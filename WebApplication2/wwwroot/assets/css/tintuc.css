@@ -1,0 +1,36 @@
+
+.myTintuc {
+    width: 100%;
+    height: 100%;
+}
+
+swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.img-center{
+    width:172px;
+    height:4px;
+    
+}
+
+.content-in-banner{
+    margin-left: 100px;
+}
+.arrow-tintuc{
+    padding-top: 4px;
+}
+.content-layout{
+    padding-bottom: 30px;
+}
