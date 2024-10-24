@@ -1,3 +1,8 @@
+using Microsoft.EntityFrameworkCore;
+using Project_Group5.Models;
+using Project_Group5.Repositoríes;
+using Project_Group5.Repositoríes.Interfaces;
+
 namespace Project_Group5
 {
     public class Program
@@ -6,8 +11,13 @@ namespace Project_Group5
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            // Register your DbContext with connection string
+            builder.Services.AddDbContext<Fall24_SE1745_PRN221_Group5Context>(options =>
+                options.UseSqlServer(builder.Configuration.GetConnectionString("MyDatabase")));
+
             // Add services to the container.
             builder.Services.AddRazorPages();
+            builder.Services.AddScoped<IRoomRepository, RoomRepository>();
 
             var app = builder.Build();
 
