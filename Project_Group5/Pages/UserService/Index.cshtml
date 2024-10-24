@@ -2,6 +2,7 @@
 @model Project_Group5.Pages.UserService.IndexModel
 @{
 }
+
 <h1 class="text-3xl font-bold text-gray-900 mb-4">User Manager</h1>
 <section class="bg-gray-50 bg-white p-3 sm:p-5 antialiased">
     <div class="mx-auto max-w-screen-xl px-4 lg:px-12">
@@ -174,32 +175,37 @@
                 </button>
             </div>
             <!-- Modal body -->
-            <form action="#">
+            <form method="post">
                 <div class="grid gap-4 mb-4 sm:grid-cols-2">
                     <div>
                         <label for="name" class="block mb-2 text-sm font-medium text-gray-900">Name</label>
-                        <input type="text" name="name" id="name" class="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" placeholder="Type name" required="">
+                        <input asp-for="User.Name" class="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" placeholder="Type name" />
+                        <span asp-validation-for="User.Name" class="text-red-500"></span>
                     </div>
                     <div>
-                        <label for="brand" class="block mb-2 text-sm font-medium text-gray-900">Age</label>
-                        <input type="text" name="brand" id="brand" class="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" placeholder="Age" required="">
+                        <label for="age" class="block mb-2 text-sm font-medium text-gray-900">Dob</label>
+                        <input asp-for="User.Dob" class="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" placeholder="Age" />
+                        <span asp-validation-for="User.Dob" class="text-red-500"></span>
                     </div>
                     <div>
-                        <label for="price" class="block mb-2 text-sm font-medium text-gray-900">PhoneNumber</label>
-                        <input type="number" name="price" id="price" class="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" placeholder="Number" required="">
+                        <label for="phone" class="block mb-2 text-sm font-medium text-gray-900">PhoneNumber</label>
+                        <input asp-for="User.Phone" class="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" placeholder="Number" />
+                        <span asp-validation-for="User.Phone" class="text-red-500"></span>
                     </div>
                     <div>
-                        <label for="category" class="block mb-2 text-sm font-medium text-gray-900">Role</label>
-                        <select id="category" class="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5">
-                            <option selected="">Select Role</option>
-                            <option value="TV">Admin</option>
-                            <option value="PC">User</option>
-                            <option value="GA">Receptionist</option>
+                        <label for="role" class="block mb-2 text-sm font-medium text-gray-900">Role</label>
+                        <select asp-for="User.Role" class="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5">
+                            <option value="">Select Role</option>
+                            <option value="Admin">Admin</option>
+                            <option value="User">User</option>
+                            <option value="Receptionist">Receptionist</option>
                         </select>
+                        <span asp-validation-for="User.Role" class="text-red-500"></span>
                     </div>
                     <div class="sm:col-span-2">
-                        <label for="description" class="block mb-2 text-sm font-medium text-gray-900">Address</label>
-                        <textarea id="description" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500" placeholder="Write product description here"></textarea>
+                        <label for="address" class="block mb-2 text-sm font-medium text-gray-900">Address</label>
+                        <textarea asp-for="User.Address" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500" placeholder="Write Address here"></textarea>
+                        <span asp-validation-for="User.Address" class="text-red-500"></span>
                     </div>
                 </div>
                 <button type="submit" class="text-white inline-flex items-center bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
