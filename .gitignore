@@ -1,4 +1,5 @@
 Project_Group5/.vs/Project_Group5/FileContentIndex/59c5bac5-e624-4d20-b87e-e1a06f576516.vsidx
+<<<<<<< HEAD
 Project_Group5/.vs/Project_Group5/DesignTimeBuild/.dtbcache.v2
 Project_Group5/obj/Debug/net6.0/project.razor.vs.bin
 Project_Group5/.vs/Project_Group5/FileContentIndex/7030f6cb-8279-4356-bd60-f93a7c8d6415.vsidx
@@ -11,3 +12,6 @@ Project_Group5/.vs/Project_Group5/FileContentIndex/316f68a3-e591-4597-8505-e0dc9
 Project_Group5/.vs/Project_Group5/FileContentIndex/55a0d612-bd8b-415f-aa69-918630731dba.vsidx
 Project_Group5/.vs/Project_Group5/FileContentIndex/673b3f64-4b2b-4fe1-95bd-a42eb95b802f.vsidx
 Project_Group5/.vs/Project_Group5/FileContentIndex/7060045b-33db-4dff-af3b-92c10a77c68b.vsidx
+=======
+Project_Group5/.vs
+>>>>>>> c14ec11c9f93d44358b9598f7a751e8092d88760

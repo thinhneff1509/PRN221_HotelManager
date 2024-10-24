@@ -1,5 +1,6 @@
 {
   "Version": 1,
+<<<<<<< HEAD
   "WorkspaceRootPath": "D:\\Ki 7\\PRN221_Retake\\Assignment_Group5\\Project_Group5\\",
   "Documents": [
     {
@@ -89,6 +90,29 @@
     {
       "AbsoluteMoniker": "D:0:0:{9A2393C9-4A9C-4C05-93B4-67304C2480E3}|Project_Group5.csproj|d:\\ki 7\\prn221_retake\\assignment_group5\\project_group5\\pages\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{9A2393C9-4A9C-4C05-93B4-67304C2480E3}|Project_Group5.csproj|solutionrelative:pages\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+=======
+  "WorkspaceRootPath": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9A2393C9-4A9C-4C05-93B4-67304C2480E3}|Project_Group5.csproj|c:\\users\\my pc\\documents\\github\\prn221_hotelmanager\\project_group5\\pages\\rooms\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9A2393C9-4A9C-4C05-93B4-67304C2480E3}|Project_Group5.csproj|solutionrelative:pages\\rooms\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A2393C9-4A9C-4C05-93B4-67304C2480E3}|Project_Group5.csproj|c:\\users\\my pc\\documents\\github\\prn221_hotelmanager\\project_group5\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{9A2393C9-4A9C-4C05-93B4-67304C2480E3}|Project_Group5.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A2393C9-4A9C-4C05-93B4-67304C2480E3}|Project_Group5.csproj|c:\\users\\my pc\\documents\\github\\prn221_hotelmanager\\project_group5\\pages\\rooms\\detail.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A2393C9-4A9C-4C05-93B4-67304C2480E3}|Project_Group5.csproj|solutionrelative:pages\\rooms\\detail.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A2393C9-4A9C-4C05-93B4-67304C2480E3}|Project_Group5.csproj|c:\\users\\my pc\\documents\\github\\prn221_hotelmanager\\project_group5\\pages\\rooms\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9A2393C9-4A9C-4C05-93B4-67304C2480E3}|Project_Group5.csproj|solutionrelative:pages\\rooms\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A2393C9-4A9C-4C05-93B4-67304C2480E3}|Project_Group5.csproj|c:\\users\\my pc\\documents\\github\\prn221_hotelmanager\\project_group5\\pages\\rooms\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A2393C9-4A9C-4C05-93B4-67304C2480E3}|Project_Group5.csproj|solutionrelative:pages\\rooms\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> c14ec11c9f93d44358b9598f7a751e8092d88760
     }
   ],
   "DocumentGroupContainers": [
@@ -98,7 +122,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
+<<<<<<< HEAD
           "SelectedChildIndex": 13,
+=======
+          "SelectedChildIndex": 12,
+>>>>>>> c14ec11c9f93d44358b9598f7a751e8092d88760
           "Children": [
             {
               "$type": "Bookmark",
@@ -110,6 +138,7 @@
             },
             {
               "$type": "Bookmark",
+<<<<<<< HEAD
               "Name": "ST:20:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
             },
             {
@@ -229,10 +258,38 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-24T08:37:32.874Z",
               "EditorCaption": ""
+=======
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{131369f2-062d-44a2-8671-91ff31efb4f4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+>>>>>>> c14ec11c9f93d44358b9598f7a751e8092d88760
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+<<<<<<< HEAD
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "D:\\Ki 7\\PRN221_Retake\\Assignment_Group5\\Project_Group5\\Pages\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Pages\\Shared\\_Layout.cshtml",
@@ -241,11 +298,22 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-10-08T06:56:46.411Z",
+=======
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-10-24T07:56:46.331Z",
+>>>>>>> c14ec11c9f93d44358b9598f7a751e8092d88760
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+<<<<<<< HEAD
               "Title": "_ValidationScriptsPartial.cshtml",
               "DocumentMoniker": "D:\\Ki 7\\PRN221_Retake\\Assignment_Group5\\Project_Group5\\Pages\\Shared\\_ValidationScriptsPartial.cshtml",
               "RelativeDocumentMoniker": "Pages\\Shared\\_ValidationScriptsPartial.cshtml",
@@ -254,10 +322,34 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-10-08T07:06:50.841Z",
+=======
+              "Title": "Detail.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\Pages\\Rooms\\Detail.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\Rooms\\Detail.cshtml.cs",
+              "ToolTip": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\Pages\\Rooms\\Detail.cshtml.cs",
+              "RelativeToolTip": "Pages\\Rooms\\Detail.cshtml.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAmwBkAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T07:55:59.514Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Detail.cshtml",
+              "DocumentMoniker": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\Pages\\Rooms\\Detail.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Rooms\\Detail.cshtml",
+              "ToolTip": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\Pages\\Rooms\\Detail.cshtml",
+              "RelativeToolTip": "Pages\\Rooms\\Detail.cshtml",
+              "ViewState": "AQIAAPsAAAAAAAAAAAAAAAkAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-24T07:55:01.852Z",
+>>>>>>> c14ec11c9f93d44358b9598f7a751e8092d88760
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 9,
               "Title": "Room.cs",
               "DocumentMoniker": "D:\\Ki 7\\PRN221_Retake\\Assignment_Group5\\Project_Group5\\Models\\Room.cs",
@@ -267,10 +359,22 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-24T08:35:26.514Z",
+=======
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\Pages\\Rooms\\Index.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\Rooms\\Index.cshtml.cs",
+              "ToolTip": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\Pages\\Rooms\\Index.cshtml.cs",
+              "RelativeToolTip": "Pages\\Rooms\\Index.cshtml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T07:54:13.61Z",
+>>>>>>> c14ec11c9f93d44358b9598f7a751e8092d88760
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 10,
               "Title": "ImageRoom.cs",
               "DocumentMoniker": "D:\\Ki 7\\PRN221_Retake\\Assignment_Group5\\Project_Group5\\Models\\ImageRoom.cs",
@@ -433,6 +537,18 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-10-08T07:06:55.82Z"
+=======
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\Pages\\Rooms\\Index.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Rooms\\Index.cshtml",
+              "ToolTip": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\Pages\\Rooms\\Index.cshtml",
+              "RelativeToolTip": "Pages\\Rooms\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADMAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-24T07:54:12.861Z",
+              "EditorCaption": ""
+>>>>>>> c14ec11c9f93d44358b9598f7a751e8092d88760
             }
           ]
         }

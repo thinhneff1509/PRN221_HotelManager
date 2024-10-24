@@ -22,12 +22,28 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Ki 7/PRN221_Retake/Assignment_Group5/Project_Group5/Pages/Homepage/Home.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZXBhZ2VcSG9tZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Ki 7/PRN221_Retake/Assignment_Group5/Project_Group5/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Ki 7/PRN221_Retake/Assignment_Group5/Project_Group5/Pages/Login/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW5cTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Ki 7/PRN221_Retake/Assignment_Group5/Project_Group5/Pages/Login/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW5cUmVnaXN0ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Ki 7/PRN221_Retake/Assignment_Group5/Project_Group5/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Ki 7/PRN221_Retake/Assignment_Group5/Project_Group5/Pages/Rooms/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUm9vbXNcRGV0YWlsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Ki 7/PRN221_Retake/Assignment_Group5/Project_Group5/Pages/Rooms/Index.cshtml]
