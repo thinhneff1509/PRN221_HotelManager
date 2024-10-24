@@ -59,7 +59,7 @@ namespace Project_Group5.Pages.Login
                     // };
 
                     // Đăng nhập người dùng
-                    await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity), authProperties);
+                    //await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity), authProperties);
 
                     return RedirectToPage("/Index"); // Chuyển hướng đến trang chính
                 }

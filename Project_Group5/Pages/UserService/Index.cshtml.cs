@@ -33,7 +33,8 @@ namespace Project_Group5.Pages.UserService
 
             // Thêm user mới vào database
             _context.Customers.Add(User);
-            await _context.SaveChangesAsync();
+             await _context.SaveChangesAsync();
+           
 
             return RedirectToPage(); // Tải lại trang sau khi thêm user thành công
         }

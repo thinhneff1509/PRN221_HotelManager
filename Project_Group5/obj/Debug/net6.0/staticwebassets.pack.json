@@ -5,12 +5,24 @@
       "PackagePath": "staticwebassets\\Project_Group5.bundle.scp.css"
     },
     {
+      "Id": "D:\\Ki 7\\PRN221_Retake\\Assignment_Group5\\Project_Group5\\wwwroot\\css\\listroom.css",
+      "PackagePath": "staticwebassets\\css\\listroom.css"
+    },
+    {
       "Id": "D:\\Ki 7\\PRN221_Retake\\Assignment_Group5\\Project_Group5\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
       "Id": "D:\\Ki 7\\PRN221_Retake\\Assignment_Group5\\Project_Group5\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\Ki 7\\PRN221_Retake\\Assignment_Group5\\Project_Group5\\wwwroot\\images\\room101.jpg",
+      "PackagePath": "staticwebassets\\images\\room101.jpg"
+    },
+    {
+      "Id": "D:\\Ki 7\\PRN221_Retake\\Assignment_Group5\\Project_Group5\\wwwroot\\images\\room102.jpg",
+      "PackagePath": "staticwebassets\\images\\room102.jpg"
     },
     {
       "Id": "D:\\Ki 7\\PRN221_Retake\\Assignment_Group5\\Project_Group5\\wwwroot\\js\\site.js",

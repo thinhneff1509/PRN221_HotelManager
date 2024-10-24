@@ -14,6 +14,8 @@ namespace Project_Group5.Pages.Rooms
         {
             _context = context;
         }
+
+
         public async Task OnGetAsync()
         {
             // Fetch all rooms from the database
