@@ -1,0 +1,105 @@
+﻿{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\PRN221\\project\\PRN221_HotelManager\\AuthenHotel\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{90F58982-62B2-4215-AF21-9ACB511A1A64}|AuthenHotel.csproj|d:\\prn221\\project\\prn221_hotelmanager\\authenhotel\\authenhotel.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{90F58982-62B2-4215-AF21-9ACB511A1A64}|AuthenHotel.csproj|solutionrelative:authenhotel.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90F58982-62B2-4215-AF21-9ACB511A1A64}|AuthenHotel.csproj|d:\\prn221\\project\\prn221_hotelmanager\\authenhotel\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{90F58982-62B2-4215-AF21-9ACB511A1A64}|AuthenHotel.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90F58982-62B2-4215-AF21-9ACB511A1A64}|AuthenHotel.csproj|d:\\prn221\\project\\prn221_hotelmanager\\authenhotel\\pages\\register\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{90F58982-62B2-4215-AF21-9ACB511A1A64}|AuthenHotel.csproj|solutionrelative:pages\\register\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90F58982-62B2-4215-AF21-9ACB511A1A64}|AuthenHotel.csproj|d:\\prn221\\project\\prn221_hotelmanager\\authenhotel\\pages\\register\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{90F58982-62B2-4215-AF21-9ACB511A1A64}|AuthenHotel.csproj|solutionrelative:pages\\register\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90F58982-62B2-4215-AF21-9ACB511A1A64}|AuthenHotel.csproj|d:\\prn221\\project\\prn221_hotelmanager\\authenhotel\\pages\\login\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{90F58982-62B2-4215-AF21-9ACB511A1A64}|AuthenHotel.csproj|solutionrelative:pages\\login\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AuthenHotel",
+              "DocumentMoniker": "D:\\PRN221\\project\\PRN221_HotelManager\\AuthenHotel\\AuthenHotel.csproj",
+              "RelativeDocumentMoniker": "AuthenHotel.csproj",
+              "ToolTip": "D:\\PRN221\\project\\PRN221_HotelManager\\AuthenHotel\\AuthenHotel.csproj",
+              "RelativeToolTip": "AuthenHotel.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-10-10T01:12:29.624Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "site.css",
+              "DocumentMoniker": "D:\\PRN221\\project\\PRN221_HotelManager\\AuthenHotel\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
+              "ToolTip": "D:\\PRN221\\project\\PRN221_HotelManager\\AuthenHotel\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "wwwroot\\css\\site.css",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABsAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-10-10T01:11:11.098Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Register.cshtml.cs",
+              "DocumentMoniker": "D:\\PRN221\\project\\PRN221_HotelManager\\AuthenHotel\\Pages\\Register\\Register.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\Register\\Register.cshtml.cs",
+              "ToolTip": "D:\\PRN221\\project\\PRN221_HotelManager\\AuthenHotel\\Pages\\Register\\Register.cshtml.cs",
+              "RelativeToolTip": "Pages\\Register\\Register.cshtml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-10T01:10:36.419Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "D:\\PRN221\\project\\PRN221_HotelManager\\AuthenHotel\\Pages\\Register\\Register.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Register\\Register.cshtml",
+              "ToolTip": "D:\\PRN221\\project\\PRN221_HotelManager\\AuthenHotel\\Pages\\Register\\Register.cshtml",
+              "RelativeToolTip": "Pages\\Register\\Register.cshtml",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAuwAwAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-10T00:57:44.951Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "D:\\PRN221\\project\\PRN221_HotelManager\\AuthenHotel\\Pages\\Login\\Login.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Login\\Login.cshtml",
+              "ToolTip": "D:\\PRN221\\project\\PRN221_HotelManager\\AuthenHotel\\Pages\\Login\\Login.cshtml",
+              "RelativeToolTip": "Pages\\Login\\Login.cshtml",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAgAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-10T00:56:53.701Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
