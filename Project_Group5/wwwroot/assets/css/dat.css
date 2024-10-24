@@ -1,0 +1,21 @@
+.project-item .title-project-item {
+   background-color: transparent;
+   transition: all 0.3s;
+}
+
+.project-item:hover .title-project-item {
+   background-color: #fff;
+}
+
+.project-item:hover .title-project-item h2 {
+   color: #25437f;
+}
+
+.project-item:hover .title-project-item a {
+   display: flex;
+   visibility: visible;
+}
+
+
+
+
