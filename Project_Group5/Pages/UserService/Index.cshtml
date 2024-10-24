@@ -81,50 +81,34 @@
                 <thead class="text-xs text-gray-900 uppercase bg-gray-200">
                     <tr>
                         <th scope="col" class="px-4 py-4">Name</th>
-                        <th scope="col" class="px-4 py-3">Age</th>
+                        <th scope="col" class="px-4 py-3">Email</th>
+                        <th scope="col" class="px-4 py-3">Date of Birth</th>
+                        <th scope="col" class="px-4 py-3">Phone</th>
+                        <th scope="col" class="px-4 py-3">Username</th>
                         <th scope="col" class="px-4 py-3">Role</th>
-                        <th scope="col" class="px-4 py-3">PhoneNumber</th>
-                        <th scope="col" class="px-4 py-3">Address</th>
-                        <th scope="col" class="px-4 py-3">
-                            <span class="sr-only">Actions</span>
-                        </th>
+                        <th scope="col" class="px-4 py-3">Banned</th>
+                        <th scope="col" class="px-4 py-3"><span class="sr-only">Actions</span></th>
                     </tr>
                 </thead>
-                <div class="overflow-x-auto">
-                    <table class="w-full text-sm text-left text-gray-800 bg-white">
-                        <thead class="text-xs text-gray-900 uppercase bg-gray-200">
-                            <tr>
-                                <th scope="col" class="px-4 py-4">Name</th>
-                                <th scope="col" class="px-4 py-3">Email</th>
-                                <th scope="col" class="px-4 py-3">Date of Birth</th>
-                                <th scope="col" class="px-4 py-3">Phone</th>
-                                <th scope="col" class="px-4 py-3">Username</th>
-                                <th scope="col" class="px-4 py-3">Role</th>
-                                <th scope="col" class="px-4 py-3">Banned</th>
-                                <th scope="col" class="px-4 py-3"><span class="sr-only">Actions</span></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach (var user in Model.Users)
-                            {
-                                <tr class="border-b border-gray-300">
-                                    <td class="px-4 py-3">@user.Name</td>
-                                    <td class="px-4 py-3">@user.Email</td>
-                                    <td class="px-4 py-3">@user.Dob?.ToString("yyyy-MM-dd")</td>
-                                    <td class="px-4 py-3">@user.Phone</td>
-                                    <td class="px-4 py-3">@user.Username</td>
-                                    <td class="px-4 py-3">@user.RoleId</td>
-                                    <td class="px-4 py-3">@user.Banned</td>
-                                    <td class="px-4 py-3 flex items-center justify-end">
-                                        <a href="/Users/Edit?id=@user.Id" class="text-sm font-medium hover:bg-gray-300 p-1.5 text-gray-800 rounded-lg">Edit</a>
-                                        <a href="/Users/Details?id=@user.Id" class="text-sm font-medium hover:bg-gray-300 p-1.5 text-gray-800 rounded-lg">Preview</a>
-                                        <a href="/Users/Delete?id=@user.Id" class="text-sm font-medium hover:bg-gray-300 p-1.5 text-red-500 rounded-lg">Delete</a>
-                                    </td>
-                                </tr>
-                            }
-                        </tbody>
-                    </table>
-                </div>
+                <tbody>
+                    @foreach (var user in Model.Users)
+                    {
+                        <tr class="border-b border-gray-300">
+                            <td class="px-4 py-3">@user.Name</td>
+                            <td class="px-4 py-3">@user.Email</td>
+                            <td class="px-4 py-3">@user.Dob?.ToString("yyyy-MM-dd")</td>
+                            <td class="px-4 py-3">@user.Phone</td>
+                            <td class="px-4 py-3">@user.Username</td>
+                            <td class="px-4 py-3">@user.RoleId</td>
+                            <td class="px-4 py-3">@user.Banned</td>
+                            <td class="px-4 py-3 flex items-center justify-end">
+                                <a href="/Users/Edit?id=@user.Id" class="text-sm font-medium hover:bg-gray-300 p-1.5 text-gray-800 rounded-lg">Edit</a>
+                                <a href="/Users/Details?id=@user.Id" class="text-sm font-medium hover:bg-gray-300 p-1.5 text-gray-800 rounded-lg">Preview</a>
+                                <a href="/Users/Delete?id=@user.Id" class="text-sm font-medium hover:bg-gray-300 p-1.5 text-red-500 rounded-lg">Delete</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
             </table>
         </div>
 
