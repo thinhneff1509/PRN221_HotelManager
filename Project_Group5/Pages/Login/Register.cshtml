@@ -2,3 +2,109 @@
 @model Project_Group5.Pages.Login.RegisterModel
 @{
 }
+
+
+<div class="container">
+    <!--================ Start Header Menu Area =================-->
+    <header class="header_area">
+        <div class="main_menu">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container">
+                    <a class="navbar-brand logo_h" asp-page="/Index"><img src="~/img/logo.png" alt=""></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav menu_nav ml-auto mr-auto">
+                            <li class="nav-item"><a class="nav-link" asp-page="/Index">Home</a></li>
+                            <li class="nav-item submenu dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Shop</a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item"><a class="nav-link" asp-page="/Category">Shop Category</a></li>
+                                    <li class="nav-item"><a class="nav-link" asp-page="/SingleProduct">Product Details</a></li>
+                                    <li class="nav-item"><a class="nav-link" asp-page="/Checkout">Product Checkout</a></li>
+                                    <li class="nav-item"><a class="nav-link" asp-page="/Cart">Shopping Cart</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" asp-page="/Contact">Contact</a></li>
+                        </ul>
+
+                        <ul class="nav-shop">
+                            <li class="nav-item"><button><i class="ti-search"></i></button></li>
+                            <li class="nav-item"><button><i class="ti-shopping-cart"></i><span class="nav-shop__circle">3</span></button></li>
+                            <li class="nav-item"><a class="button button-header" href="#">Buy Now</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!--================ End Header Menu Area =================-->
+
+    <!--================ Start Banner Area =================-->
+    <section class="blog-banner-area" id="category">
+        <div class="container h-100">
+            <div class="blog-banner">
+                <div class="text-center">
+                    <h1>Register</h1>
+                    <nav aria-label="breadcrumb" class="banner-breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Register</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================ End Banner Area =================-->
+
+    <!--================ Start Register Form Area =================-->
+    <section class="login_box_area section-margin">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="login_box_img">
+                        <div class="hover">
+                            <h4>Already have an account?</h4>
+                            <p>There are advances being made in science and technology every day, and a good example of this is the progress we see in</p>
+                            <a class="button button-account" asp-page="/Login">Login Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="login_form_inner register_form_inner">
+                        <h3>Create an account</h3>
+                        <form class="row login_form" method="post">
+                            <div class="col-md-12 form-group">
+                                <input type="text" class="form-control" id="name" name="Username" placeholder="Username" value="@Model.Customer.Username" required>
+                            </div>
+                            <div class="col-md-12 form-group">
+                                <input type="email" class="form-control" id="email" name="Email" placeholder="Email Address" value="@Model.Customer.Email" required>
+                            </div>
+                            <div class="col-md-12 form-group">
+                                <input type="password" class="form-control" id="password" name="Password" placeholder="Password" required>
+                            </div>
+                            <div class="col-md-12 form-group">
+                                <input type="password" class="form-control" id="confirmPassword" name="ConfirmPassword" placeholder="Confirm Password" required>
+                            </div>
+                            <div class="col-md-12 form-group">
+                                <div class="creat_account">
+                                    <input type="checkbox" id="f-option2" name="RememberMe">
+                                    <label for="f-option2">Keep me logged in</label>
+                                </div>
+                            </div>
+                            <div class="col-md-12 form-group">
+                                <button type="submit" class="button button-register w-100">Register</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================ End Register Form Area =================-->
+</div>
