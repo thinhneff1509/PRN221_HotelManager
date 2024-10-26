@@ -9,50 +9,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotel Room</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/listroom.css" rel="stylesheet">
 </head>
 <body>
     <main>
         <div class="container my-5">
+            <div class="form-booking"><div class="bm_row"> <!--<p>62285593-3bcf-1635130380-4f06-9e5f-bbabb06126ae</p> --> <label><img src="https://mandalahotels.com.vn/wp-content/plugins/booking-mandala-main/assets/image/pin.png" alt="Destination">Điểm đến</label> <select class="select-destination select2-hidden-accessible" name="hotel-id" data-select2-id="7" tabindex="-1" aria-hidden="true"><option value="62285593-3bcf-1635130380-4f06-9e5f-bbabb06126ae" selected="selected" data-select2-id="9">Mandala Hotel &amp; Suites Bắc Giang</option><option value="d1de4dbb-8947-1681715658-4bba-8b32-c1294dbfa495">Mandala Chăm Bay Mũi Né</option><option value="69676f11-6c7b-1648003788-4c40-8769-6dad351abc62">Mandala Hotel &amp; Spa Phú Yên</option><option value="d5606481-146d-1516615600-45e4-abf9-e64e045ad1ac">Mandala Hotel &amp; Spa Bắc Ninh</option><option value="f8e69366-a0a3-1696241295-422f-88fc-07fbf269a58f">Mandala Retreats Kim Boi</option> </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="8" style="width: 257.5px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-hotel-id-7k-container"><span class="select2-selection__rendered" id="select2-hotel-id-7k-container" role="textbox" aria-readonly="true" title="Mandala Hotel &amp; Suites Bắc Giang">Mandala Hotel &amp; Suites Bắc Giang</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span></div><div class="bm_row"> <label><img src="https://mandalahotels.com.vn/wp-content/plugins/booking-mandala-main/assets/image/calendar.png" alt="Ngày đến - Ngày đi">Ngày đến <span class="checkin-checkout">-</span> Ngày đi</label><div class="check-time"> <input type="text" name="check-in" value="26/10/2024" class="datepicker_start hasDatepicker" placeholder="Check in" autocomplete="nope" autocorrect="off" autocapitalize="none" id="dp1729918621664"> <input type="text" name="check-out" value="27/10/2024" class="datepicker_end hasDatepicker" placeholder="Check out" autocomplete="nope" autocorrect="off" autocapitalize="none" id="dp1729918621665"></div></div><div class="bm_row"> <label><img src="https://mandalahotels.com.vn/wp-content/plugins/booking-mandala-main/assets/image/price-tag.png" alt="Discount">Mã khuyến mại</label> <!--input type="text" name="discount" value="< ?php echo $discount; ?>" placeholder="Your discount code"--> <select class="select-discount select2-hidden-accessible" name="discount" data-discount="" data-select2-id="10" tabindex="-1" aria-hidden="true"><option value="" selected="selected" data-hotel="62285593-3bcf-1635130380-4f06-9e5f-bbabb06126ae" data-select2-id="12">FREE CONVENTION PACKAGE</option> </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="14" style="width: 257.5px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-discount-p4-container"><span class="select2-selection__rendered" id="select2-discount-p4-container" role="textbox" aria-readonly="true"><span class="select2-selection__placeholder">Mã khuyến mại</span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span></div> <button class="check-valid">Kiểm Tra Phòng</button></div>
             @foreach (var room in rooms)
             {
-                <div class="row align-items-center mb-5">
-                    <!-- Left section: Image Carousel -->
-                    <div class="col-md-6">
-                        <div id="roomCarousel_@room.Id" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-inner">
+                    <div class="room-card col-md-8 mb-4">
+                        <div class="room-info">
+                            <div id="roomCarousel_@room.Id" class="carousel slide col-md-6" data-bs-ride="carousel">
+                                <div class="carousel-inner">
                                 @foreach (var image in room.ImageRooms)
                                 {
-                                    <div class="carousel-item @(image == room.ImageRooms.First() ? "active" : "")">
-                                                <img src="@image.Path" class="d-block w-100" alt="Room Image">
-                                    </div>
+                                            <div class="carousel-item @(image == room.ImageRooms.First() ? "active" : "")">
+                                                <img src="/images/@image.Path" class="d-block w-100 room-image" alt="Room Image">
+                                            </div>
                                 }
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#roomCarousel_@room.Id" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#roomCarousel_@room.Id" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
                             </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#roomCarousel_@room.Id" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#roomCarousel_@room.Id" data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
+
+                            <div class="room-details col-md-6">
+                                <h2>@room.Name</h2>
+                                <p>29 m² | 1 King Bed</p>
+                                <ul class="amenities">
+                                    <li><i class="fa fa-wifi"></i> Free Wifi</li>
+                                    <li><i class="fa fa-tv"></i> Television</li>
+                                    <li><i class="fa fa-bath"></i> Bathtub</li>
+                                    <li><i class="fa fa-parking"></i> Parking</li>
+                                </ul>
+                                <p class="price">Giá chỉ từ: <strong>@room.Price VND</strong> / đêm</p>
+                                <button class="choose-btn col-md-6" data-bs-toggle="collapse" data-bs-target="#roomOptions_@room.Id" aria-expanded="false" aria-controls="roomOptions_@room.Id">
+                                    Lựa chọn
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Hidden by default, shown when "Lựa chọn" is clicked -->
+                        <div id="roomOptions_@room.Id" class="room-options collapse">
+                            <p><strong>@room.Name (Room Only)</strong></p>
+                            <p><del>@(room.Price) VND</del> <strong>@room.Price VND</strong> / night</p>
+                            <label for="room-count">Select Room:</label>
+                            <select id="room-count">
+                                    <option value="0">0 phòng</option>
+                            @for (int i = 1; i <= room.Rooms.Where(r => r.Status == 1).Count(); i++) 
+                            {
+                                <option value="@i">@i phòng</option>
+                            }
+                            </select>
+
+                            <label for="children-count">Trẻ em (6-11 tuổi):</label>
+                            <select id="children-count">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                            </select>
+
+                            <p>Total: <strong>@room.Price VND</strong></p>
+                            <button class="book-now-btn">Đặt Ngay</button>
                         </div>
                     </div>
-
-                    <!-- Right section: Room Details -->
-                    <div class="col-md-6">
-                        <h2>@room.Name</h2>                      
-                        <p><em>@room.RoomType</em></p>
-                        <p class="price-label">Giá chỉ từ</p>
-                        <p class="price">@room.Price VND / đêm</p>
-                        <a href="/Rooms/Detail" class="btn btn-primary">Lựa chọn <i class="bi bi-chevron-down"></i></a>
-
-                    </div>
-                </div>
             }
         </div>
     </main>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
+
+<script>
+    // Select all collapse toggle buttons
+    document.querySelectorAll('.choose-btn').forEach(button => {
+        button.addEventListener('click', function () {
+            const target = document.querySelector(this.getAttribute('data-bs-target')); // Get the target element
+            const isCollapsed = target.style.display === 'block'; // Check if it's currently shown
+
+            // Toggle the display property
+            target.style.display = isCollapsed ? 'none' : 'block';
+
+            // Optionally, you can add smooth transitions
+            if (!isCollapsed) {
+                target.style.transition = 'max-height 0.2s ease-in-out'; // Optional smooth transition
+                target.style.maxHeight = target.scrollHeight + 'px'; // Set to full height for smooth opening
+            } else {
+                target.style.maxHeight = '0'; // Collapse the options
+            }
+        });
+    });
+</script>
+
 </html>

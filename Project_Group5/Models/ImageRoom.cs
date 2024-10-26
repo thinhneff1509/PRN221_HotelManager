@@ -7,8 +7,8 @@ namespace Project_Group5.Models
     {
         public int Id { get; set; }
         public string? Path { get; set; }
-        public int? RoomId { get; set; }
+        public int? RoomtypeId { get; set; }
 
-        public virtual Room? Room { get; set; }
+        public virtual RoomType? Roomtype { get; set; }
     }
 }

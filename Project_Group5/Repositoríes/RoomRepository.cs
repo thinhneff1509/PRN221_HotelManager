@@ -13,17 +13,23 @@ namespace Project_Group5.Repositoríes
             _context = context;
         }
 
-        public async Task<IEnumerable<Room>> GetRoomsAsync()
+        public async Task<IEnumerable<RoomType>> GetRoomTypesAsync()
         {
             // Include related entities like ImageRoom
-            return await _context.Rooms.Include(r => r.ImageRooms).ToListAsync();
+            return await _context.RoomTypes.Include(r => r.ImageRooms).Include(r => r.Rooms).ToListAsync();
         }
 
-        public async Task<Room?> GetRoomByIdAsync(int id)
+        public async Task<RoomType?> GetRoomTypeByIdAsync(int id)
         {
-            return await _context.Rooms
-                                 .Include(r => r.ImageRooms)
+            return await _context.RoomTypes
+                                 .Include(r => r.ImageRooms).Include(r => r.Rooms)
                                  .FirstOrDefaultAsync(r => r.Id == id);
         }
+
+        public async Task<int> GetAvailiableRooms(int roomtypeId)
+        {
+            return await _context.Rooms.Where(r => r.RoomtypeId == roomtypeId && r.Status == 0).CountAsync();
+        }
+
     }
 }

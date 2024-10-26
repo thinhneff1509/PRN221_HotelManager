@@ -15,11 +15,13 @@ namespace Project_Group5.Models
 
         public virtual DbSet<Booking> Bookings { get; set; } = null!;
         public virtual DbSet<Customer> Customers { get; set; } = null!;
+        public virtual DbSet<Discount> Discounts { get; set; } = null!;
         public virtual DbSet<Feedback> Feedbacks { get; set; } = null!;
         public virtual DbSet<ImageRoom> ImageRooms { get; set; } = null!;
         public virtual DbSet<Payment> Payments { get; set; } = null!;
         public virtual DbSet<Role> Roles { get; set; } = null!;
         public virtual DbSet<Room> Rooms { get; set; } = null!;
+        public virtual DbSet<RoomType> RoomTypes { get; set; } = null!;
         public virtual DbSet<Service> Services { get; set; } = null!;
         public virtual DbSet<ServiceRegistration> ServiceRegistrations { get; set; } = null!;
         public virtual DbSet<Wishlist> Wishlists { get; set; } = null!;
@@ -52,18 +54,16 @@ namespace Project_Group5.Models
 
                 entity.Property(e => e.CustomerId).HasColumnName("customer_id");
 
-                entity.Property(e => e.PaymentStatus)
-                    .HasMaxLength(255)
-                    .HasColumnName("payment_status");
+                entity.Property(e => e.PaymentStatus).HasColumnName("payment_status");
 
                 entity.Property(e => e.RoomId).HasColumnName("room_id");
 
                 entity.Property(e => e.Status)
-                    .HasMaxLength(255)
+                    .HasMaxLength(50)
                     .HasColumnName("status");
 
                 entity.Property(e => e.TotalAmount)
-                    .HasMaxLength(255)
+                    .HasColumnType("money")
                     .HasColumnName("total_amount");
 
                 entity.HasOne(d => d.Customer)
@@ -97,19 +97,19 @@ namespace Project_Group5.Models
                     .HasColumnName("dob");
 
                 entity.Property(e => e.Email)
-                    .HasMaxLength(255)
+                    .HasMaxLength(50)
                     .HasColumnName("email");
 
                 entity.Property(e => e.Name)
-                    .HasMaxLength(255)
+                    .HasMaxLength(50)
                     .HasColumnName("name");
 
                 entity.Property(e => e.Password)
-                    .HasMaxLength(255)
+                    .HasMaxLength(50)
                     .HasColumnName("password");
 
                 entity.Property(e => e.Phone)
-                    .HasMaxLength(255)
+                    .HasMaxLength(10)
                     .HasColumnName("phone");
 
                 entity.Property(e => e.RegisterDate)
@@ -119,13 +119,35 @@ namespace Project_Group5.Models
                 entity.Property(e => e.RoleId).HasColumnName("role_id");
 
                 entity.Property(e => e.Username)
-                    .HasMaxLength(255)
+                    .HasMaxLength(50)
                     .HasColumnName("username");
 
                 entity.HasOne(d => d.Role)
                     .WithMany(p => p.Customers)
                     .HasForeignKey(d => d.RoleId)
                     .HasConstraintName("FK_Customer_Role");
+            });
+
+            modelBuilder.Entity<Discount>(entity =>
+            {
+                entity.ToTable("Discount");
+
+                entity.Property(e => e.Id).HasColumnName("id");
+
+                entity.Property(e => e.BookingId).HasColumnName("booking_id");
+
+                entity.Property(e => e.Content)
+                    .HasMaxLength(150)
+                    .HasColumnName("content");
+
+                entity.Property(e => e.Name)
+                    .HasMaxLength(50)
+                    .HasColumnName("name");
+
+                entity.HasOne(d => d.Booking)
+                    .WithMany(p => p.Discounts)
+                    .HasForeignKey(d => d.BookingId)
+                    .HasConstraintName("FK_Discount_Booking");
             });
 
             modelBuilder.Entity<Feedback>(entity =>
@@ -169,11 +191,11 @@ namespace Project_Group5.Models
                     .HasMaxLength(255)
                     .HasColumnName("path");
 
-                entity.Property(e => e.RoomId).HasColumnName("room_id");
+                entity.Property(e => e.RoomtypeId).HasColumnName("roomtype_id");
 
-                entity.HasOne(d => d.Room)
+                entity.HasOne(d => d.Roomtype)
                     .WithMany(p => p.ImageRooms)
-                    .HasForeignKey(d => d.RoomId)
+                    .HasForeignKey(d => d.RoomtypeId)
                     .HasConstraintName("FK_ImageRoom_Room");
             });
 
@@ -184,10 +206,18 @@ namespace Project_Group5.Models
                 entity.Property(e => e.Id).HasColumnName("id");
 
                 entity.Property(e => e.Amount)
-                    .HasMaxLength(255)
+                    .HasColumnType("money")
                     .HasColumnName("amount");
 
                 entity.Property(e => e.BookingId).HasColumnName("booking_id");
+
+                entity.Property(e => e.CheckIn)
+                    .HasColumnType("date")
+                    .HasColumnName("check_in");
+
+                entity.Property(e => e.CheckOut)
+                    .HasColumnType("date")
+                    .HasColumnName("check_out");
 
                 entity.Property(e => e.PaymentDate)
                     .HasColumnType("date")
@@ -198,7 +228,7 @@ namespace Project_Group5.Models
                     .HasColumnName("payment_method");
 
                 entity.Property(e => e.Status)
-                    .HasMaxLength(255)
+                    .HasMaxLength(50)
                     .HasColumnName("status");
 
                 entity.HasOne(d => d.Booking)
@@ -214,7 +244,7 @@ namespace Project_Group5.Models
                 entity.Property(e => e.Id).HasColumnName("id");
 
                 entity.Property(e => e.Name)
-                    .HasMaxLength(255)
+                    .HasMaxLength(50)
                     .HasColumnName("name");
             });
 
@@ -227,27 +257,36 @@ namespace Project_Group5.Models
 
                 entity.Property(e => e.Id).HasColumnName("id");
 
-                entity.Property(e => e.Description)
+                entity.Property(e => e.RoomNumber)
                     .HasMaxLength(255)
-                    .HasColumnName("description");
+                    .HasColumnName("room_number");
+
+                entity.Property(e => e.RoomtypeId).HasColumnName("roomtype_id");
+
+                entity.Property(e => e.Status).HasColumnName("status");
+
+                entity.HasOne(d => d.Roomtype)
+                    .WithMany(p => p.Rooms)
+                    .HasForeignKey(d => d.RoomtypeId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_Room_RoomType");
+            });
+
+            modelBuilder.Entity<RoomType>(entity =>
+            {
+                entity.ToTable("RoomType");
+
+                entity.Property(e => e.Id).HasColumnName("id");
+
+                entity.Property(e => e.Description).HasColumnName("description");
 
                 entity.Property(e => e.Name)
                     .HasMaxLength(255)
                     .HasColumnName("name");
 
                 entity.Property(e => e.Price)
-                    .HasMaxLength(255)
+                    .HasColumnType("money")
                     .HasColumnName("price");
-
-                entity.Property(e => e.RoomNumber)
-                    .HasMaxLength(255)
-                    .HasColumnName("room_number");
-
-                entity.Property(e => e.RoomType)
-                    .HasMaxLength(255)
-                    .HasColumnName("room_type");
-
-                entity.Property(e => e.Status).HasColumnName("status");
             });
 
             modelBuilder.Entity<Service>(entity =>
@@ -257,7 +296,7 @@ namespace Project_Group5.Models
                 entity.Property(e => e.Id).HasColumnName("id");
 
                 entity.Property(e => e.Price)
-                    .HasMaxLength(255)
+                    .HasColumnType("money")
                     .HasColumnName("price");
 
                 entity.Property(e => e.ServiceName)
@@ -265,7 +304,7 @@ namespace Project_Group5.Models
                     .HasColumnName("service_name");
 
                 entity.Property(e => e.Status)
-                    .HasMaxLength(255)
+                    .HasMaxLength(50)
                     .HasColumnName("status");
             });
 
@@ -285,7 +324,7 @@ namespace Project_Group5.Models
                 entity.Property(e => e.ServiceId).HasColumnName("service_id");
 
                 entity.Property(e => e.TotalPrice)
-                    .HasMaxLength(255)
+                    .HasColumnType("money")
                     .HasColumnName("total_price");
 
                 entity.HasOne(d => d.Booking)

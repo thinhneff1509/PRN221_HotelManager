@@ -1,38 +1,71 @@
-﻿body {
-    font-family: Arial, sans-serif;
+﻿.room-card {
+    border: 1px solid #ddd;
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+     Optional: Add box-shadow for better visuals 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
-    font-weight: bold;
-    font-size: 1.75rem;
+.room-info {
+    display: flex;
+    gap: 20px;
 }
 
-.carousel-inner img {
-    border-radius: 10px;
+.room-image {
+    width: 150px;  Image width 
+    height: 100px;  Image height 
+    object-fit: cover;
 }
 
-.text-center p {
-    margin: 0;
-    font-size: 0.9rem;
+.room-details {
+    display: flex;
+    flex-direction: column;
 }
 
-.price-label {
-    font-weight: bold;
-    color: #6c757d;
+.amenities {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 10px;
 }
 
 .price {
-    font-size: 1.5rem;
-    color: #d9534f;
-    font-weight: bold;
+    font-size: 18px;
+    color: #ff6b6b;
 }
 
-button.btn-primary {
-    background-color: #c39d77;
-    border-color: #c39d77;
+.choose-btn {
+    padding: 10px 20px;
+    background-color: #c9a385;
+    border: none;
+    cursor: pointer;
 }
 
-    button.btn-primary:hover {
-        background-color: #b58969;
-        border-color: #b58969;
-    }
+.room-options {
+    margin-top: 20px;
+    padding: 20px;
+    border-top: 1px solid #ddd;
+    transition: max-height 0.2s ease-in-out;
+    overflow: hidden;  Prevent overflow when collapsed 
+}
+
+select {
+    margin: 5px 0;
+    padding: 5px;
+}
+
+.book-now-btn {
+    padding: 10px 20px;
+    background-color: #c9a385;
+    border: none;
+    cursor: pointer;
+}
+
+.carousel-item img {
+    width: 100%;  Makes the image take the full width of the container 
+    height: auto;  Maintains aspect ratio 
+    object-fit: cover;  Ensures the image covers the entire container without stretching 
+}

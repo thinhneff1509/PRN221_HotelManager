@@ -4,7 +4,9 @@ namespace Project_Group5.Repositoríes.Interfaces
 {
     public interface IRoomRepository
     {
-        Task<IEnumerable<Room>> GetRoomsAsync();
-        Task<Room?> GetRoomByIdAsync(int id);
+        Task<IEnumerable<RoomType>> GetRoomTypesAsync();
+        Task<RoomType?> GetRoomTypeByIdAsync(int id);
+        Task<int> GetAvailiableRooms(int roomtypeId);
+
     }
 }
