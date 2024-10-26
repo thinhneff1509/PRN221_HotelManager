@@ -69,3 +69,56 @@ select {
     height: auto;  Maintains aspect ratio 
     object-fit: cover;  Ensures the image covers the entire container without stretching 
 }
+
+.search-bar {
+    display: flex;
+    justify-content: center; /* Đưa thanh tìm kiếm ra giữa */
+    margin-bottom: 20px;
+}
+
+    .search-bar form {
+        display: flex;
+        flex-wrap: wrap;
+        /*gap: 10px;*/
+        justify-content: center; /* Các thành phần trong form sẽ được căn giữa */
+    }
+
+    .search-bar input, .search-bar button {
+        padding: 8px;
+        font-size: 1rem;
+        margin: 5px;
+    }
+
+    .search-bar .form-control {
+        width: auto; /* Để đảm bảo input không chiếm toàn bộ chiều rộng */
+    }
+
+.check-rooms-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.selected-rooms {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.selected-room p {
+    margin: 10px 0;
+}
+
+.book-now-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
