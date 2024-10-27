@@ -1,7 +1,5 @@
 using Microsoft.EntityFrameworkCore;
 using Project_Group5.Models;
-using Project_Group5.Repositoríes;
-using Project_Group5.Repositoríes.Interfaces;
 
 namespace Project_Group5
 {
@@ -17,7 +15,6 @@ namespace Project_Group5
 
             // Add services to the container.
             builder.Services.AddRazorPages();
-            builder.Services.AddScoped<IRoomRepository, RoomRepository>();
 
             var app = builder.Build();
 

@@ -191,11 +191,11 @@ namespace Project_Group5.Models
                     .HasMaxLength(255)
                     .HasColumnName("path");
 
-                entity.Property(e => e.RoomtypeId).HasColumnName("roomtype_id");
+                entity.Property(e => e.RoomId).HasColumnName("room_id");
 
-                entity.HasOne(d => d.Roomtype)
+                entity.HasOne(d => d.Room)
                     .WithMany(p => p.ImageRooms)
-                    .HasForeignKey(d => d.RoomtypeId)
+                    .HasForeignKey(d => d.RoomId)
                     .HasConstraintName("FK_ImageRoom_Room");
             });
 
@@ -277,6 +277,8 @@ namespace Project_Group5.Models
                 entity.ToTable("RoomType");
 
                 entity.Property(e => e.Id).HasColumnName("id");
+
+                entity.Property(e => e.Bed).HasColumnName("bed");
 
                 entity.Property(e => e.Description).HasColumnName("description");
 

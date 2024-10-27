@@ -7,7 +7,6 @@ namespace Project_Group5.Models
     {
         public RoomType()
         {
-            ImageRooms = new HashSet<ImageRoom>();
             Rooms = new HashSet<Room>();
         }
 
@@ -15,8 +14,8 @@ namespace Project_Group5.Models
         public string? Name { get; set; }
         public string? Description { get; set; }
         public decimal Price { get; set; }
+        public int Bed { get; set; }
 
-        public virtual ICollection<ImageRoom> ImageRooms { get; set; }
         public virtual ICollection<Room> Rooms { get; set; }
     }
 }
