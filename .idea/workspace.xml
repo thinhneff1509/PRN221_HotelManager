@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="dc411107-3085-47f1-85e0-41108aacbb2f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Project_Group5/.vs/ProjectEvaluation/project_group5.metadata.v7.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Project_Group5/.vs/ProjectEvaluation/project_group5.metadata.v7.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Group5/.vs/ProjectEvaluation/project_group5.projects.v7.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Project_Group5/.vs/ProjectEvaluation/project_group5.projects.v7.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Group5/.vs/Project_Group5/DesignTimeBuild/.dtbcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/Project_Group5/.vs/Project_Group5/DesignTimeBuild/.dtbcache.v2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Group5/.vs/Project_Group5/v17/.futdcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/Project_Group5/.vs/Project_Group5/v17/.futdcache.v2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Group5/.vs/Project_Group5/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/Project_Group5/.vs/Project_Group5/v17/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Group5/.vs/slnx.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/Project_Group5/.vs/slnx.sqlite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Group5/obj/Debug/net6.0/Project_Group5.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Project_Group5/obj/Debug/net6.0/Project_Group5.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_Group5/obj/Debug/net6.0/Project_Group5.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Project_Group5/obj/Debug/net6.0/Project_Group5.AssemblyInfoInputs.cache" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 6
+}]]></component>
+  <component name="ProjectId" id="2nvukOcsgeFVr9NxbS6LgJFyKV1" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "phi__homepage",
+    "kotlin-language-version-configured": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dc411107-3085-47f1-85e0-41108aacbb2f" name="Changes" comment="" />
+      <created>1729866013024</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1729866013024</updated>
+    </task>
+    <servers />
+  </component>
+</project>
