@@ -23,6 +23,13 @@ namespace Project_Group5
             app.UseStaticFiles();
 
             app.UseRouting();
+            app.MapGet("/", context =>
+            {
+                context.Response.Redirect("/homepage/home");
+                return Task.CompletedTask;
+            });
+
+            app.MapRazorPages();
 
             app.UseAuthorization();
 

@@ -20,15 +20,16 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <!--script-->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Swiper -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
 </head>
 <body>
     <!--Header-->
     <header class="bg-[#FFF]  fixed nav_header w-full shadow-lg z-20">
         <div class="max-content flex items-stretch justify-between gap-5 md:px-0 py-2 max-md:flex-wrap px-5">
             <a class="py-auto" href="/">
-                <img loading="lazy" src="./assets/images/Logo.png"
+                <img loading="lazy" src="~/assets/images/Logo.png"
                      class="pt-[5px] md:pt-0 aspect-[1.82] object-contain object-center w-[80px] md:w-[100px] overflow-hidden shrink-0 max-w-full " />
             </a>
             <!--Header PC-->
@@ -84,14 +85,10 @@
             </div>
 
             <div class="self-center flex items-stretch gap-1 my-auto hidden md:flex ">
-                <button>
-                    <img loading="lazy" src="./assets/images/search 1.png"
-                         class="aspect-[0.71] object-contain object-center w-[18px] overflow-hidden shrink-0 max-w-full" />
-                </button>
+            
                 <div class="mx-2">|</div>
                 <button class="flex gap-2">
-                    <img loading="lazy" src="./assets/images/vietnam 1.png"
-                         class="aspect-[0.71] object-contain object-center w-[18px] overflow-hidden shrink-0 max-w-full" />
+                   
                     <div class="menu relative">
                         <li class="nav__link relative text-pantone md:text-black text-25 leading-6">
                             <a class="  mx-7 py-4 @@(currentUrl.Contains(" tai-khoan") ? "active" : "" ) "
@@ -192,43 +189,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="menu relative">
-                            <div class="text-gray-700  text-[18px] font-medium leading-6 leading-6">
-                                <li onclick="closeModalMobile()" href="">
-                                    khách sạn
-                                </li>
-                                <ul style="width: 300px;"
-                                    class="hidden sub-menu background_second py-2 px-[7px] flex flex-col  text-base font-semibold leading-6  rounded-lg shadow-lg text-neutral-800">
-                                    <li class="nav__link2 sub-menu-current relative py-2 pl-4">
-                                        <a href="" onclick="highlightParent(this)" class="">Hennessy Hồ Chí Minh</a>
-                                    </li>
-                                    <li class="nav__link2 py-2 pl-4">
-                                        <a href="" onclick="highlightParent(this)" class="">Hennessy Phú Quốc</a>
-                                    </li>
-                                    <li class="nav__link2 py-2 pl-4">
-                                        <a href="" onclick="highlightParent(this)" class="">Hennessy Cần Thơ</a>
-                                    </li>
-                                    <li class="nav__link2 py-2 pl-4">
-                                        <a href="" onclick="highlightParent(this)" class="">Hennessy Nha Trang</a>
-                                    </li>
-                                    <li class="nav__link2 py-2 pl-4">
-                                        <a href="" onclick="highlightParent(this)" class="">...</a>
-                                    </li>
-
-
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="text-gray-700  text-[18px] font-medium leading-6  whitespace-nowrap">
-                            <a onclick="closeModalMobile()" href="">
-                                Tin tức
-                            </a>
-                        </div>
-                        <div class="text-gray-700  text-[18px] font-medium leading-6  whitespace-nowrap">
-                            <a onclick="closeModalMobile()" href="">
-                                Tuyển dụng
-                            </a>
-                        </div>
+                 
                         <div class="text-gray-700  text-[18px] font-medium leading-6  whitespace-nowrap">
                             <a onclick="closeModalMobile()" href="">
                                 Liên hệ
@@ -239,432 +200,12 @@
             </div>
         </div>
     </header>
- 
-    <!--Banner-->
-    <section id="banner" class="z-30 flex-col items-stretch overflow-hidden justify-center pt-[62px] md:pt-[72px]">
-        <div class="swiper mySwiper_mb">
-            <div class="swiper-wrapper">
 
-                <div class="swiper-slide">
-                    <a href=@@Url.Content(item.Link) target="_blank">
-                        <img class="z-1 banner-img w-full object-cover inset-0 blur-image_banner"
-                             src="./assets/images/Ảnh 2.png" alt="" />
-                    </a>
-                    <div style="width:100vw; height:100vh"
-                         class=" absolute top-0 left-0 bg-black bg-opacity-30 flex flex-col items-stretch"></div>
-                    <div class="banner-content ">
-                        <p class="banner-title "></p>
-                        <p class="banner-title uppercase ">
-                            DTF Hennessy - Đơn vị cung cấp hệ thống khách sạn cao cấp uy tín hàng đầu
-                            Việt Nam
-                        </p>
-                    </div>
-                </div>
+    <main class="pt-20">
+        @RenderBody()
+    </main>
 
-
-            </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-        </div>
-    </section>
-    <!--Giới thiệu chung-->
-    <section class="max-content py-10 md:py-20 md:px-0 px-5">
-        <div class="flex gap-5 max-md:flex-col max-md:gap-0">
-            <div class="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
-                <article class="flex flex-col px-0  text-lg font-semibold max-md:mt-1 max-md:max-w-full">
-                    <div class="shrink-0 h-[0.5px] bg-orange-400 border-2 md:border-4 border-[#FCB040] border-solid max-md:max-w-full w-[100px] md:w-[150px]">
-                    </div>
-                    <h2 class="max-w-[500px] mt-2 md:mt-8  md:text-5xl text-blue-900  md:leading-[60px] max-md:max-w-full max-md:text-3xl max-md:leading-[48px]">
-                        Giới thiệu chung về DTF Hotel
-                    </h2>
-                    <p class="mt-7 text-base md:text-lg text-neutral-700 max-md:max-w-full text-justify">
-                        Thành lập từ năm 2018, Hennessy Hospitality Group (HHG) là thương hiệu quản lý toàn bộ chuỗi khách sạn tiêu chuẩn của Tập đoàn Hennessy Group.
-
-                        <br />
-                        <br />
-                        Lấy cảm hứng từ vòng tròn Hennessy trong quan niệm Phật giáo - vòng tròn tượng trưng cho sự sống bất tận và mối tương quan giữa con người với thiên nhiên, HHG muốn khắc họa lại hành trình đi tìm kiếm hạnh phúc của mỗi người và lan tỏa tới cộng đồng sứ mệnh phụng sự khách hàng và phụng sự xã hội của chúng tôi.
-
-                    </p>
-                    <a href="#"
-                       class="flex gap-2 text-base md:text-lg self-start px-9 py-3.5  md:mt-16 text-white background_second rounded-[500px] max-md:px-5 max-md:mt-6">
-                        <span class="grow">Xem thêm</span>
-                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/9acc647bead820972d16638f049e4724d24d25a880cdcc7701391be799dee3e3?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
-                             alt="" class="shrink-0 w-4 aspect-square" />
-                    </a>
-                </article>
-            </div>
-            <div class="flex flex-col ml-8 w-6/12 max-md:ml-0 max-md:w-full">
-                <img src="./assets/images/Ảnh 3.png"
-                     alt="Giới thiệu chung về Hennessy Group"
-                     class="grow w-full aspect-[1.16] max-md:mt-10 max-md:max-w-full" />
-            </div>
-        </div>
-    </section>
-
-    <!--Các dịch vụ-->
-    <section class="flex flex-col py-10 md:py-20 md:px-0 px-5">
-        <div class="shrink-0 h-[0.5]px bg-orange-400 border-2 md:border-4 border-[#FCB040] border-solid max-md:max-w-full w-[100px] md:w-[150px] mx-auto">
-        </div>
-        <h2 class="mt-2 md:mt-8 self-center text-5xl font-semibold md:leading-8 text-center text-blue-900 max-md:text-3xl leading-[48px]">
-            CÁC HẠNG PHÒNG
-
-        </h2>
-        <div class="mt-14 w-full max-md:mt-10 max-md:max-w-full">
-            <!--Các dịch vụ PC-->
-            <div class="hidden md:flex gap-0 max-md:flex-col max-md:gap-0">
-                <div class="flex flex-col w-[33%] max-md:ml-0 max-md:w-full">
-                    <article class=" flex overflow-hidden relative flex-col grow justify-center text-lg font-semibold text-white min-h-[684px] max-md:max-w-full">
-                        <img loading="lazy"
-                             src="./assets/images/Ảnh 1.png"
-                             alt="Thiết kế, thi công nội thất và xây dựng"
-                             class="object-cover  inset-0 size-full  " />
-                        <div class="flex  blur-image flex-col items-start px-14 pt-20 pb-12 max-md:px-5 max-md:max-w-full">
-                            <h3 class="mt-96 text-2xl max-md:mt-10 max-md:max-w-full">Suite Singel Room </h3>
-                            <p class="mt-6  text-opacity-50 max-md:max-w-full">
-                                Very spacious room type with tranquil views over the bustling street. State of the art technology with each room featuring a 49 inch LCD TV and large en suite bathroom. Natural daylight, in room safe. Tea coffee making facilities, minibar, complimentary Wi fi, telephone, alarm clock. Hairdryer, Bathrobe, Storage facilities and slippers, Green tea Natural and Organic bath amenities.
-
-                            </p>
-                            <a href="#" class="flex gap-3 mt-9">
-                                <span class="my-auto">Xem thêm</span>
-                                <img loading="lazy"
-                                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/9acc647bead820972d16638f049e4724d24d25a880cdcc7701391be799dee3e3?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
-                                     alt="Arrow icon" class="shrink-0 w-4 aspect-square" />
-                            </a>
-                        </div>
-                    </article>
-                </div>
-                <div class="flex flex-col w-[33%] max-md:ml-0 max-md:w-full">
-                    <article class=" flex overflow-hidden relative flex-col grow justify-center text-lg font-semibold text-white min-h-[684px] max-md:max-w-full">
-                        <img loading="lazy"
-                             src="./assets/images/Ảnh 1.png"
-                             alt="Thiết kế, thi công nội thất và xây dựng"
-                             class="object-cover  inset-0 size-full  " />
-                        <div class="flex  blur-image flex-col items-start px-14 pt-20 pb-12 max-md:px-5 max-md:max-w-full">
-                            <h3 class="mt-96 text-2xl max-md:mt-10 max-md:max-w-full">
-                                Executive Double Room
-                            </h3>
-                            <p class="mt-6  text-opacity-50 max-md:max-w-full">
-                                Very spacious room type with tranquil views over the bustling street. State of the art technology with each room featuring a 49 inch LCD TV and large en suite bathroom. Natural daylight, in room safe. Tea coffee making facilities, minibar, complimentary Wi fi, telephone, alarm clock. Hairdryer, Bathrobe, Storage facilities and slippers, Green tea Natural and Organic bath amenities.
-
-
-
-                            </p>
-                            <a href="#" class="flex gap-3 mt-9">
-                                <span class="my-auto">Xem thêm</span>
-                                <img loading="lazy"
-                                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/9acc647bead820972d16638f049e4724d24d25a880cdcc7701391be799dee3e3?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
-                                     alt="Arrow icon" class="shrink-0 w-4 aspect-square" />
-                            </a>
-                        </div>
-                    </article>
-                </div>
-                <div class="flex flex-col w-[33%] max-md:ml-0 max-md:w-full">
-                    <article class=" flex overflow-hidden relative flex-col grow justify-center text-lg font-semibold text-white min-h-[684px] max-md:max-w-full">
-                        <img loading="lazy"
-                             src="./assets/images/Ảnh 1.png"
-                             alt="Thiết kế, thi công nội thất và xây dựng"
-                             class="object-cover  inset-0 size-full  " />
-                        <div class="flex  blur-image flex-col items-start px-14 pt-20 pb-12 max-md:px-5 max-md:max-w-full">
-                            <h3 class="mt-96 text-2xl max-md:mt-10 max-md:max-w-full">
-                                Deluxe Single Room
-                            </h3>
-                            <p class="mt-6  text-opacity-50 max-md:max-w-full">
-                                Very spacious room type with tranquil views over the bustling street. State of the art technology with each room featuring a 49 inch LCD TV and large en suite bathroom. Natural daylight, in room safe. Tea coffee making facilities, minibar, complimentary Wi fi, telephone, alarm clock. Hairdryer, Bathrobe, Storage facilities and slippers, Green tea Natural and Organic bath amenities.
-
-
-
-                            </p>
-                            <a href="#" class="flex gap-3 mt-9">
-                                <span class="my-auto">Xem thêm</span>
-                                <img loading="lazy"
-                                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/9acc647bead820972d16638f049e4724d24d25a880cdcc7701391be799dee3e3?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
-                                     alt="Arrow icon" class="shrink-0 w-4 aspect-square" />
-                            </a>
-                        </div>
-                    </article>
-                </div>
-
-            </div>
-            <!--Các dịch vụ mobile-->
-            <div class="flex md:hidden swiper mySwiper_mb">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="flex flex-col w-[100%] max-md:ml-0 max-md:w-full">
-                            <article class=" flex overflow-hidden relative flex-col grow justify-center text-lg font-semibold text-white  max-md:max-w-full">
-                                <img loading="lazy"
-                                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/1fd5b9e18d28f4a0f1ccc16562a8de9a70b8c580ab3616b78660ab05df43a36d?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
-                                     alt="Thiết kế, thi công nội thất và xây dựng"
-                                     class="w-full min-h-[450px] object-cover inset-0   " />
-                                <div class="flex blur-image flex-col items-start px-14 pt-64 pb-12 max-md:px-5 max-md:max-w-full">
-                                    <h3 class=" text-xl max-md:mt-10 max-md:max-w-full">
-                                        Thiết kế, thi công nội thất
-                                        và
-                                        xây dựng
-                                    </h3>
-                                    <a href="#" class="flex gap-3 mt-4">
-                                        <span class="my-auto text-base">Xem thêm</span>
-                                        <img loading="lazy"
-                                             src="https://cdn.builder.io/api/v1/image/assets/TEMP/9acc647bead820972d16638f049e4724d24d25a880cdcc7701391be799dee3e3?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
-                                             alt="Arrow icon" class="shrink-0 w-4 aspect-square" />
-                                    </a>
-                                </div>
-                            </article>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="flex flex-col w-[100%] max-md:ml-0 max-md:w-full">
-                            <article class=" flex overflow-hidden relative flex-col grow justify-center text-lg font-semibold text-white  max-md:max-w-full">
-                                <img loading="lazy"
-                                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/3ec634847fc3fd906efa4bab0b0dbfd4129a759e6072f5f478442eacab394d92?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
-                                     alt="Thiết kế, thi công nội thất và xây dựng"
-                                     class="w-full min-h-[450px] object-cover inset-0   " />
-                                <div class="flex blur-image flex-col items-start px-14 pt-64 pb-12 max-md:px-5 max-md:max-w-full">
-                                    <h3 class=" text-xl max-md:mt-10 max-md:max-w-full">Sản xuất nội thất gỗ</h3>
-                                    <a href="#" class="flex gap-3 mt-4">
-                                        <span class="my-auto text-base">Xem thêm</span>
-                                        <img loading="lazy"
-                                             src="https://cdn.builder.io/api/v1/image/assets/TEMP/9acc647bead820972d16638f049e4724d24d25a880cdcc7701391be799dee3e3?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
-                                             alt="Arrow icon" class="shrink-0 w-4 aspect-square" />
-                                    </a>
-                                </div>
-                            </article>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="flex flex-col w-[100%] max-md:ml-0 max-md:w-full">
-                            <article class=" flex overflow-hidden relative flex-col grow justify-center text-lg font-semibold text-white  max-md:max-w-full">
-                                <img loading="lazy"
-                                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/9f4b748d0c8e90d6af4e33e446457cde163a3868ca5742a42205a30a1e06834a?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
-                                     alt="Thiết kế, thi công nội thất và xây dựng"
-                                     class="w-full min-h-[450px] object-cover inset-0   " />
-                                <div class="flex blur-image flex-col items-start px-14 pt-64 pb-12 max-md:px-5 max-md:max-w-full">
-                                    <h3 class=" text-xl max-md:mt-10 max-md:max-w-full">Bảo dưỡng, bảo trì</h3>
-                                    <a href="#" class="flex gap-3 mt-4">
-                                        <span class="text-base my-auto">Xem thêm</span>
-                                        <img loading="lazy"
-                                             src="https://cdn.builder.io/api/v1/image/assets/TEMP/9acc647bead820972d16638f049e4724d24d25a880cdcc7701391be799dee3e3?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
-                                             alt="Arrow icon" class="shrink-0 w-4 aspect-square" />
-                                    </a>
-                                </div>
-                            </article>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-pagination"></div>
-            </div>
-        </div>
-    </section>
-    <!--Các khách sạn hoàn thành-->
-    <section class="py-10 md:py-20 flex flex-col">
-
-        <header class="max-content md:px- px-5 flex md:gap-5 gap-2 self-center  w-full font-semibold  justify-center ">
-
-            <div class="mt-2 flex-auto text-5xl text-blue-900 md:leading-[60px] max-md:max-w-full max-md:text-3xl leading-[48px] w-1/2">
-                <div class=" shrink-0 h-[0.5px] bg-orange-400 border-2 md:border-4 border-[#FCB040] border-solid max-md:max-w-full w-[100px] md:w-[150px]">
-                </div>
-                <h2 class="mt-3">CÁC KHÁCH SẠN ĐÃ HOÀN THÀNH</h2>
-            </div>
-            <div class="flex gap-3 self-start px-9 py-3.5 text-base md:text-lg text-white bg-orange-400 rounded-[500px] max-md:px-5">
-                <div class="my-auto">Xem thêm</div>
-                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/6e047264100cf415308bacc4fd4314b43bbd5ff80f09d38a21e01e95211df79b?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
-                     alt="" class="shrink-0 w-4 aspect-square" />
-            </div>
-        </header>
-        <div class="md:px-0 px-5 mt-20 w-full max-md:mt-10 max-md:max-w-full">
-            <!--khách sạn hoàn thành PC-->
-            <div class="hidden md:flex gap-0 max-md:flex-col ">
-                <article class="flex flex-col relative w-3/12 max-md:ml-0 max-md:w-full">
-                    <div class="box flex overflow-hidden relative flex-col grow pt-20 font-semibold min-h-[646px] max-md:max-w-full">
-                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/fad6c138469012634ea0a3c55c2e2557964279557893bc7b08bef4c7eefa779e?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
-                             alt="Project image" class="object-cover absolute inset-0 size-full" />
-                        <h3 class="box2 absolute bottom-10 left-5 text-white font-bold text-3xl items-start max-md:px-5 max-md:pt-10 max-md:max-w-full">
-                            Tên khách sạn này
-                        </h3>
-
-                        <div class="additional-content hidden absolute bottom-0 w-[100%] flex-col items-start py-8 pl-6 bg-blur max-md:px-5 max-md:mt-10 max-md:max-w-full">
-                            <h3 class="text-3xl text-blue-900">Tên khách sạn này</h3>
-                            <div class="flex gap-2.5 mt-3 text-lg text-orange-400">
-                                <div class="flex-auto my-auto">Xem thêm</div>
-                                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/3b9a208927d2249c90ab32774bfa22a04d675130eea0ebb486dcfa18b5d62967?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
-                                     alt="" class="shrink-0 w-4 aspect-square" />
-                            </div>
-                        </div>
-                    </div>
-                </article>
-                <article class="flex flex-col ml-5 w-3/12 max-md:ml-0 max-md:w-full">
-
-                    <div class="box flex overflow-hidden relative flex-col grow pt-20 font-semibold min-h-[646px] max-md:max-w-full">
-                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/a43b9a041f40f3a5603f41d7e8f115a7b0ebf7c23f189b155c13fb04ff283b29?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
-                             alt="Project image" class="object-cover absolute inset-0 size-full" />
-                        <h3 class="box2 absolute bottom-10 left-5 text-white font-bold text-3xl items-start max-md:px-5 max-md:pt-10 max-md:max-w-full">
-                            Tên khách sạn này
-                        </h3>
-
-                        <div class="additional-content hidden absolute bottom-0 w-[100%] flex-col items-start py-8 pl-6 bg-blur max-md:px-5 max-md:mt-10 max-md:max-w-full">
-                            <h3 class="text-3xl text-blue-900">Tên khách sạn này</h3>
-                            <div class="flex gap-2.5 mt-3 text-lg text-orange-400">
-                                <div class="flex-auto my-auto">Xem thêm</div>
-                                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/3b9a208927d2249c90ab32774bfa22a04d675130eea0ebb486dcfa18b5d62967?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
-                                     alt="" class="shrink-0 w-4 aspect-square" />
-                            </div>
-                        </div>
-                    </div>
-                </article>
-                <article class="flex flex-col relative w-3/12 max-md:ml-0 max-md:w-full">
-                    <div class="box flex overflow-hidden relative flex-col grow pt-20 font-semibold min-h-[646px] max-md:max-w-full">
-                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/fad6c138469012634ea0a3c55c2e2557964279557893bc7b08bef4c7eefa779e?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
-                             alt="Project image" class="object-cover absolute inset-0 size-full" />
-                        <h3 class="box2 absolute bottom-10 left-5 text-white font-bold text-3xl items-start max-md:px-5 max-md:pt-10 max-md:max-w-full">
-                            Tên khách sạn này
-                        </h3>
-
-                        <div class="additional-content hidden absolute bottom-0 w-[100%] flex-col items-start py-8 pl-6 bg-blur max-md:px-5 max-md:mt-10 max-md:max-w-full">
-                            <h3 class="text-3xl text-blue-900">Tên khách sạn này</h3>
-                            <div class="flex gap-2.5 mt-3 text-lg text-orange-400">
-                                <div class="flex-auto my-auto">Xem thêm</div>
-                                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/3b9a208927d2249c90ab32774bfa22a04d675130eea0ebb486dcfa18b5d62967?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
-                                     alt="" class="shrink-0 w-4 aspect-square" />
-                            </div>
-                        </div>
-                    </div>
-                </article>
-                <article class="flex flex-col relative w-3/12 max-md:ml-0 max-md:w-full">
-                    <div class="box flex overflow-hidden relative flex-col grow pt-20 font-semibold min-h-[646px] max-md:max-w-full">
-                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/fad6c138469012634ea0a3c55c2e2557964279557893bc7b08bef4c7eefa779e?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
-                             alt="Project image" class="object-cover absolute inset-0 size-full" />
-                        <h3 class="box2 absolute bottom-10 left-5 text-white font-bold text-3xl items-start max-md:px-5 max-md:pt-10 max-md:max-w-full">
-                            Tên khách sạn này
-                        </h3>
-
-                        <div class="additional-content hidden absolute bottom-0 w-[100%] flex-col items-start py-8 pl-6 bg-blur max-md:px-5 max-md:mt-10 max-md:max-w-full">
-                            <h3 class="text-3xl text-blue-900">Tên khách sạn này</h3>
-                            <div class="flex gap-2.5 mt-3 text-lg text-orange-400">
-                                <div class="flex-auto my-auto">Xem thêm</div>
-                                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/3b9a208927d2249c90ab32774bfa22a04d675130eea0ebb486dcfa18b5d62967?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
-                                     alt="" class="shrink-0 w-4 aspect-square" />
-                            </div>
-                        </div>
-                    </div>
-                </article>
-            </div>
-            <!--khách sạn hoàn thành mobile-->
-            <div class="flex md:hidden swiper mySwiper_mb">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <article class="flex flex-col relative max-md:ml-0 max-md:w-full">
-                            <div class="flex overflow-hidden relative flex-col grow font-semibold  max-md:max-w-full">
-                                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/fad6c138469012634ea0a3c55c2e2557964279557893bc7b08bef4c7eefa779e?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
-                                     alt="Project image" class="object-cover inset-0 w-full size-full" />
-                                <div class="flex absolute bottom-[0px] w-[100%] flex-col items-start py-6 pr-20 pl-9  bg-blur max-md:px-5 max-md:mt-0 max-md:max-w-full">
-                                    <h3 class="text-xl md:text-3xl text-blue-900">Tên khách sạn này</h3>
-                                    <div class="flex gap-2.5 mt-3 text-lg text-orange-400">
-                                        <div class="flex-auto my-auto text-base">Xem thêm</div>
-                                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/3b9a208927d2249c90ab32774bfa22a04d675130eea0ebb486dcfa18b5d62967?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
-                                             alt="" class="shrink-0 w-4 aspect-square" />
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="swiper-slide">
-                        <article class="flex flex-col relative max-md:ml-0 max-md:w-full">
-                            <div class="flex overflow-hidden relative flex-col grow font-semibold  max-md:max-w-full">
-                                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/a43b9a041f40f3a5603f41d7e8f115a7b0ebf7c23f189b155c13fb04ff283b29?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
-                                     alt="Project image" class="object-cover inset-0 w-full size-full" />
-                                <div class="flex absolute bottom-[0px] w-[100%] flex-col items-start py-6 pr-20 pl-9  bg-blur max-md:px-5 max-md:mt-0 max-md:max-w-full">
-                                    <h3 class="text-xl md:text-3xl text-blue-900">Tên khách sạn này</h3>
-                                    <div class="flex gap-2.5 mt-3 text-lg text-orange-400">
-                                        <div class="flex-auto my-auto text-base">Xem thêm</div>
-                                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/3b9a208927d2249c90ab32774bfa22a04d675130eea0ebb486dcfa18b5d62967?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
-                                             alt="" class="shrink-0 w-4 aspect-square" />
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-pagination"></div>
-            </div>
-
-        </div>
-    </section>
-    <!--Cùng DTF tạo nên không gian-->
-    <section class=" flex overflow-hidden relative flex-col justify-center text-white min-h-[380px]">
-        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/b65789ee105192b906d8eb8b6d408410798a7e485fb62835f22390a2c941f233?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
-             alt="Background image" class="object-cover absolute  inset-0 size-full" />
-        <div class="flex absolute top-0 bottom-0 justify-center items-center  w-full bg-black bg-opacity-50 max-md:px-5 max-md:max-w-full">
-            <div class="flex flex-col mt-7 mb-1.5 max-w-full w-[1225px]">
-                <h2 class=" md:text-5xl font-semibold leading-[60px] max-md:max-w-full max-md:text-2xl max-md:leading-[32px]">
-                    Cùng DTF Hennessy tạo nên không gian nghỉ dưỡng độc đáo
-                </h2>
-                <p class="mt-4 md:mt-7 text-base md:text-lg max-md:max-w-full">
-                    Hãy đồng hành cùng DTF kiến tạo không gian khách sạn đẳng cấp, nâng cao trải nghiệm khách hàng, tối ưu hiệu quả kinh doanh và vươn tới thành công.
-
-
-
-
-
-                    <br />
-                    
-                </p>
-            </div>
-        </div>
-    </section>
-    @RenderBody()
-
-    <!--Form đăng ký-->
-    <section class="max-content py-10 md:py-20 flex flex-col px-5">
-        <div class=" shrink-0 h-[0.5px] bg-orange-400 border-2 md:border-4 border-[#FCB040] border-solid max-md:max-w-full w-[100px] md:w-[150px]">
-        </div>
-        <h1 class="mt-3 w-full text-5xl font-semibold text-blue-900 md:leading-[60px] max-md:max-w-full max-md:text-3xl leading-[48px]">
-            Đăng ký nhận tư vấn từ DTF
-        </h1>
-        <p class="mt-4 md:mt-7 w-full text-lg text-neutral-700 max-md:max-w-full">
-            Quý khách vui lòng liên hệ với DTF qua điện thoại, email hoặc điền vào mãu thông tin để được tư vấn.
-        </p>
-        <div class="mt-16 w-full max-md:mt-6 max-md:max-w-full">
-            <div class="relative flex gap-5 max-md:flex-col max-md:gap-0">
-                <figure class="hidden md:flex flex-col  w-[56%] max-md:ml-0 max-md:w-full ">
-                    <img loading="lazy"
-                         src="https://cdn.builder.io/api/v1/image/assets/TEMP/c759435f6e5e2f1ab32b923436f9e2a93b7ab1ebc3ff8763b329df47527d216c?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
-                         alt="" class="grow w-full aspect-[1.3] max-md:max-w-full" />
-                </figure>
-                <div class="flex md:absolute top-[11%] left-[50%] ">
-                    <form class="flex flex-col py-8 md:px-16 md:py-20  w-full text-base bg-stone-200 text-neutral-700 text-opacity-50 rounded-lg max-md:px-5 max-md:mt-0 max-md:max-w-full">
-                        <div class="flex gap-5 md:mx-4  max-md:flex-wrap max-md:mt-0 max-md:mr-0 max-md:max-w-full">
-                            <label for="name" class="sr-only">Họ tên</label>
-                            <input type="text" id="name" placeholder="Họ tên" aria-label="Họ tên"
-                                   class="w-full justify-center items-start px-2.5 py-2.5 bg-white rounded-md max-md:pr-5" />
-                            <label for="phone" class="sr-only">Số điện thoại</label>
-                            <input type="tel" id="phone" placeholder="Số điện thoại" aria-label="Số điện thoại"
-                                   class="w-full justify-center items-start p-2.5 bg-white rounded-md max-md:pr-5" />
-                        </div>
-                        <label for="email" class="sr-only">Email</label>
-                        <input type="email" id="email" placeholder="Email" aria-label="Email"
-                               class="justify-center items-start px-2.5 py-2.5 md:mx-4 mt-5 whitespace-nowrap bg-white rounded-md max-md:pr-5 max-md:mr-0 max-md:max-w-full" />
-                        <div class="flex gap-5 px-3 py-2.5 md:mx-4 mt-5 bg-white rounded-md max-md:flex-wrap max-md:mr-0 max-md:max-w-full">
-                            <input type="date" class="flex-auto" />
-                            <!-- <img loading="lazy"
-                                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/4776946ddb1c0d5c3314848c37f4fd370439afa7882958d79b50ff01c4046e1b?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
-                                    alt="" class="shrink-0 self-start w-4 aspect-square" /> -->
-                        </div>
-
-                        <button type="submit"
-                                class="flex gap-4 self-end px-7 py-3.5 mt-7 text-base md:text-lg font-semibold text-white background_second rounded-[500px] max-md:px-5 max-md:mr-0">
-                            <span>Nhận tư vấn</span>
-                            <img loading="lazy"
-                                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/1c42535ee8e1689ac11dccbe6015902c23fbf964e0bea6c7117991c9acc5311e?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
-                                 alt="" class="shrink-0 self-start w-6 aspect-square pt-1" />
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
+    
     <!--Footer-->
     <section class="flex overflow-hidden relative flex-col justify-center min-h-[464px]">
         <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/cc7121df96ef0bff6a448306fe4a4db41e5bf3a3d6ae742b0699b563ccc5e38f?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
@@ -675,7 +216,7 @@
                     <div class="flex flex-col w-[50%] max-md:ml-0 max-md:w-full">
                         <div class="flex flex-col grow items-start mt-1 max-md:mt-6 max-md:max-w-full">
                             <a href="">
-                                <img src="./assets/images/Logo.png" alt="DTF Việt Nam logo"
+                                <img src="~/assets/images/Logo.png" alt="DTF Việt Nam logo"
                                      class="max-w-full aspect-[2.86] w-[90px] md:w-[120px]" />
                             </a>
                             <h2 class="self-stretch mt-4 md:mt-7 text-xl md:text-2xl font-semibold text-white max-md:max-w-full">

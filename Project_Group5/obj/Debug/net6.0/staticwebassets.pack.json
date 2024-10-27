@@ -217,6 +217,10 @@
       "PackagePath": "staticwebassets\\assets\\images\\Banner_home.png"
     },
     {
+      "Id": "C:\\Users\\Nhat Anh\\Desktop\\prnn\\Project_Group5\\wwwroot\\assets\\images\\Cong-vien-1-1-scaled.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\Cong-vien-1-1-scaled.jpg"
+    },
+    {
       "Id": "C:\\Users\\Nhat Anh\\Desktop\\prnn\\Project_Group5\\wwwroot\\assets\\images\\Line 11.png",
       "PackagePath": "staticwebassets\\assets\\images\\Line 11.png"
     },
@@ -233,12 +237,44 @@
       "PackagePath": "staticwebassets\\assets\\images\\Mốc.png"
     },
     {
+      "Id": "C:\\Users\\Nhat Anh\\Desktop\\prnn\\Project_Group5\\wwwroot\\assets\\images\\bacgiang.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\bacgiang.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nhat Anh\\Desktop\\prnn\\Project_Group5\\wwwroot\\assets\\images\\bacninh.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\bacninh.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nhat Anh\\Desktop\\prnn\\Project_Group5\\wwwroot\\assets\\images\\doubleroom.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\doubleroom.jpg"
+    },
+    {
       "Id": "C:\\Users\\Nhat Anh\\Desktop\\prnn\\Project_Group5\\wwwroot\\assets\\images\\downward-arrow 3.png",
       "PackagePath": "staticwebassets\\assets\\images\\downward-arrow 3.png"
     },
     {
+      "Id": "C:\\Users\\Nhat Anh\\Desktop\\prnn\\Project_Group5\\wwwroot\\assets\\images\\family.png",
+      "PackagePath": "staticwebassets\\assets\\images\\family.png"
+    },
+    {
+      "Id": "C:\\Users\\Nhat Anh\\Desktop\\prnn\\Project_Group5\\wwwroot\\assets\\images\\kimboi.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\kimboi.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nhat Anh\\Desktop\\prnn\\Project_Group5\\wwwroot\\assets\\images\\muine.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\muine.jpg"
+    },
+    {
       "Id": "C:\\Users\\Nhat Anh\\Desktop\\prnn\\Project_Group5\\wwwroot\\assets\\images\\office 1.png",
       "PackagePath": "staticwebassets\\assets\\images\\office 1.png"
+    },
+    {
+      "Id": "C:\\Users\\Nhat Anh\\Desktop\\prnn\\Project_Group5\\wwwroot\\assets\\images\\phongdon.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\phongdon.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nhat Anh\\Desktop\\prnn\\Project_Group5\\wwwroot\\assets\\images\\phonghangsang.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\phonghangsang.jpg"
     },
     {
       "Id": "C:\\Users\\Nhat Anh\\Desktop\\prnn\\Project_Group5\\wwwroot\\assets\\images\\search 1.png",
@@ -317,8 +353,8 @@
       "PackagePath": "staticwebassets\\assets\\images\\tintuc\\tuyetvoiqua.png"
     },
     {
-      "Id": "C:\\Users\\Nhat Anh\\Desktop\\prnn\\Project_Group5\\wwwroot\\assets\\images\\vietnam 1.png",
-      "PackagePath": "staticwebassets\\assets\\images\\vietnam 1.png"
+      "Id": "C:\\Users\\Nhat Anh\\Desktop\\prnn\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\vietnam.png",
+      "PackagePath": "staticwebassets\\assets\\images\\tintuc\\vietnam.png"
     },
     {
       "Id": "C:\\Users\\Nhat Anh\\Desktop\\prnn\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\1.png",
