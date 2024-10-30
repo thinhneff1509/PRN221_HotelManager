@@ -20,5 +20,10 @@ namespace Project_Group5.Pages.Rooms
             // Fetch all rooms from the database
             Rooms = await _context.RoomTypes.Include(r => r.Rooms).ThenInclude(r => r.ImageRooms).ToListAsync();
         }
+
+        public async Task OnPostAsync()
+        {
+
+        }
     }
 }

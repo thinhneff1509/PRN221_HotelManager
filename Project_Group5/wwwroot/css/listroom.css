@@ -109,6 +109,11 @@ select {
     border: 1px solid #ddd;
 }
 
+.selected-room-list {
+    max-height: 800px;
+    overflow-y: auto;
+}
+
 .selected-room p {
     margin: 10px 0;
 }
