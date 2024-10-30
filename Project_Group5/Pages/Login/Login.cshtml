@@ -1,0 +1,84 @@
+﻿@page
+@model Project_Group5.Pages.Login.LoginModel
+@{
+}
+<div class="container">
+    <!--================ Start Header Menu Area =================-->
+    <header class="header_area">
+        <div class="main_menu">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container">
+                    <a class="navbar-brand logo_h" asp-page="/Index"><img src="~/img/logo.png" alt=""></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav menu_nav ml-auto mr-auto">
+                            <li class="nav-item"><a class="nav-link" asp-page="/Index">Home</a></li>
+                            <li class="nav-item submenu dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Shop</a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item"><a class="nav-link" asp-page="/Category">Shop Category</a></li>
+                                    <li class="nav-item"><a class="nav-link" asp-page="/SingleProduct">Product Details</a></li>
+                                    <li class="nav-item"><a class="nav-link" asp-page="/Checkout">Product Checkout</a></li>
+                                    <li class="nav-item"><a class="nav-link" asp-page="/Cart">Shopping Cart</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" asp-page="/Contact">Contact</a></li>
+                        </ul>
+
+                        <ul class="nav-shop">
+                            <li class="nav-item"><button><i class="ti-search"></i></button></li>
+                            <li class="nav-item"><button><i class="ti-shopping-cart"></i><span class="nav-shop__circle">3</span></button></li>
+                            <li class="nav-item"><a class="button button-header" href="#">Buy Now</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!--================ End Header Menu Area =================-->
+    <!--================ Start Login Box Area =================-->
+    <section class="login_box_area section-margin">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="login_box_img">
+                        <div class="hover">
+                            <h4>New to our website?</h4>
+                            <p>There are advances being made in science and technology every day, and a good example of this is the progress we see in</p>
+                            <a class="button button-account" asp-page="/Register">Create an Account</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="login_form_inner">
+                        <h3>Log in to enter</h3>
+                        <form method="post" asp-action="Login">
+                            <div class="col-md-12 form-group">
+                                <input type="text" class="form-control" name="Username" placeholder="Username" required>
+                            </div>
+                            <div class="col-md-12 form-group">
+                                <input type="password" class="form-control" name="Password" placeholder="Password" required>
+                            </div>
+                            <div class="col-md-12 form-group">
+                                <div class="creat_account">
+                                    <input type="checkbox" id="f-option2" name="RememberMe">
+                                    <label for="f-option2">Keep me logged in</label>
+                                </div>
+                            </div>
+                            <div class="col-md-12 form-group">
+                                <button type="submit" class="button button-login w-100">Log In</button>
+                                <a href="#">Forgot Password?</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================ End Login Box Area =================-->
+</div>
