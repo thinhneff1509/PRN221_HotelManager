@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "ZW5SgGiRUCkYlfSVVOP8tbaG+Dtf9foaBYMnx8JetEiCeJIAEH1BO7cyQmWh8nsUOusdaYuudmIEBGMcTKQUJg==",
+  "dgSpecHash": "9wg378L8e4o5q0aDluyaYJITXkiqKPR0gG+9jGknpRaRdz+Z6dkJBt2/OOYypqXOuVX34Ts7UfY9yt99LO5fPg==",
   "success": true,
-  "projectFilePath": "D:\\Ki 7\\PRN221_Retake\\Assignment_Group5\\Project_Group5\\Project_Group5.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\Project_Group5.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\MY PC\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.29\\microsoft.windowsdesktop.app.ref.6.0.29.nupkg.sha512",
+    "C:\\Users\\MY PC\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.29\\microsoft.netcore.app.ref.6.0.29.nupkg.sha512",
+    "C:\\Users\\MY PC\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.29\\microsoft.aspnetcore.app.ref.6.0.29.nupkg.sha512",
+    "C:\\Users\\MY PC\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.29\\microsoft.netcore.app.host.win-x64.6.0.29.nupkg.sha512"
+  ],
   "logs": []
 }

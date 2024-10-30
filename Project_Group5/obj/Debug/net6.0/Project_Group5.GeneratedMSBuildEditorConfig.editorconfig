@@ -9,39 +9,39 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Project_Group5
 build_property.RootNamespace = Project_Group5
-build_property.ProjectDir = D:\Ki 7\PRN221_Retake\Assignment_Group5\Project_Group5\
+build_property.ProjectDir = C:\Users\MY PC\Documents\GitHub\PRN221_HotelManager\Project_Group5\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\Ki 7\PRN221_Retake\Assignment_Group5\Project_Group5
+build_property.MSBuildProjectDirectory = C:\Users\MY PC\Documents\GitHub\PRN221_HotelManager\Project_Group5
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/Ki 7/PRN221_Retake/Assignment_Group5/Project_Group5/Pages/Error.cshtml]
+[C:/Users/MY PC/Documents/GitHub/PRN221_HotelManager/Project_Group5/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Ki 7/PRN221_Retake/Assignment_Group5/Project_Group5/Pages/Index.cshtml]
+[C:/Users/MY PC/Documents/GitHub/PRN221_HotelManager/Project_Group5/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Ki 7/PRN221_Retake/Assignment_Group5/Project_Group5/Pages/Privacy.cshtml]
+[C:/Users/MY PC/Documents/GitHub/PRN221_HotelManager/Project_Group5/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Ki 7/PRN221_Retake/Assignment_Group5/Project_Group5/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/MY PC/Documents/GitHub/PRN221_HotelManager/Project_Group5/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Ki 7/PRN221_Retake/Assignment_Group5/Project_Group5/Pages/_ViewImports.cshtml]
+[C:/Users/MY PC/Documents/GitHub/PRN221_HotelManager/Project_Group5/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Ki 7/PRN221_Retake/Assignment_Group5/Project_Group5/Pages/_ViewStart.cshtml]
+[C:/Users/MY PC/Documents/GitHub/PRN221_HotelManager/Project_Group5/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Ki 7/PRN221_Retake/Assignment_Group5/Project_Group5/Pages/Shared/_Layout.cshtml]
+[C:/Users/MY PC/Documents/GitHub/PRN221_HotelManager/Project_Group5/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-gf8ki7huqi
