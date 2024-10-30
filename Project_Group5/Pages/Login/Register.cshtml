@@ -68,6 +68,10 @@
                         <h3>Create an account</h3>
                         <form method="post">
                             <div class="col-md-12 form-group">
+                                <input type="text" class="form-control" asp-for="Name" placeholder="Name" />
+                                <span asp-validation-for="Name" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-12 form-group">
                                 <input type="text" class="form-control" asp-for="Username" placeholder="Username" />
                                 <span asp-validation-for="Username" class="text-danger"></span>
                             </div>
@@ -75,6 +79,17 @@
                                 <input type="email" class="form-control" asp-for="Email" placeholder="Email Address" />
                                 <span asp-validation-for="Email" class="text-danger"></span>
                             </div>
+                            <div class="col-md-12 form-group">
+                                <input type="date" class="form-control" asp-for="Dob" placeholder="Date of Birth" />
+                                <span asp-validation-for="Dob" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-12 form-group">
+                                <input type="text" class="form-control" asp-for="Phone" placeholder="Phone" />
+                                <span asp-validation-for="Phone" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-12 form-group">
+                                <input type="text" class="form-control" asp-for="Address" placeholder="Address" />
+                                <span asp-validation-for="Address" class="text-danger"></span>
                             <div class="col-md-12 form-group">
                                 <input type="password" class="form-control" asp-for="Password" placeholder="Password" />
                                 <span asp-validation-for="Password" class="text-danger"></span>
@@ -96,12 +111,6 @@
             </div>
         </div>
     </section>
-    <!--================End Register Box Area =================-->
-    <!--================ Start footer Area  =================-->
-    <footer>
-        <!-- Your existing footer code here -->
-    </footer>
-    <!--================ End footer Area =================-->
 
     <script src="~/vendors/jquery/jquery-3.2.1.min.js"></script>
     <script src="~/vendors/bootstrap/bootstrap.bundle.min.js"></script>

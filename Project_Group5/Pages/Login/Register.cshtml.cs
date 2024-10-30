@@ -25,19 +25,45 @@ namespace Project_Group5.Pages.Login
         public string Password { get; set; }
 
         [BindProperty]
+        public DateTime? Dob { get; set; }
+
+        [BindProperty]
+        public string Phone { get; set; }
+
+        [BindProperty]
+        public string Address { get; set; }
+
+        [BindProperty]
+        public string Name { get; set; }
+
+        [BindProperty]
         public string ConfirmPassword { get; set; }
 
         public string ErrorMessage { get; set; }
 
         public async Task<IActionResult> OnPostAsync()
         {
-            // Kiểm tra Username không rỗng
+            if (string.IsNullOrWhiteSpace(Name))
+            {
+                ModelState.AddModelError("Name", "Name is required.");
+            }
             if (string.IsNullOrWhiteSpace(Username))
             {
                 ModelState.AddModelError("Username", "Username is required.");
             }
+            if (!Dob.HasValue)
+            {
+                ModelState.AddModelError("Dob", "Date of Birth is required.");
+            }
+            if (string.IsNullOrWhiteSpace(Phone))
+            {
+                ModelState.AddModelError("Phone", "Phone number is required.");
+            }
+            if (string.IsNullOrWhiteSpace(Address))
+            {
+                ModelState.AddModelError("Address", "Address is required.");
+            }
 
-            // Kiểm tra Email không rỗng và định dạng hợp lệ
             if (string.IsNullOrWhiteSpace(Email))
             {
                 ModelState.AddModelError("Email", "Email is required.");
@@ -79,20 +105,24 @@ namespace Project_Group5.Pages.Login
                 return Page();
             }
 
-            // Tạo khách hàng mới
             var customer = new Customer
             {
+                Name = Name,
+                Dob = Dob,
+                Phone = Phone,
+                Address = Address,
                 Username = Username,
                 Email = Email,
-                Password = Password, // Trong thực tế, mật khẩu cần mã hóa
+                Password = Password, 
                 RegisterDate = DateTime.Now,
-                RoleId = 1 // Giả sử 2 là role mặc định cho người dùng
+                RoleId = 1 
             };
 
             _context.Customers.Add(customer);
             await _context.SaveChangesAsync();
 
-            return RedirectToPage("/Login");
+            return RedirectToPage("/Login/Login");
+
         }
     }
 }
