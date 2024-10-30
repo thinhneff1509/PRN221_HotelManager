@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\Project_Group5.csproj": {}
+    "d:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\Project_Group5.csproj": {}
   },
   "projects": {
-    "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\Project_Group5.csproj": {
+    "d:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\Project_Group5.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\Project_Group5.csproj",
+        "projectUniqueName": "d:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\Project_Group5.csproj",
         "projectName": "Project_Group5",
-        "projectPath": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\Project_Group5.csproj",
+        "projectPath": "d:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\Project_Group5.csproj",
         "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-        "outputPath": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\obj\\",
+        "outputPath": "d:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",

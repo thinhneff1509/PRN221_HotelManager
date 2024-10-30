@@ -1,4 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using System;
+using System.Collections.Generic;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace Project_Group5.Models
 {
@@ -29,9 +32,9 @@ namespace Project_Group5.Models
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             IConfiguration config = new ConfigurationBuilder()
-                           .SetBasePath(Directory.GetCurrentDirectory())
-                           .AddJsonFile("appsettings.json", true, true)
-                           .Build();
+               .SetBasePath(Directory.GetCurrentDirectory())
+               .AddJsonFile("appsettings.json", true, true)
+               .Build();
             var strConn = config["ConnectionStrings:MyDatabase"];
             optionsBuilder.UseSqlServer(strConn);
         }
@@ -137,11 +140,11 @@ namespace Project_Group5.Models
                 entity.Property(e => e.BookingId).HasColumnName("booking_id");
 
                 entity.Property(e => e.Content)
-                    .HasMaxLength(150)
+                    .HasMaxLength(255)
                     .HasColumnName("content");
 
                 entity.Property(e => e.Name)
-                    .HasMaxLength(50)
+                    .HasMaxLength(255)
                     .HasColumnName("name");
 
                 entity.HasOne(d => d.Booking)
