@@ -1,44 +1,60 @@
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Project_Group5.Models;
-using Project_Group5.Repositor�es;
-using Project_Group5.Repositor�es.Interfaces;
+using Project_Group5.Repositoríes;
+using Project_Group5.Repositoríes.Interfaces;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 namespace Project_Group5
 {
-    public class Program
-    {
-        public static void Main(string[] args)
-        {
-            var builder = WebApplication.CreateBuilder(args);
+	public class Program
+	{
+		public static void Main(string[] args)
+		{
+			var builder = WebApplication.CreateBuilder(args);
 
-            // Register your DbContext with connection string
-            builder.Services.AddDbContext<Fall24_SE1745_PRN221_Group5Context>(options =>
-                options.UseSqlServer(builder.Configuration.GetConnectionString("MyDatabase")));
+			// Đăng ký DbContext với chuỗi kết nối
+			builder.Services.AddDbContext<Fall24_SE1745_PRN221_Group5Context>(options =>
+				options.UseSqlServer(builder.Configuration.GetConnectionString("MyDatabase")));
 
-            // Add services to the container.
-            builder.Services.AddRazorPages();
-            builder.Services.AddScoped<IRoomRepository, RoomRepository>();
+			// Đăng ký Razor Pages và các dịch vụ cần thiết
+			builder.Services.AddRazorPages();
 
-            var app = builder.Build();
+			// Đăng ký Repository
+			builder.Services.AddScoped<IRoomRepository, RoomRepository>();
 
-            // Configure the HTTP request pipeline.
-            if (!app.Environment.IsDevelopment())
-            {
-                app.UseExceptionHandler("/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-                app.UseHsts();
-            }
+			// Cấu hình Authentication sử dụng Cookie
+			builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+				.AddCookie(options =>
+				{
+					options.LoginPath = "/Login"; // Đường dẫn đến trang đăng nhập
+					options.LogoutPath = "/Logout"; // Đường dẫn để đăng xuất
+					options.AccessDeniedPath = "/AccessDenied"; // Đường dẫn khi không có quyền truy cập
+				});
 
-            app.UseHttpsRedirection();
-            app.UseStaticFiles();
+			// Cấu hình Authorization
+			builder.Services.AddAuthorization();
 
-            app.UseRouting();
+			var app = builder.Build();
 
-            app.UseAuthorization();
+			// Cấu hình HTTP request pipeline
+			if (!app.Environment.IsDevelopment())
+			{
+				app.UseExceptionHandler("/Error");
+				app.UseHsts();
+			}
 
-            app.MapRazorPages();
+			app.UseHttpsRedirection();
+			app.UseStaticFiles();
 
-            app.Run();
-        }
-    }
+			app.UseRouting();
+
+			// Thêm Authentication và Authorization vào pipeline
+			app.UseAuthentication();
+			app.UseAuthorization();
+
+			app.MapRazorPages();
+
+			app.Run();
+		}
+	}
 }

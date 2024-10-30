@@ -7,6 +7,7 @@ namespace Project_Group5.Models
     {
         public Booking()
         {
+            Discounts = new HashSet<Discount>();
             Payments = new HashSet<Payment>();
             ServiceRegistrations = new HashSet<ServiceRegistration>();
         }
@@ -22,6 +23,7 @@ namespace Project_Group5.Models
 
         public virtual Customer? Customer { get; set; }
         public virtual Room? Room { get; set; }
+        public virtual ICollection<Discount> Discounts { get; set; }
         public virtual ICollection<Payment> Payments { get; set; }
         public virtual ICollection<ServiceRegistration> ServiceRegistrations { get; set; }
     }

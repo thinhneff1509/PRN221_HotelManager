@@ -1,25 +1,25 @@
-﻿@page
+﻿@page "/Home"
 @model Project_Group5.Pages.Homepage.HomeModel
 @{
+Layout = "_Layout";
 }
-
 
 <!--Banner-->
 <section id="banner" class="z-30 flex-col items-stretch overflow-hidden justify-center pt-[62px] md:pt-[72px]">
     <div class="swiper mySwiper_mb">
         <div class="swiper-wrapper">
-            class="text-center"
+
             <div class="swiper-slide">
                 <a href=@@Url.Content(item.Link) target="_blank">
                     <img class="z-1 banner-img w-full object-cover inset-0 blur-image_banner"
-                         src="./assets/images/Ảnh 2.png" alt="" />
+                         src="~/assets/images/Cong-vien-1-1-scaled.jpg" alt="" />
                 </a>
                 <div style="width:100vw; height:100vh"
                      class=" absolute top-0 left-0 bg-black bg-opacity-30 flex flex-col items-stretch"></div>
                 <div class="banner-content ">
                     <p class="banner-title "></p>
                     <p class="banner-title uppercase ">
-                        DTF - Đơn vị thiết kế, thi công nội thất uy tín hàng đầu
+                        DTF Hennessy - Đơn vị cung cấp hệ thống khách sạn cao cấp uy tín hàng đầu
                         Việt Nam
                     </p>
                 </div>
@@ -39,25 +39,27 @@
                 <div class="shrink-0 h-[0.5px] bg-orange-400 border-2 md:border-4 border-[#FCB040] border-solid max-md:max-w-full w-[100px] md:w-[150px]">
                 </div>
                 <h2 class="max-w-[500px] mt-2 md:mt-8  md:text-5xl text-blue-900  md:leading-[60px] max-md:max-w-full max-md:text-3xl max-md:leading-[48px]">
-                    Giới thiệu chung về DTF Group
+                    Giới thiệu chung về DTF Hotel
                 </h2>
                 <p class="mt-7 text-base md:text-lg text-neutral-700 max-md:max-w-full text-justify">
-                    Công ty Cổ phần Thương mại Dịch vụ DTF Việt Nam (DTF Việt Nam) được thành lập tháng 11/2012. Trên hành trình hơn một thập kỷ hình thành và phát triển, DTF Việt Nam đã xây dựng vị thế vững chắc trên thị trường, được khách hàng trong và ngoài nước tin tưởng hợp tác
+                    Thành lập từ năm 2018, Hennessy Hospitality Group (HHG) là thương hiệu quản lý toàn bộ chuỗi khách sạn tiêu chuẩn của Tập đoàn Hennessy Group.
+
                     <br />
                     <br />
-                    Kiên trì với phương châm "Uy tín làm nên thương hiệu", chúng tôi luôn tập trung vào tính "Chuyên nghiệp - Chính xác - Hiệu quả" trong việc cung cấp tất cả các sản phẩm, dịch vụ.
+                    Lấy cảm hứng từ vòng tròn Hennessy trong quan niệm Phật giáo - vòng tròn tượng trưng cho sự sống bất tận và mối tương quan giữa con người với thiên nhiên, HHG muốn khắc họa lại hành trình đi tìm kiếm hạnh phúc của mỗi người và lan tỏa tới cộng đồng sứ mệnh phụng sự khách hàng và phụng sự xã hội của chúng tôi.
+
                 </p>
                 <a href="#"
                    class="flex gap-2 text-base md:text-lg self-start px-9 py-3.5  md:mt-16 text-white background_second rounded-[500px] max-md:px-5 max-md:mt-6">
                     <span class="grow">Xem thêm</span>
-                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/0eae846d4e9e4ee43b2ba5c12cda7fe0a867600207fe7a08c5b31c6a216688f7?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
+                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/9acc647bead820972d16638f049e4724d24d25a880cdcc7701391be799dee3e3?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
                          alt="" class="shrink-0 w-4 aspect-square" />
                 </a>
             </article>
         </div>
         <div class="flex flex-col ml-8 w-6/12 max-md:ml-0 max-md:w-full">
-            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/9aa3e66a048c4de588e8ac2a1ee31c9fe1103d9c77fe70b1e5d06473469eb36b?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
-                 alt="Giới thiệu chung về DTF Group"
+            <img src="~/assets/images/Ảnh 2.png"
+                 alt="Giới thiệu chung về Hennessy Group"
                  class="grow w-full aspect-[1.16] max-md:mt-10 max-md:max-w-full" />
         </div>
     </div>
@@ -68,27 +70,23 @@
     <div class="shrink-0 h-[0.5]px bg-orange-400 border-2 md:border-4 border-[#FCB040] border-solid max-md:max-w-full w-[100px] md:w-[150px] mx-auto">
     </div>
     <h2 class="mt-2 md:mt-8 self-center text-5xl font-semibold md:leading-8 text-center text-blue-900 max-md:text-3xl leading-[48px]">
-        Các
-        dịch vụ
+        CÁC HẠNG PHÒNG
+
     </h2>
     <div class="mt-14 w-full max-md:mt-10 max-md:max-w-full">
         <!--Các dịch vụ PC-->
         <div class="hidden md:flex gap-0 max-md:flex-col max-md:gap-0">
-            <div class="flex flex-col w-[54%] max-md:ml-0 max-md:w-full">
+            <div class="flex flex-col w-[33%] max-md:ml-0 max-md:w-full">
                 <article class=" flex overflow-hidden relative flex-col grow justify-center text-lg font-semibold text-white min-h-[684px] max-md:max-w-full">
                     <img loading="lazy"
-                         src="https://cdn.builder.io/api/v1/image/assets/TEMP/1fd5b9e18d28f4a0f1ccc16562a8de9a70b8c580ab3616b78660ab05df43a36d?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
+                         src="~/assets/images/phongdon.jpg"
                          alt="Thiết kế, thi công nội thất và xây dựng"
                          class="object-cover  inset-0 size-full  " />
                     <div class="flex  blur-image flex-col items-start px-14 pt-20 pb-12 max-md:px-5 max-md:max-w-full">
-                        <h3 class="mt-96 text-2xl max-md:mt-10 max-md:max-w-full">
-                            Thiết kế, thi công nội thất và
-                            xây dựng
-                        </h3>
-                        <p class="mt-6 text-white text-opacity-50 max-md:max-w-full">
-                            Lorem Ipsum is simply dummy
-                            text of the printing and typesetting industry lorem Ipsum has been the industry's
-                            standard dummy text ever since the 1500s.
+                        <h3 class="mt-96 text-2xl max-md:mt-10 max-md:max-w-full">Suite Singel Room </h3>
+                        <p class="mt-6  text-opacity-50 max-md:max-w-full">
+                            Phòng Suite Singel Room được thiết kế hài hòa giữa tiện ích và phong cách độc đáo. Một nơi nghỉ ngơi thoải mái với đầy đủ tiện nghi, ẩm thực độc đáo, đa dạng cùng cơ sở vật chất tuyệt vời khiến bạn có cảm giác như ngôi nhà thứ hai, giúp bạn tận hưởng trọn vẹn kỳ nghỉ trong mơ
+
                         </p>
                         <a href="#" class="flex gap-3 mt-9">
                             <span class="my-auto">Xem thêm</span>
@@ -99,26 +97,55 @@
                     </div>
                 </article>
             </div>
-            <div class="flex flex-col  w-[46%] max-md:ml-0 max-md:w-full">
-                <div class="flex flex-col grow text-2xl font-semibold text-white max-md:max-w-full">
-                    <article class="flex overflow-hidden relative flex-col justify-center w-full min-h-[342px] max-md:max-w-full">
-                        <img loading="lazy"
-                             src="https://cdn.builder.io/api/v1/image/assets/TEMP/3ec634847fc3fd906efa4bab0b0dbfd4129a759e6072f5f478442eacab394d92?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
-                             alt="Sản xuất nội thất gỗ" class="object-cover absolute inset-0 size-full" />
-                        <h3 class="blur-image items-start px-11 pt-64 pb-12 max-md:px-5 max-md:pt-10 max-md:max-w-full">
-                            Sản xuất nội thất gỗ
+            <div class="flex flex-col w-[33%] max-md:ml-0 max-md:w-full">
+                <article class=" flex overflow-hidden relative flex-col grow justify-center text-lg font-semibold text-white min-h-[684px] max-md:max-w-full">
+                    <img loading="lazy"
+                         src="~/assets/images/doubleroom.jpg"
+                         alt="Thiết kế, thi công nội thất và xây dựng"
+                         class="object-cover  inset-0 size-full  " />
+                    <div class="flex  blur-image flex-col items-start px-14 pt-20 pb-12 max-md:px-5 max-md:max-w-full">
+                        <h3 class="mt-96 text-2xl max-md:mt-10 max-md:max-w-full">
+                            Executive Double Room
                         </h3>
-                    </article>
-                    <article class="flex overflow-hidden relative flex-col justify-center w-full min-h-[342px] max-md:max-w-full">
-                        <img loading="lazy"
-                             src="https://cdn.builder.io/api/v1/image/assets/TEMP/9f4b748d0c8e90d6af4e33e446457cde163a3868ca5742a42205a30a1e06834a?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
-                             alt="Bảo dưỡng, bảo trì" class="object-cover absolute inset-0 size-full" />
-                        <h3 class="blur-image items-start px-11 pt-72 pb-12 max-md:px-5 max-md:pt-10 max-md:max-w-full">
-                            Bảo dưỡng, bảo trì
-                        </h3>
-                    </article>
-                </div>
+                        <p class="mt-6  text-opacity-50 max-md:max-w-full">
+                        <p class="description">Executive Double Room là phòng gia đình cao cấp nhất tại Apec Mandala Phú Yên với diện tích 65m2, 2 phòng ngủ rộng rãi thích hợp cho gia đình và nhóm bạn. Ban công thu hút toàn cảnh biển với những tiện nghi cao cấp nhất chinh phục được cả những vị khách thượng lưu. Phòng ăn, bếp và phòng khách tách biệt mang đến cho du khách sự thoải mái, tiện nghi và thư thái nhất trong suốt quá trình trải nghiệm tại DFT.</p>
+
+
+                        </p>
+                        <a href="#" class="flex gap-3 mt-9">
+                            <span class="my-auto">Xem thêm</span>
+                            <img loading="lazy"
+                                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/9acc647bead820972d16638f049e4724d24d25a880cdcc7701391be799dee3e3?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
+                                 alt="Arrow icon" class="shrink-0 w-4 aspect-square" />
+                        </a>
+                    </div>
+                </article>
             </div>
+            <div class="flex flex-col w-[33%] max-md:ml-0 max-md:w-full">
+                <article class=" flex overflow-hidden relative flex-col grow justify-center text-lg font-semibold text-white min-h-[684px] max-md:max-w-full">
+                    <img loading="lazy"
+                         src="~/assets/images/phonghangsang.jpg"
+                         alt="Thiết kế, thi công nội thất và xây dựng"
+                         class="object-cover  inset-0 size-full  " />
+                    <div class="flex  blur-image flex-col items-start px-14 pt-20 pb-12 max-md:px-5 max-md:max-w-full">
+                        <h3 class="mt-96 text-2xl max-md:mt-10 max-md:max-w-full">
+                            Premium Ocean Wing
+                        </h3>
+                        <p class="mt-6  text-opacity-50 max-md:max-w-full">
+                            Với thiết kế pha trộn giữa sự tiện nghi và phong cách độc đáo, phòng Premium Deluxe hướng biển sẽ mang đến cho du khách những trải nghiệm khó quên khi lưu trú tại khách sạn, phù hợp với những khách hàng yêu thích sự đơn giản nhưng không thiếu phần tinh tế.
+
+
+                        </p>
+                        <a href="#" class="flex gap-3 mt-9">
+                            <span class="my-auto">Xem thêm</span>
+                            <img loading="lazy"
+                                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/9acc647bead820972d16638f049e4724d24d25a880cdcc7701391be799dee3e3?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
+                                 alt="Arrow icon" class="shrink-0 w-4 aspect-square" />
+                        </a>
+                    </div>
+                </article>
+            </div>
+
         </div>
         <!--Các dịch vụ mobile-->
         <div class="flex md:hidden swiper mySwiper_mb">
@@ -191,7 +218,7 @@
         </div>
     </div>
 </section>
-<!--Các dự án hoàn thành-->
+<!--Các khách sạn hoàn thành-->
 <section class="py-10 md:py-20 flex flex-col">
 
     <header class="max-content md:px- px-5 flex md:gap-5 gap-2 self-center  w-full font-semibold  justify-center ">
@@ -199,74 +226,67 @@
         <div class="mt-2 flex-auto text-5xl text-blue-900 md:leading-[60px] max-md:max-w-full max-md:text-3xl leading-[48px] w-1/2">
             <div class=" shrink-0 h-[0.5px] bg-orange-400 border-2 md:border-4 border-[#FCB040] border-solid max-md:max-w-full w-[100px] md:w-[150px]">
             </div>
-            <h2 class="mt-3">Các dự án đã hoàn thành</h2>
+            <h2 class="mt-3"> HỆ THỐNG KHÁCH SẠN </h2>
         </div>
-        <div class="flex gap-3 self-start px-9 py-3.5 text-base md:text-lg text-white bg-orange-400 rounded-[500px] max-md:px-5">
-            <div class="my-auto">Xem thêm</div>
-            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/6e047264100cf415308bacc4fd4314b43bbd5ff80f09d38a21e01e95211df79b?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
-                 alt="" class="shrink-0 w-4 aspect-square" />
-        </div>
+
     </header>
     <div class="md:px-0 px-5 mt-20 w-full max-md:mt-10 max-md:max-w-full">
-        <!--Dự án hoàn thành PC-->
+        <!--khách sạn hoàn thành PC-->
         <div class="hidden md:flex gap-0 max-md:flex-col ">
             <article class="flex flex-col relative w-3/12 max-md:ml-0 max-md:w-full">
                 <div class="box flex overflow-hidden relative flex-col grow pt-20 font-semibold min-h-[646px] max-md:max-w-full">
-                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/fad6c138469012634ea0a3c55c2e2557964279557893bc7b08bef4c7eefa779e?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
+                    <img src="~/assets/images/muine.jpg"
                          alt="Project image" class="object-cover absolute inset-0 size-full" />
                     <h3 class="box2 absolute bottom-10 left-5 text-white font-bold text-3xl items-start max-md:px-5 max-md:pt-10 max-md:max-w-full">
-                        Tên dự án này
                     </h3>
 
                     <div class="additional-content hidden absolute bottom-0 w-[100%] flex-col items-start py-8 pl-6 bg-blur max-md:px-5 max-md:mt-10 max-md:max-w-full">
-                        <h3 class="text-3xl text-blue-900">Tên dự án này</h3>
-                        <div class="flex gap-2.5 mt-3 text-lg text-orange-400">
-                            <div class="flex-auto my-auto">Xem thêm</div>
-                            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/3b9a208927d2249c90ab32774bfa22a04d675130eea0ebb486dcfa18b5d62967?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
-                                 alt="" class="shrink-0 w-4 aspect-square" />
-                        </div>
+                        <h3 class="text-3xl text-fuchsia-600">DFT Hennessy Mũi Né</h3>
+
                     </div>
                 </div>
             </article>
             <article class="flex flex-col ml-5 w-3/12 max-md:ml-0 max-md:w-full">
 
                 <div class="box flex overflow-hidden relative flex-col grow pt-20 font-semibold min-h-[646px] max-md:max-w-full">
-                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/a43b9a041f40f3a5603f41d7e8f115a7b0ebf7c23f189b155c13fb04ff283b29?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
+                    <img src="~/assets/images/bacninh.jpg"
                          alt="Project image" class="object-cover absolute inset-0 size-full" />
-                    <h3 class="box2 absolute bottom-10 left-5 text-white font-bold text-3xl items-start max-md:px-5 max-md:pt-10 max-md:max-w-full">
-                        Tên dự án này
-                    </h3>
+
 
                     <div class="additional-content hidden absolute bottom-0 w-[100%] flex-col items-start py-8 pl-6 bg-blur max-md:px-5 max-md:mt-10 max-md:max-w-full">
-                        <h3 class="text-3xl text-blue-900">Tên dự án này</h3>
-                        <div class="flex gap-2.5 mt-3 text-lg text-orange-400">
-                            <div class="flex-auto my-auto">Xem thêm</div>
-                            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/3b9a208927d2249c90ab32774bfa22a04d675130eea0ebb486dcfa18b5d62967?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
-                                 alt="" class="shrink-0 w-4 aspect-square" />
-                        </div>
+                        <h3 class="text-3xl text-fuchsia-600">DFT Hennessy Phú Yên</h3>
+
                     </div>
                 </div>
             </article>
-            <article class="flex flex-col ml-5 w-3/12 max-md:ml-0 max-md:w-full">
-                <div class="flex overflow-hidden relative flex-col grow justify-center text-3xl font-semibold text-white min-h-[645px] max-md:max-w-full">
-                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/341c3f54d409b1ff7586cb16998991c1d135c8073f45effeb2d18b90e66e8076?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
+            <article class="flex flex-col relative w-3/12 max-md:ml-0 max-md:w-full">
+                <div class="box flex overflow-hidden relative flex-col grow pt-20 font-semibold min-h-[646px] max-md:max-w-full">
+                    <img src="~/assets/images/bacgiang.jpg"
                          alt="Project image" class="object-cover absolute inset-0 size-full" />
-                    <h3 class="relative items-start px-9 pb-7 pt-[592px] max-md:px-5 max-md:pt-10 max-md:max-w-full">
-                        Tên dự án này
-                    </h3>
+
+
+                    <div class="additional-content hidden absolute bottom-0 w-[100%] flex-col items-start py-8 pl-6 bg-blur max-md:px-5 max-md:mt-10 max-md:max-w-full">
+                        <h3 class="text-3xl text-fuchsia-600">DFT Hennessy Bắc Giang</h3>
+
+                    </div>
+
                 </div>
             </article>
-            <article class="flex flex-col ml-5 w-3/12 max-md:ml-0 max-md:w-full">
-                <div class="flex overflow-hidden relative flex-col grow justify-center text-3xl font-semibold text-white min-h-[645px] max-md:max-w-full">
-                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/782257e223e66a11d5930b403a8b5389c1b547a720abfcdca921bfb01acccdf0?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
+            <article class="flex flex-col relative w-3/12 max-md:ml-0 max-md:w-full">
+                <div class="box flex overflow-hidden relative flex-col grow pt-20 font-semibold min-h-[646px] max-md:max-w-full">
+                    <img src="~/assets/images/kimboi.jpg"
                          alt="Project image" class="object-cover absolute inset-0 size-full" />
-                    <h3 class="relative items-start px-9 pb-7 pt-[592px] max-md:px-5 max-md:pt-10 max-md:max-w-full">
-                        Tên dự án này
-                    </h3>
+
+
+
+                    <div class="additional-content hidden absolute bottom-0 w-[100%] flex-col items-start py-8 pl-6 bg-blur max-md:px-5 max-md:mt-10 max-md:max-w-full">
+                        <h3 class="text-3xl text-fuchsia-600">DFT Hennessy Kim Bôi</h3>
+
+                    </div>
                 </div>
             </article>
         </div>
-        <!--Dự án hoàn thành mobile-->
+        <!--khách sạn hoàn thành mobile-->
         <div class="flex md:hidden swiper mySwiper_mb">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
@@ -275,7 +295,7 @@
                             <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/fad6c138469012634ea0a3c55c2e2557964279557893bc7b08bef4c7eefa779e?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
                                  alt="Project image" class="object-cover inset-0 w-full size-full" />
                             <div class="flex absolute bottom-[0px] w-[100%] flex-col items-start py-6 pr-20 pl-9  bg-blur max-md:px-5 max-md:mt-0 max-md:max-w-full">
-                                <h3 class="text-xl md:text-3xl text-blue-900">Tên dự án này</h3>
+                                <h3 class="text-xl md:text-3xl text-blue-900">Tên khách sạn này</h3>
                                 <div class="flex gap-2.5 mt-3 text-lg text-orange-400">
                                     <div class="flex-auto my-auto text-base">Xem thêm</div>
                                     <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/3b9a208927d2249c90ab32774bfa22a04d675130eea0ebb486dcfa18b5d62967?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
@@ -291,7 +311,7 @@
                             <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/a43b9a041f40f3a5603f41d7e8f115a7b0ebf7c23f189b155c13fb04ff283b29?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
                                  alt="Project image" class="object-cover inset-0 w-full size-full" />
                             <div class="flex absolute bottom-[0px] w-[100%] flex-col items-start py-6 pr-20 pl-9  bg-blur max-md:px-5 max-md:mt-0 max-md:max-w-full">
-                                <h3 class="text-xl md:text-3xl text-blue-900">Tên dự án này</h3>
+                                <h3 class="text-xl md:text-3xl text-blue-900">Tên khách sạn này</h3>
                                 <div class="flex gap-2.5 mt-3 text-lg text-orange-400">
                                     <div class="flex-auto my-auto text-base">Xem thêm</div>
                                     <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/3b9a208927d2249c90ab32774bfa22a04d675130eea0ebb486dcfa18b5d62967?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
@@ -309,516 +329,6 @@
 
     </div>
 </section>
-<!--Tin tức mới-->
-<section class="max-content py-10 md:py-20 flex flex-col">
-    <div class="mx-5 shrink-0 h-[0.5px] bg-orange-400 border-2 md:border-4 border-[#FCB040] border-solid max-md:max-w-full w-[100px] md:w-[150px]">
-    </div>
-    <header class="flex gap-5 px-5 w-full font-semibold max-md:flex-wrap max-md:max-w-full">
-        <h2 class="mt-3 flex-auto my-auto text-5xl text-blue-900 md:leading-[60px] max-md:text-3xl leading-[48px]">
-            Tin tức mới
-        </h2>
-        <div class="flex gap-3 px-9 py-2 text-lg text-white bg-orange-400 rounded-[500px] max-md:px-5">
-            <div class="my-auto md:text-lg text-base">Xem thêm</div>
-            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/903dd23d6683c124cfbb32bdbc12d7ba501047c004b0b92281d8f97627ef59bc?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
-                 alt="" class="shrink-0 w-4 aspect-square" />
-        </div>
-    </header>
-    <!--Tin tức PC-->
-    <div class="hidden md:block">
-        <div class="mt-16  w-full max-md:mt-10 max-md:max-w-full">
-            <div class="flex gap-0 max-md:flex-col max-md:gap-0">
-                <article class="flex flex-col w-6/12 max-md:ml-0 max-md:w-full md:px-0 px-5">
-                    <div class="grow max-md:mt-0 max-md:max-w-full">
-                        <div class="flex gap-5 max-md:flex-col max-md:gap-0">
-                            <div class="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
-                                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/cf07aeca7b1823c29794a8f10264bd31a5cf07fdbad83786ddd8794daf79475c?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
-                                     alt="Article image" class="grow w-full aspect-[1.39] max-md:mt-0" />
-                            </div>
-                            <div class="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full">
-                                <div class="flex flex-col px-0 md:px-5 mt-1 max-md:mt-8">
-                                    <h3 class="text-3xl font-semibold leading-9 text-blue-900">
-                                        Xu hướng thiết kế
-                                        nội
-                                        thất mới nhất 2024
-                                    </h3>
-                                    <p class="mt-6 text-lg text-neutral-700">
-                                        Lorem Ipsum is simply simply dummy
-                                        text
-                                        of the printing and industry Ipsum been the industry's ...
-                                    </p>
-                                    <div class="flex gap-2 mt-8 text-sm text-neutral-700 text-opacity-70">
-                                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/bef47dde7e5c4addbfdc17db32479682dbb3dc23e9f0aa9d1e00210d4287ee99?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
-                                             alt="" class="shrink-0 w-4 aspect-square" />
-                                        <time class="flex-auto">07.04.2024 | Chuyên mục</time>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-                <article class="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full">
-                    <div class="grow max-md:mt-10 max-md:max-w-full">
-                        <div class="flex gap-5 max-md:flex-col max-md:gap-0">
-                            <div class="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
-                                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/cf07aeca7b1823c29794a8f10264bd31a5cf07fdbad83786ddd8794daf79475c?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
-                                     alt="Article image" class="grow w-full aspect-[1.39] max-md:mt-7" />
-                            </div>
-                            <div class="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full">
-                                <div class="flex flex-col px-5 mt-1 max-md:mt-8">
-                                    <h3 class="text-3xl font-semibold leading-9 text-blue-900">
-                                        Xu hướng thiết kế
-                                        nội
-                                        thất mới nhất 2024
-                                    </h3>
-                                    <p class="mt-6 text-lg text-neutral-700">
-                                        Lorem Ipsum is simply simply dummy
-                                        text
-                                        of the printing and industry Ipsum been the industry's ...
-                                    </p>
-                                    <div class="flex gap-2 mt-8 text-sm text-neutral-700 text-opacity-70">
-                                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/19d63cec38f44f97bd51616e517913d219de4396022987c56dd0002355df749b?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
-                                             alt="" class="shrink-0 w-4 aspect-square" />
-                                        <time class="flex-auto">07.04.2024 | Chuyên mục</time>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </div>
-        <div class="mt-14 w-full max-md:mt-10 max-md:max-w-full">
-            <div class="flex gap-0 max-md:flex-col max-md:gap-0">
-                <article class="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
-                    <div class="grow max-md:mt-10 max-md:max-w-full">
-                        <div class="flex gap-5 max-md:flex-col max-md:gap-0">
-                            <div class="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
-                                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/cf07aeca7b1823c29794a8f10264bd31a5cf07fdbad83786ddd8794daf79475c?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
-                                     alt="Article image" class="grow w-full aspect-[1.39] max-md:mt-7" />
-                            </div>
-                            <div class="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full">
-                                <div class="flex flex-col px-5 mt-1 max-md:mt-8">
-                                    <h3 class="text-3xl font-semibold leading-9 text-blue-900">
-                                        Xu hướng thiết kế
-                                        nội
-                                        thất mới nhất 2024
-                                    </h3>
-                                    <p class="mt-6 text-lg text-neutral-700">
-                                        Lorem Ipsum is simply simply dummy
-                                        text
-                                        of the printing and industry Ipsum been the industry's ...
-                                    </p>
-                                    <div class="flex gap-2 mt-8 text-sm text-neutral-700 text-opacity-70">
-                                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4cb42835b968217ad27db314b2637fabc2fb5ce237908451401a765eaa99c2f8?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
-                                             alt="" class="shrink-0 w-4 aspect-square" />
-                                        <time class="flex-auto">07.04.2024 | Chuyên mục</time>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-                <article class="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full">
-                    <div class="grow max-md:mt-10 max-md:max-w-full">
-                        <div class="flex gap-5 max-md:flex-col max-md:gap-0">
-                            <div class="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
-                                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/cf07aeca7b1823c29794a8f10264bd31a5cf07fdbad83786ddd8794daf79475c?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
-                                     alt="Article image" class="grow w-full aspect-[1.39] max-md:mt-7" />
-                            </div>
-                            <div class="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full">
-                                <div class="flex flex-col px-5 mt-1 max-md:mt-8">
-                                    <h3 class="text-3xl font-semibold leading-9 text-blue-900">
-                                        Xu hướng thiết kế
-                                        nội
-                                        thất mới nhất 2024
-                                    </h3>
-                                    <p class="mt-6 text-lg text-neutral-700">
-                                        Lorem Ipsum is simply simply dummy
-                                        text
-                                        of the printing and industry Ipsum been the industry's ...
-                                    </p>
-                                    <div class="flex gap-2 mt-8 text-sm text-neutral-700 text-opacity-70">
-                                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/55672ab048916523c3b76a239233aa8d7924587a1c5a008d1e7f083153291665?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
-                                             alt="" class="shrink-0 w-4 aspect-square" />
-                                        <time class="flex-auto">07.04.2024 | Chuyên mục</time>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </div>
-        <div class="mt-14 w-full max-md:mt-10 max-md:max-w-full">
-            <div class="flex gap-5 max-md:flex-col max-md:gap-0">
-                <article class="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
-                    <div class="grow max-md:mt-10 max-md:max-w-full">
-                        <div class="flex gap-5 max-md:flex-col max-md:gap-0">
-                            <div class="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
-                                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/cf07aeca7b1823c29794a8f10264bd31a5cf07fdbad83786ddd8794daf79475c?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
-                                     alt="Article image" class="grow w-full aspect-[1.39] max-md:mt-7" />
-                            </div>
-                            <div class="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full">
-                                <div class="flex flex-col px-5 mt-1 max-md:mt-8">
-                                    <h3 class="text-3xl font-semibold leading-9 text-blue-900">
-                                        Xu hướng thiết kế
-                                        nội
-                                        thất mới nhất 2024
-                                    </h3>
-                                    <p class="mt-6 text-lg text-neutral-700">
-                                        Lorem Ipsum is simply simply dummy
-                                        text
-                                        of the printing and industry Ipsum been the industry's ...
-                                    </p>
-                                    <div class="flex gap-2 mt-8 text-sm text-neutral-700 text-opacity-70">
-                                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/39eb3813ead25a09d101f2d9ee4c065b2bc1b40f1b649e9659fcce098a75f03e?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
-                                             alt="" class="shrink-0 w-4 aspect-square" />
-                                        <time class="flex-auto">07.04.2024 | Chuyên mục</time>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-                <article class="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full">
-                    <div class="grow max-md:mt-10 max-md:max-w-full">
-                        <div class="flex gap-0 max-md:flex-col max-md:gap-0">
-                            <div class="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
-                                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/cf07aeca7b1823c29794a8f10264bd31a5cf07fdbad83786ddd8794daf79475c?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
-                                     alt="Article image" class="grow w-full aspect-[1.39] max-md:mt-7" />
-                            </div>
-                            <div class="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full">
-                                <div class="flex flex-col px-5 mt-1 max-md:mt-8">
-                                    <h3 class="text-3xl font-semibold leading-9 text-blue-900">
-                                        Xu hướng thiết kế
-                                        nội
-                                        thất mới nhất 2024
-                                    </h3>
-                                    <p class="mt-6 text-lg text-neutral-700">
-                                        Lorem Ipsum is simply simply dummy
-                                        text
-                                        of the printing and industry Ipsum been the industry's ...
-                                    </p>
-                                    <div class="flex gap-2 mt-8 text-sm text-neutral-700 text-opacity-70">
-                                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/3ca140f43aa18d19b4e0508cca8534aa45d9efc3010ed0df95853310363e0987?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
-                                             alt="" class="shrink-0 w-4 aspect-square" />
-                                        <time class="flex-auto">07.04.2024 | Chuyên mục</time>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </div>
-    <!--Tin tức mobile-->
-    <div class="mt-10 block md:hidden ">
-        <div class="swiper mySwiper_mb">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <article class="flex flex-col w-6/12 max-md:ml-0 max-md:w-full md:px-0 px-5">
-                        <div class="grow max-md:mt-0 max-md:max-w-full">
-                            <div class="flex gap-5 max-md:flex-col max-md:gap-0">
-                                <div class="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
-                                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/cf07aeca7b1823c29794a8f10264bd31a5cf07fdbad83786ddd8794daf79475c?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
-                                         alt="Article image" class="grow w-full aspect-[1.39] max-md:mt-0" />
-                                </div>
-                                <div class="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full">
-                                    <div class="flex flex-col px-0 md:px-5 mt-3">
-                                        <h3 class="text-xl font-semibold leading-9 text-blue-900">
-                                            Xu hướng thiết
-                                            kế nội
-                                            thất mới nhất 2024
-                                        </h3>
-                                        <p class="mt-1 text-base text-neutral-700">
-                                            Lorem Ipsum is simply simply
-                                            dummy text
-                                            of the printing and industry Ipsum been the industry's ...
-                                        </p>
-                                        <div class="flex gap-2 mt-3 text-sm text-neutral-700 text-opacity-70">
-                                            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/bef47dde7e5c4addbfdc17db32479682dbb3dc23e9f0aa9d1e00210d4287ee99?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
-                                                 alt="" class="shrink-0 w-4 aspect-square" />
-                                            <time class="flex-auto">07.04.2024 | Chuyên mục</time>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-                <div class="swiper-slide">
-                    <article class="flex flex-col w-6/12 max-md:ml-0 max-md:w-full md:px-0 px-5">
-                        <div class="grow max-md:mt-0 max-md:max-w-full">
-                            <div class="flex gap-5 max-md:flex-col max-md:gap-0">
-                                <div class="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
-                                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/cf07aeca7b1823c29794a8f10264bd31a5cf07fdbad83786ddd8794daf79475c?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
-                                         alt="Article image" class="grow w-full aspect-[1.39] max-md:mt-0" />
-                                </div>
-                                <div class="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full">
-                                    <div class="flex flex-col px-0 md:px-5 mt-3">
-                                        <h3 class="text-xl font-semibold leading-9 text-blue-900">
-                                            Xu hướng thiết
-                                            kế nội
-                                            thất mới nhất 2024
-                                        </h3>
-                                        <p class="mt-1 text-base text-neutral-700">
-                                            Lorem Ipsum is simply simply
-                                            dummy text
-                                            of the printing and industry Ipsum been the industry's ...
-                                        </p>
-                                        <div class="flex gap-2 mt-3 text-sm text-neutral-700 text-opacity-70">
-                                            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/bef47dde7e5c4addbfdc17db32479682dbb3dc23e9f0aa9d1e00210d4287ee99?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
-                                                 alt="" class="shrink-0 w-4 aspect-square" />
-                                            <time class="flex-auto">07.04.2024 | Chuyên mục</time>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!--Đối tác & Khách hàng-->
-<section class="max-content py-10 md:py-20 flex flex-col px-5">
-    <div class="mx-auto shrink-0 h-[0.5px] bg-orange-400 border-2 md:border-4 border-[#FCB040] border-solid max-md:max-w-full w-[100px] md:w-[150px]">
-    </div>
-    <h2 class="mt-3 md:mt-6 self-center text-5xl font-semibold md:leading-8 text-center text-blue-900 max-md:max-w-full max-md:text-3xl leading-[48px]">
-        Đối tác & Khách hàng
-    </h2>
-    <!--PC-->
-    <div class="hidden md:flex gap-5 justify-between mt-14 w-full max-md:flex-wrap max-md:mt-10 max-md:max-w-full">
-        <div class="swiper mySwiper_doitac">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img loading="lazy"
-                         src="./assets/images/Đối tác - khách hàng/1.png"
-                         alt="Partner logo" class="shrink-0 max-w-full aspect-[2.27] w-[206px]" />
-                </div>
-                <div class="swiper-slide">
-                    <img loading="lazy"
-                         src="./assets/images/Đối tác - khách hàng/2.png"
-                         alt="Partner logo" class="shrink-0 max-w-full aspect-[2.27] w-[206px] " />
-                </div>
-                <div class="swiper-slide">
-                    <img loading="lazy"
-                         src="./assets/images/Đối tác - khách hàng/3.png"
-                         alt="Partner logo" class="shrink-0 max-w-full aspect-[2.27] w-[206px]" />
-                </div>
-                <div class="swiper-slide">
-                    <img loading="lazy"
-                         src="./assets/images/Đối tác - khách hàng/4.png"
-                         alt="Partner logo" class="shrink-0 max-w-full aspect-[2.27] w-[206px] " />
-                </div>
-                <div class="swiper-slide">
-                    <img loading="lazy"
-                         src="./assets/images/Đối tác - khách hàng/5.png"
-                         alt="Partner logo" class="shrink-0 max-w-full aspect-[2.27] w-[206px] " />
-                </div>
-                <div class="swiper-slide">
-                    <img loading="lazy"
-                         src="./assets/images/Đối tác - khách hàng/6.png"
-                         alt="Partner logo" class="shrink-0 max-w-full aspect-[2.27] w-[206px]" />
-                </div>
-                <div class="swiper-slide">
-                    <img loading="lazy"
-                         src="./assets/images/Đối tác - khách hàng/7.png"
-                         alt="Partner logo" class="shrink-0 max-w-full aspect-[2.27] w-[206px] " />
-                </div>
-                <div class="swiper-slide">
-                    <img loading="lazy"
-                         src="./assets/images/Đối tác - khách hàng/8.png"
-                         alt="Partner logo" class="shrink-0 max-w-full aspect-[2.27] w-[206px] " />
-                </div>
-                <div class="swiper-slide">
-                    <img loading="lazy"
-                         src="./assets/images/Đối tác - khách hàng/9.png"
-                         alt="Partner logo" class="shrink-0 max-w-full aspect-[2.27] w-[206px] " />
-                </div>
-                <div class="swiper-slide">
-                    <img loading="lazy"
-                         src="./assets/images/Đối tác - khách hàng/10.png"
-                         alt="Partner logo" class="shrink-0 max-w-full aspect-[2.27] w-[206px] " />
-                </div>
-                <div class="swiper-slide">
-                    <img loading="lazy"
-                         src="./assets/images/Đối tác - khách hàng/11.png"
-                         alt="Partner logo" class="shrink-0 max-w-full aspect-[2.27] w-[206px] " />
-                </div>
-                <div class="swiper-slide">
-                    <img loading="lazy"
-                         src="./assets/images/Đối tác - khách hàng/12.png"
-                         alt="Partner logo" class="shrink-0 max-w-full aspect-[2.27] w-[206px] " />
-                </div>
-                <div class="swiper-slide">
-                    <img loading="lazy"
-                         src="./assets/images/Đối tác - khách hàng/13.png"
-                         alt="Partner logo" class="shrink-0 max-w-full aspect-[2.27] w-[206px] " />
-                </div>
-                <div class="swiper-slide">
-                    <img loading="lazy"
-                         src="./assets/images/Đối tác - khách hàng/14.png"
-                         alt="Partner logo" class="shrink-0 max-w-full aspect-[2.27] w-[206px]" />
-                </div>
-                <div class="swiper-slide">
-                    <img loading="lazy"
-                         src="./assets/images/Đối tác - khách hàng/15.png"
-                         alt="Partner logo" class="shrink-0 max-w-full aspect-[2.27] w-[206px] " />
-                </div>
-                <div class="swiper-slide">
-                    <img loading="lazy"
-                         src="./assets/images/Đối tác - khách hàng/16.png"
-                         alt="Partner logo" class="shrink-0 max-w-full aspect-[2.27] w-[206px] " />
-                </div>
-                <div class="swiper-slide">
-                    <img loading="lazy"
-                         src="./assets/images/Đối tác - khách hàng/17.png"
-                         alt="Partner logo" class="shrink-0 max-w-full aspect-[2.27] w-[206px] " />
-                </div>
-                <div class="swiper-slide">
-                    <img loading="lazy"
-                         src="./assets/images/Đối tác - khách hàng/18.png"
-                         alt="Partner logo" class="shrink-0 max-w-full aspect-[2.27] w-[206px] " />
-                </div>
-                <div class="swiper-slide">
-                    <img loading="lazy"
-                         src="./assets/images/Đối tác - khách hàng/19.png"
-                         alt="Partner logo" class="shrink-0 max-w-full aspect-[2.27] w-[206px]" />
-                </div>
-                <div class="swiper-slide">
-                    <img loading="lazy"
-                         src="./assets/images/Đối tác - khách hàng/20.png"
-                         alt="Partner logo" class="shrink-0 max-w-full aspect-[2.27] w-[206px] " />
-                </div>
-                <div class="swiper-slide">
-                    <img loading="lazy"
-                         src="./assets/images/Đối tác - khách hàng/21.png"
-                         alt="Partner logo" class="shrink-0 max-w-full aspect-[2.27] w-[206px]" />
-                </div>
-            </div>
-        </div>
-        <!-- <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div> -->
-    </div>
-    <!--Mobile-->
-    <div class="flex md:hidden gap-5 justify-between  w-full max-md:flex-wrap max-md:mt-6 max-md:max-w-full">
-        <div class="swiper mySwiper_doitac2">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img loading="lazy"
-                         src="./assets/images/Đối tác - khách hàng/1.png"
-                         alt="Partner logo" class="shrink-0 max-w-full aspect-[2.27] w-[206px]" />
-                </div>
-                <div class="swiper-slide">
-                    <img loading="lazy"
-                         src="./assets/images/Đối tác - khách hàng/2.png"
-                         alt="Partner logo" class="shrink-0 max-w-full aspect-[2.27] w-[206px] " />
-                </div>
-                <div class="swiper-slide">
-                    <img loading="lazy"
-                         src="./assets/images/Đối tác - khách hàng/3.png"
-                         alt="Partner logo" class="shrink-0 max-w-full aspect-[2.27] w-[206px]" />
-                </div>
-                <div class="swiper-slide">
-                    <img loading="lazy"
-                         src="./assets/images/Đối tác - khách hàng/4.png"
-                         alt="Partner logo" class="shrink-0 max-w-full aspect-[2.27] w-[206px] " />
-                </div>
-                <div class="swiper-slide">
-                    <img loading="lazy"
-                         src="./assets/images/Đối tác - khách hàng/5.png"
-                         alt="Partner logo" class="shrink-0 max-w-full aspect-[2.27] w-[206px] " />
-                </div>
-                <div class="swiper-slide">
-                    <img loading="lazy"
-                         src="./assets/images/Đối tác - khách hàng/6.png"
-                         alt="Partner logo" class="shrink-0 max-w-full aspect-[2.27] w-[206px]" />
-                </div>
-                <div class="swiper-slide">
-                    <img loading="lazy"
-                         src="./assets/images/Đối tác - khách hàng/7.png"
-                         alt="Partner logo" class="shrink-0 max-w-full aspect-[2.27] w-[206px] " />
-                </div>
-                <div class="swiper-slide">
-                    <img loading="lazy"
-                         src="./assets/images/Đối tác - khách hàng/8.png"
-                         alt="Partner logo" class="shrink-0 max-w-full aspect-[2.27] w-[206px] " />
-                </div>
-                <div class="swiper-slide">
-                    <img loading="lazy"
-                         src="./assets/images/Đối tác - khách hàng/9.png"
-                         alt="Partner logo" class="shrink-0 max-w-full aspect-[2.27] w-[206px] " />
-                </div>
-                <div class="swiper-slide">
-                    <img loading="lazy"
-                         src="./assets/images/Đối tác - khách hàng/10.png"
-                         alt="Partner logo" class="shrink-0 max-w-full aspect-[2.27] w-[206px] " />
-                </div>
-                <div class="swiper-slide">
-                    <img loading="lazy"
-                         src="./assets/images/Đối tác - khách hàng/11.png"
-                         alt="Partner logo" class="shrink-0 max-w-full aspect-[2.27] w-[206px] " />
-                </div>
-                <div class="swiper-slide">
-                    <img loading="lazy"
-                         src="./assets/images/Đối tác - khách hàng/12.png"
-                         alt="Partner logo" class="shrink-0 max-w-full aspect-[2.27] w-[206px] " />
-                </div>
-                <div class="swiper-slide">
-                    <img loading="lazy"
-                         src="./assets/images/Đối tác - khách hàng/13.png"
-                         alt="Partner logo" class="shrink-0 max-w-full aspect-[2.27] w-[206px] " />
-                </div>
-                <div class="swiper-slide">
-                    <img loading="lazy"
-                         src="./assets/images/Đối tác - khách hàng/14.png"
-                         alt="Partner logo" class="shrink-0 max-w-full aspect-[2.27] w-[206px]" />
-                </div>
-                <div class="swiper-slide">
-                    <img loading="lazy"
-                         src="./assets/images/Đối tác - khách hàng/15.png"
-                         alt="Partner logo" class="shrink-0 max-w-full aspect-[2.27] w-[206px] " />
-                </div>
-                <div class="swiper-slide">
-                    <img loading="lazy"
-                         src="./assets/images/Đối tác - khách hàng/16.png"
-                         alt="Partner logo" class="shrink-0 max-w-full aspect-[2.27] w-[206px] " />
-                </div>
-                <div class="swiper-slide">
-                    <img loading="lazy"
-                         src="./assets/images/Đối tác - khách hàng/17.png"
-                         alt="Partner logo" class="shrink-0 max-w-full aspect-[2.27] w-[206px] " />
-                </div>
-                <div class="swiper-slide">
-                    <img loading="lazy"
-                         src="./assets/images/Đối tác - khách hàng/18.png"
-                         alt="Partner logo" class="shrink-0 max-w-full aspect-[2.27] w-[206px] " />
-                </div>
-                <div class="swiper-slide">
-                    <img loading="lazy"
-                         src="./assets/images/Đối tác - khách hàng/19.png"
-                         alt="Partner logo" class="shrink-0 max-w-full aspect-[2.27] w-[206px]" />
-                </div>
-                <div class="swiper-slide">
-                    <img loading="lazy"
-                         src="./assets/images/Đối tác - khách hàng/20.png"
-                         alt="Partner logo" class="shrink-0 max-w-full aspect-[2.27] w-[206px] " />
-                </div>
-                <div class="swiper-slide">
-                    <img loading="lazy"
-                         src="./assets/images/Đối tác - khách hàng/21.png"
-                         alt="Partner logo" class="shrink-0 max-w-full aspect-[2.27] w-[206px]" />
-                </div>
-            </div>
-        </div>
-        <!-- <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div> -->
-    </div>
-
-</section>
 <!--Cùng DTF tạo nên không gian-->
 <section class=" flex overflow-hidden relative flex-col justify-center text-white min-h-[380px]">
     <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/b65789ee105192b906d8eb8b6d408410798a7e485fb62835f22390a2c941f233?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
@@ -826,15 +336,48 @@
     <div class="flex absolute top-0 bottom-0 justify-center items-center  w-full bg-black bg-opacity-50 max-md:px-5 max-md:max-w-full">
         <div class="flex flex-col mt-7 mb-1.5 max-w-full w-[1225px]">
             <h2 class=" md:text-5xl font-semibold leading-[60px] max-md:max-w-full max-md:text-2xl max-md:leading-[32px]">
-                Cùng DTF tạo nên không gian nội thất độc đáo
+                Cùng DTF Hennessy tạo nên không gian nghỉ dưỡng độc đáo
             </h2>
             <p class="mt-4 md:mt-7 text-base md:text-lg max-md:max-w-full">
-                Hãy đồng hành cùng DTF trên hành trình kiến tạo không gian mơ ước để nâng cao giá trị thương
-                hiệu, nâng cao hiệu quả kinh doanh và gặt hái những thành công mới.
+                Hãy đồng hành cùng DTF kiến tạo không gian khách sạn đẳng cấp, nâng cao trải nghiệm khách hàng, tối ưu hiệu quả kinh doanh và vươn tới thành công.
+
+
+
+
+
                 <br />
-                Đến với DTF, bạn sẽ nhận được sự tư vấn tận tâm đến từ đội ngũ chuyên gia trong lĩnh vực thiết
-                kế, thi công nội thất hàng đầu Việt Nam.
+
             </p>
         </div>
+    </div>
+</section>
+
+
+<!--Form đăng ký-->
+<section class="max-content py-10 md:py-20 flex flex-col px-5">
+    <div class=" shrink-0 h-[0.5px] bg-orange-400 border-2 md:border-4 border-[#FCB040] border-solid max-md:max-w-full w-[100px] md:w-[150px]">
+    </div>
+    <h1 class="mt-3 w-full text-5xl font-semibold text-blue-900 md:leading-[60px] max-md:max-w-full max-md:text-3xl leading-[48px]">
+        Nhận phòng ngay !
+    </h1>
+    <p class="mt-4 md:mt-7 w-full text-lg text-neutral-700 max-md:max-w-full">
+        Khách hàng thân yêu ơi, bạn đã biết tin gì chưa? Chỉ cần một cái chạm nhẹ vào nút Book Now của DFT, bạn sẽ bước vào thế giới quà tặng đầy hấp dẫn! Dù đây là lần đầu bạn ghé thăm hay đã trở thành một phần thân thiết của […]
+    </p>
+    <div class="mt-16 w-full max-md:mt-6 max-md:max-w-full">
+        <div class="relative flex gap-5 max-md:flex-col max-md:gap-0">
+            <figure class="hidden md:flex flex-col  w-[56%] max-md:ml-0 max-md:w-full ">
+                <img loading="lazy"
+                     src="~/assets/images/family.png"
+                     alt="" class="grow w-full aspect-[1.3] max-md:max-w-full" />
+            </figure>
+            <button type="submit" href=""
+                    class="flex gap-4 self-end px-7 py-3.5 mt-7 text-base md:text-lg font-semibold text-white background_second rounded-[500px] max-md:px-5 max-md:mr-0">
+                <span>Book Now</span>
+                <img loading="lazy"
+                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/1c42535ee8e1689ac11dccbe6015902c23fbf964e0bea6c7117991c9acc5311e?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
+                     alt="" class="shrink-0 self-start w-6 aspect-square pt-1" />
+            </button>
+        </div>
+    </div>
     </div>
 </section>

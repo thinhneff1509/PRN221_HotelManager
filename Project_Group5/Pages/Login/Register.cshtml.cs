@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Project_Group5.Models;
-using System;
-using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace Project_Group5.Pages.Login
 {
@@ -10,8 +10,16 @@ namespace Project_Group5.Pages.Login
     {
         private readonly Fall24_SE1745_PRN221_Group5Context _context;
 
+        public RegisterModel(Fall24_SE1745_PRN221_Group5Context context)
+        {
+            _context = context;
+        }
+
         [BindProperty]
-        public Customer Customer { get; set; }
+        public string Username { get; set; }
+
+        [BindProperty]
+        public string Email { get; set; }
 
         [BindProperty]
         public string Password { get; set; }
@@ -19,59 +27,71 @@ namespace Project_Group5.Pages.Login
         [BindProperty]
         public string ConfirmPassword { get; set; }
 
-        public RegisterModel(Fall24_SE1745_PRN221_Group5Context context)
-        {
-            _context = context;
-        }
+        public string ErrorMessage { get; set; }
 
-        public void OnGet()
+        public async Task<IActionResult> OnPostAsync()
         {
-        }
+            // Kiểm tra Username không rỗng
+            if (string.IsNullOrWhiteSpace(Username))
+            {
+                ModelState.AddModelError("Username", "Username is required.");
+            }
 
-        public IActionResult OnPost()
-        {
+            // Kiểm tra Email không rỗng và định dạng hợp lệ
+            if (string.IsNullOrWhiteSpace(Email))
+            {
+                ModelState.AddModelError("Email", "Email is required.");
+            }
+            else if (!Email.Contains("@") || !Email.Contains("."))
+            {
+                ModelState.AddModelError("Email", "Invalid email address.");
+            }
+
+            // Kiểm tra Password không rỗng
+            if (string.IsNullOrWhiteSpace(Password))
+            {
+                ModelState.AddModelError("Password", "Password is required.");
+            }
+
+            // Kiểm tra ConfirmPassword không rỗng và khớp với Password
+            if (string.IsNullOrWhiteSpace(ConfirmPassword))
+            {
+                ModelState.AddModelError("ConfirmPassword", "Confirm Password is required.");
+            }
+            else if (Password != ConfirmPassword)
+            {
+                ModelState.AddModelError("ConfirmPassword", "Passwords do not match.");
+            }
+
+            // Kiểm tra nếu có lỗi
             if (!ModelState.IsValid)
             {
                 return Page();
             }
 
-            // Kiểm tra xem mật khẩu và xác nhận mật khẩu có khớp nhau hay không
-            if (Password != ConfirmPassword)
+            // Kiểm tra xem Username hoặc Email đã tồn tại trong DB chưa
+            var existingUser = await _context.Customers
+                .FirstOrDefaultAsync(c => c.Username == Username || c.Email == Email);
+
+            if (existingUser != null)
             {
-                ModelState.AddModelError(string.Empty, "Passwords do not match.");
+                ErrorMessage = "Username or Email already exists.";
                 return Page();
             }
 
-            // Kiểm tra xem tên người dùng (username) đã tồn tại chưa
-            if (_context.Customers.Any(c => c.Username == Customer.Username))
+            // Tạo khách hàng mới
+            var customer = new Customer
             {
-                ModelState.AddModelError(string.Empty, "Username already exists.");
-                return Page();
-            }
-
-            // Kiểm tra xem email đã được sử dụng chưa
-            if (_context.Customers.Any(c => c.Email == Customer.Email))
-            {
-                ModelState.AddModelError(string.Empty, "Email is already in use.");
-                return Page();
-            }
-
-            // Tạo tài khoản khách hàng mới
-            var newCustomer = new Customer
-            {
-                Username = Customer.Username,
-                Email = Customer.Email,
-                Password = Password, // Bạn nên sử dụng hashing cho mật khẩu ở đây
+                Username = Username,
+                Email = Email,
+                Password = Password, // Trong thực tế, mật khẩu cần mã hóa
                 RegisterDate = DateTime.Now,
-                RoleId = 2, // Gán vai trò mặc định (khách hàng)
-                Banned = false
+                RoleId = 1 // Giả sử 2 là role mặc định cho người dùng
             };
 
-            // Lưu khách hàng vào cơ sở dữ liệu
-            _context.Customers.Add(newCustomer);
-            _context.SaveChanges();
+            _context.Customers.Add(customer);
+            await _context.SaveChangesAsync();
 
-            // Chuyển hướng về trang đăng nhập
             return RedirectToPage("/Login");
         }
     }

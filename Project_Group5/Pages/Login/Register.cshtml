@@ -1,40 +1,47 @@
-﻿@page
+﻿@page "/Register"
 @model Project_Group5.Pages.Login.RegisterModel
 @{
+    ViewData["Title"] = "Register";
 }
 
-
-<div class="container">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aroma Shop - Register</title>
+    <link rel="icon" href="~/img/Fevicon.png" type="image/png">
+    <link rel="stylesheet" href="~/vendors/bootstrap/bootstrap.min.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/vendors/fontawesome/css/all.min.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/vendors/themify-icons/themify-icons.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/vendors/linericon/style.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/vendors/owl-carousel/owl.theme.default.min.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/vendors/owl-carousel/owl.carousel.min.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/vendors/nice-select/nice-select.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/vendors/nouislider/nouislider.min.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/css/style.css" asp-append-version="true">
+</head>
+<body>
     <!--================ Start Header Menu Area =================-->
     <header class="header_area">
         <div class="main_menu">
             <nav class="navbar navbar-expand-lg navbar-light">
                 <div class="container">
-                    <a class="navbar-brand logo_h" asp-page="/Index"><img src="~/img/logo.png" alt=""></a>
+                    <a class="navbar-brand logo_h" href="~/index.html"><img src="~/img/logo.png" alt=""></a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
                     <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
                         <ul class="nav navbar-nav menu_nav ml-auto mr-auto">
-                            <li class="nav-item"><a class="nav-link" asp-page="/Index">Home</a></li>
-                            <li class="nav-item submenu dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Shop</a>
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item"><a class="nav-link" asp-page="/Category">Shop Category</a></li>
-                                    <li class="nav-item"><a class="nav-link" asp-page="/SingleProduct">Product Details</a></li>
-                                    <li class="nav-item"><a class="nav-link" asp-page="/Checkout">Product Checkout</a></li>
-                                    <li class="nav-item"><a class="nav-link" asp-page="/Cart">Shopping Cart</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item"><a class="nav-link" asp-page="/Contact">Contact</a></li>
+                            <li class="nav-item"><a class="nav-link" href="~/index.html">Home</a></li>
+                            <!-- Các mục menu khác của bạn -->
                         </ul>
-
                         <ul class="nav-shop">
                             <li class="nav-item"><button><i class="ti-search"></i></button></li>
-                            <li class="nav-item"><button><i class="ti-shopping-cart"></i><span class="nav-shop__circle">3</span></button></li>
+                            <li class="nav-item"><button><i class="ti-shopping-cart"></i><span class="nav-shop__circle">3</span></button> </li>
                             <li class="nav-item"><a class="button button-header" href="#">Buy Now</a></li>
                         </ul>
                     </div>
@@ -43,26 +50,7 @@
         </div>
     </header>
     <!--================ End Header Menu Area =================-->
-
-    <!--================ Start Banner Area =================-->
-    <section class="blog-banner-area" id="category">
-        <div class="container h-100">
-            <div class="blog-banner">
-                <div class="text-center">
-                    <h1>Register</h1>
-                    <nav aria-label="breadcrumb" class="banner-breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Register</li>
-                        </ol>
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--================ End Banner Area =================-->
-
-    <!--================ Start Register Form Area =================-->
+    <!--================Register Box Area =================-->
     <section class="login_box_area section-margin">
         <div class="container">
             <div class="row">
@@ -70,33 +58,35 @@
                     <div class="login_box_img">
                         <div class="hover">
                             <h4>Already have an account?</h4>
-                            <p>There are advances being made in science and technology every day, and a good example of this is the progress we see in</p>
-                            <a class="button button-account" asp-page="/Login">Login Now</a>
+                            <p>There are advances being made in science and technology everyday, and a good example of this is the</p>
+                            <a class="button button-account" href="~/Login">Login Now</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="login_form_inner register_form_inner">
                         <h3>Create an account</h3>
-                        <form class="row login_form" method="post">
+                        <form method="post">
                             <div class="col-md-12 form-group">
-                                <input type="text" class="form-control" id="name" name="Username" placeholder="Username" value="@Model.Customer.Username" required>
+                                <input type="text" class="form-control" asp-for="Username" placeholder="Username" />
+                                <span asp-validation-for="Username" class="text-danger"></span>
                             </div>
                             <div class="col-md-12 form-group">
-                                <input type="email" class="form-control" id="email" name="Email" placeholder="Email Address" value="@Model.Customer.Email" required>
+                                <input type="email" class="form-control" asp-for="Email" placeholder="Email Address" />
+                                <span asp-validation-for="Email" class="text-danger"></span>
                             </div>
                             <div class="col-md-12 form-group">
-                                <input type="password" class="form-control" id="password" name="Password" placeholder="Password" required>
+                                <input type="password" class="form-control" asp-for="Password" placeholder="Password" />
+                                <span asp-validation-for="Password" class="text-danger"></span>
                             </div>
                             <div class="col-md-12 form-group">
-                                <input type="password" class="form-control" id="confirmPassword" name="ConfirmPassword" placeholder="Confirm Password" required>
+                                <input type="password" class="form-control" asp-for="ConfirmPassword" placeholder="Confirm Password" />
+                                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
                             </div>
-                            <div class="col-md-12 form-group">
-                                <div class="creat_account">
-                                    <input type="checkbox" id="f-option2" name="RememberMe">
-                                    <label for="f-option2">Keep me logged in</label>
-                                </div>
-                            </div>
+                            @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+                            {
+                                <p style="color:red;">@Model.ErrorMessage</p>
+                            }
                             <div class="col-md-12 form-group">
                                 <button type="submit" class="button button-register w-100">Register</button>
                             </div>
@@ -106,5 +96,20 @@
             </div>
         </div>
     </section>
-    <!--================ End Register Form Area =================-->
-</div>
+    <!--================End Register Box Area =================-->
+    <!--================ Start footer Area  =================-->
+    <footer>
+        <!-- Your existing footer code here -->
+    </footer>
+    <!--================ End footer Area =================-->
+
+    <script src="~/vendors/jquery/jquery-3.2.1.min.js"></script>
+    <script src="~/vendors/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="~/vendors/skrollr.min.js"></script>
+    <script src="~/vendors/owl-carousel/owl.carousel.min.js"></script>
+    <script src="~/vendors/nice-select/jquery.nice-select.min.js"></script>
+    <script src="~/vendors/jquery.ajaxchimp.min.js"></script>
+    <script src="~/vendors/mail-script.js"></script>
+    <script src="~/js/main.js"></script>
+</body>
+</html>

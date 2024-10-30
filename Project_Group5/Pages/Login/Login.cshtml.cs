@@ -3,74 +3,63 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using System.Security.Claims;
-using Project_Group5.Models; // Namespace của bạn chứa DbContext và mô hình
-using System.Linq;
 using System.Threading.Tasks;
+using Project_Group5.Models; // Đảm bảo bạn đã thêm không gian tên cho các mô hình
+using Microsoft.EntityFrameworkCore;
 
 namespace Project_Group5.Pages.Login
 {
-    public class LoginModel : PageModel
-    {
-        private readonly Fall24_SE1745_PRN221_Group5Context _context;
+	public class LoginModel : PageModel
+	{
+		private readonly Fall24_SE1745_PRN221_Group5Context _context;
 
-        public LoginModel(Fall24_SE1745_PRN221_Group5Context context)
-        {
-            _context = context;
-        }
+		[BindProperty]
+		public string Username { get; set; }
 
-        [BindProperty]
-        public string Username { get; set; }
+		[BindProperty]
+		public string Password { get; set; }
 
-        [BindProperty]
-        public string Password { get; set; }
+		public LoginModel(Fall24_SE1745_PRN221_Group5Context context)
+		{
+			_context = context;
+		}
 
-        // [BindProperty]
-        // public bool RememberMe { get; set; }
+		public async Task<IActionResult> OnPostAsync()
+		{
+			// Kiểm tra thông tin đăng nhập
+			var customer = await _context.Customers
+										  .Include(c => c.Role)
+										  .FirstOrDefaultAsync(c => c.Username == Username && c.Password == Password && c.Banned != true);
 
-        public string ErrorMessage { get; set; }
+			if (customer == null)
+			{
+				// Nếu thông tin không đúng hoặc tài khoản bị khóa
+				ModelState.AddModelError(string.Empty, "Invalid username or password.");
+				return Page();
+			}
 
-        public void OnGet()
-        {
-        }
+			// Tạo Claims cho người dùng
+			var claims = new List<Claim>
+			{
+				new Claim(ClaimTypes.Name, customer.Username),
+				new Claim(ClaimTypes.NameIdentifier, customer.Id.ToString()),
+				new Claim(ClaimTypes.Role, customer.Role.Name) // Thêm Role của người dùng
+            };
 
-        public async Task<IActionResult> OnPostAsync()
-        {
-            if (ModelState.IsValid)
-            {
-                // Kiểm tra thông tin từ cơ sở dữ liệu
-                var customer = _context.Customers.FirstOrDefault(c => c.Username == Username && c.Password == Password);
+			var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
 
-                if (customer != null && customer.Banned == false) // Kiểm tra nếu không bị cấm (Banned)
-                {
-                    // Tạo các claims để đăng nhập
-                    var claims = new List<Claim>
-                    {
-                        new Claim(ClaimTypes.Name, customer.Username),
-                        new Claim(ClaimTypes.Role, customer.Role.Name) // Lấy vai trò từ bảng Role
-                    };
+			// Thiết lập cookie xác thực
+			await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity));
 
-                    var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+			// Chuyển hướng đến trang chủ sau khi đăng nhập thành công
+			return RedirectToPage("/Index");
+		}
 
-                    // Thiết lập thuộc tính phiên đăng nhập
-                    // var authProperties = new AuthenticationProperties
-                    // {
-                    //     IsPersistent = RememberMe, // Đăng nhập duy trì nếu chọn RememberMe
-                    //     ExpiresUtc = DateTimeOffset.UtcNow.AddMinutes(30)
-                    // };
-
-                    // Đăng nhập người dùng
-                    await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity), authProperties);
-
-                    return RedirectToPage("/Index"); // Chuyển hướng đến trang chính
-                }
-                else
-                {
-                    ErrorMessage = "Invalid username or password, or your account is banned."; // Thông báo nếu tài khoản không hợp lệ
-                    return Page();
-                }
-            }
-
-            return Page();
-        }
-    }
+		public async Task<IActionResult> OnGetLogoutAsync()
+		{
+			// Đăng xuất
+			await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+			return RedirectToPage("/Index");
+		}
+	}
 }

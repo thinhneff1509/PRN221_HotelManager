@@ -1,4 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using System;
+using System.Collections.Generic;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace Project_Group5.Models
 {
@@ -15,6 +18,7 @@ namespace Project_Group5.Models
 
         public virtual DbSet<Booking> Bookings { get; set; } = null!;
         public virtual DbSet<Customer> Customers { get; set; } = null!;
+        public virtual DbSet<Discount> Discounts { get; set; } = null!;
         public virtual DbSet<Feedback> Feedbacks { get; set; } = null!;
         public virtual DbSet<ImageRoom> ImageRooms { get; set; } = null!;
         public virtual DbSet<Payment> Payments { get; set; } = null!;
@@ -26,12 +30,7 @@ namespace Project_Group5.Models
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            IConfiguration config = new ConfigurationBuilder()
-                           .SetBasePath(Directory.GetCurrentDirectory())
-                           .AddJsonFile("appsettings.json", true, true)
-                           .Build();
-            var strConn = config["ConnectionStrings:MyDatabase"];
-            optionsBuilder.UseSqlServer(strConn);
+            
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -128,6 +127,28 @@ namespace Project_Group5.Models
                     .HasConstraintName("FK_Customer_Role");
             });
 
+            modelBuilder.Entity<Discount>(entity =>
+            {
+                entity.ToTable("Discount");
+
+                entity.Property(e => e.Id).HasColumnName("id");
+
+                entity.Property(e => e.BookingId).HasColumnName("booking_id");
+
+                entity.Property(e => e.Content)
+                    .HasMaxLength(255)
+                    .HasColumnName("content");
+
+                entity.Property(e => e.Name)
+                    .HasMaxLength(255)
+                    .HasColumnName("name");
+
+                entity.HasOne(d => d.Booking)
+                    .WithMany(p => p.Discounts)
+                    .HasForeignKey(d => d.BookingId)
+                    .HasConstraintName("FK_Discount_Booking");
+            });
+
             modelBuilder.Entity<Feedback>(entity =>
             {
                 entity.ToTable("Feedback");
@@ -188,6 +209,14 @@ namespace Project_Group5.Models
                     .HasColumnName("amount");
 
                 entity.Property(e => e.BookingId).HasColumnName("booking_id");
+
+                entity.Property(e => e.CheckIn)
+                    .HasColumnType("date")
+                    .HasColumnName("check_in");
+
+                entity.Property(e => e.CheckOut)
+                    .HasColumnType("date")
+                    .HasColumnName("check_out");
 
                 entity.Property(e => e.PaymentDate)
                     .HasColumnType("date")
