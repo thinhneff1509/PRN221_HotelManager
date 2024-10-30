@@ -1,147 +1,520 @@
-﻿@page "{id:int}"
-@model Project_Group5.Pages.Rooms.DetailModel
-
+﻿@page
+@model DetailModel
 @{
-    ViewBag.Title = Model.RoomType?.Name ?? "Room Details";
+    ViewData["Title"] = "Hotel Detail";
 }
+<style>
+    body {
+        line-height: 1.6;
+        color: #333;
+        margin: 0;
+        padding: 0;
+    }
 
-<link href="~/css/detail.css" rel="stylesheet">
+    .main-content {
+        width: 100%;
+        float: none;
+    }
 
-<h1>@Model.RoomType?.Name</h1>
-<div class="image-gallery">
-    @if (Model.ImageRoom != null && Model.ImageRoom.Any())
-    {
-        @for (int i = 0; i < Model.ImageRoom.Count; i++)
-        {
-            <img src="/images/@Model.ImageRoom[i].Path" alt="Room Image"
-                 class="gallery-image @(i == 0 ? "active" : "")" />
+    .ftco-section {
+        padding: 60px 0;
+    }
+
+        .ftco-section h2 {
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 30px;
         }
-    }
-    else
-    {
-        <p>No images available for this room.</p>
-    }
-    <button class="prev" onclick="changeImage(-1)">&#10094;</button>
-    <button class="next" onclick="changeImage(1)">&#10095;</button>
-</div>
 
-<script>
-    let currentImageIndex = 0;
-    const images = document.getElementsByClassName("gallery-image");
-
-    function showImage(index) {
-        for (let i = 0; i < images.length; i++) {
-            images[i].classList.remove("active");
+        .ftco-section p {
+            margin-bottom: 20px;
         }
-        images[index].classList.add("active");
+
+    .img-fluid {
+        max-width: 100%;
+        height: auto;
     }
 
-    function changeImage(step) {
-        currentImageIndex = (currentImageIndex + step + images.length) % images.length;
+    .small-img {
+        max-width: 60%;
+        height: auto;
+        margin-top: 20px;
+    }
+
+    .comment-form-wrap {
+        margin-top: 50px;
+    }
+
+        .comment-form-wrap h3 {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+
+        .comment-form-wrap .form-control {
+            margin-bottom: 20px;
+        }
+
+        .comment-form-wrap .btn-primary {
+            background-color: #ff8800;
+            color: #fff;
+        }
+
+            .comment-form-wrap .btn-primary:hover {
+                background-color: #ff6600;
+            }
+
+    .btn-select-room {
+        background-color: #D2A97D;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 20px;
+        font-size: 16px;
+    }
+
+        .btn-select-room:hover {
+            background-color: #b88f66;
+        }
+
+    /* Styles for amenities section */
+    .amenities-section {
+        margin-top: 40px;
+    }
+
+    .amenities-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .amenity-category {
+        flex: 1;
+        min-width: 250px;
+    }
+
+        .amenity-category h3 {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+            .amenity-category h3 svg {
+                width: 24px;
+                height: 24px;
+                margin-right: 10px;
+            }
+
+    .amenity-list {
+        list-style-type: disc;
+        padding-left: 20px;
+    }
+
+        .amenity-list li {
+            margin-bottom: 8px;
+        }
+
+    /* Styles for image gallery */
+    .image-gallery {
+        position: relative;
+        max-width: 70%;
+        margin-top: 20px;
+    }
+
+    .gallery-image {
+        display: none;
+        width: 100%; /* Set to 100% to make it responsive */
+        height: auto; /* Maintain aspect ratio */
+        max-height: 400px; /* Set a maximum height */
+        object-fit: cover; /* Cover to maintain aspect ratio */
+    }
+
+        .gallery-image.active {
+            display: block;
+        }
+
+
+    .prev, .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(255, 255, 255, 0.8);
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+    }
+
+    .prev {
+        left: 10px;
+    }
+
+    .next {
+        right: 10px;
+    }
+
+    /* Feedback Section Styles */
+    .feedback-section {
+        margin-top: 60px;
+        padding: 40px;
+        background-color: #f8f9fa;
+        border-radius: 8px;
+    }
+
+        .feedback-section h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+    .rating label {
+        margin-right: 10px;
+        font-size: 18px;
+    }
+
+    .feedback-comment textarea {
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+        margin-bottom: 20px;
+    }
+
+    .btn-submit-feedback {
+        background-color: #ff8800;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+        .btn-submit-feedback:hover {
+            background-color: #ff6600;
+        }
+
+    /* Previous Feedback Section Styles */
+    .previous-feedback-section {
+        margin-top: 40px;
+        padding: 20px;
+        background-color: #f1f1f1;
+        border-radius: 8px;
+    }
+
+        .previous-feedback-section h3 {
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+
+    .feedback-item {
+        margin-bottom: 20px;
+    }
+
+        .feedback-item p {
+            margin: 5px 0;
+        }
+
+        .feedback-item hr {
+            border-top: 1px solid #ddd;
+        }
+
+    .policy-section {
+        margin-top: 40px;
+        background-color: #f8f9fa;
+        padding: 20px;
+        border-radius: 8px;
+    }
+
+        .policy-section h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .policy-section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .policy-section li {
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .policy-section p {
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+
+
+</style>
+<body>    
+    <section class="ftco-section ftco-degree-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 ftco-animate">
+                    <h2 class="mb-3" style="font-family: ArTimes New Roman;">@Model.Hotel.Name</h2>
+
+                    <!-- Image Gallery -->
+                    <div class="image-gallery">
+                        @* <img src="@Model.Hotel.ImageUrl" alt="" class="img-fluid gallery-image active"> *@
+                        <img src="https://media.sohuutritue.net.vn/files/huongmi/2018/07/13/muong-thanh-grand-ha-long-3-0638.png" alt="Hotel Image" class="img-fluid gallery-image">                       
+                        <img src="https://cdn2.vietnambooking.com/wp-content/uploads/hotel_pro/hotel_345614/f58fc5baaf4693db13807a43ca4396e7.jpg" alt="Hotel Image" class="img-fluid gallery-image">
+                        <img src="https://www.vn.kayak.com/rimg/himg/be/36/8b/expedia_group-399742-210049608-616783.jpg?width=968&height=607&crop=true" alt="Hotel Image" class="img-fluid gallery-image">
+                        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/412969097.jpg?k=2577400aa99ca57cb52b6d4e3ff0fb19cdb8d5027f69533f6b641dca8dc981a3&o=&hp=1" alt="Hotel Image" class="img-fluid gallery-image">
+                        <img src="https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/10030661-d5f40b78426dcc37e01a164ad8ab8a15.jpeg?_src=imagekit&tr=c-at_max,f-jpg,fo-auto,h-500,pr-true,q-80,w-740" alt="Hotel Darmstadt" class="img-fluid gallery-image">
+
+                        <!-- Add more images as necessary -->
+                        <button class="prev" onclick="changeImage(-1)">&#10094;</button>
+                        <button class="next" onclick="changeImage(1)">&#10095;</button>
+                    </div>
+                    <p style="font-size: 15px; font-style:italic">@Model.Hotel.Description</p>
+                    <p><strong>Vị trí:</strong> @Model.Hotel.Address</p>
+                    <p><strong>Giá chỉ từ:</strong> @Model.Hotel.PricePerNight.ToString("C", new System.Globalization.CultureInfo("vi-VN"))</p>
+
+                    <!-- Amenities section -->
+                    <div class="amenities-section">
+                        <h3>Tất cả những tiện ích tại @Model.Hotel.Name</h3>
+                        <div class="amenities-grid">
+                            <div class="amenity-category">
+                                <h3>
+                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                                    Ẩm thực
+                                </h3>
+                                <ul class="amenity-list">
+                                    <li>Bữa tối với thực đơn gọi món</li>
+                                    <li>Bữa trưa với thực đơn gọi món</li>
+                                    <li>Nhà hàng có máy lạnh</li>
+                                    <li>Quầy bar</li>
+                                    <li>Bữa sáng</li>
+                                    <li>Bữa sáng món tự chọn</li>
+                                    <li>Tiệc liên hoan</li>
+                                    <li>Bữa tối với thực đơn chọn sẵn</li>
+                                    <li>Bữa trưa với thực đơn chọn sẵn</li>
+                                    <li>Đồ ăn nhẹ</li>
+                                    <li>Phục vụ món chay</li>
+                                </ul>
+                            </div>
+                            <div class="amenity-category">
+                                <h3>
+                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                                    Dịch vụ khách sạn
+                                </h3>
+                                <ul class="amenity-list">
+                                    <li>Dịch vụ concierge/hỗ trợ khách</li>
+                                    <li>Dịch vụ thu đổi ngoại tệ</li>
+                                    <li>Người gác cửa</li>
+                                    <li>Quầy lễ tân</li>
+                                    <li>Lễ tân 24h</li>
+                                    <li>Bảo vệ 24 giờ</li>
+                                    <li>Dịch vụ giặt ủi</li>
+                                    <li>Dịch vụ lưu trữ/bảo quản hành lý</li>
+                                    <li>Nhặt đồ tại sảnh</li>
+                                    <li>Dịch vụ hỗ trợ đặt Tour</li>
+                                    <li>Dịch vụ tiệc cưới</li>
+                                </ul>
+                            </div>
+                            <div class="amenity-category">
+                                <h3>
+                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+                                    Tiện nghi công cộng
+                                </h3>
+                                <ul class="amenity-list">
+                                    <li>Bãi đậu xe</li>
+                                    <li>Thang máy</li>
+                                    <li>Dịch vụ phòng 24 giờ</li>
+                                    <li>Nhà hàng</li>
+                                    <li>Nhà hàng phục vụ bữa sáng</li>
+                                    <li>Nhà hàng phục vụ bữa tối</li>
+                                    <li>Nhà hàng phục vụ bữa trưa</li>
+                                    <li>Dịch vụ dọn phòng</li>
+                                    <li>Két an toàn</li>
+                                    <li>WiFi tại khu vực chung</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Chính Sách Lưu Trú Section -->
+                    <div class="policy-section">
+                        <h3>Chính Sách Lưu Trú</h3>
+                        <ul>
+                            <li>🕒 <strong>Thời gian nhận phòng/trả phòng</strong></li>
+                            <p>Giờ nhận phòng: Từ 14:00</p>
+                            <p>Giờ trả phòng: Trước 12:00</p>
+                            <li>ℹ️ <strong>Lưu Ý về Tiện Ích</strong></li>
+                            <p>Hồ bơi tạm thời đóng cửa từ 15-12-2020 đến 31-3-2021.</p>
+                            <li>📋 <strong>Hướng Dẫn Nhận Phòng Chung</strong></li>
+                            <p>Important Note: From December 15, 2020, our hotel swimming pool will be closed for maintenance. We apologize for the inconvenience.</p>
+                            <li>🍳 <strong>Bữa sáng</strong></li>
+                            <p>Bữa sáng tại cơ sở lưu trú được phục vụ từ 06:00 đến 09:00.</p>
+                            <li>🚭 <strong>Hút Thuốc</strong></li>
+                            <p>Cơ sở lưu trú cấm hút thuốc.</p>
+                            <li>🐾 <strong>Thú cưng</strong></li>
+                            <p>Không được mang theo thú cưng.</p>
+                        </ul>
+                    </div>
+
+
+                    <button class="btn-select-room">Đặt phòng</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        let currentImageIndex = 0;
+
+        const images = document.querySelectorAll('.gallery-image');
+
+        function showImage(index) {
+            images.forEach((img, i) => {
+                img.classList.remove('active');
+                if (i === index) {
+                    img.classList.add('active');
+                }
+            });
+        }
+
+        function changeImage(direction) {
+            currentImageIndex += direction;
+            if (currentImageIndex < 0) {
+                currentImageIndex = images.length - 1; 
+            } else if (currentImageIndex >= images.length) {
+                currentImageIndex = 0; 
+            }
+            showImage(currentImageIndex);
+        }
+
+        
         showImage(currentImageIndex);
-    }
+    </script>
 
-    showImage(currentImageIndex);
-</script>
+    <div id="rating-summary"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/17.0.2/umd/react.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/17.0.2/umd/react-dom.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
 
-<p>@Model.RoomType?.Description</p>
-</div>
-<div>
-    <table>     
-        <tbody>
-            <tr>               
-                <td>
-                    <p class="price">Giá chỉ từ: <strong>@String.Format("{0:N0}", @Model.RoomType.Price) VND</strong> / đêm</p>
-                    <span>Số giường: @Model.RoomType?.Bed</span>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+    <script type="text/babel">
+        // Function to render star rating based on score
+        const StarRating = ({ score }) => {
+          const stars = [];
+          for (let i = 1; i <= 5; i++) {
+            stars.push(
+              <span key={i} style={{ color: i <= score ? "#ff8800" : "#ccc" }}>
+                ★
+              </span>
+            );
+          }
+          return <div>{stars}</div>;
+        };
 
-<!-- Amenities section -->
-<div class="amenities-section">
-    <h3>Tất cả những tiện ích tại @Model.RoomType.Name</h3>
-    <div class="amenities-grid">
-        <div class="amenity-category">
-            <h3>
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
-                Ẩm thực
-            </h3>
-            <ul class="amenity-list">
-                <li>Bữa tối với thực đơn gọi món</li>
-                <li>Bữa trưa với thực đơn gọi món</li>
-                <li>Nhà hàng có máy lạnh</li>
-                <li>Quầy bar</li>
-                <li>Bữa sáng</li>
-                <li>Bữa sáng món tự chọn</li>
-                <li>Tiệc liên hoan</li>
-                <li>Bữa tối với thực đơn chọn sẵn</li>
-                <li>Bữa trưa với thực đơn chọn sẵn</li>
-                <li>Đồ ăn nhẹ</li>
-                <li>Phục vụ món chay</li>
-            </ul>
-        </div>
-        <div class="amenity-category">
-            <h3>
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
-                Dịch vụ khách sạn
-            </h3>
-            <ul class="amenity-list">
-                <li>Dịch vụ concierge/hỗ trợ khách</li>
-                <li>Dịch vụ thu đổi ngoại tệ</li>
-                <li>Người gác cửa</li>
-                <li>Quầy lễ tân</li>
-                <li>Lễ tân 24h</li>
-                <li>Bảo vệ 24 giờ</li>
-                <li>Dịch vụ giặt ủi</li>
-                <li>Dịch vụ lưu trữ/bảo quản hành lý</li>
-                <li>Nhặt đồ tại sảnh</li>
-                <li>Dịch vụ hỗ trợ đặt Tour</li>
-                <li>Dịch vụ tiệc cưới</li>
-            </ul>
-        </div>
-        <div class="amenity-category">
-            <h3>
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
-                Tiện nghi công cộng
-            </h3>
-            <ul class="amenity-list">
-                <li>Bãi đậu xe</li>
-                <li>Thang máy</li>
-                <li>Dịch vụ phòng 24 giờ</li>
-                <li>Nhà hàng</li>
-                <li>Nhà hàng phục vụ bữa sáng</li>
-                <li>Nhà hàng phục vụ bữa tối</li>
-                <li>Nhà hàng phục vụ bữa trưa</li>
-                <li>Dịch vụ dọn phòng</li>
-                <li>Két an toàn</li>
-                <li>WiFi tại khu vực chung</li>
-            </ul>
-        </div>
+        // RatingSummary component to display overall rating and category ratings with stars
+        const RatingSummary = ({ overallRating, ratings }) => {
+          return (
+            <div>
+              <h3>Xếp hạng & Điểm đánh giá chung: {overallRating}/10</h3>
+              <ul>
+                {ratings.categories.map((category, index) => (
+                  <li key={index}>
+                    {category.name}: <StarRating score={category.score} />
+                  </li>
+                ))}
+              </ul>
+              <p>Từ tất cả {ratings.totalReviews} đánh giá của khách hàng đã ở </p>
+            </div>
+          );
+        };
+
+        // Fetch rating data (replace with actual API call)
+        const fetchRatingData = () => {
+          return {
+            overallRating: 8.1,
+            ratings: {
+              totalReviews: 187,
+              categories: [
+                { name: "Sạch sẽ", score: 4.5 },
+                { name: "Thoải mái", score: 4.5 },
+                { name: "Đồ ăn", score: 4 },
+                { name: "Vị trí", score: 4 },
+                { name: "Dịch vụ", score: 4 }
+              ]
+            }
+          };
+        };
+
+        // Render the RatingSummary component
+        const ratingData = fetchRatingData();
+        ReactDOM.render(
+          <RatingSummary
+            overallRating={ratingData.overallRating}
+            ratings={ratingData.ratings}
+          />,
+          document.getElementById('rating-summary')
+        );
+    </script>
+
+
+    <!-- Previous Feedback Section -->
+    <div class="previous-feedback-section">
+        <h3>Đánh giá từ khách hàng</h3>
+        @if (Model.PreviousFeedbacks != null && Model.PreviousFeedbacks.Count > 0)
+        {
+            @foreach (var feedback in Model.PreviousFeedbacks)
+            {
+                <div class="feedback-item">
+                    <p><strong>Đánh giá:</strong> @feedback.Rating/5</p>
+                    <p>@feedback.Content</p>
+                    <hr />
+                </div>
+            }
+        }
+        else
+        {
+            <p>Chưa có đánh giá nào. Hãy là người đầu tiên để lại đánh giá!</p>
+        }
     </div>
-</div>
-<!-- Chính Sách Lưu Trú Section -->
-<div class="policy-section">
-    <h3>Chính Sách Lưu Trú</h3>
-    <ul>
-        <li>🕒 <strong>Thời gian nhận phòng/trả phòng</strong></li>
-        <p>Giờ nhận phòng: Từ 14:00</p>
-        <p>Giờ trả phòng: Trước 12:00</p>
-        <li>ℹ️ <strong>Lưu Ý về Tiện Ích</strong></li>
-        <p>Hồ bơi tạm thời đóng cửa từ 15-12-2020 đến 31-3-2021.</p>
-        <li>📋 <strong>Hướng Dẫn Nhận Phòng Chung</strong></li>
-        <p>Important Note: From December 15, 2020, our hotel swimming pool will be closed for maintenance. We apologize for the inconvenience.</p>
-        <li>🍳 <strong>Bữa sáng</strong></li>
-        <p>Bữa sáng tại cơ sở lưu trú được phục vụ từ 06:00 đến 09:00.</p>
-        <li>🚭 <strong>Hút Thuốc</strong></li>
-        <p>Cơ sở lưu trú cấm hút thuốc.</p>
-        <li>🐾 <strong>Thú cưng</strong></li>
-        <p>Không được mang theo thú cưng.</p>
-    </ul>
-</div>
-<div>   
-    <form method="post" action="/Rooms/Detail/@Model.RoomType?.Id">
-        <button type="submit" class="btn-select-room">Đặt phòng</button>
-    </form>
-</div>
+
+    <!-- Feedback Section -->
+    <div class="feedback-section">
+        <h3>Góp ý và đánh giá</h3>
+        <form method="post" action="/submit-feedback">
+            <div class="rating">
+                <p>Đánh giá của bạn (từ 1 đến 5):</p>
+                <label>
+                    <input type="radio" name="rating" value="1" required>
+                    1
+                </label>
+                <label>
+                    <input type="radio" name="rating" value="2" required>
+                    2
+                </label>
+                <label>
+                    <input type="radio" name="rating" value="3" required>
+                    3
+                </label>
+                <label>
+                    <input type="radio" name="rating" value="4" required>
+                    4
+                </label>
+                <label>
+                    <input type="radio" name="rating" value="5" required>
+                    5
+                </label>
+            </div>
+
+            <div class="feedback-comment">
+                <p>Ý kiến của bạn:</p>
+                <textarea name="comment" class="form-control" rows="4" placeholder="Hãy chia sẻ cảm nhận của bạn..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit-feedback btn-primary">Gửi đánh giá</button>
+        </form>
+    </div>
+
+    @if (TempData["FeedbackMessage"] != null)
+    {
+        <div class="alert alert-success">
+            @TempData["FeedbackMessage"]
+        </div>
+    }
+</body>
