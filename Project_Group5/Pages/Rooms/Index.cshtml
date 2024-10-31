@@ -99,7 +99,7 @@ var rooms = Model.Rooms;
                                         <p><del>@String.Format("{0:N0}", room.Price) VND</del> <strong>@String.Format("{0:N0}", room.Price) VND</strong> / đêm</p>
                                     <label for="room-count">Số phòng:</label>
                                     <select id="room-count_@room.Id" onchange="updateRoomOptions('@room.Id', @room.Bed, '@room.Name', @room.Price)">
-                                    @for (int i = 0; i <= room.Rooms.Where(r => r.Status == 1).Count(); i++) 
+                                    @for (int i = 0; i <= room.Rooms.Where(r => !r.Status.Equals("full")).Count(); i++)
                                     {
                                         <option value="@i">@i phòng</option>
                                     }

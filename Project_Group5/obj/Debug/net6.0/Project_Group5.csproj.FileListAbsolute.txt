@@ -85,7 +85,6 @@ C:\Users\MY PC\Documents\GitHub\PRN221_HotelManager\Project_Group5\bin\Debug\net
 C:\Users\MY PC\Documents\GitHub\PRN221_HotelManager\Project_Group5\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
 C:\Users\MY PC\Documents\GitHub\PRN221_HotelManager\Project_Group5\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
 C:\Users\MY PC\Documents\GitHub\PRN221_HotelManager\Project_Group5\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
-C:\Users\MY PC\Documents\GitHub\PRN221_HotelManager\Project_Group5\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\MY PC\Documents\GitHub\PRN221_HotelManager\Project_Group5\bin\Debug\net6.0\Microsoft.Identity.Client.dll
 C:\Users\MY PC\Documents\GitHub\PRN221_HotelManager\Project_Group5\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
 C:\Users\MY PC\Documents\GitHub\PRN221_HotelManager\Project_Group5\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll

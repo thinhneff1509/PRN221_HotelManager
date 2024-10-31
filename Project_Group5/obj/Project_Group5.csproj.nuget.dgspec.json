@@ -49,11 +49,11 @@
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[6.0.35, )"
+              "version": "[6.0.33, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[6.0.35, )"
+              "version": "[6.0.33, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",

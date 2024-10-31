@@ -25,12 +25,48 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\images\\bathroom_suiteroom.jpg",
+      "PackagePath": "staticwebassets\\images\\bathroom_suiteroom.jpg"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\images\\beboi.webp",
+      "PackagePath": "staticwebassets\\images\\beboi.webp"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\images\\le tan Muong Thanh.jpeg",
+      "PackagePath": "staticwebassets\\images\\le tan Muong Thanh.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\images\\restroom.jpg",
+      "PackagePath": "staticwebassets\\images\\restroom.jpg"
+    },
+    {
       "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\images\\room101.jpg",
       "PackagePath": "staticwebassets\\images\\room101.jpg"
     },
     {
       "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\images\\room102.jpg",
       "PackagePath": "staticwebassets\\images\\room102.jpg"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\images\\room201.webp",
+      "PackagePath": "staticwebassets\\images\\room201.webp"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\images\\room201_phongan.jpg",
+      "PackagePath": "staticwebassets\\images\\room201_phongan.jpg"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\images\\suite.jpg",
+      "PackagePath": "staticwebassets\\images\\suite.jpg"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\images\\suite_rest.jpg",
+      "PackagePath": "staticwebassets\\images\\suite_rest.jpg"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\images\\suiteroom.jpg",
+      "PackagePath": "staticwebassets\\images\\suiteroom.jpg"
     },
     {
       "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\js\\site.js",

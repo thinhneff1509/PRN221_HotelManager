@@ -25,7 +25,7 @@ namespace Project_Group5.Pages.Rooms
         public string Email { get; set; }
         [BindProperty]
         public string Dob { get; set; }
-        public List<RoomData> SelectedRooms { get; set; }
+        //public List<RoomData> SelectedRooms { get; set; }
 
         public void OnGet(string checkinDate, string checkoutDate, string roomData)
         {
@@ -42,7 +42,7 @@ namespace Project_Group5.Pages.Rooms
             {
                 Console.WriteLine(roomData);
                 // Deserialize RoomData JSON into a list of RoomData objects
-                SelectedRooms = JsonConvert.DeserializeObject<List<RoomData>>(RoomData);
+                //SelectedRooms = JsonConvert.DeserializeObject<List<RoomData>>(RoomData);
             }
         }
 

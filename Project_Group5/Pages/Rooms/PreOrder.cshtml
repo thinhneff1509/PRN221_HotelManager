@@ -1,7 +1,7 @@
 ﻿@page
 @model Project_Group5.Pages.Rooms.PreOrderModel
 @{
-    var SelectedRooms = Model.SelectedRooms;
+    // var SelectedRooms = Model.SelectedRooms;
     <link href="~/css/pre_order.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -16,7 +16,7 @@
                 </div>
             </div>
 
-            <div class="d-flex justify-content-between">
+          @*  <div class="d-flex justify-content-between">
                 <div class="col-md-8">
                     <!-- Room Details -->
                     <div class="card">
@@ -34,15 +34,7 @@
                                             <input type="hidden" id="room_bed_@r.RoomType" value="@r.Bed" />
                                         </div>
                                         <div class="col-md-5 d-flex justify-content-between">
-                                            @*                                <div class="col-md-3">
-                                        <p>Số lượng phòng</p>
-                                        <select>
-                                            @for (int i = 0; i <= r.RoomList.Count; i++)
-                                            {
-                                                <option selected value="@i">@i phòng</option>
-                                            }
-                                        </select>
-                                    </div>*@
+                                            
                                             <div class="col-md-7">
                                                 <p>Số lượng khách</p>
                                                 @foreach (var ri in r.RoomList)
@@ -110,7 +102,7 @@
                                     <hr />
                                                     }
                                 <!-- Room 1 -->
-                                                    }
+                             }
                             <hr>
 
                             <!-- Total Price -->
@@ -168,7 +160,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> *@
             
             
 
