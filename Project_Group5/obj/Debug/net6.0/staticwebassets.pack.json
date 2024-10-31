@@ -5,6 +5,474 @@
       "PackagePath": "staticwebassets\\Project_Group5.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\Form\\Validateform.html",
+      "PackagePath": "staticwebassets\\assets\\Form\\Validateform.html"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\css\\dat.css",
+      "PackagePath": "staticwebassets\\assets\\css\\dat.css"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\css\\ngoc.css",
+      "PackagePath": "staticwebassets\\assets\\css\\ngoc.css"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\css\\reset.css",
+      "PackagePath": "staticwebassets\\assets\\css\\reset.css"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\css\\style.css",
+      "PackagePath": "staticwebassets\\assets\\css\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\css\\tintuc.css",
+      "PackagePath": "staticwebassets\\assets\\css\\tintuc.css"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\css\\tintucchitiet.css",
+      "PackagePath": "staticwebassets\\assets\\css\\tintucchitiet.css"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\AnekLatin-VariableFont_wdth,wght.ttf",
+      "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\AnekLatin-VariableFont_wdth,wght.ttf"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\OFL.txt",
+      "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\OFL.txt"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\README.txt",
+      "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\README.txt"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin-Bold.ttf",
+      "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin-Bold.ttf"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin-ExtraBold.ttf",
+      "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin-ExtraBold.ttf"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin-ExtraLight.ttf",
+      "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin-ExtraLight.ttf"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin-Light.ttf",
+      "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin-Light.ttf"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin-Medium.ttf",
+      "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin-Medium.ttf"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin-Regular.ttf",
+      "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin-Regular.ttf"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin-SemiBold.ttf",
+      "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin-SemiBold.ttf"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin-Thin.ttf",
+      "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin-Thin.ttf"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Condensed-Bold.ttf",
+      "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin_Condensed-Bold.ttf"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Condensed-ExtraBold.ttf",
+      "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin_Condensed-ExtraBold.ttf"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Condensed-ExtraLight.ttf",
+      "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin_Condensed-ExtraLight.ttf"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Condensed-Light.ttf",
+      "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin_Condensed-Light.ttf"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Condensed-Medium.ttf",
+      "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin_Condensed-Medium.ttf"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Condensed-Regular.ttf",
+      "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin_Condensed-Regular.ttf"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Condensed-SemiBold.ttf",
+      "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin_Condensed-SemiBold.ttf"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Condensed-Thin.ttf",
+      "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin_Condensed-Thin.ttf"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Expanded-Bold.ttf",
+      "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin_Expanded-Bold.ttf"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Expanded-ExtraBold.ttf",
+      "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin_Expanded-ExtraBold.ttf"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Expanded-ExtraLight.ttf",
+      "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin_Expanded-ExtraLight.ttf"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Expanded-Light.ttf",
+      "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin_Expanded-Light.ttf"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Expanded-Medium.ttf",
+      "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin_Expanded-Medium.ttf"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Expanded-Regular.ttf",
+      "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin_Expanded-Regular.ttf"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Expanded-SemiBold.ttf",
+      "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin_Expanded-SemiBold.ttf"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Expanded-Thin.ttf",
+      "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin_Expanded-Thin.ttf"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiCondensed-Bold.ttf",
+      "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiCondensed-Bold.ttf"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiCondensed-ExtraBold.ttf",
+      "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiCondensed-ExtraBold.ttf"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiCondensed-ExtraLight.ttf",
+      "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiCondensed-ExtraLight.ttf"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiCondensed-Light.ttf",
+      "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiCondensed-Light.ttf"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiCondensed-Medium.ttf",
+      "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiCondensed-Medium.ttf"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiCondensed-Regular.ttf",
+      "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiCondensed-Regular.ttf"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiCondensed-SemiBold.ttf",
+      "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiCondensed-SemiBold.ttf"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiCondensed-Thin.ttf",
+      "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiCondensed-Thin.ttf"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiExpanded-Bold.ttf",
+      "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiExpanded-Bold.ttf"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiExpanded-ExtraBold.ttf",
+      "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiExpanded-ExtraBold.ttf"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiExpanded-ExtraLight.ttf",
+      "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiExpanded-ExtraLight.ttf"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiExpanded-Light.ttf",
+      "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiExpanded-Light.ttf"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiExpanded-Medium.ttf",
+      "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiExpanded-Medium.ttf"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiExpanded-Regular.ttf",
+      "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiExpanded-Regular.ttf"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiExpanded-SemiBold.ttf",
+      "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiExpanded-SemiBold.ttf"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiExpanded-Thin.ttf",
+      "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiExpanded-Thin.ttf"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\icons\\downward-arrow 3.svg",
+      "PackagePath": "staticwebassets\\assets\\icons\\downward-arrow 3.svg"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\icons\\search.svg",
+      "PackagePath": "staticwebassets\\assets\\icons\\search.svg"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Banner_home.png",
+      "PackagePath": "staticwebassets\\assets\\images\\Banner_home.png"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Cong-vien-1-1-scaled.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\Cong-vien-1-1-scaled.jpg"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Line 11.png",
+      "PackagePath": "staticwebassets\\assets\\images\\Line 11.png"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Logo.png",
+      "PackagePath": "staticwebassets\\assets\\images\\Logo.png"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Mốc dưới.png",
+      "PackagePath": "staticwebassets\\assets\\images\\Mốc dưới.png"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Mốc.png",
+      "PackagePath": "staticwebassets\\assets\\images\\Mốc.png"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\bacgiang.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\bacgiang.jpg"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\bacninh.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\bacninh.jpg"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\doubleroom.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\doubleroom.jpg"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\downward-arrow 3.png",
+      "PackagePath": "staticwebassets\\assets\\images\\downward-arrow 3.png"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\family.png",
+      "PackagePath": "staticwebassets\\assets\\images\\family.png"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\kimboi.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\kimboi.jpg"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\muine.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\muine.jpg"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\office 1.png",
+      "PackagePath": "staticwebassets\\assets\\images\\office 1.png"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\phongdon.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\phongdon.jpg"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\phonghangsang.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\phonghangsang.jpg"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\search 1.png",
+      "PackagePath": "staticwebassets\\assets\\images\\search 1.png"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\A.png",
+      "PackagePath": "staticwebassets\\assets\\images\\tintuc\\A.png"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\Line.png",
+      "PackagePath": "staticwebassets\\assets\\images\\tintuc\\Line.png"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\Vector1.png",
+      "PackagePath": "staticwebassets\\assets\\images\\tintuc\\Vector1.png"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\Vectortintuc.png",
+      "PackagePath": "staticwebassets\\assets\\images\\tintuc\\Vectortintuc.png"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\anhnhamay.png",
+      "PackagePath": "staticwebassets\\assets\\images\\tintuc\\anhnhamay.png"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\anhquytrinhsx.png",
+      "PackagePath": "staticwebassets\\assets\\images\\tintuc\\anhquytrinhsx.png"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\anhtrongcontent.png",
+      "PackagePath": "staticwebassets\\assets\\images\\tintuc\\anhtrongcontent.png"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\capsach.png",
+      "PackagePath": "staticwebassets\\assets\\images\\tintuc\\capsach.png"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\g720.png",
+      "PackagePath": "staticwebassets\\assets\\images\\tintuc\\g720.png"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\gocongnghiep.png",
+      "PackagePath": "staticwebassets\\assets\\images\\tintuc\\gocongnghiep.png"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\gotunhien.png",
+      "PackagePath": "staticwebassets\\assets\\images\\tintuc\\gotunhien.png"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\linequytrinhsx.png",
+      "PackagePath": "staticwebassets\\assets\\images\\tintuc\\linequytrinhsx.png"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\maymocnha.png",
+      "PackagePath": "staticwebassets\\assets\\images\\tintuc\\maymocnha.png"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\mykingdom.png",
+      "PackagePath": "staticwebassets\\assets\\images\\tintuc\\mykingdom.png"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\quatuyetvoi.png",
+      "PackagePath": "staticwebassets\\assets\\images\\tintuc\\quatuyetvoi.png"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\slidechitiet.png",
+      "PackagePath": "staticwebassets\\assets\\images\\tintuc\\slidechitiet.png"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\tuyetvoi.png",
+      "PackagePath": "staticwebassets\\assets\\images\\tintuc\\tuyetvoi.png"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\tuyetvoiqua.png",
+      "PackagePath": "staticwebassets\\assets\\images\\tintuc\\tuyetvoiqua.png"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\vietnam.png",
+      "PackagePath": "staticwebassets\\assets\\images\\tintuc\\vietnam.png"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\1.png",
+      "PackagePath": "staticwebassets\\assets\\images\\Đối tác - khách hàng\\1.png"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\10.png",
+      "PackagePath": "staticwebassets\\assets\\images\\Đối tác - khách hàng\\10.png"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\11.png",
+      "PackagePath": "staticwebassets\\assets\\images\\Đối tác - khách hàng\\11.png"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\12.png",
+      "PackagePath": "staticwebassets\\assets\\images\\Đối tác - khách hàng\\12.png"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\13.png",
+      "PackagePath": "staticwebassets\\assets\\images\\Đối tác - khách hàng\\13.png"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\14.png",
+      "PackagePath": "staticwebassets\\assets\\images\\Đối tác - khách hàng\\14.png"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\15.png",
+      "PackagePath": "staticwebassets\\assets\\images\\Đối tác - khách hàng\\15.png"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\16.png",
+      "PackagePath": "staticwebassets\\assets\\images\\Đối tác - khách hàng\\16.png"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\17.png",
+      "PackagePath": "staticwebassets\\assets\\images\\Đối tác - khách hàng\\17.png"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\18.png",
+      "PackagePath": "staticwebassets\\assets\\images\\Đối tác - khách hàng\\18.png"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\19.png",
+      "PackagePath": "staticwebassets\\assets\\images\\Đối tác - khách hàng\\19.png"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\2.png",
+      "PackagePath": "staticwebassets\\assets\\images\\Đối tác - khách hàng\\2.png"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\20.png",
+      "PackagePath": "staticwebassets\\assets\\images\\Đối tác - khách hàng\\20.png"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\21.png",
+      "PackagePath": "staticwebassets\\assets\\images\\Đối tác - khách hàng\\21.png"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\3.png",
+      "PackagePath": "staticwebassets\\assets\\images\\Đối tác - khách hàng\\3.png"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\4.png",
+      "PackagePath": "staticwebassets\\assets\\images\\Đối tác - khách hàng\\4.png"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\5.png",
+      "PackagePath": "staticwebassets\\assets\\images\\Đối tác - khách hàng\\5.png"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\6.png",
+      "PackagePath": "staticwebassets\\assets\\images\\Đối tác - khách hàng\\6.png"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\7.png",
+      "PackagePath": "staticwebassets\\assets\\images\\Đối tác - khách hàng\\7.png"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\8.png",
+      "PackagePath": "staticwebassets\\assets\\images\\Đối tác - khách hàng\\8.png"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\9.png",
+      "PackagePath": "staticwebassets\\assets\\images\\Đối tác - khách hàng\\9.png"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Ảnh 1.png",
+      "PackagePath": "staticwebassets\\assets\\images\\Ảnh 1.png"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Ảnh 2.png",
+      "PackagePath": "staticwebassets\\assets\\images\\Ảnh 2.png"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Ảnh 3.png",
+      "PackagePath": "staticwebassets\\assets\\images\\Ảnh 3.png"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\js\\dat.js",
+      "PackagePath": "staticwebassets\\assets\\js\\dat.js"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\js\\main.js",
+      "PackagePath": "staticwebassets\\assets\\js\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\js\\ngoc_swiper.js",
+      "PackagePath": "staticwebassets\\assets\\js\\ngoc_swiper.js"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\js\\phi.js",
+      "PackagePath": "staticwebassets\\assets\\js\\phi.js"
+    },
+    {
+      "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\js\\tailwind_custom.js",
+      "PackagePath": "staticwebassets\\assets\\js\\tailwind_custom.js"
+    },
+    {
       "Id": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\css\\detail.css",
       "PackagePath": "staticwebassets\\css\\detail.css"
     },
