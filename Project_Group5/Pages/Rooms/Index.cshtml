@@ -94,7 +94,7 @@
                                     <div class="col-md-4 align-items-md-end">
                                         <label for="room-count">Số phòng:</label>
                                         <select class="form-select col-md-3" id="room-count_@room.Id" onchange="updateRoomOptions('@room.Id', @room.Bed, '@room.Name', @room.Price)">
-                                            @for (int i = 0; i <= room.Rooms.Where(r => r.Status == 1).Count(); i++)
+                                            @for (int i = 0; i <= room.Rooms.Where(r => !r.Status.Equals("full")).Count(); i++)
                                             {
                                                 <option value="@i">@i phòng</option>
                                             }
@@ -217,33 +217,39 @@
             document.getElementById(`adult-count_${roomId}_${i}`).addEventListener('change', function () {
                 totalGuests[i].adults = parseInt(this.value);
                 document.getElementById(`adult-count-display_${roomId}_${i}`).innerText = this.value;
-                updateRoomPrice(i, maxBed, price);
+                updateRoomPrice(roomId, i, maxBed, price);
             });
 
             document.getElementById(`children-count_${roomId}_${i}`).addEventListener('change', function () {
                 totalGuests[i].children = parseInt(this.value);
                 document.getElementById(`children-count-display_${roomId}_${i}`).innerText = this.value;
-                updateRoomPrice(i, maxBed, price);
+                updateRoomPrice(roomId, i, maxBed, price);
             });
         }
         calculateTotalPrice();
     }
 
     // Function to update room price based on total guests
-    function updateRoomPrice(roomIndex, maxBed, basePrice) {
-        const currentGuests = totalGuests[roomIndex].adults + totalGuests[roomIndex].children;
+    function updateRoomPrice(roomId, roomIndex, maxBed, basePrice) {
+        var adultCount = parseInt(document.getElementById(`adult-count_${roomId}_${roomIndex}`).value);
+        var childrenCount = parseInt(document.getElementById(`children-count_${roomId}_${roomIndex}`).value);
+
+        const currentGuests = adultCount + childrenCount;
         let updatedPrice = basePrice;
 
+        // If the number of guests exceeds the maxBed, apply a 30% increase per extra guest
         if (currentGuests > maxBed) {
-            updatedPrice = basePrice * (1 + (currentGuests - maxBed) * 0.3); // Adjust price if guests exceed maxBed
+            const extraGuests = currentGuests - maxBed;
+            updatedPrice = basePrice * (1 + extraGuests * 0.3); // Increase by 30% per extra guest
         }
 
         // Update price display and hidden input value
         document.getElementById(`display_room_price_${roomId}_${roomIndex}`).innerHTML = `Giá: ${formatPrice(updatedPrice)} VND / đêm`;
         document.getElementById(`selected_room_price_${roomId}_${roomIndex}`).value = updatedPrice;
 
-        calculateTotalPrice(); // Recalculate the total price
+        calculateTotalPrice(); // Recalculate the total price after updating this room
     }
+
 
 
 

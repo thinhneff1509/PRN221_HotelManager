@@ -31,12 +31,11 @@ namespace Project_Group5.Models
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            IConfiguration config = new ConfigurationBuilder()
-               .SetBasePath(Directory.GetCurrentDirectory())
-               .AddJsonFile("appsettings.json", true, true)
-               .Build();
-            var strConn = config["ConnectionStrings:MyDatabase"];
-            optionsBuilder.UseSqlServer(strConn);
+            if (!optionsBuilder.IsConfigured)
+            {
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+                optionsBuilder.UseSqlServer("Server=.;Database=Fall24_SE1745_PRN221_Group5;Trusted_Connection=True;");
+            }
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -57,16 +56,18 @@ namespace Project_Group5.Models
 
                 entity.Property(e => e.CustomerId).HasColumnName("customer_id");
 
-                entity.Property(e => e.PaymentStatus).HasColumnName("payment_status");
+                entity.Property(e => e.PaymentStatus)
+                    .HasMaxLength(255)
+                    .HasColumnName("payment_status");
 
                 entity.Property(e => e.RoomId).HasColumnName("room_id");
 
                 entity.Property(e => e.Status)
-                    .HasMaxLength(50)
+                    .HasMaxLength(255)
                     .HasColumnName("status");
 
                 entity.Property(e => e.TotalAmount)
-                    .HasColumnType("money")
+                    .HasMaxLength(255)
                     .HasColumnName("total_amount");
 
                 entity.HasOne(d => d.Customer)
@@ -108,11 +109,11 @@ namespace Project_Group5.Models
                     .HasColumnName("name");
 
                 entity.Property(e => e.Password)
-                    .HasMaxLength(50)
+                    .HasMaxLength(255)
                     .HasColumnName("password");
 
                 entity.Property(e => e.Phone)
-                    .HasMaxLength(10)
+                    .HasMaxLength(255)
                     .HasColumnName("phone");
 
                 entity.Property(e => e.RegisterDate)
@@ -122,7 +123,7 @@ namespace Project_Group5.Models
                 entity.Property(e => e.RoleId).HasColumnName("role_id");
 
                 entity.Property(e => e.Username)
-                    .HasMaxLength(50)
+                    .HasMaxLength(255)
                     .HasColumnName("username");
 
                 entity.HasOne(d => d.Role)
@@ -209,7 +210,7 @@ namespace Project_Group5.Models
                 entity.Property(e => e.Id).HasColumnName("id");
 
                 entity.Property(e => e.Amount)
-                    .HasColumnType("money")
+                    .HasMaxLength(255)
                     .HasColumnName("amount");
 
                 entity.Property(e => e.BookingId).HasColumnName("booking_id");
@@ -231,7 +232,7 @@ namespace Project_Group5.Models
                     .HasColumnName("payment_method");
 
                 entity.Property(e => e.Status)
-                    .HasMaxLength(50)
+                    .HasMaxLength(255)
                     .HasColumnName("status");
 
                 entity.HasOne(d => d.Booking)
@@ -247,7 +248,7 @@ namespace Project_Group5.Models
                 entity.Property(e => e.Id).HasColumnName("id");
 
                 entity.Property(e => e.Name)
-                    .HasMaxLength(50)
+                    .HasMaxLength(255)
                     .HasColumnName("name");
             });
 
@@ -266,7 +267,9 @@ namespace Project_Group5.Models
 
                 entity.Property(e => e.RoomtypeId).HasColumnName("roomtype_id");
 
-                entity.Property(e => e.Status).HasColumnName("status");
+                entity.Property(e => e.Status)
+                    .HasMaxLength(255)
+                    .HasColumnName("status");
 
                 entity.HasOne(d => d.Roomtype)
                     .WithMany(p => p.Rooms)
@@ -283,15 +286,15 @@ namespace Project_Group5.Models
 
                 entity.Property(e => e.Bed).HasColumnName("bed");
 
-                entity.Property(e => e.Description).HasColumnName("description");
+                entity.Property(e => e.Description)
+                    .HasMaxLength(255)
+                    .HasColumnName("description");
 
                 entity.Property(e => e.Name)
                     .HasMaxLength(255)
                     .HasColumnName("name");
 
-                entity.Property(e => e.Price)
-                    .HasColumnType("money")
-                    .HasColumnName("price");
+                entity.Property(e => e.Price).HasColumnName("price");
             });
 
             modelBuilder.Entity<Service>(entity =>
@@ -301,7 +304,7 @@ namespace Project_Group5.Models
                 entity.Property(e => e.Id).HasColumnName("id");
 
                 entity.Property(e => e.Price)
-                    .HasColumnType("money")
+                    .HasMaxLength(255)
                     .HasColumnName("price");
 
                 entity.Property(e => e.ServiceName)
@@ -309,7 +312,7 @@ namespace Project_Group5.Models
                     .HasColumnName("service_name");
 
                 entity.Property(e => e.Status)
-                    .HasMaxLength(50)
+                    .HasMaxLength(255)
                     .HasColumnName("status");
             });
 

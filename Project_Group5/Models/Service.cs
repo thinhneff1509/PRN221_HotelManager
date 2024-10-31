@@ -12,7 +12,7 @@ namespace Project_Group5.Models
 
         public int Id { get; set; }
         public string? ServiceName { get; set; }
-        public decimal Price { get; set; }
+        public string Price { get; set; } = null!;
         public string? Status { get; set; }
 
         public virtual ICollection<ServiceRegistration> ServiceRegistrations { get; set; }

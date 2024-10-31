@@ -18,8 +18,8 @@ namespace Project_Group5.Models
         public string? Status { get; set; }
         public DateTime? CheckInDate { get; set; }
         public DateTime? CheckOutDate { get; set; }
-        public decimal? TotalAmount { get; set; }
-        public bool? PaymentStatus { get; set; }
+        public string? TotalAmount { get; set; }
+        public string? PaymentStatus { get; set; }
 
         public virtual Customer? Customer { get; set; }
         public virtual Room? Room { get; set; }
