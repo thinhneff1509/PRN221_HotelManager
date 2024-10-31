@@ -18,7 +18,7 @@ namespace Project_Group5.Models
         public DateTime? Dob { get; set; }
         public string? Phone { get; set; } = null!;
         public string? Username { get; set; }
-        public string? Password { get; set; } = null!;
+        public string? Password { get; set; }
         public string? Address { get; set; }
         public DateTime? RegisterDate { get; set; }
         public int? RoleId { get; set; }

@@ -14,13 +14,11 @@ namespace Project_Group5.Models
         }
 
         public int Id { get; set; }
-        public string? Name { get; set; }
-        public string RoomNumber { get; set; } = null!;
-        public string? RoomType { get; set; }
-        public string Price { get; set; } = null!;
-        public int Status { get; set; }
-        public string? Description { get; set; }
+        public string? RoomNumber { get; set; } = null!;
+        public string? Status { get; set; } = null!;
+        public int? RoomtypeId { get; set; }
 
+        public virtual RoomType Roomtype { get; set; } = null!;
         public virtual ICollection<Booking> Bookings { get; set; }
         public virtual ICollection<Feedback> Feedbacks { get; set; }
         public virtual ICollection<ImageRoom> ImageRooms { get; set; }

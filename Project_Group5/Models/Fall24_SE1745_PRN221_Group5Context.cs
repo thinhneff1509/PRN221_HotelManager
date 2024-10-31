@@ -24,13 +24,14 @@ namespace Project_Group5.Models
         public virtual DbSet<Payment> Payments { get; set; } = null!;
         public virtual DbSet<Role> Roles { get; set; } = null!;
         public virtual DbSet<Room> Rooms { get; set; } = null!;
+        public virtual DbSet<RoomType> RoomTypes { get; set; } = null!;
         public virtual DbSet<Service> Services { get; set; } = null!;
         public virtual DbSet<ServiceRegistration> ServiceRegistrations { get; set; } = null!;
         public virtual DbSet<Wishlist> Wishlists { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            
+           
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -96,11 +97,11 @@ namespace Project_Group5.Models
                     .HasColumnName("dob");
 
                 entity.Property(e => e.Email)
-                    .HasMaxLength(255)
+                    .HasMaxLength(50)
                     .HasColumnName("email");
 
                 entity.Property(e => e.Name)
-                    .HasMaxLength(255)
+                    .HasMaxLength(50)
                     .HasColumnName("name");
 
                 entity.Property(e => e.Password)
@@ -256,6 +257,31 @@ namespace Project_Group5.Models
 
                 entity.Property(e => e.Id).HasColumnName("id");
 
+                entity.Property(e => e.RoomNumber)
+                    .HasMaxLength(255)
+                    .HasColumnName("room_number");
+
+                entity.Property(e => e.RoomtypeId).HasColumnName("roomtype_id");
+
+                entity.Property(e => e.Status)
+                    .HasMaxLength(255)
+                    .HasColumnName("status");
+
+                entity.HasOne(d => d.Roomtype)
+                    .WithMany(p => p.Rooms)
+                    .HasForeignKey(d => d.RoomtypeId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_Room_RoomType");
+            });
+
+            modelBuilder.Entity<RoomType>(entity =>
+            {
+                entity.ToTable("RoomType");
+
+                entity.Property(e => e.Id).HasColumnName("id");
+
+                entity.Property(e => e.Bed).HasColumnName("bed");
+
                 entity.Property(e => e.Description)
                     .HasMaxLength(255)
                     .HasColumnName("description");
@@ -264,19 +290,7 @@ namespace Project_Group5.Models
                     .HasMaxLength(255)
                     .HasColumnName("name");
 
-                entity.Property(e => e.Price)
-                    .HasMaxLength(255)
-                    .HasColumnName("price");
-
-                entity.Property(e => e.RoomNumber)
-                    .HasMaxLength(255)
-                    .HasColumnName("room_number");
-
-                entity.Property(e => e.RoomType)
-                    .HasMaxLength(255)
-                    .HasColumnName("room_type");
-
-                entity.Property(e => e.Status).HasColumnName("status");
+                entity.Property(e => e.Price).HasColumnName("price");
             });
 
             modelBuilder.Entity<Service>(entity =>
@@ -314,7 +328,7 @@ namespace Project_Group5.Models
                 entity.Property(e => e.ServiceId).HasColumnName("service_id");
 
                 entity.Property(e => e.TotalPrice)
-                    .HasMaxLength(255)
+                    .HasColumnType("money")
                     .HasColumnName("total_price");
 
                 entity.HasOne(d => d.Booking)
