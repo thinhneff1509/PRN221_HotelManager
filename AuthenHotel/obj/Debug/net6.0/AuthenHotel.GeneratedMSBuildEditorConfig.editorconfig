@@ -42,7 +42,15 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+<<<<<<< HEAD:Project_Group5/obj/Debug/net6.0/Project_Group5.GeneratedMSBuildEditorConfig.editorconfig
+[D:/Ki 7/PRN221_Retake/Assignment_Group5/Project_Group5/Pages/UserService/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlclNlcnZpY2VcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Ki 7/PRN221_Retake/Assignment_Group5/Project_Group5/Pages/_ViewImports.cshtml]
+=======
 [D:/PRN221/project/PRN221_HotelManager/AuthenHotel/Pages/_ViewImports.cshtml]
+>>>>>>> f322e664095d085798eb9f4c909f9cca65796237:AuthenHotel/obj/Debug/net6.0/AuthenHotel.GeneratedMSBuildEditorConfig.editorconfig
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 

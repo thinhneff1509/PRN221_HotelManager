@@ -41,8 +41,8 @@ namespace Project_Group5.Pages.Login
 			{
 				new Claim(ClaimTypes.Name, customer.Username),
 				new Claim(ClaimTypes.NameIdentifier, customer.Id.ToString()),
-				new Claim(ClaimTypes.Role, customer.Role.Name) 
-            };
+				new Claim(ClaimTypes.Role, customer.Role.Name)
+			};
 
 			var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
 
@@ -53,6 +53,7 @@ namespace Project_Group5.Pages.Login
 			return RedirectToPage("/Homepage/Home");
 		}
 
+
 		public async Task<IActionResult> OnGetLogoutAsync()
 		{
 			await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
@@ -60,3 +61,4 @@ namespace Project_Group5.Pages.Login
 		}
 	}
 }
+
