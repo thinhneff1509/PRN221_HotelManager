@@ -2019,19 +2019,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\acer\\.nuget\\packages\\": {}
+    "C:\\Users\\ACER\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Ki 7\\PRN221_Retake\\Assignment_Group5\\Project_Group5\\Project_Group5.csproj",
+      "projectUniqueName": "d:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\Project_Group5.csproj",
       "projectName": "Project_Group5",
-      "projectPath": "D:\\Ki 7\\PRN221_Retake\\Assignment_Group5\\Project_Group5\\Project_Group5.csproj",
-      "packagesPath": "C:\\Users\\acer\\.nuget\\packages\\",
-      "outputPath": "D:\\Ki 7\\PRN221_Retake\\Assignment_Group5\\Project_Group5\\obj\\",
+      "projectPath": "d:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\Project_Group5.csproj",
+      "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
+      "outputPath": "d:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\acer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
