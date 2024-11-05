@@ -8,7 +8,8 @@ namespace Project_Group5.Pages.Rooms
     {
         private readonly Fall24_SE1745_PRN221_Group5Context _context;
 
-        public IList<Room> Rooms { get; set; }
+
+        public IList<RoomType> Rooms { get; set; }
 
         public IndexModel(Fall24_SE1745_PRN221_Group5Context context)
         {
@@ -17,7 +18,12 @@ namespace Project_Group5.Pages.Rooms
         public async Task OnGetAsync()
         {
             // Fetch all rooms from the database
-            Rooms = await _context.Rooms.Include(r => r.ImageRooms).ToListAsync();
+            Rooms = await _context.RoomTypes.Include(r => r.Rooms).ThenInclude(r => r.ImageRooms).ToListAsync();
+        }
+
+        public async Task OnPostAsync()
+        {
+
         }
     }
 }

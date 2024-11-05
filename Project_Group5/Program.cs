@@ -1,7 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Project_Group5.Models;
-using Project_Group5.Repositoríes;
-using Project_Group5.Repositoríes.Interfaces;
 using Microsoft.AspNetCore.Authentication.Cookies;
 
 namespace Project_Group5
@@ -18,9 +16,6 @@ namespace Project_Group5
 
 			// Đăng ký Razor Pages và các dịch vụ cần thiết
 			builder.Services.AddRazorPages();
-
-			// Đăng ký Repository
-			builder.Services.AddScoped<IRoomRepository, RoomRepository>();
 
 			// Cấu hình Authentication sử dụng Cookie
 			builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
