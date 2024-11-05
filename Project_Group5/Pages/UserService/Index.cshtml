@@ -2,6 +2,13 @@
 @model Project_Group5.Pages.UserService.IndexModel
 @{
 }
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="bg-green-500 text-white p-4 rounded-lg mb-4">
+        @TempData["SuccessMessage"]
+    </div>
+}
 <h1 class="text-3xl font-bold text-gray-900 mb-4">User Manager</h1>
 <section class="bg-gray-50 bg-white p-3 sm:p-5 antialiased">
     <div class="mx-auto max-w-screen-xl px-4 lg:px-12">
@@ -18,8 +25,18 @@
                                 </svg>
                             </div>
                             <input type="text" id="simple-search" name="searchString" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full pl-10 p-2" placeholder="Search">
-                            <button type="submit" class="bg-blue-500 text-white font-semibold rounded-lg px-4 py-2 ml-2 hover:bg-blue-600">Search</button>
                         </div>
+
+                        <!-- Bộ lọc vai trò (Role) -->
+                        <select name="roleFilter" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg ml-2 p-2 focus:ring-primary-500 focus:border-primary-500">
+                            <option value="">All Roles</option> <!-- Tùy chọn để hiển thị tất cả vai trò -->
+                            @foreach (var role in Model.Roles)
+                            {
+                                <option value="@role.Id">@role.Name</option>
+                            }
+                        </select>
+
+                        <button type="submit" class="bg-blue-500 text-white font-semibold rounded-lg px-4 py-2 ml-2 hover:bg-blue-600">Search</button>
                     </form>
                 </div>
                 <div class="w-full md:w-auto flex flex-col md:flex-row space-y-2 md:space-y-0 items-stretch md:items-center justify-end md:space-x-3 flex-shrink-0">
@@ -32,7 +49,6 @@
                 </div>
             </div>
         </div>
-    </div>
     <div class="overflow-x-auto">
         <table class="w-full text-sm text-left text-gray-800 bg-white">
             <thead class="text-xs text-gray-900 uppercase bg-gray-200">
@@ -70,12 +86,17 @@
                             <div id="dropdown-@customer.Id" class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-200 shadow">
                                 <ul class="py-1 text-sm" aria-labelledby="options-dropdown-@customer.Id">
                                     <li>
-                                        <button type="button" class="edit-button flex w-full items-center py-2 px-4 hover:bg-gray-300 text-gray-800" data-id="@customer.Id" data-name="@customer.Name" data-phone="@customer.Phone" data-email="@customer.Email" data-role-id="@customer.RoleId">
-                                            <svg class="h-3.5 w-3.5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                                <path clip-rule="evenodd" fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" />
-                                            </svg>
-                                            Edit
-                                        </button>
+                                            <button type="button" class="edit-button flex w-full items-center py-2 px-4 hover:bg-gray-300 text-gray-800"
+                                                    data-id="@customer.Id"
+                                                    data-name="@customer.Name"
+                                                    data-phone="@customer.Phone"
+                                                    data-role-id="@customer.RoleId"
+                                                    onclick="openUpdateUserModal(this)">
+                                                <svg class="h-3.5 w-3.5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                                    <path clip-rule="evenodd" fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" />
+                                                </svg>
+                                                Edit
+                                            </button>
                                     </li>
 
                                     <li>
@@ -202,26 +223,25 @@
 
                 <!-- Modal content -->
                 <div class="relative p-4 bg-white rounded-lg shadow sm:p-5">
-                    <form method="post" asp-page="./Index" asp-page-handler="Update">
-                        <input type="hidden" asp-for="Customer.Id" id="customerId" />
+                    <form method="post" asp-page="./Index" asp-page-handler="Update" onsubmit="return validateFormUpdate()">
+
+                        <input type="hidden" asp-for="Customer.Id" id="updateCustomerId" />
                         <div class="p-4">
                             <div class="grid gap-4 mb-4 sm:grid-cols-2">
                                 <div>
                                     <label asp-for="Customer.Name" class="block mb-2 text-sm font-medium">Name</label>
-                                    <input asp-for="Customer.Name" id="customerName" class="bg-gray-50 border border-gray-300 rounded-lg p-2.5 w-full" required />
+                                    <input asp-for="Customer.Name" id="updateCustomerName" class="bg-gray-50 border border-gray-300 rounded-lg p-2.5 w-full" required />
+                                    <span id="nameError" class="text-red-500 text-sm hidden"></span> <!-- Thêm thẻ span cho tên -->
                                 </div>
                                 <div>
                                     <label asp-for="Customer.Phone" class="block mb-2 text-sm font-medium">Phone Number</label>
-                                    <input asp-for="Customer.Phone" id="customerPhone" class="bg-gray-50 border border-gray-300 rounded-lg p-2.5 w-full" required />
-                                </div>
-                                <div>
-                                    <label asp-for="Customer.Email" class="block mb-2 text-sm font-medium">Email</label>
-                                    <input asp-for="Customer.Email" id="customerEmail" class="bg-gray-50 border border-gray-300 rounded-lg p-2.5 w-full" required />
+                                    <input asp-for="Customer.Phone" id="updateCustomerPhone" class="bg-gray-50 border border-gray-300 rounded-lg p-2.5 w-full" required />
+                                    <span id="phoneError" class="text-red-500 text-sm hidden"></span> <!-- Thêm thẻ span cho số điện thoại -->
                                 </div>
                                 <div>
                                     <label asp-for="Customer.RoleId" class="block mb-2 text-sm font-medium">Role</label>
-                                    <select asp-for="Customer.RoleId" id="customerRole" class="bg-gray-50 border border-gray-300 rounded-lg p-2.5 w-full" required>
-                                        <option selected>Select Role</option>
+                                    <select asp-for="Customer.RoleId" id="updateCustomerRole" class="bg-gray-50 border border-gray-300 rounded-lg p-2.5 w-full" required>
+                                        <option value="" selected>Select Role</option>
                                         @if (Model.Roles != null)
                                         {
                                             foreach (var role in Model.Roles)
@@ -230,6 +250,7 @@
                                             }
                                         }
                                     </select>
+                                    <span id="roleError" class="text-red-500 text-sm hidden"></span> <!-- Thêm thẻ span cho vai trò -->
                                 </div>
                             </div>
                             <div class="flex justify-end">
@@ -238,61 +259,74 @@
                             </div>
                         </div>
                     </form>
+
+
                 </div>
+
             </div>
         </div>
     </div>
 </div>
 
-<!-- Read modal -->
-<div id="readProductModal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
-    <div class="relative p-4 w-full max-w-xl max-h-full">
-        <div class="relative p-4 bg-white rounded-lg shadow sm:p-5">
-            <div class="flex justify-between mb-4 rounded-t sm:mb-5">
-                <div class="text-lg text-gray-900 md:text-xl">
-                    <h3 class="font-semibold">Nguyen Hoang</h3>
-                    <p class="font-bold">21</p>
-                </div>
-                <div>
-                    <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 inline-flex" data-modal-toggle="readProductModal">
-                        <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
-                        </svg>
-                        <span class="sr-only">Close modal</span>
-                    </button>
-                </div>
-            </div>
-            <dl>
-                <dt class="mb-2 font-semibold leading-none text-gray-900">Desc</dt>
-                <dd class="mb-4 font-light text-gray-500 sm:mb-5">Yungboisitinh</dd>
-                <dt class="mb-2 font-semibold leading-none text-gray-900">Role</dt>
-                <dd class="mb-4 font-light text-gray-500 sm:mb-5">Admin</dd>
-            </dl>
-            <div class="flex justify-between items-center">
-                <div class="flex items-center space-x-3 sm:space-x-4">
-                    <button type="button" class="text-white inline-flex items-center bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
-                        <svg aria-hidden="true" class="mr-1 -ml-1 w-5 h-5" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z" />
-                            <path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd" />
-                        </svg>
-                        Edit
-                    </button>
-                    <button type="button" class="py-2.5 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-200">Preview</button>
-                </div>
-                <button type="button" class="inline-flex items-center text-white bg-red-600 hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
-                    <svg aria-hidden="true" class="w-5 h-5 mr-1.5 -ml-1" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h10a1 1 0 000-2H4V6h3.382l.724-1.447A1 1 0 009 2z" clip-rule="evenodd" />
-                    </svg>
-                    Delete
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
-                <!-- Delete modal -->
+      
  <script>
+     //Update Modal
 
-// Open modal function
+    function openUpdateUserModal(button) {
+        var customerId = button.getAttribute('data-id');
+        var customerName = button.getAttribute('data-name');
+        var customerPhone = button.getAttribute('data-phone');
+        var customerRoleId = button.getAttribute('data-role-id');
+
+        // Cập nhật giá trị vào các trường trong modal
+        document.getElementById('updateCustomerId').value = customerId;
+        document.getElementById('updateCustomerName').value = customerName;
+        document.getElementById('updateCustomerPhone').value = customerPhone;
+        document.getElementById('updateCustomerRole').value = customerRoleId;
+
+        // Mở modal
+        document.getElementById('updateUserModal').classList.remove('hidden');
+    }
+
+    function closeModal() {
+        document.getElementById('updateUserModal').classList.add('hidden');
+    }
+
+    function validateFormUpdate() {
+        // Lấy giá trị từ các trường trong form
+        var customerName = document.getElementById('updateCustomerName').value;
+        var customerPhone = document.getElementById('updateCustomerPhone').value;
+        var customerRole = document.getElementById('updateCustomerRole').value;
+
+        // Kiểm tra tên
+        if (!customerName) {
+            alert("Tên không được để trống.");
+            return false; // Ngăn gửi form
+        }
+
+        // Kiểm tra số điện thoại
+        if (!customerPhone) {
+            alert("Số điện thoại không được để trống.");
+            return false; // Ngăn gửi form
+        } else if (!/^\d{10}$/.test(customerPhone)) {
+            alert("Số điện thoại không hợp lệ.");
+            return false; // Ngăn gửi form
+        }
+
+        // Kiểm tra vai trò
+        if (!customerRole) {
+            alert("Vui lòng chọn vai trò.");
+            return false; // Ngăn gửi form
+        }
+
+        // Nếu tất cả đều hợp lệ, cho phép gửi form
+        return true;
+    }
+
+
+
+    
+                // Open modal function
                     function openModal(customer) {
                         document.getElementById('customerId').value = customer.id;
                         document.getElementById('customerName').value = customer.name;
