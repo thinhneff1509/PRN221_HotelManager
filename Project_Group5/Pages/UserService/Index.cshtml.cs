@@ -33,7 +33,7 @@ namespace Project_Group5.Pages.UserService
 
 
 
-           
+            Roles = await _context.Roles.ToListAsync();
         }
 
         public async Task<IActionResult> OnPostAsync()
@@ -44,6 +44,19 @@ namespace Project_Group5.Pages.UserService
                 ViewData["ShowModal"] = true;
                 Customers = await _context.Customers.ToListAsync();
                 return Page(); // Nếu dữ liệu không hợp lệ, trở lại trang
+            }
+
+            // Kiểm tra xem email đã tồn tại trong cơ sở dữ liệu hay chưa
+            var existingCustomer = await _context.Customers
+                .FirstOrDefaultAsync(c => c.Email == Customer.Email);
+
+            if (existingCustomer != null)
+            {
+                ModelState.AddModelError("Customer.Email", "Email đã tồn tại. Vui lòng nhập email khác.");
+                Roles = await _context.Roles.ToListAsync();
+                ViewData["ShowModal"] = true;
+                Customers = await _context.Customers.ToListAsync();
+                return Page(); // Trở lại trang với thông báo lỗi
             }
 
             _context.Customers.Add(Customer); // Thêm khách hàng mới vào DbContext
