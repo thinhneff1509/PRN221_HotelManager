@@ -53,10 +53,11 @@ namespace Project_Group5.Pages.Login
 			return RedirectToPage("/Homepage/Home");
 		}
 
-		public async Task<IActionResult> OnGetLogoutAsync()
-		{
-			await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
-			return RedirectToPage("/Homepage/Home");
-		}
+	public async Task<IActionResult> OnGetLogoutAsync()
+{
+    await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+    return RedirectToPage("/Homepage/Home");
+}
+
 	}
 }
