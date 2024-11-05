@@ -5,3 +5,10 @@ Project_Group5/.vs
 Project_Group5/bin
 Project_Group5/obj
 
+# Bỏ qua thư mục Visual Studio
+.vs/
+# Bỏ qua tệp cấu hình nhạy cảm
+appsettings.json
+# Bỏ qua thư mục biên dịch
+bin/
+obj/
