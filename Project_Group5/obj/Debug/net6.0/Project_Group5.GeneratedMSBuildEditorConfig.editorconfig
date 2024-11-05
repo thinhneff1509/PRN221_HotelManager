@@ -18,6 +18,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\PRN221\project\PRN221_HotelManager\Project_Group5
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/Admin/RoomManagement/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cUm9vbU1hbmFnZW1lbnRcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/Checkout/Checkout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2hlY2tvdXRcQ2hlY2tvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -50,10 +54,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZmlsZUN1c3RvbWVyXFByb2ZpbGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/RoomManagement/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUm9vbU1hbmFnZW1lbnRcSW5kZXguY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/Rooms/Detail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUm9vbXNcRGV0YWlsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -68,6 +68,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/Rooms/PreOrder.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUm9vbXNcUHJlT3JkZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/ServiceOrder/ServiceOrder.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2VydmljZU9yZGVyXFNlcnZpY2VPcmRlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/Shared/_ValidationScriptsPartial.cshtml]
