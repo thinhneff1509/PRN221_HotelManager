@@ -1,6 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
 using Project_Group5.Models;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Project_Group5.Pages.Checkout
 {
@@ -13,7 +17,6 @@ namespace Project_Group5.Pages.Checkout
             _context = context;
         }
 
-        // Thuộc tính chứa thông tin thanh toán
         [BindProperty]
         public string FullName { get; set; }
 
@@ -27,13 +30,42 @@ namespace Project_Group5.Pages.Checkout
         public string Address { get; set; }
 
         [BindProperty]
-        public string status { get; set; }
+        public List<RoomData> SelectedRooms { get; set; } = new List<RoomData>();
 
+        public int StayDuration { get; set; }
         public decimal TotalAmount { get; set; }
 
-        public IActionResult OnGet()
+        public async Task<IActionResult> OnGetAsync(string selectedRooms, string totalAmount, int stayDuration)
         {
-            TotalAmount = CalculateTotalAmount();
+            // Deserialize RoomData JSON from the query parameter
+            if (!string.IsNullOrEmpty(selectedRooms))
+            {
+                SelectedRooms = JsonConvert.DeserializeObject<List<RoomData>>(selectedRooms);
+            }
+
+            // Parse and assign TotalAmount
+            TotalAmount = string.IsNullOrEmpty(totalAmount) ? 0 : decimal.Parse(totalAmount);
+            StayDuration = stayDuration;
+
+            // Kiểm tra nếu người dùng đã đăng nhập
+            if (User.Identity.IsAuthenticated)
+            {
+                // Lấy Username từ thông tin người dùng đăng nhập
+                string username = User.Identity.Name;
+
+                // Tìm kiếm thông tin khách hàng dựa vào Username
+                var customer = await _context.Customers.FirstOrDefaultAsync(c => c.Username == username);
+
+                if (customer != null)
+                {
+                    // Đổ dữ liệu khách hàng vào các thuộc tính BindProperty
+                    FullName = customer.Name;
+                    PhoneNumber = customer.Phone;
+                    Email = customer.Email;
+                    Address = customer.Address;
+                }
+            }
+
             return Page();
         }
 
@@ -44,26 +76,21 @@ namespace Project_Group5.Pages.Checkout
                 return Page();
             }
 
-            var order = new Booking
+            // Xử lý logic tạo đơn hàng ở đây
+            var booking = new Booking
             {
-                CustomerId = 1, // ID khách hàng đã đăng nhập (giả sử 1 là ID của khách hiện tại)
+                CustomerId = 1, // Thay bằng ID khách hàng đã đăng nhập
                 CheckInDate = DateTime.Now,
-                CheckOutDate = DateTime.Now.AddDays(1), // Giả sử đơn hàng trong 1 ngày
+                CheckOutDate = DateTime.Now.AddDays(StayDuration),
                 TotalAmount = TotalAmount.ToString(),
                 PaymentStatus = "Pending",
                 Status = "Processing"
             };
 
-            _context.Bookings.Add(order);
+            _context.Bookings.Add(booking);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("/Confirmation");
         }
-
-        private decimal CalculateTotalAmount()
-        {
-            return 2210.00M; 
-        }
     }
 }
-

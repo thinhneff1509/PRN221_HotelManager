@@ -3,11 +3,22 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 using Project_Group5.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace Project_Group5.Pages.Rooms
 {
     public class PreOrderModel : PageModel
     {
+        private readonly Fall24_SE1745_PRN221_Group5Context _context;
+
+        public PreOrderModel(Fall24_SE1745_PRN221_Group5Context context)
+        {
+            _context = context;
+        }
+
         [BindProperty]
         public string CheckinDate { get; set; }
 
@@ -16,18 +27,25 @@ namespace Project_Group5.Pages.Rooms
 
         [BindProperty]
         public string RoomData { get; set; }
+
         [BindProperty]
         public int StayDuration { get; set; }
+
         [BindProperty]
         public string Name { get; set; }
+
         [BindProperty]
         public string Phone { get; set; }
+
         [BindProperty]
         public string Email { get; set; }
+
         [BindProperty]
         public DateTime? Dob { get; set; }
+
         [BindProperty]
-        public string TotalAmount { get; set; }
+        public decimal TotalAmount { get; set; }
+
         public List<RoomData> SelectedRooms { get; set; }
 
         public void OnGet(string checkinDate, string checkoutDate, string roomData)
@@ -35,22 +53,28 @@ namespace Project_Group5.Pages.Rooms
             CheckinDate = checkinDate;
             CheckoutDate = checkoutDate;
             RoomData = roomData;
+
             if (DateOnly.TryParse(CheckinDate, out var checkInDate) && DateOnly.TryParse(CheckoutDate, out var checkOutDate))
             {
                 TimeSpan dateDifference = checkOutDate.ToDateTime(new TimeOnly()) - checkInDate.ToDateTime(new TimeOnly());
-
                 StayDuration = dateDifference.Days;
             }
-            if (roomData != null)
+
+            if (!string.IsNullOrEmpty(RoomData))
             {
-                Console.WriteLine(roomData);
-                // Deserialize RoomData JSON into a list of RoomData objects
                 SelectedRooms = JsonConvert.DeserializeObject<List<RoomData>>(RoomData);
+                CalculateTotalAmount();
             }
+        }
+
+        private void CalculateTotalAmount()
+        {
+            TotalAmount = SelectedRooms.Sum(room => (decimal)(room.RoomList.Count * room.Price * StayDuration));
         }
 
         public async Task<IActionResult> OnPostAsync()
         {
+            // Validate inputs
             if (string.IsNullOrWhiteSpace(Name))
             {
                 ModelState.AddModelError("Name", "Name is required.");
@@ -63,72 +87,71 @@ namespace Project_Group5.Pages.Rooms
             {
                 ModelState.AddModelError("Phone", "Phone number is required.");
             }
-            if (string.IsNullOrWhiteSpace(Email))
-            {
-                ModelState.AddModelError("Email", "Email is required.");
-            }
-            else if (!Email.Contains("@") || !Email.Contains("."))
+            if (string.IsNullOrWhiteSpace(Email) || !Email.Contains("@") || !Email.Contains("."))
             {
                 ModelState.AddModelError("Email", "Invalid email address.");
             }
 
-            // Kiểm tra nếu có lỗi
             if (!ModelState.IsValid)
             {
                 return Page();
             }
 
-            if (RoomData != null)
+            if (!string.IsNullOrEmpty(RoomData))
             {
-                // Deserialize RoomData JSON into a list of RoomData objects
                 SelectedRooms = JsonConvert.DeserializeObject<List<RoomData>>(RoomData);
+                CalculateTotalAmount();
 
-                using (var context = new Fall24_SE1745_PRN221_Group5Context())
+                // Retrieve or create customer
+                Customer customer = await _context.Customers.FirstOrDefaultAsync(c => c.Email == Email || c.Phone == Phone);
+                if (customer == null)
                 {
-                    var customer = await context.Customers.FirstOrDefaultAsync(c => c.Email.Equals(Email) || c.Phone.Equals(Phone));
-                    if (customer == null)
+                    customer = new Customer
                     {
-                        var newCustomer = new Customer
+                        Name = Name,
+                        Email = Email,
+                        Phone = Phone,
+                        Dob = Dob,
+                        RegisterDate = DateTime.Now,
+                    };
+                    _context.Customers.Add(customer);
+                    await _context.SaveChangesAsync();
+                }
+
+                // Create bookings
+                DateTime checkIn = DateTime.Parse(CheckinDate);
+                DateTime checkOut = DateTime.Parse(CheckoutDate);
+
+                foreach (var room in SelectedRooms)
+                {
+                    var availableRooms = await _context.Rooms
+                        .Where(r => r.RoomtypeId == int.Parse(room.RoomType) && r.Status != "full")
+                        .Take(room.RoomList.Count)
+                        .ToListAsync();
+
+                    foreach (var availableRoom in availableRooms)
+                    {
+                        availableRoom.Status = "full";
+                        _context.Update(availableRoom);
+
+                        var booking = new Booking
                         {
-                            Name = Name,
-                            Email = Email,
-                            Phone = Phone,
-                            Dob = Dob,
-                            RegisterDate = DateTime.Now,
+                            CustomerId = customer.Id,
+                            RoomId = availableRoom.Id,
+                            CheckInDate = checkIn,
+                            CheckOutDate = checkOut,
+                            TotalAmount = TotalAmount.ToString(),
+                            Status = "Pending",
+                            PaymentStatus = "Unpaid",
                         };
-                        await context.Customers.AddAsync(newCustomer);
-                        await context.SaveChangesAsync();
+                        _context.Bookings.Add(booking);
                     }
                 }
-
-                using (var context = new Fall24_SE1745_PRN221_Group5Context())
-                {
-                    var customer = await context.Customers.FirstOrDefaultAsync(c => c.Email.Equals(Email) || c.Phone.Equals(Phone));
-
-                    DateTime CheckInDate = DateTime.Parse(CheckinDate);
-                    DateTime CheckOutDate = DateTime.Parse(CheckoutDate);
-                    foreach (var r in SelectedRooms)
-                    {
-                        var listRoom = await context.Rooms.Where(lr => lr.RoomtypeId == int.Parse(r.RoomType) && !lr.Status.Equals("full")).Take(r.RoomList.Count).ToListAsync();
-                        foreach (var ri in listRoom)
-                        {
-                            ri.Status = "full";
-                            context.Update(ri);
-                            var booking = new Booking
-                            {
-                                CustomerId = customer.Id,
-                                CheckInDate = CheckInDate,
-                                CheckOutDate = CheckOutDate,
-                                TotalAmount = TotalAmount,
-                                RoomId = ri.Id
-                            };
-                            context.Add(booking);
-                        }
-                    }
-                    await context.SaveChangesAsync();
-                }
+                await _context.SaveChangesAsync();
             }
-            return RedirectToPage("/Homepage/Home");
+
+            // Redirect to the Checkout page with data in query parameters
+            return RedirectToPage("/Checkout", new { selectedRooms = RoomData, totalAmount = TotalAmount, stayDuration = StayDuration });
         }
     }
 }
