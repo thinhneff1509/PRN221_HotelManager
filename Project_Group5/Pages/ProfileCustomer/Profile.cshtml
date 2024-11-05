@@ -1,0 +1,92 @@
+﻿@page "/Customer/Profile"
+@model Project_Group5.Pages.ProfileCustomer.ProfileModel
+@{
+    ViewData["Title"] = "Customer Profile";
+    Layout = "_Layout";
+
+}
+<!-- Profile Page -->
+<section class="bg-gray-100 min-h-screen flex items-center justify-center p-6">
+    <div class="max-w-2xl w-full bg-white shadow-lg rounded-lg overflow-hidden p-6">
+        <!-- Profile Header -->
+        <div class="flex items-center justify-between pb-4 border-b">
+            <h2 class="text-2xl font-semibold text-gray-800">Customer Profile</h2>
+            <span class="text-sm text-gray-500">ID:</span>
+        </div>
+
+        <!-- Profile Picture (Placeholder) -->
+        <div class="flex justify-center mt-4">
+            <img src="https://via.placeholder.com/100" alt="Profile Picture" class="w-24 h-24 rounded-full border-2 border-blue-500">
+        </div>
+
+        <!-- Customer Information -->
+        <div class="mt-6">
+            <!-- Name -->
+            <div class="flex items-center mb-4">
+                <span class="w-1/3 text-gray-700 font-semibold">Name:</span>
+                <span class="w-2/3 text-gray-900"></span>
+            </div>
+
+            <!-- Email -->
+            <div class="flex items-center mb-4">
+                <span class="w-1/3 text-gray-700 font-semibold">Email:</span>
+                <span class="w-2/3 text-gray-900"></span>
+            </div>
+
+            <!-- Date of Birth -->
+            <div class="flex items-center mb-4">
+                <span class="w-1/3 text-gray-700 font-semibold">Date of Birth:</span>
+                <span class="w-2/3 text-gray-900"></span>
+            </div>
+
+            <!-- Phone -->
+            <div class="flex items-center mb-4">
+                <span class="w-1/3 text-gray-700 font-semibold">Phone:</span>
+                <span class="w-2/3 text-gray-900"></span>
+            </div>
+
+            <!-- Username -->
+            <div class="flex items-center mb-4">
+                <span class="w-1/3 text-gray-700 font-semibold">Username:</span>
+                <span class="w-2/3 text-gray-900"></span>
+            </div>
+
+            <!-- Password (Hidden for security) -->
+            <div class="flex items-center mb-4">
+                <span class="w-1/3 text-gray-700 font-semibold">Password:</span>
+                <span class="w-2/3 text-gray-900"></span>
+            </div>
+
+            <!-- Address -->
+            <div class="flex items-center mb-4">
+                <span class="w-1/3 text-gray-700 font-semibold">Address:</span>
+                <span class="w-2/3 text-gray-900"></span>
+            </div>
+
+            <!-- Register Date -->
+            <div class="flex items-center mb-4">
+                <span class="w-1/3 text-gray-700 font-semibold">Register Date:</span>
+                <span class="w-2/3 text-gray-900"></span>
+            </div>
+
+            <!-- Role ID -->
+            <div class="flex items-center mb-4">
+                <span class="w-1/3 text-gray-700 font-semibold">Role ID:</span>
+                <span class="w-2/3 text-gray-900"></span>
+            </div>
+
+            <!-- Banned Status -->
+            <div class="flex items-center mb-4">
+                <span class="w-1/3 text-gray-700 font-semibold">Banned:</span>
+                <span class="w-2/3 text-gray-900"></span>
+            </div>
+        </div>
+
+        <!-- Edit Profile Button -->
+        <div class="flex justify-end mt-6">
+            <a href="/Customer/Edit/" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-300">
+                Edit Profile
+            </a>
+        </div>
+    </div>
+</section>
