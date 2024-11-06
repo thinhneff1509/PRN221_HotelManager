@@ -3,9 +3,11 @@
 
 @{
     ViewBag.Title = Model.RoomType?.Name ?? "Room Details";
+    Layout = "_Layout";
 }
 
 <link href="~/css/detail.css" rel="stylesheet">
+
 
 <h1>@Model.RoomType?.Name</h1>
 <div class="image-gallery">
