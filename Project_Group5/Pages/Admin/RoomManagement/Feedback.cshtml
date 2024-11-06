@@ -12,10 +12,18 @@
         padding: 0;
     }
 
+    /* Header Styling */
     h2 {
         color: #333;
         text-align: center;
-        padding: 20px;
+        font-size: 1.5em;
+        font-weight: bold;
+        margin-bottom: 20px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        border-bottom: 2px solid #4CAF50;
+        padding-bottom: 10px;
+        font-family: 'Arial', sans-serif;
     }
 
     /* Table Styling */
@@ -69,12 +77,14 @@
 
     /* Button Styling */
     .btn {
-        padding: 8px 15px;
+        padding: 8px 18px; 
         border-radius: 4px;
         text-decoration: none;
         color: #fff;
         font-weight: bold;
-        display: inline-block; /* Ensures consistent button sizing */
+        display: inline-block;
+        text-align: center; 
+        margin: 5px; 
     }
 
     /* Primary Button Styling */
@@ -88,15 +98,19 @@
 
     /* Delete Button Styling (Always Red) */
     .btn-danger {
-        background-color: #f44336 !important; /* Ensure red color at all times */
-        color: #fff;
-        padding: 8px 15px; /* Matches the Edit button padding */
-        border: none; /* Remove border for consistent size */
+        background-color: #f44336 !important; 
     }
 
         .btn-danger:hover {
-            background-color: #d32f2f; /* Slightly darker red on hover */
+            background-color: #d32f2f; 
         }
+
+    /* Thêm thuộc tính để đảm bảo các nút nằm cùng một hàng */
+    .table td a, .table td button {
+        display: inline-block;
+        margin: 0 5px;
+    }
+
 </style>
 
 <h2>Feedback Management</h2>
@@ -117,7 +131,7 @@
         {
             <tr>
                 <td>@feedback.Customer?.Name</td>
-                <td>@feedback.Room?.Roomtype?.Name</td> <!-- Display RoomType's Name -->
+                <td>@feedback.Room?.Roomtype?.Name</td> 
                 <td>@feedback.Content</td>
                 <td>
                     @for (int i = 0; i < feedback.Rating; i++)
@@ -127,10 +141,12 @@
                 </td>
                 <td>@feedback.FeedbackDate?.ToString("dd/MM/yyyy")</td>
                 <td>
+                    <div class="d-flex justify-content-between align-items-center">
                     <a asp-page="./EditFeedback" asp-route-id="@feedback.Id" class="btn btn-primary">Edit</a>
                     <form method="post" asp-page-handler="Delete" asp-route-id="@feedback.Id" style="display:inline;">
                         <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this feedback?');">Delete</button>
                     </form>
+                    </div>
                 </td>
             </tr>
         }

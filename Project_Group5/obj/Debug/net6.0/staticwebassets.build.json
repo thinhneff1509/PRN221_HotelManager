@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "jyUEsziz01U0p+ZLpXBt1Ve5ziLI/RPzL2WQ2IyviyU=",
+  "Hash": "+QUPMin1g5knrPIrUEtvJtzkZVBhpQj4Tn7A10e6rV4=",
   "Source": "Project_Group5",
   "BasePath": "_content/Project_Group5",
   "Mode": "Default",
@@ -2276,6 +2276,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\js\\tailwind_custom.js"
+    },
+    {
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\css\\changepassword.css",
+      "SourceId": "Project_Group5",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "BasePath": "_content/Project_Group5",
+      "RelativePath": "css/changepassword.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\changepassword.css"
     },
     {
       "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\css\\detail.css",

@@ -20,11 +20,10 @@ namespace Project_Group5.Pages.Admin.RoomManagement
 
         public async Task OnGetAsync()
         {
-            // Load feedback list with Customer and RoomType data via Room
             FeedbackList = await _context.Feedbacks
                 .Include(f => f.Customer)
                 .Include(f => f.Room)
-                    .ThenInclude(r => r.Roomtype) // Ensure RoomType is included
+                    .ThenInclude(r => r.Roomtype)
                 .ToListAsync();
         }
 
@@ -43,6 +42,5 @@ namespace Project_Group5.Pages.Admin.RoomManagement
             return RedirectToPage();
         }
 
-        // Edit method would typically go to a new page, or use AJAX to update inline
     }
 }

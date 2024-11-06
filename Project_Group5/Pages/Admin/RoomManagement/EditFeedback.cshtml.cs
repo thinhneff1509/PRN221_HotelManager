@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using Project_Group5.Models;
@@ -20,9 +20,19 @@ namespace Project_Group5.Pages.Admin.RoomManagement
 
         public async Task<IActionResult> OnGetAsync(int id)
         {
-            Feedback = await _context.Feedbacks.FindAsync(id);
+            Feedback = await _context.Feedbacks
+                .Include(f => f.Customer)
+                .Include(f => f.Room)
+                    .ThenInclude(r => r.Roomtype)
+                .FirstOrDefaultAsync(f => f.Id == id);
 
             if (Feedback == null)
+            {
+                return NotFound();
+            }
+
+            // Kiểm tra nếu ID của Feedback là hợp lệ
+            if (Feedback.Id == 0)
             {
                 return NotFound();
             }
@@ -30,11 +40,19 @@ namespace Project_Group5.Pages.Admin.RoomManagement
             return Page();
         }
 
+
+
         public async Task<IActionResult> OnPostAsync()
         {
             if (!ModelState.IsValid)
             {
                 return Page();
+            }
+
+            // Kiểm tra xem ID có hợp lệ hay không
+            if (Feedback.Id == 0)
+            {
+                return NotFound();
             }
 
             _context.Attach(Feedback).State = EntityState.Modified;
@@ -57,6 +75,7 @@ namespace Project_Group5.Pages.Admin.RoomManagement
 
             return RedirectToPage("./Feedback");
         }
+
 
         private bool FeedbackExists(int id)
         {
