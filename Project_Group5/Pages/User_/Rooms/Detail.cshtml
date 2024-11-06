@@ -1,0 +1,147 @@
+﻿@page "{id:int}"
+@model Project_Group5.Pages.Rooms.DetailModel
+
+@{
+    ViewBag.Title = Model.RoomType?.Name ?? "Room Details";
+}
+
+<link href="~/css/detail.css" rel="stylesheet">
+
+<h1>@Model.RoomType?.Name</h1>
+<div class="image-gallery">
+    @if (Model.ImageRoom != null && Model.ImageRoom.Any())
+    {
+        @for (int i = 0; i < Model.ImageRoom.Count; i++)
+        {
+            <img src="/images/@Model.ImageRoom[i].Path" alt="Room Image"
+                 class="gallery-image @(i == 0 ? "active" : "")" />
+        }
+    }
+    else
+    {
+        <p>No images available for this room.</p>
+    }
+    <button class="prev" onclick="changeImage(-1)">&#10094;</button>
+    <button class="next" onclick="changeImage(1)">&#10095;</button>
+</div>
+
+<script>
+    let currentImageIndex = 0;
+    const images = document.getElementsByClassName("gallery-image");
+
+    function showImage(index) {
+        for (let i = 0; i < images.length; i++) {
+            images[i].classList.remove("active");
+        }
+        images[index].classList.add("active");
+    }
+
+    function changeImage(step) {
+        currentImageIndex = (currentImageIndex + step + images.length) % images.length;
+        showImage(currentImageIndex);
+    }
+
+    showImage(currentImageIndex);
+</script>
+
+<p>@Model.RoomType?.Description</p>
+<div>
+    <table>
+        <tbody>
+            <tr>
+                <td>
+                    <p class="price">Giá chỉ từ: <strong>@String.Format("{0:N0}", @Model.RoomType.Price) VND</strong> / đêm</p>
+                    <span>Số giường: @Model.RoomType?.Bed</span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- Amenities section -->
+<div class="amenities-section">
+    <h3>Tất cả những tiện ích tại @Model.RoomType.Name</h3>
+    <div class="amenities-grid">
+        <div class="amenity-category">
+            <h3>
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                Ẩm thực
+            </h3>
+            <ul class="amenity-list">
+                <li>Bữa tối với thực đơn gọi món</li>
+                <li>Bữa trưa với thực đơn gọi món</li>
+                <li>Nhà hàng có máy lạnh</li>
+                <li>Quầy bar</li>
+                <li>Bữa sáng</li>
+                <li>Bữa sáng món tự chọn</li>
+                <li>Tiệc liên hoan</li>
+                <li>Bữa tối với thực đơn chọn sẵn</li>
+                <li>Bữa trưa với thực đơn chọn sẵn</li>
+                <li>Đồ ăn nhẹ</li>
+                <li>Phục vụ món chay</li>
+            </ul>
+        </div>
+        <div class="amenity-category">
+            <h3>
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                Dịch vụ khách sạn
+            </h3>
+            <ul class="amenity-list">
+                <li>Dịch vụ concierge/hỗ trợ khách</li>
+                <li>Dịch vụ thu đổi ngoại tệ</li>
+                <li>Người gác cửa</li>
+                <li>Quầy lễ tân</li>
+                <li>Lễ tân 24h</li>
+                <li>Bảo vệ 24 giờ</li>
+                <li>Dịch vụ giặt ủi</li>
+                <li>Dịch vụ lưu trữ/bảo quản hành lý</li>
+                <li>Nhặt đồ tại sảnh</li>
+                <li>Dịch vụ hỗ trợ đặt Tour</li>
+                <li>Dịch vụ tiệc cưới</li>
+            </ul>
+        </div>
+        <div class="amenity-category">
+            <h3>
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+                Tiện nghi công cộng
+            </h3>
+            <ul class="amenity-list">
+                <li>Bãi đậu xe</li>
+                <li>Thang máy</li>
+                <li>Dịch vụ phòng 24 giờ</li>
+                <li>Nhà hàng</li>
+                <li>Nhà hàng phục vụ bữa sáng</li>
+                <li>Nhà hàng phục vụ bữa tối</li>
+                <li>Nhà hàng phục vụ bữa trưa</li>
+                <li>Dịch vụ dọn phòng</li>
+                <li>Két an toàn</li>
+                <li>WiFi tại khu vực chung</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- Chính Sách Lưu Trú Section -->
+<div class="policy-section">
+    <h3>Chính Sách Lưu Trú</h3>
+    <ul>
+        <li>🕒 <strong>Thời gian nhận phòng/trả phòng</strong></li>
+        <p>Giờ nhận phòng: Từ 14:00</p>
+        <p>Giờ trả phòng: Trước 12:00</p>
+        <li>ℹ️ <strong>Lưu Ý về Tiện Ích</strong></li>
+        <p>Hồ bơi tạm thời đóng cửa từ 15-12-2020 đến 31-3-2021.</p>
+        <li>📋 <strong>Hướng Dẫn Nhận Phòng Chung</strong></li>
+        <p>Important Note: From December 15, 2020, our hotel swimming pool will be closed for maintenance. We apologize for the inconvenience.</p>
+        <li>🍳 <strong>Bữa sáng</strong></li>
+        <p>Bữa sáng tại cơ sở lưu trú được phục vụ từ 06:00 đến 09:00.</p>
+        <li>🚭 <strong>Hút Thuốc</strong></li>
+        <p>Cơ sở lưu trú cấm hút thuốc.</p>
+        <li>🐾 <strong>Thú cưng</strong></li>
+        <p>Không được mang theo thú cưng.</p>
+    </ul>
+</div>
+<div>
+    <form method="post" action="/Rooms/Detail/@Model.RoomType?.Id">
+        <button type="submit" class="btn-select-room">Đặt phòng</button>
+    </form>
+
+</div>

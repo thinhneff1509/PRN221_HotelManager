@@ -2,123 +2,95 @@
 @model Project_Group5.Pages.Login.RegisterModel
 @{
     ViewData["Title"] = "Register";
+    Layout = "_Layout";
+
 }
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aroma Shop - Register</title>
-    <link rel="icon" href="~/img/Fevicon.png" type="image/png">
-    <link rel="stylesheet" href="~/vendors/bootstrap/bootstrap.min.css" asp-append-version="true">
-    <link rel="stylesheet" href="~/vendors/fontawesome/css/all.min.css" asp-append-version="true">
-    <link rel="stylesheet" href="~/vendors/themify-icons/themify-icons.css" asp-append-version="true">
-    <link rel="stylesheet" href="~/vendors/linericon/style.css" asp-append-version="true">
-    <link rel="stylesheet" href="~/vendors/owl-carousel/owl.theme.default.min.css" asp-append-version="true">
-    <link rel="stylesheet" href="~/vendors/owl-carousel/owl.carousel.min.css" asp-append-version="true">
-    <link rel="stylesheet" href="~/vendors/nice-select/nice-select.css" asp-append-version="true">
-    <link rel="stylesheet" href="~/vendors/nouislider/nouislider.min.css" asp-append-version="true">
-    <link rel="stylesheet" href="~/css/style.css" asp-append-version="true">
-</head>
-<body>
-    <!--================ Start Header Menu Area =================-->
-    <header class="header_area">
-        <div class="main_menu">
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <div class="container">
-                    <a class="navbar-brand logo_h" href="~/index.html"><img src="~/img/logo.png" alt=""></a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
-                        <ul class="nav navbar-nav menu_nav ml-auto mr-auto">
-                            <li class="nav-item"><a class="nav-link" href="~/index.html">Home</a></li>
-                            <!-- Các mục menu khác của bạn -->
-                        </ul>
-                        <ul class="nav-shop">
-                            <li class="nav-item"><button><i class="ti-search"></i></button></li>
-                            <li class="nav-item"><button><i class="ti-shopping-cart"></i><span class="nav-shop__circle">3</span></button> </li>
-                            <li class="nav-item"><a class="button button-header" href="#">Buy Now</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </header>
-    <!--================ End Header Menu Area =================-->
-    <!--================Register Box Area =================-->
-    <section class="login_box_area section-margin">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="login_box_img">
-                        <div class="hover">
-                            <h4>Already have an account?</h4>
-                            <p>There are advances being made in science and technology everyday, and a good example of this is the</p>
-                            <a class="button button-account" href="~/Login">Login Now</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="login_form_inner register_form_inner">
-                        <h3>Create an account</h3>
-                        <form method="post">
-                            <div class="col-md-12 form-group">
-                                <input type="text" class="form-control" asp-for="Name" placeholder="Name" />
-                                <span asp-validation-for="Name" class="text-danger"></span>
-                            </div>
-                            <div class="col-md-12 form-group">
-                                <input type="text" class="form-control" asp-for="Username" placeholder="Username" />
-                                <span asp-validation-for="Username" class="text-danger"></span>
-                            </div>
-                            <div class="col-md-12 form-group">
-                                <input type="email" class="form-control" asp-for="Email" placeholder="Email Address" />
-                                <span asp-validation-for="Email" class="text-danger"></span>
-                            </div>
-                            <div class="col-md-12 form-group">
-                                <input type="date" class="form-control" asp-for="Dob" placeholder="Date of Birth" />
-                                <span asp-validation-for="Dob" class="text-danger"></span>
-                            </div>
-                            <div class="col-md-12 form-group">
-                                <input type="text" class="form-control" asp-for="Phone" placeholder="Phone" />
-                                <span asp-validation-for="Phone" class="text-danger"></span>
-                            </div>
-                            <div class="col-md-12 form-group">
-                                <input type="text" class="form-control" asp-for="Address" placeholder="Address" />
-                                <span asp-validation-for="Address" class="text-danger"></span>
-                            <div class="col-md-12 form-group">
-                                <input type="password" class="form-control" asp-for="Password" placeholder="Password" />
-                                <span asp-validation-for="Password" class="text-danger"></span>
-                            </div>
-                            <div class="col-md-12 form-group">
-                                <input type="password" class="form-control" asp-for="ConfirmPassword" placeholder="Confirm Password" />
-                                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
-                            </div>
-                            @if (!string.IsNullOrEmpty(Model.ErrorMessage))
-                            {
-                                <p style="color:red;">@Model.ErrorMessage</p>
-                            }
-                            <div class="col-md-12 form-group">
-                                <button type="submit" class="button button-register w-100">Register</button>
-                            </div>
-                        </form>
-                    </div>
+<!--================Register Box Area =================-->
+<section class="login_box_area py-16 bg-gray-100">
+    <div class="container mx-auto px-5">
+        <div class="flex flex-col md:flex-row items-center">
+            <!-- Left Side (Image & Info) -->
+            <div class="w-full md:w-1/2 bg-cover bg-center relative" style="background-image: url('~/assets/images/register-background.jpg');">
+                <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-8 text-white">
+                    <h4 class="text-2xl font-semibold mb-4 text-black">Already have an account?</h4>
+                    <p class="mb-6 text-black">There are advances being made in science and technology every day, and a good example of this is the...</p>
+                    <a class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition duration-300" href="~/Login">Login Now</a>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <script src="~/vendors/jquery/jquery-3.2.1.min.js"></script>
-    <script src="~/vendors/bootstrap/bootstrap.bundle.min.js"></script>
-    <script src="~/vendors/skrollr.min.js"></script>
-    <script src="~/vendors/owl-carousel/owl.carousel.min.js"></script>
-    <script src="~/vendors/nice-select/jquery.nice-select.min.js"></script>
-    <script src="~/vendors/jquery.ajaxchimp.min.js"></script>
-    <script src="~/vendors/mail-script.js"></script>
-    <script src="~/js/main.js"></script>
-</body>
-</html>
+            <!-- Right Side (Register Form) -->
+            <div class="w-full md:w-1/2 bg-white p-8 shadow-lg rounded-lg mt-8 md:mt-0 md:ml-8">
+                <h3 class="text-2xl font-semibold text-center mb-6">Create an account</h3>
+                <form class="space-y-4" method="post">
+                    <!-- Name Field -->
+                    <div>
+                        <input type="text" class="w-full border border-gray-300 rounded-lg py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-600"
+                               asp-for="Name" placeholder="Name" />
+                        <span asp-validation-for="Name" class="text-red-500 text-sm"></span>
+                    </div>
+
+                    <!-- Username Field -->
+                    <div>
+                        <input type="text" class="w-full border border-gray-300 rounded-lg py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-600"
+                               asp-for="Username" placeholder="Username" />
+                        <span asp-validation-for="Username" class="text-red-500 text-sm"></span>
+                    </div>
+
+                    <!-- Email Field -->
+                    <div>
+                        <input type="email" class="w-full border border-gray-300 rounded-lg py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-600"
+                               asp-for="Email" placeholder="Email Address" />
+                        <span asp-validation-for="Email" class="text-red-500 text-sm"></span>
+                    </div>
+
+                    <!-- Date of Birth Field -->
+                    <div>
+                        <input type="date" class="w-full border border-gray-300 rounded-lg py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-600"
+                               asp-for="Dob" placeholder="Date of Birth" />
+                        <span asp-validation-for="Dob" class="text-red-500 text-sm"></span>
+                    </div>
+
+                    <!-- Phone Field -->
+                    <div>
+                        <input type="text" class="w-full border border-gray-300 rounded-lg py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-600"
+                               asp-for="Phone" placeholder="Phone" />
+                        <span asp-validation-for="Phone" class="text-red-500 text-sm"></span>
+                    </div>
+
+                    <!-- Address Field -->
+                    <div>
+                        <input type="text" class="w-full border border-gray-300 rounded-lg py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-600"
+                               asp-for="Address" placeholder="Address" />
+                        <span asp-validation-for="Address" class="text-red-500 text-sm"></span>
+                    </div>
+
+                    <!-- Password Field -->
+                    <div>
+                        <input type="password" class="w-full border border-gray-300 rounded-lg py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-600"
+                               asp-for="Password" placeholder="Password" />
+                        <span asp-validation-for="Password" class="text-red-500 text-sm"></span>
+                    </div>
+
+                    <!-- Confirm Password Field -->
+                    <div>
+                        <input type="password" class="w-full border border-gray-300 rounded-lg py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-600"
+                               asp-for="ConfirmPassword" placeholder="Confirm Password" />
+                        <span asp-validation-for="ConfirmPassword" class="text-red-500 text-sm"></span>
+                    </div>
+
+                    <!-- Error Message -->
+                    @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+                    {
+                        <p class="text-red-500 mt-2 text-center">@Model.ErrorMessage</p>
+                    }
+
+                    <!-- Register Button -->
+                    <div>
+                        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-300">Register</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

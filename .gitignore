@@ -1,15 +1,21 @@
 Project_Group5/.vs/Project_Group5/FileContentIndex/59c5bac5-e624-4d20-b87e-e1a06f576516.vsidx
 
+
 Project_Group5/appsettings.json
 Project_Group5/.vs
 Project_Group5/bin
 Project_Group5/obj
-=======
+
+# Bỏ qua thư mục Visual Studio
+.vs/
+# Bỏ qua tệp cấu hình nhạy cảm
+appsettings.json
+# Bỏ qua thư mục biên dịch
+bin/
 Project_Group5/.vs/ProjectEvaluation/project_group5.projects.v7.bin
 Project_Group5/.vs/Project_Group5/v17/.futdcache.v2
 Project_Group5/.vs/Project_Group5/DesignTimeBuild/.dtbcache.v2
 Project_Group5/.vs/ProjectEvaluation/project_group5.metadata.v7.bin
->>>>>>> 658c1ae (no message)
 =======
 Project_Group5/.vs/Project_Group5/DesignTimeBuild/.dtbcache.v2
 Project_Group5/obj/Debug/net6.0/project.razor.vs.bin
@@ -42,3 +48,13 @@ Project_Group5/obj/Debug/net6.0/Project_Group5.AssemblyInfoInputs.cache
 Project_Group5/obj/Debug/net6.0/Project_Group5.AssemblyInfo.cs
 Project_Group5/.vs/Project_Group5/v17/DocumentLayout.json
 Project_Group5/.vs/Project_Group5/v17/.suo
+=======
+
+# Bỏ qua thư mục Visual Studio
+.vs/
+# Bỏ qua tệp cấu hình nhạy cảm
+appsettings.json
+# Bỏ qua thư mục biên dịch
+bin/
+obj/
+>>>>>>> 2b837b39c7bbfeb872fed09ea1b9a85bb3f58435
