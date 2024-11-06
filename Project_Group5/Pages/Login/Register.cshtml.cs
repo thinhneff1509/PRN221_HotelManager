@@ -115,7 +115,7 @@ namespace Project_Group5.Pages.Login
                 Email = Email,
                 Password = Password, 
                 RegisterDate = DateTime.Now,
-                RoleId = 1 
+                RoleId = 2 
             };
 
             _context.Customers.Add(customer);

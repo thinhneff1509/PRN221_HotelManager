@@ -39,39 +39,26 @@
         <!-- Service and Payment Section -->
         <div class="mb-5 p-4 bg-white shadow-md rounded">
             <h2 class="text-lg font-semibold mb-3">Danh sách dịch vụ</h2>
-            <form>
+            <form method="post" asp-page-handler="AddService">
                 <div class="row g-3 mb-3">
                     <div class="col-md-6">
                         <label for="serviceType" class="form-label">Loại dịch vụ:</label>
-                        <select id="serviceType" class="form-select">
-                            <option>Ăn uống</option>
-                            <option>Spa</option>
-                            <option>Massage</option>
-                            <option>Xông hơi</option>
-                            <!-- Additional options here -->
+                        <select id="serviceType" name="ServiceId" class="form-select">
+                            <!-- Điền các dịch vụ từ database -->
+                            <option value="1">Ăn uống</option>
+                            <option value="2">Spa</option>
+                            <!-- Các dịch vụ khác -->
                         </select>
-                    </div>
-                    <div class="col-md-6">
-                        <label for="serviceName" class="form-label">Dịch vụ:</label>
-                        <select id="serviceName" class="form-select">
-                            <option>Tam dương trùng phùng với...</option>
-                            <!-- Additional options here -->
-                        </select>
-                    </div>
-                </div>
-
-                <div class="row g-3 mb-3">
-                    <div class="col-md-6">
-                        <label for="price" class="form-label">Giá:</label>
-                        <input type="text" id="price" class="form-control" value="200.000,00 ₫" readonly>
                     </div>
                     <div class="col-md-6">
                         <label for="quantity" class="form-label">Số lượng:</label>
-                        <input type="number" id="quantity" class="form-control" value="1" min="1">
+                        <input type="number" id="quantity" name="Quantity" class="form-control" value="1" min="1">
                     </div>
                 </div>
 
-                <button type="button" class="btn btn-outline-success w-full">Thêm Dịch Vụ</button>
+                <input type="hidden" name="BookingId" value="@Model.BookingId" />
+
+                <button type="submit" class="btn btn-outline-success w-full">Thêm Dịch Vụ</button>
             </form>
 
             <div class="mt-4">
