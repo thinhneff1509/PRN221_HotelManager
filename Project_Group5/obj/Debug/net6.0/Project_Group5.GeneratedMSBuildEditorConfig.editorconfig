@@ -30,30 +30,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cVXNlclNlcnZpY2VNYW5hZ2VybWVudFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/Customer/Checkout/Checkout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJcQ2hlY2tvdXRcQ2hlY2tvdXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/Customer/Rooms/Detail.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJcUm9vbXNcRGV0YWlsLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/Customer/Rooms/Feedback.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJcUm9vbXNcRmVlZGJhY2suY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/Customer/Rooms/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJcUm9vbXNcSW5kZXguY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/Customer/Rooms/PreOrder.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJcUm9vbXNcUHJlT3JkZXIuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/Customer/ServiceOrder/ServiceOrder.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJcU2VydmljZU9yZGVyXFNlcnZpY2VPcmRlci5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -84,6 +60,30 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/User_/Checkout/Checkout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlcl9cQ2hlY2tvdXRcQ2hlY2tvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/User_/Rooms/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlcl9cUm9vbXNcRGV0YWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/User_/Rooms/Feedback.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlcl9cUm9vbXNcRmVlZGJhY2suY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/User_/Rooms/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlcl9cUm9vbXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/User_/Rooms/PreOrder.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlcl9cUm9vbXNcUHJlT3JkZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/User_/ServiceOrder/ServiceOrder.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlcl9cU2VydmljZU9yZGVyXFNlcnZpY2VPcmRlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/_ViewImports.cshtml]
