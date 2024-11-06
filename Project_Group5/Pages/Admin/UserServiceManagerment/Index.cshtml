@@ -5,18 +5,19 @@
 
 @if (TempData["SuccessMessage"] != null)
 {
-    <div class="bg-green-500 text-white p-4 rounded-lg mb-4">
+    <div class="bg-green-500 text-white p-4 rounded-lg mb-4 shadow-md">
         @TempData["SuccessMessage"]
     </div>
 }
-<h1 class="text-3xl font-bold text-gray-900 mb-4">User Manager</h1>
-<section class="bg-gray-50 bg-white p-3 sm:p-5 antialiased">
+
+<h1 class="text-3xl font-semibold text-center my-8">User Manager</h1>
+
+<section class="bg-gray-50 p-6 sm:p-8 antialiased">
     <div class="mx-auto max-w-screen-xl px-4 lg:px-12">
-        <!-- Start coding here -->
-        <div class="bg-white relative shadow-md sm:rounded-lg overflow-hidden">
-            <div class="flex flex-col md:flex-row items-center justify-between space-y-3 md:space-y-0 md:space-x-4 p-4">
+        <div class="bg-white shadow-lg sm:rounded-lg overflow-hidden mb-6">
+            <div class="flex flex-col md:flex-row items-center justify-between space-y-3 md:space-y-0 md:space-x-6 p-4">
                 <div class="w-full md:w-1/2">
-                    <form method="get" asp-page-handler="Search" class="flex items-center">
+                    <form method="get" asp-page-handler="Search" class="flex items-center space-x-2">
                         <label for="simple-search" class="sr-only">Search</label>
                         <div class="relative w-full flex">
                             <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
@@ -26,23 +27,20 @@
                             </div>
                             <input type="text" id="simple-search" name="searchString" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full pl-10 p-2" placeholder="Search">
                         </div>
-
-                        <!-- Bộ lọc vai trò (Role) -->
-                        <select name="roleFilter" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg ml-2 p-2 focus:ring-primary-500 focus:border-primary-500">
-                            <option value="">All Roles</option> <!-- Tùy chọn để hiển thị tất cả vai trò -->
+                        <select name="roleFilter" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg p-2 focus:ring-primary-500 focus:border-primary-500">
+                            <option value="">All Roles</option>
                             @foreach (var role in Model.Roles)
                             {
                                 <option value="@role.Id">@role.Name</option>
                             }
                         </select>
-
-                        <button type="submit" class="bg-blue-500 text-white font-semibold rounded-lg px-4 py-2 ml-2 hover:bg-blue-600">Search</button>
+                        <button type="submit" class="bg-blue-500 text-white font-semibold rounded-lg px-4 py-2 hover:bg-blue-600 focus:outline-none">Search</button>
                     </form>
                 </div>
 
-                <div class="w-full md:w-auto flex flex-col md:flex-row space-y-2 md:space-y-0 items-stretch md:items-center justify-end md:space-x-3 flex-shrink-0">
-                    <button type="button" id="createProductModalButton" data-modal-target="createProductModal" data-modal-toggle="createProductModal" class="flex items-center justify-center text-white bg-blue-500 hover:bg-blue-600 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 focus:outline-none">
-                        <svg class="h-3.5 w-3.5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <div class="w-full md:w-auto flex justify-end items-center space-x-4">
+                    <button type="button" id="createProductModalButton" data-modal-target="createProductModal" data-modal-toggle="createProductModal" class="flex items-center text-white bg-blue-500 hover:bg-blue-600 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2">
+                        <svg class="h-4 w-4 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <path clip-rule="evenodd" fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" />
                         </svg>
                         Add User
@@ -51,16 +49,16 @@
             </div>
         </div>
 
-        <div class="overflow-x-auto">
+        <div class="overflow-x-auto shadow-md sm:rounded-lg">
             <table class="w-full text-sm text-left text-gray-800 bg-white">
                 <thead class="text-xs text-gray-900 uppercase bg-gray-200">
                     <tr>
-                        <th scope="col" class="px-4 py-4">Name</th>
+                        <th scope="col" class="px-4 py-3">Name</th>
                         <th scope="col" class="px-4 py-3">Age</th>
                         <th scope="col" class="px-4 py-3">Role</th>
                         <th scope="col" class="px-4 py-3">Phone</th>
-                        <th scope="col" class="px-4 py-3">Email</th> <!-- Cột Email -->
-                        <th scope="col" class="px-4 py-3">Date of Birth</th> <!-- Cột Ngày sinh -->
+                        <th scope="col" class="px-4 py-3">Email</th>
+                        <th scope="col" class="px-4 py-3">Date of Birth</th>
                         <th scope="col" class="px-4 py-3"><span class="sr-only">Actions</span></th>
                     </tr>
                 </thead>
@@ -68,7 +66,7 @@
                 <tbody>
                     @foreach (var customer in Model.Customers)
                     {
-                        <tr class="border-b border-gray-300">
+                        <tr class="border-b border-gray-300 hover:bg-gray-50 transition duration-300">
                             <th scope="row" class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">@customer.Name</th>
                             <td class="px-4 py-3">@((DateTime.Now.Year - customer.Dob?.Year) ?? 0)</td>
                             <td class="px-4 py-3">
@@ -78,10 +76,10 @@
                                     "Unknown")
                             </td>
                             <td class="px-4 py-3 max-w-[12rem] truncate">@customer.Phone</td>
-                            <td class="px-4 py-3">@customer.Email</td> <!-- Hiển thị Email -->
-                            <td class="px-4 py-3">@customer.Dob?.ToString("dd/MM/yyyy")</td> <!-- Hiển thị Ngày sinh -->
+                            <td class="px-4 py-3">@customer.Email</td>
+                            <td class="px-4 py-3">@customer.Dob?.ToString("dd/MM/yyyy")</td>
                             <td class="px-4 py-3 flex items-center justify-end">
-                                <button id="options-dropdown-@customer.Id" data-dropdown-toggle="dropdown-@customer.Id" class="inline-flex items-center text-sm font-medium hover:bg-gray-300 p-1.5 text-gray-800 rounded-lg focus:outline-none" type="button">
+                                <button id="options-dropdown-@customer.Id" data-dropdown-toggle="dropdown-@customer.Id" class="inline-flex items-center text-sm font-medium hover:bg-gray-300 p-2 text-gray-800 rounded-lg focus:outline-none" type="button">
                                     <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z" />
                                     </svg>
@@ -89,7 +87,7 @@
                                 <div id="dropdown-@customer.Id" class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-200 shadow">
                                     <ul class="py-1 text-sm" aria-labelledby="options-dropdown-@customer.Id">
                                         <li>
-                                            <button type="button" class="edit-button flex w-full items-center py-2 px-4 hover:bg-gray-300 text-gray-800"
+                                            <button type="button" class="edit-button flex w-full items-center py-2 px-4 hover:bg-gray-100 text-gray-800"
                                                     data-id="@customer.Id"
                                                     data-name="@customer.Name"
                                                     data-phone="@customer.Phone"
@@ -101,11 +99,10 @@
                                                 Edit
                                             </button>
                                         </li>
-
                                         <li>
                                             <form method="post" class="deleteForm" asp-page-handler="Delete">
                                                 <input type="hidden" name="id" value="@customer.Id" />
-                                                <button type="submit" class="flex w-full items-center py-2 px-4 hover:bg-gray-300 text-red-500 delete-button"
+                                                <button type="submit" class="flex w-full items-center py-2 px-4 hover:bg-gray-100 text-red-500"
                                                         onclick="return confirm('Are you really want to delete this user?');">
                                                     <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                                         <path d="M9 3h6a1 1 0 011 1v1h3a1 1 0 110 2h-1v13a2 2 0 01-2 2H8a2 2 0 01-2-2V7H5a1 1 0 110-2h3V4a1 1 0 011-1zM8 7v13h8V7H8zm2 2a1 1 0 112 0v8a1 1 0 11-2 0V9zm4 0a1 1 0 112 0v8a1 1 0 11-2 0V9z"></path>
@@ -124,6 +121,7 @@
         </div>
     </div>
 </section>
+
 <!-- End block -->
 <!-- Create modal -->
 <div id="createProductModal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
@@ -284,7 +282,7 @@
     </div>
 </div>
 
-@section Scripts { 
+@section Scripts {
 <script>
     //Update Modal
 
@@ -370,128 +368,122 @@
             openModal(customer);
         });
     });
-    function validateForm() {
-        // Lấy giá trị từ các trường
-        const name = document.getElementById('customerName').value.trim();
-        const email = document.getElementById('customerEmail').value.trim();
-        const dob = document.getElementById('customerDob').value.trim();
-        const phone = document.getElementById('customerPhone').value.trim();
-        const username = document.getElementById('customerUsername').value.trim();
-        const password = document.getElementById('customerPassword').value.trim();
-        const address = document.getElementById('customerAddress').value.trim();
-        const roleId = document.getElementById('customerRoleId').value;
+        function validateForm() {
+            const name = document.getElementById('customerName').value.trim();
+            const email = document.getElementById('customerEmail').value.trim();
+            const dob = document.getElementById('customerDob').value.trim();
+            const phone = document.getElementById('customerPhone').value.trim();
+            const username = document.getElementById('customerUsername').value.trim();
+            const password = document.getElementById('customerPassword').value.trim();
+            const address = document.getElementById('customerAddress').value.trim();
+            const roleId = document.getElementById('customerRoleId').value;
 
-        // Reset thông báo lỗi
-        document.getElementById('nameError').classList.add('hidden');
-        document.getElementById('emailError').classList.add('hidden');
-        document.getElementById('dobError').classList.add('hidden');
-        document.getElementById('phoneError').classList.add('hidden');
-        document.getElementById('usernameError').classList.add('hidden');
-        document.getElementById('passwordError').classList.add('hidden');
-        document.getElementById('addressError').classList.add('hidden');
-        document.getElementById('roleError').classList.add('hidden');
+            // Reset các thông báo lỗi
+            document.getElementById('nameError').classList.add('hidden');
+            document.getElementById('emailError').classList.add('hidden');
+            document.getElementById('dobError').classList.add('hidden');
+            document.getElementById('phoneError').classList.add('hidden');
+            document.getElementById('usernameError').classList.add('hidden');
+            document.getElementById('passwordError').classList.add('hidden');
+            document.getElementById('addressError').classList.add('hidden');
+            document.getElementById('roleError').classList.add('hidden');
 
-        let isValid = true;
+            let isValid = true;
 
-        // Kiểm tra tên
-        if (!name) {
-            document.getElementById('nameError').textContent = 'Name is required';
-            document.getElementById('nameError').classList.remove('hidden');
-            isValid = false;
-        } else if (name.length < 2) {
-            document.getElementById('nameError').textContent = 'Name must be at least 2 characters';
-            document.getElementById('nameError').classList.remove('hidden');
-            isValid = false;
-        }
+            // Kiểm tra các trường
+            if (!name) {
+                document.getElementById('nameError').textContent = 'Name is required';
+                document.getElementById('nameError').classList.remove('hidden');
+                isValid = false;
+            } else if (name.length < 2) {
+                document.getElementById('nameError').textContent = 'Name must be at least 2 characters';
+                document.getElementById('nameError').classList.remove('hidden');
+                isValid = false;
+            }
 
-        // Kiểm tra email
-        if (!email) {
-            document.getElementById('emailError').textContent = 'Email is required';
-            document.getElementById('emailError').classList.remove('hidden');
-            isValid = false;
-        } else if (!emailRegex.test(email)) {
-            document.getElementById('emailError').textContent = 'Invalid Email Address';
-            document.getElementById('emailError').classList.remove('hidden');
-            isValid = false;
-        }
+            if (!email) {
+                document.getElementById('emailError').textContent = 'Email is required';
+                document.getElementById('emailError').classList.remove('hidden');
+                isValid = false;
+            } else if (!emailRegex.test(email)) {
+                document.getElementById('emailError').textContent = 'Invalid Email Address';
+                document.getElementById('emailError').classList.remove('hidden');
+                isValid = false;
+            }
 
-        // Kiểm tra ngày sinh
-        if (!dob) {
-            document.getElementById('dobError').textContent = 'Date of Birth is required';
-            document.getElementById('dobError').classList.remove('hidden');
-            isValid = false;
-        } else {
-            const dobDate = new Date(dob);
-            const today = new Date();
-
-            // Kiểm tra xem dob có phải là ngày trong tương lai không
-            if (dobDate >= today) {
-                document.getElementById('dobError').textContent = 'Date of Birth must be in the past';
+            if (!dob) {
+                document.getElementById('dobError').textContent = 'Date of Birth is required';
                 document.getElementById('dobError').classList.remove('hidden');
                 isValid = false;
             } else {
-                const age = today.getFullYear() - dobDate.getFullYear();
-                const m = today.getMonth() - dobDate.getMonth();
-                if (m < 0 || (m === 0 && today.getDate() < dobDate.getDate())) {
-                    age--;
-                }
-                if (age < 18) {
-                    document.getElementById('dobError').textContent = 'You must be at least 18 years old';
+                const dobDate = new Date(dob);
+                const today = new Date();
+
+                if (dobDate >= today) {
+                    document.getElementById('dobError').textContent = 'Date of Birth must be in the past';
                     document.getElementById('dobError').classList.remove('hidden');
                     isValid = false;
+                } else {
+                    const age = today.getFullYear() - dobDate.getFullYear();
+                    const m = today.getMonth() - dobDate.getMonth();
+                    if (m < 0 || (m === 0 && today.getDate() < dobDate.getDate())) {
+                        age--;
+                    }
+                    if (age < 18) {
+                        document.getElementById('dobError').textContent = 'You must be at least 18 years old';
+                        document.getElementById('dobError').classList.remove('hidden');
+                        isValid = false;
+                    }
                 }
             }
+
+            if (!phone) {
+                document.getElementById('phoneError').textContent = 'Phone number is required';
+                document.getElementById('phoneError').classList.remove('hidden');
+                isValid = false;
+            } else if (!/^\d{10}$/.test(phone)) {
+                document.getElementById('phoneError').textContent = 'Phone number must be 10 digits';
+                document.getElementById('phoneError').classList.remove('hidden');
+                isValid = false;
+            }
+
+            if (!username) {
+                document.getElementById('usernameError').textContent = 'Username is required';
+                document.getElementById('usernameError').classList.remove('hidden');
+                isValid = false;
+            } else if (username.length < 3) {
+                document.getElementById('usernameError').textContent = 'Username must be at least 3 characters';
+                document.getElementById('usernameError').classList.remove('hidden');
+                isValid = false;
+            }
+
+            if (!password) {
+                document.getElementById('passwordError').textContent = 'Password is required';
+                document.getElementById('passwordError').classList.remove('hidden');
+                isValid = false;
+            } else if (password.length < 6) {
+                document.getElementById('passwordError').textContent = 'Password must be at least 6 characters';
+                document.getElementById('passwordError').classList.remove('hidden');
+                isValid = false;
+            }
+
+            if (!address) {
+                document.getElementById('addressError').textContent = 'Address is required';
+                document.getElementById('addressError').classList.remove('hidden');
+                isValid = false;
+            }
+
+            if (roleId === "Select Role") {
+                document.getElementById('roleError').textContent = 'Please select a role';
+                document.getElementById('roleError').classList.remove('hidden');
+                isValid = false;
+            }
+
+            // Nếu form không hợp lệ, không submit
+            return isValid;
         }
 
-        // Kiểm tra số điện thoại
-        if (!phone) {
-            document.getElementById('phoneError').textContent = 'Phone number is required';
-            document.getElementById('phoneError').classList.remove('hidden');
-            isValid = false;
-        } else if (!/^\d{10}$/.test(phone)) {
-            document.getElementById('phoneError').textContent = 'Phone number must be 10 digits';
-            document.getElementById('phoneError').classList.remove('hidden');
-            isValid = false;
-        }
 
-        // Kiểm tra tên người dùng
-        if (!username) {
-            document.getElementById('usernameError').textContent = 'Username is required';
-            document.getElementById('usernameError').classList.remove('hidden');
-            isValid = false;
-        } else if (username.length < 3) {
-            document.getElementById('usernameError').textContent = 'Username must be at least 3 characters';
-            document.getElementById('usernameError').classList.remove('hidden');
-            isValid = false;
-        }
-
-        // Kiểm tra mật khẩu
-        if (!password) {
-            document.getElementById('passwordError').textContent = 'Password is required';
-            document.getElementById('passwordError').classList.remove('hidden');
-            isValid = false;
-        } else if (password.length < 6) {
-            document.getElementById('passwordError').textContent = 'Password must be at least 6 characters';
-            document.getElementById('passwordError').classList.remove('hidden');
-            isValid = false;
-        }
-
-        // Kiểm tra địa chỉ
-        if (!address) {
-            document.getElementById('addressError').textContent = 'Address is required';
-            document.getElementById('addressError').classList.remove('hidden');
-            isValid = false;
-        }
-
-        // Kiểm tra vai trò
-        if (roleId === "Select Role") {
-            document.getElementById('roleError').textContent = 'Please select a role';
-            document.getElementById('roleError').classList.remove('hidden');
-            isValid = false;
-        }
-
-        return isValid;
-    }
 
 
 </script>
