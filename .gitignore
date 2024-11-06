@@ -48,7 +48,6 @@ Project_Group5/obj/Debug/net6.0/Project_Group5.AssemblyInfoInputs.cache
 Project_Group5/obj/Debug/net6.0/Project_Group5.AssemblyInfo.cs
 Project_Group5/.vs/Project_Group5/v17/DocumentLayout.json
 Project_Group5/.vs/Project_Group5/v17/.suo
-=======
 
 # Bỏ qua thư mục Visual Studio
 .vs/
@@ -57,4 +56,3 @@ appsettings.json
 # Bỏ qua thư mục biên dịch
 bin/
 obj/
->>>>>>> 2b837b39c7bbfeb872fed09ea1b9a85bb3f58435
