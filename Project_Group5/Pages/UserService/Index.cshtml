@@ -1,4 +1,4 @@
-@page  
+@page
 @model Project_Group5.Pages.UserService.IndexModel
 @{
 }
@@ -119,7 +119,7 @@
             </tbody>
         </table>
     </div>
-
+    </div>
 
 
 </section>
@@ -414,7 +414,7 @@
                 document.getElementById('dobError').classList.remove('hidden');
                 isValid = false;
             } else {
-                const age = today.getFullYear() - dobDate.getFullYear();
+                let age = today.getFullYear() - dobDate.getFullYear();
                 const m = today.getMonth() - dobDate.getMonth();
                 if (m < 0 || (m === 0 && today.getDate() < dobDate.getDate())) {
                     age--;
