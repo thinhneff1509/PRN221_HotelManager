@@ -22,6 +22,10 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cUm9vbU1hbmFnZW1lbnRcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/Admin/UserService/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cVXNlclNlcnZpY2VcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/Checkout/Checkout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2hlY2tvdXRcQ2hlY2tvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -76,10 +80,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/UserService/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlclNlcnZpY2VcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/_ViewImports.cshtml]
