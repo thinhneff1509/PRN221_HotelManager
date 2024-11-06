@@ -23,5 +23,6 @@ namespace Project_Group5.Models
         public virtual ICollection<Feedback> Feedbacks { get; set; }
         public virtual ICollection<ImageRoom> ImageRooms { get; set; }
         public virtual ICollection<Wishlist> Wishlists { get; set; }
+        public ICollection<ServiceRegistration> ServiceRegistrations { get; set; }
     }
 }
