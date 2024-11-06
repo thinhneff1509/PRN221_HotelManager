@@ -140,3 +140,9 @@ C:\Users\Nhat Anh\Desktop\prnn\Project_Group5\obj\Debug\net6.0\refint\Project_Gr
 C:\Users\Nhat Anh\Desktop\prnn\Project_Group5\obj\Debug\net6.0\Project_Group5.pdb
 C:\Users\Nhat Anh\Desktop\prnn\Project_Group5\obj\Debug\net6.0\Project_Group5.genruntimeconfig.cache
 C:\Users\Nhat Anh\Desktop\prnn\Project_Group5\obj\Debug\net6.0\ref\Project_Group5.dll
+D:\PRN221\project\PRN221_HotelManager\Project_Group5\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\PRN221\project\PRN221_HotelManager\Project_Group5\bin\Debug\net6.0\Microsoft.Bcl.TimeProvider.dll
+D:\PRN221\project\PRN221_HotelManager\Project_Group5\bin\Debug\net6.0\Microsoft.Extensions.Configuration.dll
+D:\PRN221\project\PRN221_HotelManager\Project_Group5\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\PRN221\project\PRN221_HotelManager\Project_Group5\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+D:\PRN221\project\PRN221_HotelManager\Project_Group5\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll

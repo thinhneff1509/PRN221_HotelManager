@@ -1,5 +1,4 @@
-﻿﻿
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
@@ -50,9 +49,8 @@
                                 <button class="text-gray-800 hover:text-blue-600">Tài khoản <i class="fa-solid fa-sort-down"></i></button>
                                 <div class="hidden group-hover:block absolute right-0 w-48 bg-white border border-gray-200 rounded-md shadow-lg">
                                     <a href="/Customer/Profile" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Profile</a>
-                                    <form method="post" asp-page="/Login/Logout">
-                                        <button type="submit" class="w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100">Logout</button>
-                                    </form>
+                                    <!-- Use a direct link to the logout handler -->
+                                    <a href="/Login?handler=Logout" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Logout</a>
                                 </div>
                             </div>
                         </div>
@@ -75,14 +73,14 @@
                      class="min-sm:block md:block lg:hidden  cursor-pointer pt-3">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                         <g clip-path="url(#clip0_372_1645)">
-                            <path fill="#222"
-                                  d="M23 10.9998H1C0.447715 10.9998 0 11.4475 0 11.9998C0 12.552 0.447715 12.9998 1 12.9998H23C23.5523 12.9998 24 12.552 24 11.9998C24 11.4475 23.5523 10.9998 23 10.9998Z"
+                            <path
+                                d="M23 10.9998H1C0.447715 10.9998 0 11.4475 0 11.9998C0 12.552 0.447715 12.9998 1 12.9998H23C23.5523 12.9998 24 12.552 24 11.9998C24 11.4475 23.5523 10.9998 23 10.9998Z"
                                   fill="white" />
-                            <path fill="#222"
-                                  d="M23 4.00024H1C0.447715 4.00024 0 4.44796 0 5.00024C0 5.55253 0.447715 6.00024 1 6.00024H23C23.5523 6.00024 24 5.55253 24 5.00024C24 4.44796 23.5523 4.00024 23 4.00024Z"
+                            <path
+                                d="M23 4.00024H1C0.447715 4.00024 0 4.44796 0 5.00024C0 5.55253 0.447715 6.00024 1 6.00024H23C23.5523 6.00024 24 5.55253 24 5.00024C24 4.44796 23.5523 4.00024 23 4.00024Z"
                                   fill="white" />
-                            <path fill="#222"
-                                  d="M23 18H1C0.447715 18 0 18.4477 0 19C0 19.5523 0.447715 20 1 20H23C23.5523 20 24 19.5523 24 19C24 18.4477 23.5523 18 23 18Z"
+                            <path
+                                d="M23 18H1C0.447715 18 0 18.4477 0 19C0 19.5523 0.447715 20 1 20H23C23.5523 20 24 19.5523 24 19C24 18.4477 23.5523 18 23 18Z"
                                   fill="white" />
                         </g>
                         <defs>
@@ -151,7 +149,6 @@
                     </div>
                 </div>
             </div>
-        </div>
     </header>
 
     <main class="pt-20">

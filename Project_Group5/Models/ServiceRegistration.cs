@@ -13,5 +13,6 @@ namespace Project_Group5.Models
 
         public virtual Booking? Booking { get; set; }
         public virtual Service? Service { get; set; }
+      //  public virtual Room? Room { get; set; }
     }
 }

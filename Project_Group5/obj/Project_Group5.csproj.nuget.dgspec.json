@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Nhat Anh\\Desktop\\prnn\\Project_Group5\\Project_Group5.csproj": {}
+    "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\Project_Group5.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Nhat Anh\\Desktop\\prnn\\Project_Group5\\Project_Group5.csproj": {
+    "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\Project_Group5.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Nhat Anh\\Desktop\\prnn\\Project_Group5\\Project_Group5.csproj",
+        "projectUniqueName": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\Project_Group5.csproj",
         "projectName": "Project_Group5",
-        "projectPath": "C:\\Users\\Nhat Anh\\Desktop\\prnn\\Project_Group5\\Project_Group5.csproj",
-        "packagesPath": "C:\\Users\\Nhat Anh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Nhat Anh\\Desktop\\prnn\\Project_Group5\\obj\\",
+        "projectPath": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\Project_Group5.csproj",
+        "packagesPath": "C:\\Users\\Le Cong Truong Thinh\\.nuget\\packages\\",
+        "outputPath": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\visuastudiosetting\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Nhat Anh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Le Cong Truong Thinh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -34,6 +39,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -49,6 +59,14 @@
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[6.0.35, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.IdentityModel.JsonWebTokens": {
+              "target": "Package",
+              "version": "[8.2.0, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",
@@ -66,24 +84,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.26, 6.0.26]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[6.0.26, 6.0.26]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.26, 6.0.26]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[6.0.26, 6.0.26]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -92,7 +92,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }
