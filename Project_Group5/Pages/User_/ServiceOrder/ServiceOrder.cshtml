@@ -3,84 +3,86 @@
 @{
     Layout = "_Layout";
 }
-<div class="container">
-    <h1 class="text-2xl font-bold mb-5 text-green-700">Sử Dụng Dịch Vụ Và Thanh Toán</h1>
+
+<div class="container mx-auto p-5">
+    <h1 class="text-3xl font-bold mb-5 text-green-700">Sử Dụng Dịch Vụ Và Thanh Toán</h1>
 
     <!-- Danh sách phòng -->
     <div class="mb-5 p-4 bg-white shadow-md rounded">
-        <h2 class="text-lg font-semibold mb-3">Danh sách phòng</h2>
-        <div class="grid grid-cols-5 gap-3">
+        <h2 class="text-xl font-semibold mb-3">Danh sách phòng</h2>
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
             @foreach (var room in Model.Rooms)
             {
-                <button class="btn btn-outline-info">@room.RoomNumber - @room.Roomtype.Name</button>
+                <button class="bg-blue-500 text-white hover:bg-blue-600 rounded-md py-2 px-4 transition duration-300">
+                    @room.RoomNumber - @room.Roomtype.Name
+                </button>
             }
         </div>
     </div>
 
     <!-- Form chọn dịch vụ -->
     <div class="mb-5 p-4 bg-white shadow-md rounded">
-        <h2 class="text-lg font-semibold mb-3">Danh sách dịch vụ</h2>
+        <h2 class="text-xl font-semibold mb-3">Danh sách dịch vụ</h2>
         <form method="post" asp-page-handler="AddService">
-            <div class="row g-3 mb-3">
-                <div class="col-md-6">
-                    <label for="roomId" class="form-label">Phòng:</label>
-                    <select id="roomId" name="RoomId" class="form-select">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-3">
+                <div>
+                    <label for="roomId" class="block text-sm font-medium text-gray-700">Phòng:</label>
+                    <select id="roomId" name="RoomId" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200">
                         @foreach (var room in Model.Rooms)
                         {
                             <option value="@room.Id">@room.RoomNumber - @room.Roomtype.Name</option>
                         }
                     </select>
                 </div>
-                <div class="col-md-6">
-                    <label for="serviceType" class="form-label">Loại dịch vụ:</label>
-                    <select id="serviceType" name="ServiceId" class="form-select">
+                <div>
+                    <label for="serviceType" class="block text-sm font-medium text-gray-700">Loại dịch vụ:</label>
+                    <select id="serviceType" name="ServiceId" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200">
                         @foreach (var service in Model.Services)
                         {
                             <option value="@service.Id">@service.ServiceName - @service.Price ₫</option>
                         }
                     </select>
                 </div>
-                <div class="col-md-6">
-                    <label for="quantity" class="form-label">Số lượng:</label>
-                    <input type="number" id="quantity" name="Quantity" class="form-control" value="1" min="1">
+                <div>
+                    <label for="quantity" class="block text-sm font-medium text-gray-700">Số lượng:</label>
+                    <input type="number" id="quantity" name="Quantity" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200" value="1" min="1">
                 </div>
             </div>
 
             <input type="hidden" name="BookingId" value="@Model.BookingId" />
 
-            <button type="submit" class="btn btn-outline-success w-full">Thêm Dịch Vụ</button>
+            <button type="submit" class="bg-green-500 text-white hover:bg-green-600 rounded-md py-2 px-4 w-full transition duration-300">Thêm Dịch Vụ</button>
         </form>
     </div>
 
     <!-- Hóa đơn dịch vụ -->
     <div class="p-4 bg-white shadow-md rounded">
-        <h2 class="text-lg font-semibold mb-3">Hóa đơn dịch vụ</h2>
-        <table class="table table-bordered">
-            <thead>
+        <h2 class="text-xl font-semibold mb-3">Hóa đơn dịch vụ</h2>
+        <table class="min-w-full border border-gray-300">
+            <thead class="bg-gray-200">
                 <tr>
-                    <th>STT</th>
-                    <th>Tên phòng</th>
-                    <th>Tên dịch vụ</th>
-                    <th>Đơn giá</th>
-                    <th>Số lượng</th>
-                    <th>Thành tiền</th>
+                    <th class="border border-gray-300 px-4 py-2">STT</th>
+                    <th class="border border-gray-300 px-4 py-2">Tên phòng</th>
+                    <th class="border border-gray-300 px-4 py-2">Tên dịch vụ</th>
+                    <th class="border border-gray-300 px-4 py-2">Đơn giá</th>
+                    <th class="border border-gray-300 px-4 py-2">Số lượng</th>
+                    <th class="border border-gray-300 px-4 py-2">Thành tiền</th>
                 </tr>
             </thead>
             <tbody>
                 @for (int i = 0; i < Model.ServiceRegistrations.Count; i++)
                 {
                     var reg = Model.ServiceRegistrations[i];
-                    <tr>
-                        <td>@(i + 1)</td>
-                        <td>@reg.Booking.Room.RoomNumber</td> <!-- Sửa dòng này -->
-                        <td>@reg.Service.ServiceName</td>
-                        <td>@reg.Service.Price ₫</td>
-                        <td>@reg.Quantity</td>
-                        <td>@(reg.TotalPrice) ₫</td>
+                    <tr class="hover:bg-gray-100">
+                        <td class="border border-gray-300 px-4 py-2">@(i + 1)</td>
+                        <td class="border border-gray-300 px-4 py-2">@reg.Booking.Room.RoomNumber</td>
+                        <td class="border border-gray-300 px-4 py-2">@reg.Service.ServiceName</td>
+                        <td class="border border-gray-300 px-4 py-2">@reg.Service.Price ₫</td>
+                        <td class="border border-gray-300 px-4 py-2">@reg.Quantity</td>
+                        <td class="border border-gray-300 px-4 py-2">@reg.TotalPrice ₫</td>
                     </tr>
                 }
             </tbody>
-
         </table>
     </div>
 </div>

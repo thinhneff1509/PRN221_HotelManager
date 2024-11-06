@@ -146,3 +146,9 @@ D:\PRN221\project\PRN221_HotelManager\Project_Group5\bin\Debug\net6.0\Microsoft.
 D:\PRN221\project\PRN221_HotelManager\Project_Group5\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
 D:\PRN221\project\PRN221_HotelManager\Project_Group5\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
 D:\PRN221\project\PRN221_HotelManager\Project_Group5\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Nhat Anh\Desktop\prnn\Project_Group5\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Nhat Anh\Desktop\prnn\Project_Group5\bin\Debug\net6.0\Microsoft.Bcl.TimeProvider.dll
+C:\Users\Nhat Anh\Desktop\prnn\Project_Group5\bin\Debug\net6.0\Microsoft.Extensions.Configuration.dll
+C:\Users\Nhat Anh\Desktop\prnn\Project_Group5\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Nhat Anh\Desktop\prnn\Project_Group5\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+C:\Users\Nhat Anh\Desktop\prnn\Project_Group5\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
