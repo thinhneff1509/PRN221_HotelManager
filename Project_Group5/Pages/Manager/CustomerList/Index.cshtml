@@ -1,0 +1,235 @@
+﻿@page
+@model PetShop_Project_SWP391.Pages.Manager.CustomerList.IndexModel
+@section customer{
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+    body {
+        color: #566787;
+        background: #f5f5f5;
+		font-family: 'Roboto', sans-serif;
+        
+	}
+    .table-responsive {
+        margin: 30px 0;
+    }
+	.table-wrapper {
+		min-width: 100px;
+        background: #fff;
+        padding: 20px;        
+        box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    }
+	.table-title {
+        padding-bottom: 10px;
+        margin: 0 0 10px;
+    }
+    .table-title h2 {
+        margin: 8px 0 0;
+        font-size: 22px;
+    }
+    .search-box {
+        position: relative;        
+        float: right;
+    }
+    .search-box input {
+        height: 34px;
+        border-radius: 20px;
+        padding-left: 35px;
+        border-color: #ddd;
+        box-shadow: none;
+    }
+	.search-box input:focus {
+		border-color: #3FBAE4;
+	}
+    .search-box i {
+        color: #a0a5b1;
+        position: absolute;
+        font-size: 19px;
+        top: 8px;
+        left: 10px;
+    }
+    table.table tr th, table.table tr td {
+        border-color: #e9e9e9;
+    }
+    table.table-striped tbody tr:nth-of-type(odd) {
+    	background-color: #fcfcfc;
+	}
+	table.table-striped.table-hover tbody tr:hover {
+		background: #f5f5f5;
+	}
+    table.table th i {
+        font-size: 13px;
+        margin: 0 5px;
+        cursor: pointer;
+    }
+    table.table td:last-child {
+        width: 130px;
+    }
+    /* table.table td a {
+        color: #a0a5b1;
+        display: inline-block;
+        margin: 0 5px;
+    } */
+	table.table td a.view {
+        color: #03A9F4;
+    }
+    table.table td a.edit {
+        color: #FFC107;
+    }
+    table.table td a.delete {
+        color: #E34724;
+    }
+    table.table td i {
+        font-size: 19px;
+    } 
+    
+
+    .pagination {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .pagination a {
+        padding: 6px 12px;
+        text-decoration: none;
+        border: 1px solid #ddd;
+        margin: 0 4px;
+        color: #007bff;
+    }
+
+    .pagination a.active {
+        background-color: #007bff;
+        color: white;
+    }
+    
+</style>
+<script>
+$(document).ready(function(){
+	$('[data-toggle="tooltip"]').tooltip();
+});
+</script>
+<body>
+    <div class="container">
+            <nav class="my-4" aria-label="breadcrumb">
+                <ol style="background: none!important;" class="breadcrumb d-flex align-items-center">
+                    <li class="breadcrumb-item">
+                        <a href="~/Manager/Index" class="text-primary">
+                            <h3>Manager</h3>
+                        </a>
+                    </li>
+                    <li class="breadcrumb-item active d-flex align-items-center" aria-current="page">
+                        <h5> Danh sách Khách hàng</h5>
+                    </li>
+
+                </ol>
+            </nav>
+            
+        <div class="table-responsive">
+            <div class="table-wrapper">
+                <div class="table-title">
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <div class="form-group">
+                                    <label for="statusFilterDropdown">Trạng thái:</label>
+                                    <div class="dropdown">
+                                        <button class="btn btn-secondary dropdown-toggle" type="button" id="statusFilterDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            @(!string.IsNullOrEmpty(Model.CurrentStatus) ? Model.CurrentStatus : "Tất cả")
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="statusFilterDropdown">
+                                            <a class="dropdown-item" asp-page-handler="OnGet" asp-route-statusFilter="Tất cả">Tất cả</a>
+                                            @foreach (var status in Model.StatusList)
+                                            {
+                                                <a class="dropdown-item" asp-page-handler="OnGet" asp-route-statusFilter="@status">@(status.Value ? "Hoạt Động" : "Khóa")</a>
+                                            }
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    <div class="row">
+                                <div class= "col">
+                            <div class="search-box">
+                                <i class="material-icons">&#xE8B6;</i>
+                                 <form method="get">
+                                <input asp-for="@ViewData["txtSearch"]" type="text" name="txtSearch" placeholder="Search" class="form-control" />
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <table class="table table-striped table-hover table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Email </th>
+                            <th>Tên</th>
+                            <th class="text-nowrap">Địa chỉ </th>
+                            <th class="text-nowrap">Số Điện Thoại</th>
+                            <th class="text-nowrap"> Trạng thái </th>
+                            <th class="text-nowrap"> Thao tác </th>
+                        </tr>
+                    </thead>
+                    <tbody>     
+                        @foreach (var a in Model.Accounts)
+                        {
+                        <tr>  
+                       
+                            <td>@a.Email</td>
+                            <td>@(a.Customer != null ? a.Customer.Name : "")</td>
+                            <td>@(a.Customer != null ? a.Customer.Address : "")</td>
+                            <td>@(a.Customer != null ? a.Customer.Phone : "")</td>
+                            <td>
+                                @if (@a.IsActive == true)
+                                {
+                                   <span class="text-success text-nowrap">Hoạt động</span>
+                                }
+                                else
+                                {
+                                            <span class="text-danger">Khóa</span>
+                                }
+                            </td>
+                            <td>
+                      
+                               @if (@a.IsActive == true)
+                                    {
+                                            <a class="btn btn-primary" asp-page="/Manager/CustomerList/index" asp-page-handler="active" asp-route-id="@a.AccountId">Thay Đổi</a>
+                                       }
+                                    else
+                                    {
+                                            <a class="btn btn-primary" asp-page="/Manager/CustomerList/index" asp-page-handler="active" asp-route-id="@a.AccountId">Thay Đổi</a>
+                                    }
+                             </td>
+                           
+                        </tr>
+                   }
+                    </tbody>
+                </table>
+                <nav aria-label="Page navigation">
+                    <ul class="pagination">
+                        @if (ViewData["CurPage"] != null && (int)ViewData["CurPage"] > 1)
+                        {
+                            <li class="page-item">
+                                <a class="page-link" href="~/Manager/CustomerList?PageNum=@((int)ViewData["CurPage"] - 1)&txtSearch=@ViewData["txtSearch"]">&laquo;</a>
+                            </li>
+                        }
+                        @for (var i = 1; i <= (int)ViewData["TotalPage"]; i++)
+                        {
+                            <li class="page-item @(i ==  (int)ViewData["CurPage"] ? "active" : "")">
+                                <a class="page-link" href="~/Manager/CustomerList?PageNum=@i&txtSearch=@ViewData["txtSearch"]">@i</a>
+                            </li>
+                        }
+                        @if (ViewData["CurPage"] != null && (int)ViewData["CurPage"] < (int)ViewData["TotalPage"])
+                        {
+                            <li class="page-item">
+                                <a class="page-link" href="~/Manager/CustomerList?PageNum=@((int)ViewData["CurPage"] + 1)&txtSearch=@ViewData["txtSearch"]">&raquo;</a>
+                            </li>
+                        }
+                    </ul>
+                </nav>
+            </div>
+        </div>        
+    </div>     
+</body>
+}

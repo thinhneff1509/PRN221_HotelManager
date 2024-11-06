@@ -1,0 +1,48 @@
+﻿@page
+@model PetShop_Project_SWP391.Pages.Manager.Products.CreateModel
+@{
+    ViewData["Title"] = "Create";
+}
+<div id="content-right">
+    <div class="path-admin" style="text-align:center; font-weight:500; font-size: 2.5rem">Thêm Mới Sản Phẩm</b></div>
+    <div class="content-main">
+        <form method="post" id="content-main-product">
+            <div class="row mt-2">
+                <div class="row mt-3">
+                    <div class="col-md-12">
+                        <label class="labels">Số Phòng</label>
+                        <input type="text" required class="form-control" asp-for="Product.ProductName">
+                    </div>
+                    <div class="col-md-12">
+                        <label for="imageLink" class="labels">Link Ảnh</label>
+                        <input type="text" required class="form-control" name="imageLink" />
+                    </div>
+                    <div class="col-md-12">
+                        <label class="labels">Giá phòng</label>
+                        <input type="text" required class="form-control" asp-for="Product.UnitPrice">
+                    </div>
+                    <div class="col-md-12">
+                        <label class="labels">Số lượng</label>
+                        <input type="text" required class="form-control" asp-for="Product.QuantityPerUnit">
+                    </div>
+                    <div class="col-md-12">
+                        <label class="labels">Mô tả phòng</label>
+                        <textarea required asp-for="Product.Description"></textarea>
+                    </div>
+                    <div class="col-md-12">
+                        <label class="labels">Ngày tạo</label>
+                        <input type="date" required class="form-control" asp-for="Product.CreateDate">
+                    </div>
+                    <div class="col-md-12">
+                        <label class="labels">Phân Loại</label>
+                        <select required class="form-control" asp-for="@Model.Product.CategoryId" asp-items="@(new SelectList(Model.Category, "CategoryId", "CategoryName"))">
+                            <option value="">Chọn Phân Loại</option>
+                        </select>
+                    </div>
+
+                </div>
+                <input class="btn btn-primary profile-button" type="submit" value="Thêm Mới" style="margin-bottom: 30px;" />
+        </form>
+    </div>
+</div>
+<link href="~/css/managereditproduct.css" rel="stylesheet" />

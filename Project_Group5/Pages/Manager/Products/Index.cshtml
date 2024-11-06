@@ -1,0 +1,282 @@
+﻿@page
+@model PetShop_Project_SWP391.Pages.Manager.Products.IndexModel
+@section manager_product_list{
+@{
+    ViewData["Title"] = "Index";
+}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    body {
+        color: #566787;
+		background: #f5f5f5;
+		font-family: 'Varela Round', sans-serif;
+		font-size: 13px;
+		/*width:max-content;
+		text-align:center;*/
+	}
+	.table-responsive {
+        margin: 30px 0;
+    }
+	.table-wrapper {
+		min-width: 1000px;
+        background: #fff;
+        padding: 20px 25px;
+		border-radius: 3px;
+        box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    }
+	.table-title {        
+		padding-bottom: 15px;
+		background: #435d7d;
+		color: #fff;
+		padding: 16px 30px;
+		margin: -20px -25px 10px;
+		border-radius: 3px 3px 0 0;
+    }
+    .table-title h2 {
+		margin: 5px 0 0;
+		font-size: 24px;
+	}
+	.table-title .btn-group {
+		float: right;
+	}
+	.table-title .btn {
+		color: #fff;
+		float: right;
+		font-size: 13px;
+		border: none;
+		min-width: 50px;
+		border-radius: 2px;
+		border: none;
+		outline: none !important;
+		margin-left: 10px;
+	}
+	.table-title .btn i {
+		float: left;
+		font-size: 21px;
+		margin-right: 5px;
+	}
+	.table-title .btn span {
+		float: left;
+		margin-top: 2px;
+	}
+    table.table tr th, table.table tr td {
+        border-color: #e9e9e9;
+		padding: 12px 15px;
+		vertical-align: middle;
+    }
+	
+    table.table-striped tbody tr:nth-of-type(odd) {
+    	background-color: #fcfcfc;
+	}
+	table.table-striped.table-hover tbody tr:hover {
+		background: #f5f5f5;
+	}
+    table.table th i {
+        font-size: 13px;
+        margin: 0 5px;
+        cursor: pointer;
+    }	
+    table.table td:last-child i {
+		opacity: 0.9;
+		font-size: 22px;
+        margin: 0 5px;
+    }
+	/* table.table td a {
+		font-weight: bold;
+		color: #566787;
+		display: inline-block;
+		text-decoration: none;
+		outline: none !important;
+	} */
+	table.table td a:hover {
+		color: #2196F3;
+	}
+	table.table td a.edit {
+        color: #FFC107;
+    }
+    table.table td a.delete {
+        color: #F44336;
+    }
+    table.table td i {
+        font-size: 19px;
+    }
+	table.table .avatar {
+		border-radius: 50%;
+		vertical-align: middle;
+		margin-right: 10px;
+	}
+    
+	
+	
+   .search-box {
+        position: relative;        
+        float: right;
+		margin-left:30px;
+		margin-right:30px;
+    }
+    .search-box input {
+        height: 34px;
+        border-radius: 20px;
+        padding-left: 35px;
+        border-color: #ddd;
+        box-shadow: none;
+    }
+	.search-box input:focus {
+		border-color: #3FBAE4;
+	}
+    .search-box i {
+        color: #a0a5b1;
+        position: absolute;
+        font-size: 19px;
+        top: 8px;
+        left: 10px;
+    }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+            .pagination a {
+                padding: 6px 12px;
+                text-decoration: none;
+                border: 1px solid #ddd;
+                margin: 0 4px;
+                color: #007bff;
+            }
+
+                .pagination a.active {
+                    background-color: #007bff;
+                    color: white;
+                }
+</style>
+
+<body>
+   
+	<div class="container">
+            <div class="my-4 row w-100">
+                <div class="col-12">
+                    <nav aria-label="breadcrumb">
+                        <ol style="background: none!important;" class="breadcrumb d-flex align-items-center">
+                            <li class="breadcrumb-item">
+                                <a href="~/Manager/Index" class="text-primary">
+                                    <h3>Manager</h3>
+                                </a>
+                            </li>
+                            <li class="breadcrumb-item active d-flex align-items-center" aria-current="page">
+                                <h5> Danh sách Phòng</h5>
+                            </li>
+
+                        </ol>
+                    </nav>
+                </div>
+                <div class="col-12 row my-3 justify-content-between align-content-center">
+                    <div class="search-box col-12 col-md-6 w-100 mx-0">
+                        <i class="material-icons ml-2">&#xE8B6;</i>
+                        <form method="get" class="d-flex">
+                            <input asp-for="@ViewData["txtSearch"]" type="text" name="txtSearch" placeholder="Search" class="form-control" />
+                            <select asp-for="@ViewData["categoryId"]" name="categoryId" class="form-control ml-2">
+                                <option value="">Tất cả loại phòng</option>
+                                @foreach (var category in Model.CategoryList)
+                                {
+                                    <option value="@category.CategoryId">@category.CategoryName</option>
+                                }
+                            </select>
+                            <button class="btn btn-primary ml-2" type="submit">Tìm kiếm</button>
+                        </form>
+                    </div>
+                    <a asp-page="./Create" class="btn btn-success d-flex col-md-3 col-12 text-center justify-content-center">
+                        <i class="material-icons">&#xE147;</i>
+                        <span>Thêm phòng mới</span>
+                    </a>
+                </div>
+            </div>
+        <div class="table-responsive">
+            <div class="table-wrapper">
+               
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th class="text-nowrap">Số phòng</th>
+                            <th class="text-nowrap">Giá cả</th>
+                            <th class="text-nowrap">Phân Loại</th>
+                            <th class="text-nowrap">Trạng Thái</th>
+                            <th class="text-nowrap text-center">Thao tác</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach(var item in Model.Products)
+                            {
+                            <tr>
+                                <td>@item.ProductName</td>
+                                <td>@item.UnitPrice VNĐ</td>
+                                <td>
+                                 @item.Category.CategoryName
+                                </td>
+                                <td>
+                                        @if (@item.Status == true)
+                                        {
+                                            <span class="text-success text-nowrap">Hoạt động</span>
+                                        }
+                                        else
+                                        {
+                                            <span class="text-warning">Được thuê</span>
+                                        }
+                                </td>
+                                <td>
+                                    <div class="d-md-flex">
+                                        @if (item.Status == true)
+                                        {
+                                                <a class="btn btn-primary mr-2" asp-page="/Manager/Products/index" asp-page-handler="active" asp-route-id="@item.ProductId">Thay Đổi</a>
+                                        }
+                                        else
+                                        {
+                                            <button class="btn btn-primary mr-2">
+                                                <a asp-page="/Manager/Products/index" asp-page-handler="active" asp-route-id="@item.ProductId">Thay Đổi</a>
+                                            </button>
+                                        }
+                                            <a class="btn btn-info mr-2" asp-page="./Update" asp-route-id="@item.ProductId">Cập Nhật</a>
+                                            <a class="btn btn-secondary" asp-page="./Detail" asp-route-id="@item.ProductId">Chi Tiết</a>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+               
+                <nav aria-label="Page navigation">
+                    <ul class="pagination">
+                        @if (ViewData["CurPage"] != null && (int)ViewData["CurPage"] > 1)
+                        {
+                            <li class="page-item">
+                                    <a class="page-link" href="~/Manager/Products?PageNum=@((int)ViewData["CurPage"] - 1)&txtSearch=@ViewData["txtSearch"]">&laquo;</a>
+                            </li>
+                        }
+
+                        @for (var i = 1; i <= (int)ViewData["TotalPage"]; i++)
+                        {
+                            <li class="page-item @(i ==  (int)ViewData["CurPage"] ? "active" : "")">
+                                    <a class="page-link" href="~/Manager/Products?PageNum=@i&txtSearch=@ViewData["txtSearch"]">@i</a>
+                            </li>
+                        }
+
+
+                        @if (ViewData["CurPage"] != null && (int)ViewData["CurPage"] < (int)ViewData["TotalPage"])
+                        {
+                            <li class="page-item">
+                                    <a class="page-link" href="~/Manager/Products?PageNum=@((int)ViewData["CurPage"] + 1)&txtSearch=@ViewData["txtSearch"]">&raquo;</a>
+                            </li>
+                        }
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</body>
+}

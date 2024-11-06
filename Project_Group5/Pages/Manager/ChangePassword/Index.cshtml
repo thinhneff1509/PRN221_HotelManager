@@ -1,0 +1,61 @@
+﻿@page
+@model Project_Group5.Pages.Manager.ChangePassword.IndexModel
+@{
+    ViewData["Title"] = "Đổi mật khẩu";
+}
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mx-auto p-4">
+        <nav class="my-4" aria-label="breadcrumb">
+            <ol class="breadcrumb flex items-center space-x-2">
+                <li class="breadcrumb-item">
+                    <a href="~/Manager/Index" class="text-blue-500 hover:underline">
+                        <h3>Manager</h3>
+                    </a>
+                </li>
+                <li class="breadcrumb-item active flex items-center">
+                    <a href="~/Manager/Profile/Index" class="text-gray-700">
+                        <h3>Thông tin</h3>
+                    </a>
+                </li>
+            </ol>
+        </nav>
+
+        <form method="post" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+            <h3 class="my-3 text-center text-lg font-semibold">@ViewData["Title"]</h3>
+            <input asp-for="Account.AccountId" type="hidden" />
+
+            <div class="mb-4">
+                <label for="currentPassword" class="block text-gray-700 text-sm font-bold mb-2">Mật khẩu cũ:</label>
+                <input type="password" id="currentPassword" asp-for="CurrentPassword" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
+                <span asp-validation-for="CurrentPassword" class="text-red-500 text-xs italic"></span>
+                <span class="text-red-500 text-xs italic">@ViewData["PasswordError"]</span>
+            </div>
+
+            <div class="mb-4">
+                <label for="newPassword" class="block text-gray-700 text-sm font-bold mb-2">Mật khẩu mới:</label>
+                <input type="password" id="newPassword" asp-for="NewPassword" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
+                <span asp-validation-for="NewPassword" class="text-red-500 text-xs italic"></span>
+            </div>
+
+            <div class="mb-4">
+                <label for="confirmPassword" class="block text-gray-700 text-sm font-bold mb-2">Xác nhận lại mật khẩu:</label>
+                <input type="password" id="confirmPassword" asp-for="ConfirmPassword" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
+                <span asp-validation-for="ConfirmPassword" class="text-red-500 text-xs italic"></span>
+            </div>
+
+            <div class="flex items-center justify-between mt-4">
+                <input type="submit" value="Đổi mật khẩu" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" />
+                <span class="text-green-600">@ViewData["Success"]</span>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

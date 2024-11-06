@@ -1,0 +1,77 @@
+﻿@page
+@model PetShop_Project_SWP391.Pages.Manager.Products.DetailModel
+@section manager_product_detail{
+@{
+    ViewData["Title"] = "Detail";
+}
+<link href="~/css/managerproductdetail.css" rel="stylesheet" />
+<div class="manager-product-detail">
+    <h1 style="text-align:center">Chi Tiết Sản Phẩm</h1>
+    <div>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-4">
+                Hình Ảnh Phòng
+            </dt>
+            <dd class="col-sm-8 hinh" style="width:50%;height:50%">
+                <img src="@Model.Product.Pictures.FirstOrDefault()?.Picture"/>
+            </dd>
+            <dt class="col-sm-4">
+                Số Phòng
+            </dt>
+            <dd class="col-sm-8">
+                @Html.DisplayFor(model=>model.Product.ProductName)
+            </dd>
+            <dt class="col-sm-4">
+                Số Lượng Còn Lại
+            </dt>
+            <dd class="col-sm-8">
+                @Html.DisplayFor(model=>model.Product.QuantityPerUnit)
+            </dd>
+            <dt class="col-sm-4">
+                Giá Tiền
+            </dt>
+            <dd class="col-sm-8">
+               $@Html.DisplayFor(model=>model.Product.UnitPrice) 
+            </dd>
+           
+            <dt class="col-sm-4">
+                Mô Tả
+            </dt>
+            <dd class="col-sm-8">
+                @Html.DisplayFor(model=>model.Product.Description)
+            </dd>
+            <dt class="col-sm-4">
+                Trạng Thái
+            </dt>
+            <dd class="col-sm-8">
+                @if (Model.Product.Status == false)
+                {
+                    <span style="color: red;">Đang Được Thuê</span>
+                }
+                else if (Model.Product.Status == true)
+                {
+                    <span style="color: green;">Còn Phòng</span>
+                }
+            </dd>
+            <dt class="col-sm-4">
+                Ngày Tạo
+            </dt>
+            <dd class="col-sm-8">
+                @(Model.Product.CreateDate?.ToShortDateString() ?? "")
+            </dd>
+            <dt class="col-sm-4">
+                Ngày Cập Nhật
+            </dt>
+            <dd class="col-sm-8">
+                @(Model.Product.UpdateDate?.ToShortDateString() ?? "")
+            </dd>
+
+        </dl>
+    </div>
+    <div style="text-align:center">
+        <a asp-page="./Update" asp-route-id="@Model.Product?.ProductId">Cập Nhật</a> |
+        <a asp-page="./Index">Quay Trở Lại</a>
+    </div>
+</div>
+}

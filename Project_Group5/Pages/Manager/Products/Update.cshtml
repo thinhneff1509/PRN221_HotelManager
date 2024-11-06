@@ -1,0 +1,84 @@
+﻿@page
+@model PetShop_Project_SWP391.Pages.Manager.Products.UpdateModel
+@section manager_update_product{
+@{
+    ViewData["Title"] = "Update";
+}
+<div id="content-right">
+        <div class="path-admin" style="text-align:center; font-weight:500; font-size: 2.5rem">Chỉnh Sửa Sản Phẩm</b></div>
+    <div class="content-main">
+        <form method="post" id="content-main-product">
+            <div class="row mt-2">
+                <div class="col-md-6">
+                         <input asp-for="Product.ProductId" type="hidden" />
+                         <input asp-for="Product.Category" type="hidden" />
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-12">
+                        <label class="labels">Tên Sản Phẩm</label>
+                        <input type="text" class="form-control" asp-for="Product.ProductName">
+                    </div>
+                    </div>
+                        <div class="col-md-12">
+                            <label class="labels">Giá sản phẩm</label>
+                            <input type="number" class="form-control" asp-for="Product.UnitPrice" min="0" required>
+                        </div>
+                        <div class="col-md-12">
+                            <label class="labels">Số lượng</label>
+                            <input type="number" class="form-control" asp-for="Product.QuantityPerUnit" min="0" required>
+                        </div>
+                    <div class="col-md-12">
+                        <label class="labels">Ngừng sản xuất</label>
+                            @if (Model.Product.Discontinued == true)
+                            {
+                                <span style="color: red;">Ngừng Sản Xuất</span>
+                            }
+                            else if (Model.Product.Discontinued == false)
+                            {
+                                <span style="color: green;">Còn sản xuất</span>
+                            }
+                        </div>
+                    <div class="col-md-12">
+                        <label class="labels">Mô tả sản phẩm</label>
+                            <textarea asp-for="Product.Description"></textarea>
+                        </div>
+                    <div class="col-md-12">
+                        <label class="labels">Tình trạng</label>
+                            @if (Model.Product.Status == false)
+                            {
+                                <span style="color: red;">Hết hàng</span>
+                            }
+                            else if (Model.Product.Status == true)
+                            {
+                                <span style="color: green;">Còn hàng</span>
+                            }
+                        </div>
+                    @*<div class="col-md-12">
+                        <label class="labels">Ngày tạo</label>
+                        <input type="date" class="form-control" asp-for="Product.CreateDate" disabled>
+                    </div>  *@          
+                </div>
+                    <input class="btn btn-primary profile-button" type="submit" value="Chỉnh Sửa" style="margin-bottom: 30px;" />
+        </form>
+    </div>
+</div>
+<link href="~/css/managereditproduct.css" rel="stylesheet" />
+    <script>
+        function validateForm() {
+            var unitPrice = document.getElementById("Product_UnitPrice").value;
+            var quantityPerUnit = document.getElementById("Product_QuantityPerUnit").value;
+
+            if (isNaN(unitPrice) || parseFloat(unitPrice) <= 0) {
+                alert("Giá sản phẩm phải là một số lớn hơn 0.");
+                return false;
+            }
+
+            if (isNaN(quantityPerUnit) || parseFloat(quantityPerUnit) <= 0) {
+                alert("Số lượng sản phẩm phải là một số lớn hơn 0.");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+}
