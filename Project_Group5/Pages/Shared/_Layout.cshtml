@@ -19,9 +19,19 @@
           crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <!--script-->
-    <script src="https://cdn.tailwindcss.com"></script>
+   
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- CSS thư viện -->
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- JS thư viện -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> <!-- Nên dùng jQuery v3.5.1 đầy đủ thay vì slim -->
+    <script src="https://cdn.jsdelivr.net/npm/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 
 </head>
 <body>
@@ -112,9 +122,9 @@
                         </div>
                         <div class="menu relative">
                             <div class="text-gray-700  text-[18px] font-medium leading-6 leading-6">
-                                <li onclick="closeModalMobile()">
+                                <ul onclick="closeModalMobile()">
                                     Danh sách khách sạn
-                                </li>
+                                </ul>
                             </div>
                             <!-- Sub Menu -->
                             <ul id="sub-menu"
@@ -229,6 +239,7 @@
     <script src="~/assets/js/main.js"></script>
     <script src="~/assets/js/ngoc_swiper.js"></script>
     <script src="~/assets/js/tailwind_custom.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
 
     @await RenderSectionAsync("Scripts", required: false)
 </body>

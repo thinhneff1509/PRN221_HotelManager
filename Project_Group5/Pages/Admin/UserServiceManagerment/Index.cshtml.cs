@@ -8,7 +8,7 @@ using System.Linq;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Data;
 
-namespace Project_Group5.Pages.UserService
+namespace Project_Group5.Pages.Admin.UserServiceManagerment
 {
     public class IndexModel : PageModel
     {

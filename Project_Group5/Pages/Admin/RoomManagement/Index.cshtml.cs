@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Project_Group5.Pages.RoomManagement
+namespace Project_Group5.Pages.Admin.RoomManagement
 {
     public class IndexModel : PageModel
     {
