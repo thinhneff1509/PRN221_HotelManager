@@ -24,6 +24,8 @@ namespace Project_Group5.Pages.ServiceOrder
         public List<ServiceRegistration> ServiceRegistrations { get; set; } = new List<ServiceRegistration>();
 
         [BindProperty]
+        public int RoomId { get; set; }  // ID phòng sẽ nhận dịch vụ
+        [BindProperty]
         public int ServiceId { get; set; }
         [BindProperty]
         public int Quantity { get; set; }
@@ -33,27 +35,28 @@ namespace Project_Group5.Pages.ServiceOrder
         public async Task OnGetAsync(int bookingId)
         {
             BookingId = bookingId;
+
             // Lấy danh sách phòng và dịch vụ từ cơ sở dữ liệu
             Rooms = await _context.Rooms.Include(r => r.Roomtype).ToListAsync();
             Services = await _context.Services.Where(s => s.Status == "Available").ToListAsync();
 
-            // Lấy các dịch vụ đã đăng ký cho booking này và tính tổng tiền
+            // Truy vấn ServiceRegistrations, bao gồm Booking và Room qua Booking
             ServiceRegistrations = await _context.ServiceRegistrations
                 .Include(sr => sr.Service)
                 .Include(sr => sr.Booking)
-                    .ThenInclude(b => b.Room) // Bao gồm Room thông qua Booking
+                    .ThenInclude(b => b.Room) // Truy cập Room thông qua Booking
                 .Where(sr => sr.BookingId == BookingId)
                 .ToListAsync();
 
             TotalAmount = ServiceRegistrations.Sum(sr => sr.TotalPrice ?? 0);
         }
 
+
         public async Task<IActionResult> OnPostAddServiceAsync()
         {
-            // Lấy booking cùng với các dịch vụ đã đăng ký
             var booking = await _context.Bookings
-                .Include(b => b.Room) // Bao gồm Room qua Booking
                 .Include(b => b.ServiceRegistrations)
+                 .Include(b => b.Room)
                 .FirstOrDefaultAsync(b => b.Id == BookingId);
 
             var service = await _context.Services.FindAsync(ServiceId);
@@ -66,7 +69,7 @@ namespace Project_Group5.Pages.ServiceOrder
             decimal servicePrice = decimal.Parse(service.Price);
             decimal totalPrice = servicePrice * Quantity;
 
-            // Tạo đối tượng ServiceRegistration mới và thêm vào Booking
+            // Tạo đối tượng ServiceRegistration mới cho phòng đã chọn
             var serviceRegistration = new ServiceRegistration
             {
                 BookingId = BookingId,
@@ -76,8 +79,6 @@ namespace Project_Group5.Pages.ServiceOrder
             };
 
             booking.ServiceRegistrations.Add(serviceRegistration);
-
-            // Cập nhật tổng tiền của booking
             booking.TotalAmount = (decimal.Parse(booking.TotalAmount ?? "0") + totalPrice).ToString();
 
             await _context.SaveChangesAsync();

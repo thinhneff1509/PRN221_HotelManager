@@ -25,11 +25,21 @@
                     <td>@room.Roomtype?.Name</td>
                     <td>@room.Status</td>
                     <td>
-                        @if (room.ServiceRegistrations != null && room.ServiceRegistrations.Any())
+                        @if (room.Bookings != null && room.Bookings.Any())
                         {
-                            @foreach (var service in room.ServiceRegistrations)
+                            foreach (var booking in room.Bookings)
                             {
-                                <p>@service.Service?.ServiceName - Số lượng: @service.Quantity</p>
+                                if (booking.ServiceRegistrations != null && booking.ServiceRegistrations.Any())
+                                {
+                                    foreach (var serviceRegistration in booking.ServiceRegistrations)
+                                    {
+                                        <p>@serviceRegistration.Service?.ServiceName - Số lượng: @serviceRegistration.Quantity</p>
+                                    }
+                                }
+                                else
+                                {
+                                    <p>Không có dịch vụ</p>
+                                }
                             }
                         }
                         else
