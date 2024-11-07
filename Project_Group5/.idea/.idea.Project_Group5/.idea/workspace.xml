@@ -11,8 +11,32 @@
     <list default="true" id="3854dc94-ba40-4661-bc4c-01bd491d4348" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project_Group5/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project_Group5/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.vs/Project_Group5/DesignTimeBuild/.dtbcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/Project_Group5/DesignTimeBuild/.dtbcache.v2" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.vs/Project_Group5/v17/.futdcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/Project_Group5/v17/.futdcache.v2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.vs/Project_Group5/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/Project_Group5/v17/.suo" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.vs/Project_Group5/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/Project_Group5/v17/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/Project_Group5/v17/DocumentLayout.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/Project_Group5/v17/DocumentLayout.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Discount.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Discount.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Fall24_SE1745_PRN221_Group5Context.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Fall24_SE1745_PRN221_Group5Context.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/Admin/PaymentManagerment/PaymentManagement.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Admin/PaymentManagerment/PaymentManagement.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/User_/Rooms/PreOrder.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/User_/Rooms/PreOrder.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/User_/Rooms/PreOrder.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/User_/Rooms/PreOrder.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net6.0/Project_Group5.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net6.0/Project_Group5.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net6.0/Project_Group5.exe" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net6.0/Project_Group5.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net6.0/Project_Group5.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net6.0/Project_Group5.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net6.0/Project_Group5.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net6.0/Project_Group5.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net6.0/Project_Group5.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net6.0/Project_Group5.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net6.0/Project_Group5.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net6.0/Project_Group5.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net6.0/Project_Group5.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net6.0/Project_Group5.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net6.0/Project_Group5.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net6.0/Project_Group5.sourcelink.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net6.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net6.0/apphost.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net6.0/ref/Project_Group5.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net6.0/ref/Project_Group5.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net6.0/refint/Project_Group5.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net6.0/refint/Project_Group5.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net6.0/staticwebassets.build.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net6.0/staticwebassets.build.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/obj/rider.project.restore.info" afterDir="false" />
+>>>>>>> 120add65b073ccbdf4b0f9c7a36ce61ecd007a0f
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +49,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="thinh_Authen" />
+        <entry key="$PROJECT_DIR$/.." value="phicode" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -46,9 +70,27 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/575c31ecc35a636b6f962cb71d53992552941a18982aae1c8e6c16305cc3761b/ExceptionDispatchInfo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Models/Fall24_SE1745_PRN221_Group5Context.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Pages/Homepage/Home.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/User_/ServiceOrder/ServiceOrder.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/User_/ServiceOrder/ServiceOrder.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/User_/ServiceOrder/ServiceOrder.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/User_/ServiceOrder/ServiceOrder.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/User_/ServiceOrder/ServiceOrder.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/User_/ServiceOrder/ServiceOrder.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/User_/ServiceOrder/ServiceOrder.cshtml.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/User_/ServiceOrder/ServiceOrder.cshtml.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/User_/ServiceOrder/ServiceOrder.cshtml.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/User_/ServiceOrder/ServiceOrder.cshtml.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/bin/Debug/net6.0/Project_Group5.staticwebassets.runtime.json" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/obj/Debug/net6.0/Project_Group5.AssemblyInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/obj/Debug/net6.0/Project_Group5.AssemblyInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/obj/Debug/net6.0/Project_Group5.AssemblyInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/obj/Debug/net6.0/Project_Group5.sourcelink.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/obj/Debug/net6.0/Project_Group5.sourcelink.json" root0="FORCE_HIGHLIGHTING" />
   </component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
@@ -58,6 +100,7 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<< HEAD
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;.NET Launch Settings Profile.Project_Group5.executor&quot;: &quot;Run&quot;,
@@ -71,8 +114,23 @@
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.C#&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+=======
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Launch Settings Profile.Project_Group5.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "thinh__Authen",
+    "ignore.virus.scanning.warn.message": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "vue.rearranger.settings.migration": "true"
+>>>>>>> 120add65b073ccbdf4b0f9c7a36ce61ecd007a0f
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected=".NET Launch Settings Profile.Project_Group5">
     <configuration name="Project_Group5" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/Project_Group5.csproj" />
@@ -385,7 +443,23 @@
       <option name="project" value="LOCAL" />
       <updated>1730950788012</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="merge hoang paymentadmin vs quang feedback admin">
+      <option name="closed" value="true" />
+      <created>1730959173849</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1730959173849</updated>
+    </task>
+    <task id="LOCAL-00034" summary="done feedback admin, payment admin">
+      <option name="closed" value="true" />
+      <created>1730960303064</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1730960303064</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -394,6 +468,26 @@
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/thinh_Authen" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/Quang_LeTanHoaDon" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
@@ -406,8 +500,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="setting" />
-    <MESSAGE value="check" />
     <MESSAGE value="hi" />
     <MESSAGE value="payment" />
     <MESSAGE value="hihi" />
@@ -431,6 +523,8 @@
     <MESSAGE value="commit" />
     <MESSAGE value="done service cả 2" />
     <MESSAGE value="done" />
-    <option name="LAST_COMMIT_MESSAGE" value="done" />
+    <MESSAGE value="merge hoang paymentadmin vs quang feedback admin" />
+    <MESSAGE value="done feedback admin, payment admin" />
+    <option name="LAST_COMMIT_MESSAGE" value="done feedback admin, payment admin" />
   </component>
 </project>

@@ -138,6 +138,8 @@ namespace Project_Group5.Models
 
                 entity.Property(e => e.Id).HasColumnName("id");
 
+                entity.Property(e => e.Amount).HasMaxLength(255);
+
                 entity.Property(e => e.BookingId).HasColumnName("booking_id");
 
                 entity.Property(e => e.Content)

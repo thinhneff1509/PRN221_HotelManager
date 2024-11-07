@@ -72,7 +72,6 @@ namespace Project_Group5.Pages.Rooms
                 ModelState.AddModelError("Email", "Invalid email address.");
             }
 
-            // Kiểm tra nếu có lỗi
             if (!ModelState.IsValid)
             {
                 return Page();
@@ -98,13 +97,8 @@ namespace Project_Group5.Pages.Rooms
                         };
                         await context.Customers.AddAsync(newCustomer);
                         await context.SaveChangesAsync();
+                        customer = newCustomer;
                     }
-                }
-
-                using (var context = new Fall24_SE1745_PRN221_Group5Context())
-                {
-                    var customer = await context.Customers.FirstOrDefaultAsync(c => c.Email.Equals(Email) || c.Phone.Equals(Phone));
-
                     DateTime CheckInDate = DateTime.Parse(CheckinDate);
                     DateTime CheckOutDate = DateTime.Parse(CheckoutDate);
                     foreach (var r in SelectedRooms)
@@ -114,12 +108,21 @@ namespace Project_Group5.Pages.Rooms
                         {
                             ri.Status = "Đang đặt cọc";
                             context.Update(ri);
+                            // Tính toán giảm giá, nếu có
+                            var discount = await context.Discounts.FirstOrDefaultAsync(d => d.BookingId == ri.Id);
+                            double finalAmount = double.Parse(TotalAmount);
+                            if (discount != null)
+                            {
+                                // Giả sử giảm giá là theo phần trăm
+                                //      finalAmount = finalAmount * (1 -(discount.Amount / 100));
+                            }
+
                             var booking = new Booking
                             {
                                 CustomerId = customer.Id,
                                 CheckInDate = CheckInDate,
                                 CheckOutDate = CheckOutDate,
-                                TotalAmount = TotalAmount,
+                                TotalAmount = finalAmount.ToString(), // Lưu số tiền sau khi đã áp dụng giảm giá
                                 RoomId = ri.Id
                             };
                             context.Add(booking);

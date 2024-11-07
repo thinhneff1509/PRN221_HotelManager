@@ -473,8 +473,16 @@
       "PackagePath": "staticwebassets\\assets\\js\\tailwind_custom.js"
     },
     {
+      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\css\\changepassword.css",
+      "PackagePath": "staticwebassets\\css\\changepassword.css"
+    },
+    {
       "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\css\\detail.css",
       "PackagePath": "staticwebassets\\css\\detail.css"
+    },
+    {
+      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\css\\feedback.css",
+      "PackagePath": "staticwebassets\\css\\feedback.css"
     },
     {
       "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\css\\listroom.css",

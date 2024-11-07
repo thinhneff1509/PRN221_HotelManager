@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Project_Group5.Dto;
 using Project_Group5.Models;
 
-namespace Project_Group5.Pages.RoomManagement
+namespace Project_Group5.Pages.Admin.RoomManagement
 {
     public class IndexModel : PageModel
     {
