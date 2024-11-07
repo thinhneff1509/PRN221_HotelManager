@@ -1,0 +1,24 @@
+<changelist name="Uncommitted_changes_before_Update_at_11_7_2024_12_38_AM_[Changes]" date="1730914682532" recycled="false" toDelete="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/.idea.Project_Group5/.idea/shelf/Uncommitted_changes_before_Update_at_11_7_2024_12_38_AM_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 11/7/2024 12:38 AM [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="obj/Debug/net6.0/project.razor.vs.bin" />
+    <option name="AFTER_PATH" value="obj/Debug/net6.0/project.razor.vs.bin" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.Project_Group5/.idea/shelf/Uncommitted_changes_before_Update_at_11_7_2024_12_38_AM_[Changes]/project.razor.vs.bin" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".vs/Project_Group5/v17/.suo" />
+    <option name="AFTER_PATH" value=".vs/Project_Group5/v17/.suo" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.Project_Group5/.idea/shelf/Uncommitted_changes_before_Update_at_11_7_2024_12_38_AM_[Changes]/.suo" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="obj/Debug/net6.0/Project_Group5.AssemblyInfoInputs.cache" />
+    <option name="AFTER_PATH" value="obj/Debug/net6.0/Project_Group5.AssemblyInfoInputs.cache" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.Project_Group5/.idea/shelf/Uncommitted_changes_before_Update_at_11_7_2024_12_38_AM_[Changes]/Project_Group5.AssemblyInfoInputs.cache" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="obj/Debug/net6.0/Project_Group5.assets.cache" />
+    <option name="AFTER_PATH" value="obj/Debug/net6.0/Project_Group5.assets.cache" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.Project_Group5/.idea/shelf/Uncommitted_changes_before_Update_at_11_7_2024_12_38_AM_[Changes]/Project_Group5.assets.cache" />
+  </binary>
+</changelist>
