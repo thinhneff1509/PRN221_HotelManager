@@ -28,31 +28,39 @@ namespace Project_Group5.Pages.Rooms
             public Dictionary<string, double> CategoryRatings { get; set; }
         }
 
-        public async Task OnGetAsync()
+        public string CustomerName { get; set; }
+
+        public async Task<IActionResult> OnGetAsync()
         {
-            // Lấy danh sách feedback
+            var customer = await _context.Customers
+                .FirstOrDefaultAsync(c => c.Username == User.Identity.Name);
+
+            CustomerName = customer?.Name ?? "Khách hàng";
+
             FeedbackList = await _context.Feedbacks
                 .Include(f => f.Customer)
                 .OrderByDescending(f => f.FeedbackDate)
                 .Take(10)
                 .ToListAsync();
 
-            // Tính toán thống kê
             var allFeedbacks = await _context.Feedbacks.ToListAsync();
             Stats = new FeedbackStats
             {
                 TotalReviews = allFeedbacks.Count,
                 AverageRating = (double)(allFeedbacks.Any() ? allFeedbacks.Average(f => f.Rating) : 0),
                 RatingBreakdown = new Dictionary<string, int>
-                {
-                    { "Tuyệt vời", allFeedbacks.Count(f => f.Rating == 5) },
-                    { "Rất tốt", allFeedbacks.Count(f => f.Rating == 4) },
-                    { "Hài lòng", allFeedbacks.Count(f => f.Rating == 3) },
-                    { "Trung bình", allFeedbacks.Count(f => f.Rating == 2) },
-                    { "Kém", allFeedbacks.Count(f => f.Rating == 1) }
-                }
-            };
+        {
+            { "Tuyệt vời", allFeedbacks.Count(f => f.Rating == 5) },
+            { "Rất tốt", allFeedbacks.Count(f => f.Rating == 4) },
+            { "Hài lòng", allFeedbacks.Count(f => f.Rating == 3) },
+            { "Trung bình", allFeedbacks.Count(f => f.Rating == 2) },
+            { "Kém", allFeedbacks.Count(f => f.Rating == 1) }
         }
+            };
+
+            return Page();
+        }
+
 
         public async Task<IActionResult> OnPostAsync()
         {
