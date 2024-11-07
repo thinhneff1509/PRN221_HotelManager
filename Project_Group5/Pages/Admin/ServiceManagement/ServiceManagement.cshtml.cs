@@ -32,8 +32,11 @@ namespace Project_Group5.Pages.Admin.ServiceManagement
         {
             Services = await _context.Services.ToListAsync();
             Rooms = await _context.Rooms
-        .Include(r => r.Roomtype)
-        .ToListAsync();
+                .Include(r => r.Roomtype)
+                .Include(r => r.Bookings) // Bao gồm Bookings liên quan đến Room
+                    .ThenInclude(b => b.ServiceRegistrations) // Bao gồm ServiceRegistrations liên quan đến mỗi Booking
+                    .ThenInclude(sr => sr.Service) // Bao gồm Service để lấy thông tin chi tiết của dịch vụ
+                .ToListAsync();
         }
 
         public async Task<IActionResult> OnPostAddServiceAsync()
