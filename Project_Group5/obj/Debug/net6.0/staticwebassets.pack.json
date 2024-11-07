@@ -1,771 +1,771 @@
 {
   "Files": [
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Project_Group5.bundle.scp.css",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Project_Group5.bundle.scp.css",
       "PackagePath": "staticwebassets\\Project_Group5.bundle.scp.css"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\Form\\Validateform.html",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\Form\\Validateform.html",
       "PackagePath": "staticwebassets\\assets\\Form\\Validateform.html"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\css\\dat.css",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\css\\dat.css",
       "PackagePath": "staticwebassets\\assets\\css\\dat.css"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\css\\ngoc.css",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\css\\ngoc.css",
       "PackagePath": "staticwebassets\\assets\\css\\ngoc.css"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\css\\reset.css",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\css\\reset.css",
       "PackagePath": "staticwebassets\\assets\\css\\reset.css"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\css\\style.css",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\css\\style.css",
       "PackagePath": "staticwebassets\\assets\\css\\style.css"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\css\\tintuc.css",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\css\\tintuc.css",
       "PackagePath": "staticwebassets\\assets\\css\\tintuc.css"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\css\\tintucchitiet.css",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\css\\tintucchitiet.css",
       "PackagePath": "staticwebassets\\assets\\css\\tintucchitiet.css"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\AnekLatin-VariableFont_wdth,wght.ttf",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\AnekLatin-VariableFont_wdth,wght.ttf",
       "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\AnekLatin-VariableFont_wdth,wght.ttf"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\OFL.txt",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\OFL.txt",
       "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\OFL.txt"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\README.txt",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\README.txt",
       "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\README.txt"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin-Bold.ttf",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin-Bold.ttf",
       "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin-Bold.ttf"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin-ExtraBold.ttf",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin-ExtraBold.ttf",
       "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin-ExtraBold.ttf"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin-ExtraLight.ttf",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin-ExtraLight.ttf",
       "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin-ExtraLight.ttf"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin-Light.ttf",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin-Light.ttf",
       "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin-Light.ttf"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin-Medium.ttf",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin-Medium.ttf",
       "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin-Medium.ttf"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin-Regular.ttf",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin-Regular.ttf",
       "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin-Regular.ttf"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin-SemiBold.ttf",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin-SemiBold.ttf",
       "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin-SemiBold.ttf"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin-Thin.ttf",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin-Thin.ttf",
       "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin-Thin.ttf"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Condensed-Bold.ttf",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Condensed-Bold.ttf",
       "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin_Condensed-Bold.ttf"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Condensed-ExtraBold.ttf",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Condensed-ExtraBold.ttf",
       "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin_Condensed-ExtraBold.ttf"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Condensed-ExtraLight.ttf",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Condensed-ExtraLight.ttf",
       "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin_Condensed-ExtraLight.ttf"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Condensed-Light.ttf",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Condensed-Light.ttf",
       "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin_Condensed-Light.ttf"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Condensed-Medium.ttf",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Condensed-Medium.ttf",
       "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin_Condensed-Medium.ttf"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Condensed-Regular.ttf",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Condensed-Regular.ttf",
       "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin_Condensed-Regular.ttf"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Condensed-SemiBold.ttf",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Condensed-SemiBold.ttf",
       "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin_Condensed-SemiBold.ttf"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Condensed-Thin.ttf",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Condensed-Thin.ttf",
       "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin_Condensed-Thin.ttf"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Expanded-Bold.ttf",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Expanded-Bold.ttf",
       "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin_Expanded-Bold.ttf"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Expanded-ExtraBold.ttf",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Expanded-ExtraBold.ttf",
       "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin_Expanded-ExtraBold.ttf"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Expanded-ExtraLight.ttf",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Expanded-ExtraLight.ttf",
       "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin_Expanded-ExtraLight.ttf"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Expanded-Light.ttf",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Expanded-Light.ttf",
       "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin_Expanded-Light.ttf"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Expanded-Medium.ttf",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Expanded-Medium.ttf",
       "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin_Expanded-Medium.ttf"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Expanded-Regular.ttf",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Expanded-Regular.ttf",
       "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin_Expanded-Regular.ttf"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Expanded-SemiBold.ttf",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Expanded-SemiBold.ttf",
       "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin_Expanded-SemiBold.ttf"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Expanded-Thin.ttf",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Expanded-Thin.ttf",
       "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin_Expanded-Thin.ttf"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiCondensed-Bold.ttf",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiCondensed-Bold.ttf",
       "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiCondensed-Bold.ttf"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiCondensed-ExtraBold.ttf",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiCondensed-ExtraBold.ttf",
       "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiCondensed-ExtraBold.ttf"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiCondensed-ExtraLight.ttf",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiCondensed-ExtraLight.ttf",
       "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiCondensed-ExtraLight.ttf"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiCondensed-Light.ttf",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiCondensed-Light.ttf",
       "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiCondensed-Light.ttf"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiCondensed-Medium.ttf",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiCondensed-Medium.ttf",
       "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiCondensed-Medium.ttf"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiCondensed-Regular.ttf",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiCondensed-Regular.ttf",
       "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiCondensed-Regular.ttf"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiCondensed-SemiBold.ttf",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiCondensed-SemiBold.ttf",
       "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiCondensed-SemiBold.ttf"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiCondensed-Thin.ttf",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiCondensed-Thin.ttf",
       "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiCondensed-Thin.ttf"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiExpanded-Bold.ttf",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiExpanded-Bold.ttf",
       "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiExpanded-Bold.ttf"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiExpanded-ExtraBold.ttf",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiExpanded-ExtraBold.ttf",
       "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiExpanded-ExtraBold.ttf"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiExpanded-ExtraLight.ttf",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiExpanded-ExtraLight.ttf",
       "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiExpanded-ExtraLight.ttf"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiExpanded-Light.ttf",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiExpanded-Light.ttf",
       "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiExpanded-Light.ttf"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiExpanded-Medium.ttf",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiExpanded-Medium.ttf",
       "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiExpanded-Medium.ttf"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiExpanded-Regular.ttf",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiExpanded-Regular.ttf",
       "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiExpanded-Regular.ttf"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiExpanded-SemiBold.ttf",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiExpanded-SemiBold.ttf",
       "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiExpanded-SemiBold.ttf"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiExpanded-Thin.ttf",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiExpanded-Thin.ttf",
       "PackagePath": "staticwebassets\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiExpanded-Thin.ttf"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\icons\\downward-arrow 3.svg",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\icons\\downward-arrow 3.svg",
       "PackagePath": "staticwebassets\\assets\\icons\\downward-arrow 3.svg"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\icons\\search.svg",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\icons\\search.svg",
       "PackagePath": "staticwebassets\\assets\\icons\\search.svg"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Banner_home.png",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Banner_home.png",
       "PackagePath": "staticwebassets\\assets\\images\\Banner_home.png"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Cong-vien-1-1-scaled.jpg",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Cong-vien-1-1-scaled.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\Cong-vien-1-1-scaled.jpg"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Line 11.png",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Line 11.png",
       "PackagePath": "staticwebassets\\assets\\images\\Line 11.png"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Logo.png",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Logo.png",
       "PackagePath": "staticwebassets\\assets\\images\\Logo.png"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Mốc dưới.png",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Mốc dưới.png",
       "PackagePath": "staticwebassets\\assets\\images\\Mốc dưới.png"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Mốc.png",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Mốc.png",
       "PackagePath": "staticwebassets\\assets\\images\\Mốc.png"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\bacgiang.jpg",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\bacgiang.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\bacgiang.jpg"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\bacninh.jpg",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\bacninh.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\bacninh.jpg"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\doubleroom.jpg",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\doubleroom.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\doubleroom.jpg"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\downward-arrow 3.png",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\downward-arrow 3.png",
       "PackagePath": "staticwebassets\\assets\\images\\downward-arrow 3.png"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\family.png",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\family.png",
       "PackagePath": "staticwebassets\\assets\\images\\family.png"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\kimboi.jpg",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\kimboi.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\kimboi.jpg"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\muine.jpg",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\muine.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\muine.jpg"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\office 1.png",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\office 1.png",
       "PackagePath": "staticwebassets\\assets\\images\\office 1.png"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\phongdon.jpg",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\phongdon.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\phongdon.jpg"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\phonghangsang.jpg",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\phonghangsang.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\phonghangsang.jpg"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\search 1.png",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\search 1.png",
       "PackagePath": "staticwebassets\\assets\\images\\search 1.png"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\A.png",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\A.png",
       "PackagePath": "staticwebassets\\assets\\images\\tintuc\\A.png"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\Line.png",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\Line.png",
       "PackagePath": "staticwebassets\\assets\\images\\tintuc\\Line.png"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\Vector1.png",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\Vector1.png",
       "PackagePath": "staticwebassets\\assets\\images\\tintuc\\Vector1.png"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\Vectortintuc.png",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\Vectortintuc.png",
       "PackagePath": "staticwebassets\\assets\\images\\tintuc\\Vectortintuc.png"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\anhnhamay.png",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\anhnhamay.png",
       "PackagePath": "staticwebassets\\assets\\images\\tintuc\\anhnhamay.png"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\anhquytrinhsx.png",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\anhquytrinhsx.png",
       "PackagePath": "staticwebassets\\assets\\images\\tintuc\\anhquytrinhsx.png"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\anhtrongcontent.png",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\anhtrongcontent.png",
       "PackagePath": "staticwebassets\\assets\\images\\tintuc\\anhtrongcontent.png"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\capsach.png",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\capsach.png",
       "PackagePath": "staticwebassets\\assets\\images\\tintuc\\capsach.png"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\g720.png",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\g720.png",
       "PackagePath": "staticwebassets\\assets\\images\\tintuc\\g720.png"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\gocongnghiep.png",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\gocongnghiep.png",
       "PackagePath": "staticwebassets\\assets\\images\\tintuc\\gocongnghiep.png"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\gotunhien.png",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\gotunhien.png",
       "PackagePath": "staticwebassets\\assets\\images\\tintuc\\gotunhien.png"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\linequytrinhsx.png",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\linequytrinhsx.png",
       "PackagePath": "staticwebassets\\assets\\images\\tintuc\\linequytrinhsx.png"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\maymocnha.png",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\maymocnha.png",
       "PackagePath": "staticwebassets\\assets\\images\\tintuc\\maymocnha.png"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\mykingdom.png",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\mykingdom.png",
       "PackagePath": "staticwebassets\\assets\\images\\tintuc\\mykingdom.png"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\quatuyetvoi.png",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\quatuyetvoi.png",
       "PackagePath": "staticwebassets\\assets\\images\\tintuc\\quatuyetvoi.png"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\slidechitiet.png",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\slidechitiet.png",
       "PackagePath": "staticwebassets\\assets\\images\\tintuc\\slidechitiet.png"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\tuyetvoi.png",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\tuyetvoi.png",
       "PackagePath": "staticwebassets\\assets\\images\\tintuc\\tuyetvoi.png"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\tuyetvoiqua.png",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\tuyetvoiqua.png",
       "PackagePath": "staticwebassets\\assets\\images\\tintuc\\tuyetvoiqua.png"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\vietnam.png",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\vietnam.png",
       "PackagePath": "staticwebassets\\assets\\images\\tintuc\\vietnam.png"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\1.png",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\1.png",
       "PackagePath": "staticwebassets\\assets\\images\\Đối tác - khách hàng\\1.png"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\10.png",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\10.png",
       "PackagePath": "staticwebassets\\assets\\images\\Đối tác - khách hàng\\10.png"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\11.png",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\11.png",
       "PackagePath": "staticwebassets\\assets\\images\\Đối tác - khách hàng\\11.png"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\12.png",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\12.png",
       "PackagePath": "staticwebassets\\assets\\images\\Đối tác - khách hàng\\12.png"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\13.png",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\13.png",
       "PackagePath": "staticwebassets\\assets\\images\\Đối tác - khách hàng\\13.png"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\14.png",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\14.png",
       "PackagePath": "staticwebassets\\assets\\images\\Đối tác - khách hàng\\14.png"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\15.png",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\15.png",
       "PackagePath": "staticwebassets\\assets\\images\\Đối tác - khách hàng\\15.png"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\16.png",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\16.png",
       "PackagePath": "staticwebassets\\assets\\images\\Đối tác - khách hàng\\16.png"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\17.png",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\17.png",
       "PackagePath": "staticwebassets\\assets\\images\\Đối tác - khách hàng\\17.png"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\18.png",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\18.png",
       "PackagePath": "staticwebassets\\assets\\images\\Đối tác - khách hàng\\18.png"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\19.png",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\19.png",
       "PackagePath": "staticwebassets\\assets\\images\\Đối tác - khách hàng\\19.png"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\2.png",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\2.png",
       "PackagePath": "staticwebassets\\assets\\images\\Đối tác - khách hàng\\2.png"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\20.png",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\20.png",
       "PackagePath": "staticwebassets\\assets\\images\\Đối tác - khách hàng\\20.png"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\21.png",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\21.png",
       "PackagePath": "staticwebassets\\assets\\images\\Đối tác - khách hàng\\21.png"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\3.png",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\3.png",
       "PackagePath": "staticwebassets\\assets\\images\\Đối tác - khách hàng\\3.png"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\4.png",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\4.png",
       "PackagePath": "staticwebassets\\assets\\images\\Đối tác - khách hàng\\4.png"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\5.png",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\5.png",
       "PackagePath": "staticwebassets\\assets\\images\\Đối tác - khách hàng\\5.png"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\6.png",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\6.png",
       "PackagePath": "staticwebassets\\assets\\images\\Đối tác - khách hàng\\6.png"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\7.png",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\7.png",
       "PackagePath": "staticwebassets\\assets\\images\\Đối tác - khách hàng\\7.png"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\8.png",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\8.png",
       "PackagePath": "staticwebassets\\assets\\images\\Đối tác - khách hàng\\8.png"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\9.png",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\9.png",
       "PackagePath": "staticwebassets\\assets\\images\\Đối tác - khách hàng\\9.png"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Ảnh 1.png",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Ảnh 1.png",
       "PackagePath": "staticwebassets\\assets\\images\\Ảnh 1.png"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Ảnh 2.png",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Ảnh 2.png",
       "PackagePath": "staticwebassets\\assets\\images\\Ảnh 2.png"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Ảnh 3.png",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Ảnh 3.png",
       "PackagePath": "staticwebassets\\assets\\images\\Ảnh 3.png"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\js\\dat.js",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\js\\dat.js",
       "PackagePath": "staticwebassets\\assets\\js\\dat.js"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\js\\main.js",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\js\\main.js",
       "PackagePath": "staticwebassets\\assets\\js\\main.js"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\js\\ngoc_swiper.js",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\js\\ngoc_swiper.js",
       "PackagePath": "staticwebassets\\assets\\js\\ngoc_swiper.js"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\js\\phi.js",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\js\\phi.js",
       "PackagePath": "staticwebassets\\assets\\js\\phi.js"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\js\\tailwind_custom.js",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\js\\tailwind_custom.js",
       "PackagePath": "staticwebassets\\assets\\js\\tailwind_custom.js"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\css\\detail.css",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\css\\detail.css",
       "PackagePath": "staticwebassets\\css\\detail.css"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\css\\listroom.css",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\css\\listroom.css",
       "PackagePath": "staticwebassets\\css\\listroom.css"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\css\\pre_order.css",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\css\\pre_order.css",
       "PackagePath": "staticwebassets\\css\\pre_order.css"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\css\\site.css",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\favicon.ico",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\images\\bathroom_suiteroom.jpg",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\images\\bathroom_suiteroom.jpg",
       "PackagePath": "staticwebassets\\images\\bathroom_suiteroom.jpg"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\images\\beboi.webp",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\images\\beboi.webp",
       "PackagePath": "staticwebassets\\images\\beboi.webp"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\images\\le tan Muong Thanh.jpeg",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\images\\le tan Muong Thanh.jpeg",
       "PackagePath": "staticwebassets\\images\\le tan Muong Thanh.jpeg"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\images\\restroom.jpg",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\images\\restroom.jpg",
       "PackagePath": "staticwebassets\\images\\restroom.jpg"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\images\\room101.jpg",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\images\\room101.jpg",
       "PackagePath": "staticwebassets\\images\\room101.jpg"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\images\\room102.jpg",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\images\\room102.jpg",
       "PackagePath": "staticwebassets\\images\\room102.jpg"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\images\\room201.webp",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\images\\room201.webp",
       "PackagePath": "staticwebassets\\images\\room201.webp"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\images\\room201_phongan.jpg",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\images\\room201_phongan.jpg",
       "PackagePath": "staticwebassets\\images\\room201_phongan.jpg"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\images\\suite.jpg",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\images\\suite.jpg",
       "PackagePath": "staticwebassets\\images\\suite.jpg"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\images\\suite_rest.jpg",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\images\\suite_rest.jpg",
       "PackagePath": "staticwebassets\\images\\suite_rest.jpg"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\images\\suiteroom.jpg",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\images\\suiteroom.jpg",
       "PackagePath": "staticwebassets\\images\\suiteroom.jpg"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\js\\site.js",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Id": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Id": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
