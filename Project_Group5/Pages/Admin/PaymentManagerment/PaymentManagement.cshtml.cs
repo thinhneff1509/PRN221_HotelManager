@@ -18,7 +18,7 @@ namespace Project_Group5.Pages.Admin.PaymentManagement
         }
 
         // Các tham số phân trang
-        public const int PageSize = 10;  // Số mục mỗi trang
+        public const int PageSize = 10;
         public int CurrentPage { get; set; } = 1;
         public int TotalPages { get; set; }
         public int TotalItems { get; set; }
@@ -28,25 +28,41 @@ namespace Project_Group5.Pages.Admin.PaymentManagement
         [BindProperty]
         public Payment Payment { get; set; }
 
+        // Thuộc tính tìm kiếm
+        [BindProperty(SupportsGet = true)]
+        public string SearchQuery { get; set; }
+
         public async Task OnGetAsync(int pageIndex = 1)
         {
             CurrentPage = pageIndex;
 
-            // Lấy tổng số bản ghi thanh toán
-            TotalItems = await _context.Payments.CountAsync();
+            // Tạo query để có thể áp dụng cả filter và phân trang
+            var query = _context.Payments
+                .Include(p => p.Booking)
+                    .ThenInclude(b => b.Room)
+                .Include(p => p.Booking)
+                    .ThenInclude(b => b.Customer)
+                .AsQueryable();
 
-            // Tính tổng số trang
+            // Lọc theo tên khách hàng nếu có giá trị tìm kiếm
+            if (!string.IsNullOrEmpty(SearchQuery))
+            {
+                query = query.Where(p => p.Booking.Customer.Name.Contains(SearchQuery));
+            }
+
+            // Lấy tổng số bản ghi (sau khi áp dụng filter nếu có)
+            TotalItems = await query.CountAsync();
             TotalPages = (int)Math.Ceiling(TotalItems / (double)PageSize);
 
-            // Lấy danh sách thanh toán với phân trang
-            Payments = await _context.Payments
-                .Include(p => p.Booking)
+            // Lấy danh sách thanh toán với filter và phân trang
+            Payments = await query
                 .OrderBy(p => p.Id)
                 .Skip((CurrentPage - 1) * PageSize)
                 .Take(PageSize)
                 .ToListAsync();
         }
 
+        // Phương thức Post Edit (không cần thay đổi)
         public async Task<IActionResult> OnPostEditAsync()
         {
             if (!ModelState.IsValid)
@@ -68,7 +84,6 @@ namespace Project_Group5.Pages.Admin.PaymentManagement
 
             await _context.SaveChangesAsync();
 
-            // Thêm thông báo thành công vào TempData
             TempData["SuccessMessage"] = "Cập nhật thanh toán thành công!";
 
             return RedirectToPage();
@@ -85,7 +100,7 @@ namespace Project_Group5.Pages.Admin.PaymentManagement
             _context.Payments.Remove(payment);
             await _context.SaveChangesAsync();
 
-            return RedirectToPage(new { pageIndex = CurrentPage });
+            return RedirectToPage(new { pageIndex = CurrentPage, searchQuery = SearchQuery });
         }
     }
 }
