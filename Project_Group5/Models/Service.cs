@@ -12,8 +12,9 @@ namespace Project_Group5.Models
 
         public int Id { get; set; }
         public string? ServiceName { get; set; }
-        public string? Price { get; set; } = null!;
+        public string Price { get; set; } = null!;
         public string? Status { get; set; }
+        public string? ImageService { get; set; }
 
         public virtual ICollection<ServiceRegistration> ServiceRegistrations { get; set; }
     }
