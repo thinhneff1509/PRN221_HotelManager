@@ -1,1 +1,39 @@
-Project_Group5/.vs/Project_Group5/FileContentIndex/59c5bac5-e624-4d20-b87e-e1a06f576516.vsidx
+# Các thư mục bin và obj chứa các file build tạm thời
+[Bb]in/
+[Oo]bj/
+
+# Các tệp nhật ký, khóa và tệp cài đặt
+*.log
+*.vspscc
+*.vssscc
+.vscode/
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Các tệp cài đặt của môi trường IDE (Visual Studio)
+.vscode/
+.vs/
+.idea/
+*.csproj.user
+*.sln.ide
+
+# Thư mục phát sinh do restore package
+packages/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Các thư mục và tệp liên quan đến cấu hình
+.DS_Store
+*.tss
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Các tệp bí mật hoặc thông tin nhạy cảm
+secrets.json
+*.pfx
+*.key
