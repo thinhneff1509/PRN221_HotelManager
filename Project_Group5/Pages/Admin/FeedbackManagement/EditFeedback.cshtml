@@ -1,0 +1,187 @@
+﻿@page "{id:int}"
+@model EditFeedbackModel
+@{
+    ViewData["Title"] = "Edit Feedback";
+    Layout = "_Layout";
+}
+
+<style>
+    h2 {
+        color: #333; 
+        text-align: center; 
+        font-size: 1.5em; 
+        font-weight: bold; 
+        margin-bottom: 20px; 
+        letter-spacing: 1px; 
+        text-transform: uppercase; 
+        border-bottom: 2px solid #4CAF50; 
+        padding-bottom: 10px; 
+        font-family: 'Arial', sans-serif; 
+    }
+    /* Page Container Styling */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column; 
+        height: full;
+        overflow: auto; 
+    }
+
+    /* Header Styling */
+    header {
+        background-color: #4CAF50;
+        color: #fff;
+        padding: 10px 0;
+        text-align: center;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Footer Styling */
+    footer {
+        background-color: #4CAF50;
+        color: #fff;
+        text-align: center;
+        padding: 10px 0;
+        margin-top: auto; 
+    }
+
+    /* Form Container Styling */
+    form {
+        width: 100%;
+        max-width: 450px; 
+        background-color: #ffffff;
+        padding: 20px;
+        padding-top: 60px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin: 20px auto; 
+        box-sizing: border-box; 
+    }
+
+    /* Tạo khoảng cách cho header */
+    h2 {
+        color: #333;
+        text-align: center;
+        margin-bottom: 15px; 
+    }
+
+    /* Form Elements */
+    .form-group {
+        margin-bottom: 10px; 
+    }
+
+    label {
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 5px;
+        display: block;
+    }
+
+    input[type="text"],
+    textarea,
+    select {
+        width: 100%;
+        padding: 8px 12px; 
+        font-size: 0.95em;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        transition: border-color 0.3s ease;
+    }
+
+        input[type="text"]:disabled {
+            background-color: #e9ecef;
+            color: #6c757d;
+        }
+
+    textarea {
+        resize: vertical;
+        min-height: 100px;
+    }
+
+        /* Input Focus State */
+        input:focus,
+        textarea:focus,
+        select:focus {
+            border-color: #4CAF50;
+            outline: none;
+        }
+
+    /* Button Styling */
+    .btn {
+        font-weight: bold;
+        padding: 8px 18px; 
+        border-radius: 4px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        margin-right: 10px;
+        transition: background-color 0.3s ease;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .btn-primary {
+        background-color: #4CAF50;
+        border: none;
+    }
+
+        .btn-primary:hover {
+            background-color: #45a049;
+        }
+
+    .btn-secondary {
+        background-color: #6c757d;
+        border: none;
+    }
+
+        .btn-secondary:hover {
+            background-color: #5a6268;
+        }
+
+</style>
+
+<h2>Edit Feedback</h2>
+
+<form method="post">
+    <input type="hidden" asp-for="Feedback.Id" />
+    <input type="hidden" asp-for="Feedback.CustomerId" /> <!-- Thêm hidden input cho CustomerId -->
+    <input type="hidden" asp-for="Feedback.RoomId" />
+    <input type="hidden" asp-for="Feedback.FeedbackDate" />
+    <div class="form-group">
+        <label for="Customer">Khách Hàng</label>
+        <input type="text" id="Customer" class="form-control" value="@Model.Feedback.Customer?.Name" disabled="disabled" />
+    </div>
+    <div class="form-group">
+        <label for="Room">Loại Phòng</label>
+        <input type="text" id="Room" class="form-control" value="@Model.Feedback.Room?.Roomtype?.Name" disabled="disabled" />
+    </div>
+
+    <div class="form-group">
+        <label for="Content">Nội Dung</label>
+        <textarea id="Content" class="form-control" asp-for="Feedback.Content"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="FeedbackDate">Ngày</label>
+        <input type="date" id="FeedbackDate" class="form-control" asp-for="Feedback.FeedbackDate" disabled="disabled" />
+    </div>
+
+    <div class="form-group">
+        <label for="Rating">Đánh giá</label>
+        <select id="Rating" class="form-control" asp-for="Feedback.Rating">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Lưu</button>
+    <a asp-page="./Feedback" class="btn btn-secondary">Quay lại</a>
+</form>

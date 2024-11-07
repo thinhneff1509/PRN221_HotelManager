@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "9DPqSXfYrwkyvJJg1fqS57xbl4ZoEecr2fH8G7zqZ2o=",
+  "Hash": "+QUPMin1g5knrPIrUEtvJtzkZVBhpQj4Tn7A10e6rV4=",
   "Source": "Project_Group5",
   "BasePath": "_content/Project_Group5",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "Project_Group5\\wwwroot",
       "Source": "Project_Group5",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\obj\\Debug\\net6.0\\scopedcss\\bundle\\Project_Group5.styles.css",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\obj\\Debug\\net6.0\\scopedcss\\bundle\\Project_Group5.styles.css",
       "SourceId": "Project_Group5",
       "SourceType": "Computed",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "Project_Group5.styles.css",
       "AssetKind": "All",
@@ -33,13 +33,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\obj\\Debug\\net6.0\\scopedcss\\bundle\\Project_Group5.styles.css"
+      "OriginalItemSpec": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\obj\\Debug\\net6.0\\scopedcss\\bundle\\Project_Group5.styles.css"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Project_Group5.bundle.scp.css",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Project_Group5.bundle.scp.css",
       "SourceId": "Project_Group5",
       "SourceType": "Computed",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "Project_Group5.bundle.scp.css",
       "AssetKind": "All",
@@ -52,13 +52,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Project_Group5.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Project_Group5.bundle.scp.css"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\css\\dat.css",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\css\\dat.css",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/css/dat.css",
       "AssetKind": "All",
@@ -74,10 +74,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\css\\dat.css"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\css\\ngoc.css",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\css\\ngoc.css",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/css/ngoc.css",
       "AssetKind": "All",
@@ -93,10 +93,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\css\\ngoc.css"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\css\\reset.css",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\css\\reset.css",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/css/reset.css",
       "AssetKind": "All",
@@ -112,10 +112,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\css\\reset.css"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\css\\style.css",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\css\\style.css",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/css/style.css",
       "AssetKind": "All",
@@ -131,10 +131,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\css\\style.css"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\css\\tintuc.css",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\css\\tintuc.css",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/css/tintuc.css",
       "AssetKind": "All",
@@ -150,10 +150,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\css\\tintuc.css"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\css\\tintucchitiet.css",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\css\\tintucchitiet.css",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/css/tintucchitiet.css",
       "AssetKind": "All",
@@ -169,10 +169,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\css\\tintucchitiet.css"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\AnekLatin-VariableFont_wdth,wght.ttf",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\AnekLatin-VariableFont_wdth,wght.ttf",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/font/Anek_Latin/AnekLatin-VariableFont_wdth,wght.ttf",
       "AssetKind": "All",
@@ -188,10 +188,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\font\\Anek_Latin\\AnekLatin-VariableFont_wdth,wght.ttf"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\OFL.txt",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\OFL.txt",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/font/Anek_Latin/OFL.txt",
       "AssetKind": "All",
@@ -207,10 +207,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\font\\Anek_Latin\\OFL.txt"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\README.txt",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\README.txt",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/font/Anek_Latin/README.txt",
       "AssetKind": "All",
@@ -226,10 +226,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\font\\Anek_Latin\\README.txt"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Condensed-Bold.ttf",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Condensed-Bold.ttf",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/font/Anek_Latin/static/AnekLatin_Condensed-Bold.ttf",
       "AssetKind": "All",
@@ -245,10 +245,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Condensed-Bold.ttf"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Condensed-ExtraBold.ttf",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Condensed-ExtraBold.ttf",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/font/Anek_Latin/static/AnekLatin_Condensed-ExtraBold.ttf",
       "AssetKind": "All",
@@ -264,10 +264,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Condensed-ExtraBold.ttf"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Condensed-ExtraLight.ttf",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Condensed-ExtraLight.ttf",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/font/Anek_Latin/static/AnekLatin_Condensed-ExtraLight.ttf",
       "AssetKind": "All",
@@ -283,10 +283,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Condensed-ExtraLight.ttf"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Condensed-Light.ttf",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Condensed-Light.ttf",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/font/Anek_Latin/static/AnekLatin_Condensed-Light.ttf",
       "AssetKind": "All",
@@ -302,10 +302,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Condensed-Light.ttf"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Condensed-Medium.ttf",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Condensed-Medium.ttf",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/font/Anek_Latin/static/AnekLatin_Condensed-Medium.ttf",
       "AssetKind": "All",
@@ -321,10 +321,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Condensed-Medium.ttf"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Condensed-Regular.ttf",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Condensed-Regular.ttf",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/font/Anek_Latin/static/AnekLatin_Condensed-Regular.ttf",
       "AssetKind": "All",
@@ -340,10 +340,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Condensed-Regular.ttf"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Condensed-SemiBold.ttf",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Condensed-SemiBold.ttf",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/font/Anek_Latin/static/AnekLatin_Condensed-SemiBold.ttf",
       "AssetKind": "All",
@@ -359,10 +359,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Condensed-SemiBold.ttf"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Condensed-Thin.ttf",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Condensed-Thin.ttf",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/font/Anek_Latin/static/AnekLatin_Condensed-Thin.ttf",
       "AssetKind": "All",
@@ -378,10 +378,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Condensed-Thin.ttf"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Expanded-Bold.ttf",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Expanded-Bold.ttf",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/font/Anek_Latin/static/AnekLatin_Expanded-Bold.ttf",
       "AssetKind": "All",
@@ -397,10 +397,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Expanded-Bold.ttf"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Expanded-ExtraBold.ttf",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Expanded-ExtraBold.ttf",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/font/Anek_Latin/static/AnekLatin_Expanded-ExtraBold.ttf",
       "AssetKind": "All",
@@ -416,10 +416,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Expanded-ExtraBold.ttf"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Expanded-ExtraLight.ttf",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Expanded-ExtraLight.ttf",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/font/Anek_Latin/static/AnekLatin_Expanded-ExtraLight.ttf",
       "AssetKind": "All",
@@ -435,10 +435,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Expanded-ExtraLight.ttf"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Expanded-Light.ttf",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Expanded-Light.ttf",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/font/Anek_Latin/static/AnekLatin_Expanded-Light.ttf",
       "AssetKind": "All",
@@ -454,10 +454,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Expanded-Light.ttf"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Expanded-Medium.ttf",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Expanded-Medium.ttf",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/font/Anek_Latin/static/AnekLatin_Expanded-Medium.ttf",
       "AssetKind": "All",
@@ -473,10 +473,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Expanded-Medium.ttf"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Expanded-Regular.ttf",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Expanded-Regular.ttf",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/font/Anek_Latin/static/AnekLatin_Expanded-Regular.ttf",
       "AssetKind": "All",
@@ -492,10 +492,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Expanded-Regular.ttf"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Expanded-SemiBold.ttf",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Expanded-SemiBold.ttf",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/font/Anek_Latin/static/AnekLatin_Expanded-SemiBold.ttf",
       "AssetKind": "All",
@@ -511,10 +511,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Expanded-SemiBold.ttf"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Expanded-Thin.ttf",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Expanded-Thin.ttf",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/font/Anek_Latin/static/AnekLatin_Expanded-Thin.ttf",
       "AssetKind": "All",
@@ -530,10 +530,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_Expanded-Thin.ttf"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiCondensed-Bold.ttf",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiCondensed-Bold.ttf",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/font/Anek_Latin/static/AnekLatin_SemiCondensed-Bold.ttf",
       "AssetKind": "All",
@@ -549,10 +549,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiCondensed-Bold.ttf"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiCondensed-ExtraBold.ttf",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiCondensed-ExtraBold.ttf",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/font/Anek_Latin/static/AnekLatin_SemiCondensed-ExtraBold.ttf",
       "AssetKind": "All",
@@ -568,10 +568,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiCondensed-ExtraBold.ttf"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiCondensed-ExtraLight.ttf",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiCondensed-ExtraLight.ttf",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/font/Anek_Latin/static/AnekLatin_SemiCondensed-ExtraLight.ttf",
       "AssetKind": "All",
@@ -587,10 +587,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiCondensed-ExtraLight.ttf"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiCondensed-Light.ttf",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiCondensed-Light.ttf",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/font/Anek_Latin/static/AnekLatin_SemiCondensed-Light.ttf",
       "AssetKind": "All",
@@ -606,10 +606,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiCondensed-Light.ttf"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiCondensed-Medium.ttf",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiCondensed-Medium.ttf",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/font/Anek_Latin/static/AnekLatin_SemiCondensed-Medium.ttf",
       "AssetKind": "All",
@@ -625,10 +625,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiCondensed-Medium.ttf"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiCondensed-Regular.ttf",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiCondensed-Regular.ttf",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/font/Anek_Latin/static/AnekLatin_SemiCondensed-Regular.ttf",
       "AssetKind": "All",
@@ -644,10 +644,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiCondensed-Regular.ttf"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiCondensed-SemiBold.ttf",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiCondensed-SemiBold.ttf",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/font/Anek_Latin/static/AnekLatin_SemiCondensed-SemiBold.ttf",
       "AssetKind": "All",
@@ -663,10 +663,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiCondensed-SemiBold.ttf"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiCondensed-Thin.ttf",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiCondensed-Thin.ttf",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/font/Anek_Latin/static/AnekLatin_SemiCondensed-Thin.ttf",
       "AssetKind": "All",
@@ -682,10 +682,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiCondensed-Thin.ttf"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiExpanded-Bold.ttf",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiExpanded-Bold.ttf",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/font/Anek_Latin/static/AnekLatin_SemiExpanded-Bold.ttf",
       "AssetKind": "All",
@@ -701,10 +701,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiExpanded-Bold.ttf"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiExpanded-ExtraBold.ttf",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiExpanded-ExtraBold.ttf",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/font/Anek_Latin/static/AnekLatin_SemiExpanded-ExtraBold.ttf",
       "AssetKind": "All",
@@ -720,10 +720,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiExpanded-ExtraBold.ttf"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiExpanded-ExtraLight.ttf",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiExpanded-ExtraLight.ttf",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/font/Anek_Latin/static/AnekLatin_SemiExpanded-ExtraLight.ttf",
       "AssetKind": "All",
@@ -739,10 +739,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiExpanded-ExtraLight.ttf"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiExpanded-Light.ttf",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiExpanded-Light.ttf",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/font/Anek_Latin/static/AnekLatin_SemiExpanded-Light.ttf",
       "AssetKind": "All",
@@ -758,10 +758,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiExpanded-Light.ttf"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiExpanded-Medium.ttf",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiExpanded-Medium.ttf",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/font/Anek_Latin/static/AnekLatin_SemiExpanded-Medium.ttf",
       "AssetKind": "All",
@@ -777,10 +777,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiExpanded-Medium.ttf"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiExpanded-Regular.ttf",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiExpanded-Regular.ttf",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/font/Anek_Latin/static/AnekLatin_SemiExpanded-Regular.ttf",
       "AssetKind": "All",
@@ -796,10 +796,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiExpanded-Regular.ttf"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiExpanded-SemiBold.ttf",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiExpanded-SemiBold.ttf",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/font/Anek_Latin/static/AnekLatin_SemiExpanded-SemiBold.ttf",
       "AssetKind": "All",
@@ -815,10 +815,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiExpanded-SemiBold.ttf"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiExpanded-Thin.ttf",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiExpanded-Thin.ttf",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/font/Anek_Latin/static/AnekLatin_SemiExpanded-Thin.ttf",
       "AssetKind": "All",
@@ -834,10 +834,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin_SemiExpanded-Thin.ttf"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin-Bold.ttf",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin-Bold.ttf",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/font/Anek_Latin/static/AnekLatin-Bold.ttf",
       "AssetKind": "All",
@@ -853,10 +853,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin-Bold.ttf"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin-ExtraBold.ttf",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin-ExtraBold.ttf",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/font/Anek_Latin/static/AnekLatin-ExtraBold.ttf",
       "AssetKind": "All",
@@ -872,10 +872,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin-ExtraBold.ttf"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin-ExtraLight.ttf",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin-ExtraLight.ttf",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/font/Anek_Latin/static/AnekLatin-ExtraLight.ttf",
       "AssetKind": "All",
@@ -891,10 +891,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin-ExtraLight.ttf"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin-Light.ttf",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin-Light.ttf",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/font/Anek_Latin/static/AnekLatin-Light.ttf",
       "AssetKind": "All",
@@ -910,10 +910,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin-Light.ttf"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin-Medium.ttf",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin-Medium.ttf",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/font/Anek_Latin/static/AnekLatin-Medium.ttf",
       "AssetKind": "All",
@@ -929,10 +929,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin-Medium.ttf"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin-Regular.ttf",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin-Regular.ttf",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/font/Anek_Latin/static/AnekLatin-Regular.ttf",
       "AssetKind": "All",
@@ -948,10 +948,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin-Regular.ttf"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin-SemiBold.ttf",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin-SemiBold.ttf",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/font/Anek_Latin/static/AnekLatin-SemiBold.ttf",
       "AssetKind": "All",
@@ -967,10 +967,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin-SemiBold.ttf"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin-Thin.ttf",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin-Thin.ttf",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/font/Anek_Latin/static/AnekLatin-Thin.ttf",
       "AssetKind": "All",
@@ -986,10 +986,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\font\\Anek_Latin\\static\\AnekLatin-Thin.ttf"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\Form\\Validateform.html",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\Form\\Validateform.html",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/Form/Validateform.html",
       "AssetKind": "All",
@@ -1005,10 +1005,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\Form\\Validateform.html"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\icons\\downward-arrow 3.svg",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\icons\\downward-arrow 3.svg",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/icons/downward-arrow 3.svg",
       "AssetKind": "All",
@@ -1024,10 +1024,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\icons\\downward-arrow 3.svg"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\icons\\search.svg",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\icons\\search.svg",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/icons/search.svg",
       "AssetKind": "All",
@@ -1043,10 +1043,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\icons\\search.svg"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Ảnh 1.png",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Ảnh 1.png",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/images/Ảnh 1.png",
       "AssetKind": "All",
@@ -1062,10 +1062,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\Ảnh 1.png"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Ảnh 2.png",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Ảnh 2.png",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/images/Ảnh 2.png",
       "AssetKind": "All",
@@ -1081,10 +1081,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\Ảnh 2.png"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Ảnh 3.png",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Ảnh 3.png",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/images/Ảnh 3.png",
       "AssetKind": "All",
@@ -1100,10 +1100,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\Ảnh 3.png"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\bacgiang.jpg",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\bacgiang.jpg",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/images/bacgiang.jpg",
       "AssetKind": "All",
@@ -1119,10 +1119,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\bacgiang.jpg"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\bacninh.jpg",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\bacninh.jpg",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/images/bacninh.jpg",
       "AssetKind": "All",
@@ -1138,10 +1138,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\bacninh.jpg"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Banner_home.png",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Banner_home.png",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/images/Banner_home.png",
       "AssetKind": "All",
@@ -1157,10 +1157,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\Banner_home.png"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Cong-vien-1-1-scaled.jpg",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Cong-vien-1-1-scaled.jpg",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/images/Cong-vien-1-1-scaled.jpg",
       "AssetKind": "All",
@@ -1176,10 +1176,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\Cong-vien-1-1-scaled.jpg"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\1.png",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\1.png",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/images/Đối tác - khách hàng/1.png",
       "AssetKind": "All",
@@ -1195,10 +1195,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\Đối tác - khách hàng\\1.png"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\10.png",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\10.png",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/images/Đối tác - khách hàng/10.png",
       "AssetKind": "All",
@@ -1214,10 +1214,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\Đối tác - khách hàng\\10.png"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\11.png",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\11.png",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/images/Đối tác - khách hàng/11.png",
       "AssetKind": "All",
@@ -1233,10 +1233,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\Đối tác - khách hàng\\11.png"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\12.png",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\12.png",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/images/Đối tác - khách hàng/12.png",
       "AssetKind": "All",
@@ -1252,10 +1252,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\Đối tác - khách hàng\\12.png"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\13.png",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\13.png",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/images/Đối tác - khách hàng/13.png",
       "AssetKind": "All",
@@ -1271,10 +1271,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\Đối tác - khách hàng\\13.png"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\14.png",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\14.png",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/images/Đối tác - khách hàng/14.png",
       "AssetKind": "All",
@@ -1290,10 +1290,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\Đối tác - khách hàng\\14.png"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\15.png",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\15.png",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/images/Đối tác - khách hàng/15.png",
       "AssetKind": "All",
@@ -1309,10 +1309,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\Đối tác - khách hàng\\15.png"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\16.png",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\16.png",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/images/Đối tác - khách hàng/16.png",
       "AssetKind": "All",
@@ -1328,10 +1328,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\Đối tác - khách hàng\\16.png"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\17.png",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\17.png",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/images/Đối tác - khách hàng/17.png",
       "AssetKind": "All",
@@ -1347,10 +1347,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\Đối tác - khách hàng\\17.png"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\18.png",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\18.png",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/images/Đối tác - khách hàng/18.png",
       "AssetKind": "All",
@@ -1366,10 +1366,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\Đối tác - khách hàng\\18.png"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\19.png",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\19.png",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/images/Đối tác - khách hàng/19.png",
       "AssetKind": "All",
@@ -1385,10 +1385,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\Đối tác - khách hàng\\19.png"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\2.png",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\2.png",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/images/Đối tác - khách hàng/2.png",
       "AssetKind": "All",
@@ -1404,10 +1404,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\Đối tác - khách hàng\\2.png"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\20.png",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\20.png",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/images/Đối tác - khách hàng/20.png",
       "AssetKind": "All",
@@ -1423,10 +1423,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\Đối tác - khách hàng\\20.png"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\21.png",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\21.png",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/images/Đối tác - khách hàng/21.png",
       "AssetKind": "All",
@@ -1442,10 +1442,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\Đối tác - khách hàng\\21.png"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\3.png",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\3.png",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/images/Đối tác - khách hàng/3.png",
       "AssetKind": "All",
@@ -1461,10 +1461,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\Đối tác - khách hàng\\3.png"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\4.png",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\4.png",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/images/Đối tác - khách hàng/4.png",
       "AssetKind": "All",
@@ -1480,10 +1480,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\Đối tác - khách hàng\\4.png"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\5.png",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\5.png",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/images/Đối tác - khách hàng/5.png",
       "AssetKind": "All",
@@ -1499,10 +1499,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\Đối tác - khách hàng\\5.png"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\6.png",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\6.png",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/images/Đối tác - khách hàng/6.png",
       "AssetKind": "All",
@@ -1518,10 +1518,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\Đối tác - khách hàng\\6.png"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\7.png",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\7.png",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/images/Đối tác - khách hàng/7.png",
       "AssetKind": "All",
@@ -1537,10 +1537,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\Đối tác - khách hàng\\7.png"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\8.png",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\8.png",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/images/Đối tác - khách hàng/8.png",
       "AssetKind": "All",
@@ -1556,10 +1556,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\Đối tác - khách hàng\\8.png"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\9.png",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Đối tác - khách hàng\\9.png",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/images/Đối tác - khách hàng/9.png",
       "AssetKind": "All",
@@ -1575,10 +1575,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\Đối tác - khách hàng\\9.png"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\doubleroom.jpg",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\doubleroom.jpg",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/images/doubleroom.jpg",
       "AssetKind": "All",
@@ -1594,10 +1594,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\doubleroom.jpg"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\downward-arrow 3.png",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\downward-arrow 3.png",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/images/downward-arrow 3.png",
       "AssetKind": "All",
@@ -1613,10 +1613,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\downward-arrow 3.png"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\family.png",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\family.png",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/images/family.png",
       "AssetKind": "All",
@@ -1632,10 +1632,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\family.png"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\kimboi.jpg",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\kimboi.jpg",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/images/kimboi.jpg",
       "AssetKind": "All",
@@ -1651,10 +1651,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\kimboi.jpg"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Line 11.png",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Line 11.png",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/images/Line 11.png",
       "AssetKind": "All",
@@ -1670,10 +1670,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\Line 11.png"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Logo.png",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Logo.png",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/images/Logo.png",
       "AssetKind": "All",
@@ -1689,10 +1689,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\Logo.png"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Mốc dưới.png",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Mốc dưới.png",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/images/Mốc dưới.png",
       "AssetKind": "All",
@@ -1708,10 +1708,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\Mốc dưới.png"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Mốc.png",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\Mốc.png",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/images/Mốc.png",
       "AssetKind": "All",
@@ -1727,10 +1727,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\Mốc.png"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\muine.jpg",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\muine.jpg",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/images/muine.jpg",
       "AssetKind": "All",
@@ -1746,10 +1746,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\muine.jpg"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\office 1.png",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\office 1.png",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/images/office 1.png",
       "AssetKind": "All",
@@ -1765,10 +1765,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\office 1.png"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\phongdon.jpg",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\phongdon.jpg",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/images/phongdon.jpg",
       "AssetKind": "All",
@@ -1784,10 +1784,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\phongdon.jpg"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\phonghangsang.jpg",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\phonghangsang.jpg",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/images/phonghangsang.jpg",
       "AssetKind": "All",
@@ -1803,10 +1803,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\phonghangsang.jpg"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\search 1.png",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\search 1.png",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/images/search 1.png",
       "AssetKind": "All",
@@ -1822,10 +1822,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\search 1.png"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\A.png",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\A.png",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/images/tintuc/A.png",
       "AssetKind": "All",
@@ -1841,10 +1841,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\tintuc\\A.png"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\anhnhamay.png",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\anhnhamay.png",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/images/tintuc/anhnhamay.png",
       "AssetKind": "All",
@@ -1860,10 +1860,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\tintuc\\anhnhamay.png"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\anhquytrinhsx.png",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\anhquytrinhsx.png",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/images/tintuc/anhquytrinhsx.png",
       "AssetKind": "All",
@@ -1879,10 +1879,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\tintuc\\anhquytrinhsx.png"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\anhtrongcontent.png",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\anhtrongcontent.png",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/images/tintuc/anhtrongcontent.png",
       "AssetKind": "All",
@@ -1898,10 +1898,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\tintuc\\anhtrongcontent.png"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\capsach.png",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\capsach.png",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/images/tintuc/capsach.png",
       "AssetKind": "All",
@@ -1917,10 +1917,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\tintuc\\capsach.png"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\g720.png",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\g720.png",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/images/tintuc/g720.png",
       "AssetKind": "All",
@@ -1936,10 +1936,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\tintuc\\g720.png"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\gocongnghiep.png",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\gocongnghiep.png",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/images/tintuc/gocongnghiep.png",
       "AssetKind": "All",
@@ -1955,10 +1955,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\tintuc\\gocongnghiep.png"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\gotunhien.png",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\gotunhien.png",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/images/tintuc/gotunhien.png",
       "AssetKind": "All",
@@ -1974,10 +1974,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\tintuc\\gotunhien.png"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\Line.png",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\Line.png",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/images/tintuc/Line.png",
       "AssetKind": "All",
@@ -1993,10 +1993,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\tintuc\\Line.png"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\linequytrinhsx.png",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\linequytrinhsx.png",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/images/tintuc/linequytrinhsx.png",
       "AssetKind": "All",
@@ -2012,10 +2012,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\tintuc\\linequytrinhsx.png"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\maymocnha.png",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\maymocnha.png",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/images/tintuc/maymocnha.png",
       "AssetKind": "All",
@@ -2031,10 +2031,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\tintuc\\maymocnha.png"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\mykingdom.png",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\mykingdom.png",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/images/tintuc/mykingdom.png",
       "AssetKind": "All",
@@ -2050,10 +2050,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\tintuc\\mykingdom.png"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\quatuyetvoi.png",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\quatuyetvoi.png",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/images/tintuc/quatuyetvoi.png",
       "AssetKind": "All",
@@ -2069,10 +2069,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\tintuc\\quatuyetvoi.png"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\slidechitiet.png",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\slidechitiet.png",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/images/tintuc/slidechitiet.png",
       "AssetKind": "All",
@@ -2088,10 +2088,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\tintuc\\slidechitiet.png"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\tuyetvoi.png",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\tuyetvoi.png",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/images/tintuc/tuyetvoi.png",
       "AssetKind": "All",
@@ -2107,10 +2107,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\tintuc\\tuyetvoi.png"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\tuyetvoiqua.png",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\tuyetvoiqua.png",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/images/tintuc/tuyetvoiqua.png",
       "AssetKind": "All",
@@ -2126,10 +2126,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\tintuc\\tuyetvoiqua.png"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\Vector1.png",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\Vector1.png",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/images/tintuc/Vector1.png",
       "AssetKind": "All",
@@ -2145,10 +2145,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\tintuc\\Vector1.png"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\Vectortintuc.png",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\Vectortintuc.png",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/images/tintuc/Vectortintuc.png",
       "AssetKind": "All",
@@ -2164,10 +2164,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\tintuc\\Vectortintuc.png"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\vietnam.png",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\images\\tintuc\\vietnam.png",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/images/tintuc/vietnam.png",
       "AssetKind": "All",
@@ -2183,10 +2183,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\tintuc\\vietnam.png"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\js\\dat.js",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\js\\dat.js",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/js/dat.js",
       "AssetKind": "All",
@@ -2202,10 +2202,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\js\\dat.js"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\js\\main.js",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\js\\main.js",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/js/main.js",
       "AssetKind": "All",
@@ -2221,10 +2221,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\js\\main.js"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\js\\ngoc_swiper.js",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\js\\ngoc_swiper.js",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/js/ngoc_swiper.js",
       "AssetKind": "All",
@@ -2240,10 +2240,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\js\\ngoc_swiper.js"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\js\\phi.js",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\js\\phi.js",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/js/phi.js",
       "AssetKind": "All",
@@ -2259,10 +2259,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\js\\phi.js"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\js\\tailwind_custom.js",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\assets\\js\\tailwind_custom.js",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "assets/js/tailwind_custom.js",
       "AssetKind": "All",
@@ -2278,10 +2278,29 @@
       "OriginalItemSpec": "wwwroot\\assets\\js\\tailwind_custom.js"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\css\\detail.css",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\css\\changepassword.css",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "BasePath": "_content/Project_Group5",
+      "RelativePath": "css/changepassword.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\changepassword.css"
+    },
+    {
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\css\\detail.css",
+      "SourceId": "Project_Group5",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "css/detail.css",
       "AssetKind": "All",
@@ -2297,10 +2316,29 @@
       "OriginalItemSpec": "wwwroot\\css\\detail.css"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\css\\listroom.css",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\css\\feedback.css",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "BasePath": "_content/Project_Group5",
+      "RelativePath": "css/feedback.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\feedback.css"
+    },
+    {
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\css\\listroom.css",
+      "SourceId": "Project_Group5",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "css/listroom.css",
       "AssetKind": "All",
@@ -2316,10 +2354,10 @@
       "OriginalItemSpec": "wwwroot\\css\\listroom.css"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\css\\pre_order.css",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\css\\pre_order.css",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "css/pre_order.css",
       "AssetKind": "All",
@@ -2335,10 +2373,10 @@
       "OriginalItemSpec": "wwwroot\\css\\pre_order.css"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\css\\site.css",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\css\\site.css",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -2354,10 +2392,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\favicon.ico",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\favicon.ico",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -2373,10 +2411,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\images\\bathroom_suiteroom.jpg",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\images\\bathroom_suiteroom.jpg",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "images/bathroom_suiteroom.jpg",
       "AssetKind": "All",
@@ -2392,10 +2430,10 @@
       "OriginalItemSpec": "wwwroot\\images\\bathroom_suiteroom.jpg"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\images\\beboi.webp",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\images\\beboi.webp",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "images/beboi.webp",
       "AssetKind": "All",
@@ -2411,10 +2449,10 @@
       "OriginalItemSpec": "wwwroot\\images\\beboi.webp"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\images\\le tan Muong Thanh.jpeg",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\images\\le tan Muong Thanh.jpeg",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "images/le tan Muong Thanh.jpeg",
       "AssetKind": "All",
@@ -2430,10 +2468,10 @@
       "OriginalItemSpec": "wwwroot\\images\\le tan Muong Thanh.jpeg"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\images\\restroom.jpg",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\images\\restroom.jpg",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "images/restroom.jpg",
       "AssetKind": "All",
@@ -2449,10 +2487,10 @@
       "OriginalItemSpec": "wwwroot\\images\\restroom.jpg"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\images\\room101.jpg",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\images\\room101.jpg",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "images/room101.jpg",
       "AssetKind": "All",
@@ -2468,10 +2506,10 @@
       "OriginalItemSpec": "wwwroot\\images\\room101.jpg"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\images\\room102.jpg",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\images\\room102.jpg",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "images/room102.jpg",
       "AssetKind": "All",
@@ -2487,10 +2525,10 @@
       "OriginalItemSpec": "wwwroot\\images\\room102.jpg"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\images\\room201.webp",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\images\\room201.webp",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "images/room201.webp",
       "AssetKind": "All",
@@ -2506,10 +2544,10 @@
       "OriginalItemSpec": "wwwroot\\images\\room201.webp"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\images\\room201_phongan.jpg",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\images\\room201_phongan.jpg",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "images/room201_phongan.jpg",
       "AssetKind": "All",
@@ -2525,10 +2563,10 @@
       "OriginalItemSpec": "wwwroot\\images\\room201_phongan.jpg"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\images\\suite.jpg",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\images\\suite.jpg",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "images/suite.jpg",
       "AssetKind": "All",
@@ -2544,10 +2582,10 @@
       "OriginalItemSpec": "wwwroot\\images\\suite.jpg"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\images\\suite_rest.jpg",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\images\\suite_rest.jpg",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "images/suite_rest.jpg",
       "AssetKind": "All",
@@ -2563,10 +2601,10 @@
       "OriginalItemSpec": "wwwroot\\images\\suite_rest.jpg"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\images\\suiteroom.jpg",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\images\\suiteroom.jpg",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "images/suiteroom.jpg",
       "AssetKind": "All",
@@ -2582,10 +2620,10 @@
       "OriginalItemSpec": "wwwroot\\images\\suiteroom.jpg"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\js\\site.js",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\js\\site.js",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "js/site.js",
       "AssetKind": "All",
@@ -2601,10 +2639,10 @@
       "OriginalItemSpec": "wwwroot\\js\\site.js"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css",
       "AssetKind": "All",
@@ -2620,10 +2658,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css.map",
       "AssetKind": "All",
@@ -2639,10 +2677,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css",
       "AssetKind": "All",
@@ -2658,10 +2696,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -2677,10 +2715,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css",
       "AssetKind": "All",
@@ -2696,10 +2734,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css.map",
       "AssetKind": "All",
@@ -2715,10 +2753,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css",
       "AssetKind": "All",
@@ -2734,10 +2772,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
       "AssetKind": "All",
@@ -2753,10 +2791,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css",
       "AssetKind": "All",
@@ -2772,10 +2810,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css.map",
       "AssetKind": "All",
@@ -2791,10 +2829,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css",
       "AssetKind": "All",
@@ -2810,10 +2848,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
       "AssetKind": "All",
@@ -2829,10 +2867,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
       "AssetKind": "All",
@@ -2848,10 +2886,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
       "AssetKind": "All",
@@ -2867,10 +2905,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
       "AssetKind": "All",
@@ -2886,10 +2924,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
       "AssetKind": "All",
@@ -2905,10 +2943,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css",
       "AssetKind": "All",
@@ -2924,10 +2962,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css.map",
       "AssetKind": "All",
@@ -2943,10 +2981,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css",
       "AssetKind": "All",
@@ -2962,10 +3000,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
       "AssetKind": "All",
@@ -2981,10 +3019,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
       "AssetKind": "All",
@@ -3000,10 +3038,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
       "AssetKind": "All",
@@ -3019,10 +3057,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
       "AssetKind": "All",
@@ -3038,10 +3076,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
       "AssetKind": "All",
@@ -3057,10 +3095,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css",
       "AssetKind": "All",
@@ -3076,10 +3114,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css.map",
       "AssetKind": "All",
@@ -3095,10 +3133,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css",
       "AssetKind": "All",
@@ -3114,10 +3152,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
       "AssetKind": "All",
@@ -3133,10 +3171,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
       "AssetKind": "All",
@@ -3152,10 +3190,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
       "AssetKind": "All",
@@ -3171,10 +3209,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
       "AssetKind": "All",
@@ -3190,10 +3228,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
       "AssetKind": "All",
@@ -3209,10 +3247,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js",
       "AssetKind": "All",
@@ -3228,10 +3266,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js.map",
       "AssetKind": "All",
@@ -3247,10 +3285,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js",
       "AssetKind": "All",
@@ -3266,10 +3304,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
       "AssetKind": "All",
@@ -3285,10 +3323,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js",
       "AssetKind": "All",
@@ -3304,10 +3342,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js.map",
       "AssetKind": "All",
@@ -3323,10 +3361,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js",
       "AssetKind": "All",
@@ -3342,10 +3380,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
       "AssetKind": "All",
@@ -3361,10 +3399,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js",
       "AssetKind": "All",
@@ -3380,10 +3418,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js.map",
       "AssetKind": "All",
@@ -3399,10 +3437,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js",
       "AssetKind": "All",
@@ -3418,10 +3456,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js.map",
       "AssetKind": "All",
@@ -3437,10 +3475,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\bootstrap\\LICENSE",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "lib/bootstrap/LICENSE",
       "AssetKind": "All",
@@ -3456,10 +3494,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\LICENSE"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "lib/jquery/dist/jquery.js",
       "AssetKind": "All",
@@ -3475,10 +3513,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "lib/jquery/dist/jquery.min.js",
       "AssetKind": "All",
@@ -3494,10 +3532,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "lib/jquery/dist/jquery.min.map",
       "AssetKind": "All",
@@ -3513,10 +3551,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "lib/jquery/LICENSE.txt",
       "AssetKind": "All",
@@ -3532,10 +3570,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.js",
       "AssetKind": "All",
@@ -3551,10 +3589,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.min.js",
       "AssetKind": "All",
@@ -3570,10 +3608,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.js",
       "AssetKind": "All",
@@ -3589,10 +3627,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.min.js",
       "AssetKind": "All",
@@ -3608,10 +3646,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "lib/jquery-validation/LICENSE.md",
       "AssetKind": "All",
@@ -3627,10 +3665,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "AssetKind": "All",
@@ -3646,10 +3684,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "AssetKind": "All",
@@ -3665,10 +3703,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Identity": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Identity": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "SourceId": "Project_Group5",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\wwwroot\\",
       "BasePath": "_content/Project_Group5",
       "RelativePath": "lib/jquery-validation-unobtrusive/LICENSE.txt",
       "AssetKind": "All",
