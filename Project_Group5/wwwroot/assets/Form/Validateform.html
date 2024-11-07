@@ -1,0 +1,61 @@
+<!--Form đăng ký-->
+<section class="max-content py-10 md:py-20 flex flex-col px-5">
+    <div
+        class=" shrink-0 h-[0.5px] bg-orange-400 border-2 md:border-4 border-[#FCB040] border-solid max-md:max-w-full w-[100px] md:w-[150px]">
+    </div>
+    <h1
+        class="mt-3 w-full text-5xl font-semibold text-blue-900 md:leading-[60px] max-md:max-w-full max-md:text-3xl leading-[48px]">
+        Đăng ký nhận tư vấn từ DTF
+    </h1>
+    <p class="mt-4 md:mt-7 w-full text-lg text-neutral-700 max-md:max-w-full">
+        Quý khách vui lòng liên hệ với DTF qua điện thoại, email hoặc điền vào mãu thông tin để được tư vấn.
+    </p>
+    <div class="mt-16 w-full max-md:mt-6 max-md:max-w-full">
+        <div class="relative flex gap-5 max-md:flex-col max-md:gap-0">
+            <figure class="hidden md:flex flex-col  w-[56%] max-md:ml-0 max-md:w-full ">
+                <img loading="lazy"
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/c759435f6e5e2f1ab32b923436f9e2a93b7ab1ebc3ff8763b329df47527d216c?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
+                    alt="" class="grow w-full aspect-[1.3] max-md:max-w-full" />
+            </figure>
+            <div class="flex md:absolute top-[11%] left-[50%] ">
+                <form
+                    class="flex flex-col py-8 md:px-16 md:py-20  w-full text-base bg-stone-200 text-neutral-700 text-opacity-50 rounded-lg max-md:px-5 max-md:mt-0 max-md:max-w-full">
+                    <div class="flex gap-5 md:mx-4  max-md:flex-wrap max-md:mt-0 max-md:mr-0 max-md:max-w-full">
+                        <label for="name" class="sr-only">Họ tên</label>
+                        <input type="text" id="name" placeholder="Họ tên" aria-label="Họ tên"
+                            class="border-0 text-black	 border-gray-300 focus:border-yellow-500 focus:ring-1 focus:ring-yellow-500 focus:outline-none w-full justify-center items-start px-2.5 py-2.5 bg-white rounded-md max-md:pr-5" />
+                        <label for="phone" class="sr-only">Số điện thoại</label>
+                        <input type="tel" id="phone" placeholder="Số điện thoại" aria-label="Số điện thoại"
+                            class="border-0 text-black	 border-gray-300 focus:border-yellow-500 focus:ring-1 focus:ring-yellow-500 focus:outline-none w-full justify-center items-start p-2.5 bg-white rounded-md max-md:pr-5" />
+                    </div>
+                    <span id="nameError" class="ml-[20px] read-only pt-2 text-red-500"></span>
+
+                    <span id="phoneError" class="ml-[255px] read-only pt-2 text-red-500"></span>
+
+                    <label for="email" class="sr-only">Email</label>
+                    <input type="email" id="email" placeholder="Email" aria-label="Email"
+                        class="border-0 text-black	 border-gray-300 focus:border-yellow-500 focus:ring-1 focus:ring-yellow-500 focus:outline-none justify-center items-start px-2.5 py-2.5 md:mx-4 mt-5 whitespace-nowrap bg-white rounded-md max-md:pr-5 max-md:mr-0 max-md:max-w-full" />
+                    <span id="emailError" class="ml-[20px] read-only pt-2 text-red-500"></span>
+                    </body>
+
+                    <div
+                        class="flex gap-5  md:mx-4 mt-5 bg-white rounded-md max-md:flex-wrap max-md:mr-0 max-md:max-w-full">
+                        <input type="date" id="date"
+                            class="w-full border-0	text-black	 border-gray-300 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-500 focus:outline-none px-4 py-2 rounded-md" />
+
+                    </div>
+                    <span id="dateError" class="ml-[20px] read-only pt-2 text-red-500"></span>
+
+
+                    <button type="submit"
+                        class="flex gap-4 self-end px-7 py-3.5 mt-7 text-base md:text-lg font-semibold text-white background_second rounded-[500px] max-md:px-5 max-md:mr-0">
+                        <span>Nhận tư vấn</span>
+                        <img loading="lazy"
+                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/1c42535ee8e1689ac11dccbe6015902c23fbf964e0bea6c7117991c9acc5311e?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
+                            alt="" class="shrink-0 self-start w-6 aspect-square pt-1" />
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

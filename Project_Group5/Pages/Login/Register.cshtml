@@ -1,0 +1,96 @@
+﻿@page "/Register"
+@model Project_Group5.Pages.Login.RegisterModel
+@{
+    ViewData["Title"] = "Register";
+    Layout = "_Layout";
+
+}
+
+<!--================Register Box Area =================-->
+<section class="login_box_area py-16 bg-gray-100">
+    <div class="container mx-auto px-5">
+        <div class="flex flex-col md:flex-row items-center">
+            <!-- Left Side (Image & Info) -->
+            <div class="w-full md:w-1/2 bg-cover bg-center relative" style="background-image: url('~/assets/images/register-background.jpg');">
+                <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-8 text-white">
+                    <h4 class="text-2xl font-semibold mb-4 text-black">Already have an account?</h4>
+                    <p class="mb-6 text-black">There are advances being made in science and technology every day, and a good example of this is the...</p>
+                    <a class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition duration-300" href="~/Login">Login Now</a>
+                </div>
+            </div>
+
+            <!-- Right Side (Register Form) -->
+            <div class="w-full md:w-1/2 bg-white p-8 shadow-lg rounded-lg mt-8 md:mt-0 md:ml-8">
+                <h3 class="text-2xl font-semibold text-center mb-6">Create an account</h3>
+                <form class="space-y-4" method="post">
+                    <!-- Name Field -->
+                    <div>
+                        <input type="text" class="w-full border border-gray-300 rounded-lg py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-600"
+                               asp-for="Name" placeholder="Name" />
+                        <span asp-validation-for="Name" class="text-red-500 text-sm"></span>
+                    </div>
+
+                    <!-- Username Field -->
+                    <div>
+                        <input type="text" class="w-full border border-gray-300 rounded-lg py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-600"
+                               asp-for="Username" placeholder="Username" />
+                        <span asp-validation-for="Username" class="text-red-500 text-sm"></span>
+                    </div>
+
+                    <!-- Email Field -->
+                    <div>
+                        <input type="email" class="w-full border border-gray-300 rounded-lg py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-600"
+                               asp-for="Email" placeholder="Email Address" />
+                        <span asp-validation-for="Email" class="text-red-500 text-sm"></span>
+                    </div>
+
+                    <!-- Date of Birth Field -->
+                    <div>
+                        <input type="date" class="w-full border border-gray-300 rounded-lg py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-600"
+                               asp-for="Dob" placeholder="Date of Birth" />
+                        <span asp-validation-for="Dob" class="text-red-500 text-sm"></span>
+                    </div>
+
+                    <!-- Phone Field -->
+                    <div>
+                        <input type="text" class="w-full border border-gray-300 rounded-lg py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-600"
+                               asp-for="Phone" placeholder="Phone" />
+                        <span asp-validation-for="Phone" class="text-red-500 text-sm"></span>
+                    </div>
+
+                    <!-- Address Field -->
+                    <div>
+                        <input type="text" class="w-full border border-gray-300 rounded-lg py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-600"
+                               asp-for="Address" placeholder="Address" />
+                        <span asp-validation-for="Address" class="text-red-500 text-sm"></span>
+                    </div>
+
+                    <!-- Password Field -->
+                    <div>
+                        <input type="password" class="w-full border border-gray-300 rounded-lg py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-600"
+                               asp-for="Password" placeholder="Password" />
+                        <span asp-validation-for="Password" class="text-red-500 text-sm"></span>
+                    </div>
+
+                    <!-- Confirm Password Field -->
+                    <div>
+                        <input type="password" class="w-full border border-gray-300 rounded-lg py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-600"
+                               asp-for="ConfirmPassword" placeholder="Confirm Password" />
+                        <span asp-validation-for="ConfirmPassword" class="text-red-500 text-sm"></span>
+                    </div>
+
+                    <!-- Error Message -->
+                    @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+                    {
+                        <p class="text-red-500 mt-2 text-center">@Model.ErrorMessage</p>
+                    }
+
+                    <!-- Register Button -->
+                    <div>
+                        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-300">Register</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

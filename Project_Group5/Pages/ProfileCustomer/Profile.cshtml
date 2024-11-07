@@ -1,0 +1,115 @@
+﻿@page "/Customer/Profile"
+@model Project_Group5.Pages.ProfileCustomer.ProfileModel
+@{
+    ViewData["Title"] = "Customer Profile";
+    Layout = "_Layout";
+}
+
+<section class="bg-gray-100 min-h-screen flex items-center justify-center p-6">
+    <div class="max-w-2xl w-full bg-white shadow-lg rounded-lg overflow-hidden p-6">
+        <!-- Profile Header -->
+        <div class="flex items-center justify-between pb-4 border-b">
+            <h2 class="text-2xl font-semibold text-gray-800">Customer Profile</h2>
+            <span class="text-sm text-gray-500">ID: @Model.Customer?.Id</span>
+        </div>
+
+        <!-- Profile Picture (Placeholder) -->
+        <div class="flex justify-center mt-4">
+            <img src="https://via.placeholder.com/100" alt="Profile Picture" class="w-24 h-24 rounded-full border-2 border-blue-500">
+        </div>
+
+        <!-- Customer Information Form -->
+        <form method="post" class="mt-6 space-y-4">
+            <!-- Name -->
+            <div class="flex items-center mb-4">
+                <span class="w-1/3 text-gray-700 font-semibold">Name:</span>
+                <div class="w-2/3 text-gray-900">
+                    @if (Model.IsEditMode)
+                    {
+                        <input type="text" asp-for="Customer.Name" class="form-control border border-gray-300 rounded-md p-2 w-full" />
+                    }
+                    else
+                    {
+                        <span>@Model.Customer?.Name</span>
+                    }
+                </div>
+            </div>
+
+            <!-- Email -->
+            <div class="flex items-center mb-4">
+                <span class="w-1/3 text-gray-700 font-semibold">Email:</span>
+                <div class="w-2/3 text-gray-900">
+                    @if (Model.IsEditMode)
+                    {
+                        <input type="email" asp-for="Customer.Email" class="form-control border border-gray-300 rounded-md p-2 w-full" />
+                    }
+                    else
+                    {
+                        <span>@Model.Customer?.Email</span>
+                    }
+                </div>
+            </div>
+
+            <!-- Date of Birth -->
+            <div class="flex items-center mb-4">
+                <span class="w-1/3 text-gray-700 font-semibold">Date of Birth:</span>
+                <div class="w-2/3 text-gray-900">
+                    @if (Model.IsEditMode)
+                    {
+                        <input type="date" asp-for="Customer.Dob" class="form-control border border-gray-300 rounded-md p-2 w-full" />
+                    }
+                    else
+                    {
+                        <span>@Model.Customer?.Dob?.ToString("yyyy-MM-dd")</span>
+                    }
+                </div>
+            </div>
+
+            <!-- Phone -->
+            <div class="flex items-center mb-4">
+                <span class="w-1/3 text-gray-700 font-semibold">Phone:</span>
+                <div class="w-2/3 text-gray-900">
+                    @if (Model.IsEditMode)
+                    {
+                        <input type="text" asp-for="Customer.Phone" class="form-control border border-gray-300 rounded-md p-2 w-full" />
+                    }
+                    else
+                    {
+                        <span>@Model.Customer?.Phone</span>
+                    }
+                </div>
+            </div>
+
+            <!-- Address -->
+            <div class="flex items-center mb-4">
+                <span class="w-1/3 text-gray-700 font-semibold">Address:</span>
+                <div class="w-2/3 text-gray-900">
+                    @if (Model.IsEditMode)
+                    {
+                        <input type="text" asp-for="Customer.Address" class="form-control border border-gray-300 rounded-md p-2 w-full" />
+                    }
+                    else
+                    {
+                        <span>@Model.Customer?.Address</span>
+                    }
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex justify-end mt-6">
+                @if (Model.IsEditMode)
+                {
+                    <button type="submit" class="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-300">
+                        Save Changes
+                    </button>
+                }
+                else
+                {
+                    <button type="submit" asp-page-handler="EditMode" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-300">
+                        Edit Profile
+                    </button>
+                }
+            </div>
+        </form>
+    </div>
+</section>
