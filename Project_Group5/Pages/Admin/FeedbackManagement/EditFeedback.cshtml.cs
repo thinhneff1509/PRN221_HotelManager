@@ -73,7 +73,7 @@ namespace Project_Group5.Pages.Admin.FeedbackManagement
                 }
             }
 
-            return RedirectToPage("./Feedback");
+            return RedirectToPage("./Admin/FeedbackManagement");
         }
 
 
