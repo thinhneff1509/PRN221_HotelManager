@@ -40,7 +40,7 @@ namespace Project_Group5.Pages.Admin.PaymentManagement
 
             // Lấy danh sách thanh toán với phân trang
             Payments = await _context.Payments
-                .Include(p => p.Booking)
+                .Include(p => p.Booking).ThenInclude(p => p.Room)
                 .OrderBy(p => p.Id)
                 .Skip((CurrentPage - 1) * PageSize)
                 .Take(PageSize)
