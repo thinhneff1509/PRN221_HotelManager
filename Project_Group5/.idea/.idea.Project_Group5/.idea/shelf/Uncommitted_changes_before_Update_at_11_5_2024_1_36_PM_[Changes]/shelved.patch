@@ -1,0 +1,55 @@
+Index: obj/Debug/net6.0/Project_Group5.GeneratedMSBuildEditorConfig.editorconfig
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>is_global = true\r\nbuild_property.TargetFramework = net6.0\r\nbuild_property.TargetPlatformMinVersion = \r\nbuild_property.UsingMicrosoftNETSdkWeb = true\r\nbuild_property.ProjectTypeGuids = \r\nbuild_property.InvariantGlobalization = \r\nbuild_property.PlatformNeutralAssembly = \r\nbuild_property.EnforceExtendedAnalyzerRules = \r\nbuild_property._SupportedPlatformList = Linux,macOS,Windows\r\nbuild_property.RootNamespace = Project_Group5\r\nbuild_property.RootNamespace = Project_Group5\r\nbuild_property.ProjectDir = D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\\r\nbuild_property.EnableComHosting = \r\nbuild_property.EnableGeneratedComInterfaceComImportInterop = \r\nbuild_property.RazorLangVersion = 6.0\r\nbuild_property.SupportLocalizedComponentNames = \r\nbuild_property.GenerateRazorMetadataSourceChecksumAttributes = \r\nbuild_property.MSBuildProjectDirectory = D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\r\nbuild_property._RazorSourceGeneratorDebug = \r\n\r\n[D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/Checkout/Checkout.cshtml]\r\nbuild_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2hlY2tvdXRcQ2hlY2tvdXQuY3NodG1s\r\nbuild_metadata.AdditionalFiles.CssScope = \r\n\r\n[D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/Error.cshtml]\r\nbuild_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s\r\nbuild_metadata.AdditionalFiles.CssScope = \r\n\r\n[D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/Homepage/Home.cshtml]\r\nbuild_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZXBhZ2VcSG9tZS5jc2h0bWw=\r\nbuild_metadata.AdditionalFiles.CssScope = \r\n\r\n[D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/Index.cshtml]\r\nbuild_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s\r\nbuild_metadata.AdditionalFiles.CssScope = \r\n\r\n[D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/Login/Login.cshtml]\r\nbuild_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW5cTG9naW4uY3NodG1s\r\nbuild_metadata.AdditionalFiles.CssScope = \r\n\r\n[D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/Login/Register.cshtml]\r\nbuild_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW5cUmVnaXN0ZXIuY3NodG1s\r\nbuild_metadata.AdditionalFiles.CssScope = \r\n\r\n[D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/Privacy.cshtml]\r\nbuild_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=\r\nbuild_metadata.AdditionalFiles.CssScope = \r\n\r\n[D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/Rooms/Detail.cshtml]\r\nbuild_metadata.AdditionalFiles.TargetPath = UGFnZXNcUm9vbXNcRGV0YWlsLmNzaHRtbA==\r\nbuild_metadata.AdditionalFiles.CssScope = \r\n\r\n[D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/Rooms/Index.cshtml]\r\nbuild_metadata.AdditionalFiles.TargetPath = UGFnZXNcUm9vbXNcSW5kZXguY3NodG1s\r\nbuild_metadata.AdditionalFiles.CssScope = \r\n\r\n[D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/Shared/_ValidationScriptsPartial.cshtml]\r\nbuild_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s\r\nbuild_metadata.AdditionalFiles.CssScope = \r\n\r\n[D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/_ViewImports.cshtml]\r\nbuild_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==\r\nbuild_metadata.AdditionalFiles.CssScope = \r\n\r\n[D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/_ViewStart.cshtml]\r\nbuild_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=\r\nbuild_metadata.AdditionalFiles.CssScope = \r\n\r\n[D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/Shared/_Layout.cshtml]\r\nbuild_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s\r\nbuild_metadata.AdditionalFiles.CssScope = b-gf8ki7huqi\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/obj/Debug/net6.0/Project_Group5.GeneratedMSBuildEditorConfig.editorconfig b/obj/Debug/net6.0/Project_Group5.GeneratedMSBuildEditorConfig.editorconfig
+--- a/obj/Debug/net6.0/Project_Group5.GeneratedMSBuildEditorConfig.editorconfig	(revision 8943a74741743f45974689f6fda3a53582584c81)
++++ b/obj/Debug/net6.0/Project_Group5.GeneratedMSBuildEditorConfig.editorconfig	(date 1730788570600)
+@@ -50,9 +50,17 @@
+ build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUm9vbXNcRGV0YWlsLmNzaHRtbA==
+ build_metadata.AdditionalFiles.CssScope = 
+ 
++[D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/Rooms/Feedback.cshtml]
++build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUm9vbXNcRmVlZGJhY2suY3NodG1s
++build_metadata.AdditionalFiles.CssScope = 
++
+ [D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/Rooms/Index.cshtml]
+ build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUm9vbXNcSW5kZXguY3NodG1s
+ build_metadata.AdditionalFiles.CssScope = 
++
++[D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/Rooms/PreOrder.cshtml]
++build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUm9vbXNcUHJlT3JkZXIuY3NodG1s
++build_metadata.AdditionalFiles.CssScope = 
+ 
+ [D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/Shared/_ValidationScriptsPartial.cshtml]
+ build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+Index: obj/Debug/net6.0/Project_Group5.AssemblyInfo.cs
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>//------------------------------------------------------------------------------\r\n// <auto-generated>\r\n//     This code was generated by a tool.\r\n//     Runtime Version:4.0.30319.42000\r\n//\r\n//     Changes to this file may cause incorrect behavior and will be lost if\r\n//     the code is regenerated.\r\n// </auto-generated>\r\n//------------------------------------------------------------------------------\r\n\r\nusing System;\r\nusing System.Reflection;\r\n\r\n[assembly: System.Reflection.AssemblyCompanyAttribute(\"Project_Group5\")]\r\n[assembly: System.Reflection.AssemblyConfigurationAttribute(\"Debug\")]\r\n[assembly: System.Reflection.AssemblyFileVersionAttribute(\"1.0.0.0\")]\r\n[assembly: System.Reflection.AssemblyInformationalVersionAttribute(\"1.0.0+eb663aae069366cba3597a0f355d2f0485825eb6\")]\r\n[assembly: System.Reflection.AssemblyProductAttribute(\"Project_Group5\")]\r\n[assembly: System.Reflection.AssemblyTitleAttribute(\"Project_Group5\")]\r\n[assembly: System.Reflection.AssemblyVersionAttribute(\"1.0.0.0\")]\r\n\r\n// Generated by the MSBuild WriteCodeFragment class.\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/obj/Debug/net6.0/Project_Group5.AssemblyInfo.cs b/obj/Debug/net6.0/Project_Group5.AssemblyInfo.cs
+--- a/obj/Debug/net6.0/Project_Group5.AssemblyInfo.cs	(revision 8943a74741743f45974689f6fda3a53582584c81)
++++ b/obj/Debug/net6.0/Project_Group5.AssemblyInfo.cs	(date 1730788570642)
+@@ -1,7 +1,6 @@
+ //------------------------------------------------------------------------------
+ // <auto-generated>
+ //     This code was generated by a tool.
+-//     Runtime Version:4.0.30319.42000
+ //
+ //     Changes to this file may cause incorrect behavior and will be lost if
+ //     the code is regenerated.
+@@ -14,7 +13,7 @@
+ [assembly: System.Reflection.AssemblyCompanyAttribute("Project_Group5")]
+ [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
+ [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
+-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eb663aae069366cba3597a0f355d2f0485825eb6")]
++[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8943a74741743f45974689f6fda3a53582584c81")]
+ [assembly: System.Reflection.AssemblyProductAttribute("Project_Group5")]
+ [assembly: System.Reflection.AssemblyTitleAttribute("Project_Group5")]
+ [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
