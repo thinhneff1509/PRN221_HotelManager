@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Project_Group5.Models;
 using System.Threading.Tasks;
 
-namespace Project_Group5.Pages.Admin.RoomManagement
+namespace Project_Group5.Pages.Admin.FeedbackManagement
 {
     public class EditFeedbackModel : PageModel
     {

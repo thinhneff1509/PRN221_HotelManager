@@ -1,78 +1,169 @@
-﻿body {
-    line-height: 1.6;
-    color: #333;
-    margin: 100px;
-    padding: 0;
+﻿header {
+    position: fixed; /* Đặt header ở vị trí cố định */
+    top: 0; /* Đảm bảo nó luôn nằm ở đầu trang */
+    left: 0;
+    right: 0;
+    background-color: #fff; /* Màu nền cho header */
+    z-index: 1000; /* Đảm bảo header luôn nằm trên các phần tử khác */
+    width: 100%; /* Đảm bảo header kéo dài hết chiều rộng của trang */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Thêm hiệu ứng bóng cho header */
+    padding: 10px 20px; /* Thêm padding để tạo khoảng cách bên trong header */
 }
 
+h1 {
+    font-size: 36px; /* Larger font size for the title */
+    font-weight: 700; /* Make the title bold */
+    color: #333; /* Dark grey color for the text */
+    text-align: center; /* Center the title */
+    margin-top: 20px; /* Add space above the title */
+    margin-bottom: 20px; /* Add space below the title */
+    font-family: 'Anek Latin', sans-serif; /* Match the font style used in the page */
+    text-transform: uppercase; /* Make the title uppercase */
+    letter-spacing: 2px; /* Add spacing between letters for a more elegant look */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow to make the title stand out */
+}
+
+    h1 span {
+        color: #D2A97D; /* Optional: add a golden accent color to part of the title */
+        font-style: italic;
+    }
+
+body {
+    margin: 0;
+    padding: 0;
+    padding-top: 80px; /* Adjust this according to the header height */
+    font-family: 'Anek Latin', sans-serif; /* Smooth, modern font */
+}
+
+/* Main content area */
 .main-content {
     width: 100%;
-    float: none;
+    padding: 20px; /* Add padding for spacing */
 }
 
-.ftco-section {
-    padding: 60px 0;
+/* Style for images in the gallery */
+.image-gallery {
+    position: relative;
+    max-width: 60%; /* Giảm lại chiều rộng để cân đối hơn */
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+}
+.main-content .right-column {
+    max-width: 40%; /* Giảm kích thước thông tin */
+    margin-right: 30px;
 }
 
-    .ftco-section h2 {
-        font-size: 30px;
-        font-weight: bold;
-        margin-bottom: 30px;
-    }
-
-    .ftco-section p {
-        margin-bottom: 20px;
-    }
-
-.img-fluid {
-    max-width: 100%;
+.gallery-image {
+    display: none;
+    width: 100%; /* Tối ưu chiều rộng đầy đủ cho ảnh */
     height: auto;
+    object-fit: cover;
+    transition: opacity 0.5s ease-in-out, transform 0.3s ease;
+    border-radius: 8px;
+    margin: 0 auto;
 }
 
-.small-img {
-    max-width: 60%;
-    height: auto;
-    margin-top: 20px;
-}
-
-.comment-form-wrap {
-    margin-top: 50px;
-}
-
-    .comment-form-wrap h3 {
-        font-size: 24px;
-        margin-bottom: 30px;
+    .gallery-image.active {
+        display: block;
+        opacity: 1;
+        transform: scale(1); /* Cải thiện hiệu ứng khi chuyển ảnh */
     }
 
-    .comment-form-wrap .form-control {
-        margin-bottom: 20px;
+    .gallery-image:hover {
+        transform: scale(1.02); /* Tạo hiệu ứng phóng nhẹ khi hover */
     }
 
-    .comment-form-wrap .btn-primary {
-        background-color: #ff8800;
-        color: #fff;
-    }
-
-        .comment-form-wrap .btn-primary:hover {
-            background-color: #ff6600;
-        }
-
-.btn-select-room {
-    background-color: #D2A97D;
-    color: white;
-    padding: 10px 20px;
+/* Cải thiện nút chuyển ảnh */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+    font-size: 24px;
     border: none;
-    border-radius: 5px;
+    padding: 10px;
     cursor: pointer;
-    margin-top: 20px;
-    font-size: 16px;
+    z-index: 10;
+    border-radius: 50%;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-    .btn-select-room:hover {
-        background-color: #b88f66;
+.prev {
+    left: -20px;
+}
+
+.next {
+    right: -20px;
+}
+
+    .prev:hover, .next:hover {
+        background-color: #D2A97D;
+        color: white;
     }
 
-/* Styles for amenities section */
+
+
+
+/* Price and bed display */
+.price {
+    font-size: 20px;
+    color: #D2A97D; /* Highlight price color */
+    margin-bottom: 10px;
+}
+
+    .price strong {
+        font-size: 22px;
+        color: #000; /* Make the price bold and black */
+    }
+
+h3 {
+    font-size: 24px; /* Tăng kích thước font */
+    font-weight: 700; /* Đậm nét hơn */
+    color: #333; /* Màu chữ tối cho độ tương phản tốt */
+    text-transform: uppercase; /* Chuyển chữ thành chữ hoa */
+    letter-spacing: 1.5px; /* Tăng khoảng cách giữa các chữ */
+    margin-bottom: 15px; /* Khoảng cách bên dưới */
+    display: flex;
+    align-items: center;
+    font-family: 'Anek Latin', sans-serif; /* Đồng bộ font với trang */
+    position: relative;
+    padding-left: 30px; /* Dành chỗ cho icon nếu cần */
+}
+
+    h3::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 5px; /* Độ rộng của thanh đứng */
+        height: 80%; /* Chiều cao của thanh đứng */
+        background-color: #D2A97D; /* Màu nhấn cho thanh đứng */
+        border-radius: 3px; /* Bo góc cho thanh đứng */
+    }
+
+    h3 svg {
+        width: 24px;
+        height: 24px;
+        margin-right: 10px; /* Khoảng cách giữa icon và chữ */
+        fill: #D2A97D; /* Màu nhấn cho icon */
+        transition: transform 0.3s ease;
+    }
+
+    h3:hover svg {
+        transform: scale(1.1); /* Phóng to nhẹ icon khi hover */
+    }
+
+
 .amenities-section {
     margin-top: 40px;
 }
@@ -111,46 +202,23 @@
         margin-bottom: 8px;
     }
 
-/* Styles for image gallery */
-.image-gallery {
-    position: relative;
-    max-width: 70%;
-    margin-top: 20px;
+/* Button for selecting a room */
+.btn-select-room {
+    background-color: #D2A97D;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
 }
 
-.gallery-image {
-    display: none;
-    width: 100%; /* Set to 100% to make it responsive */
-    height: auto; /* Maintain aspect ratio */
-    max-height: 400px; /* Set a maximum height */
-    object-fit: cover; /* Cover to maintain aspect ratio */
-}
-
-    .gallery-image.active {
-        display: block;
+    .btn-select-room:hover {
+        background-color: #b88f66;
     }
 
-
-.prev, .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(255, 255, 255, 0.8);
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-}
-
-.prev {
-    left: 10px;
-}
-
-.next {
-    right: 10px;
-}
-
-
-
+/* Styling for policy section */
 .policy-section {
     margin-top: 40px;
     background-color: #f8f9fa;
@@ -177,3 +245,13 @@
         margin-left: 20px;
         margin-bottom: 10px;
     }
+
+/* Footer styling if needed */
+footer {
+    margin-top: 40px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+}

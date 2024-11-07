@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Project_Group5.Models;
 
-namespace Project_Group5.Pages.Admin.RoomManagement
+namespace Project_Group5.Pages.Admin.FeedbackManagement
 {
     public class FeedbackModel : PageModel
     {

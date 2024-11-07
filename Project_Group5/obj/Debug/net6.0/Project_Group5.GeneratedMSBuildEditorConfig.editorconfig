@@ -18,16 +18,16 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\MY PC\Documents\GitHub\PRN221_HotelManager\Project_Group5
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/MY PC/Documents/GitHub/PRN221_HotelManager/Project_Group5/Pages/Admin/FeedbackManagement/EditFeedback.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cRmVlZGJhY2tNYW5hZ2VtZW50XEVkaXRGZWVkYmFjay5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MY PC/Documents/GitHub/PRN221_HotelManager/Project_Group5/Pages/Admin/FeedbackManagement/Feedback.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cRmVlZGJhY2tNYW5hZ2VtZW50XEZlZWRiYWNrLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/MY PC/Documents/GitHub/PRN221_HotelManager/Project_Group5/Pages/Admin/PaymentManagerment/PaymentManagement.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cUGF5bWVudE1hbmFnZXJtZW50XFBheW1lbnRNYW5hZ2VtZW50LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/MY PC/Documents/GitHub/PRN221_HotelManager/Project_Group5/Pages/Admin/RoomManagement/EditFeedback.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cUm9vbU1hbmFnZW1lbnRcRWRpdEZlZWRiYWNrLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/MY PC/Documents/GitHub/PRN221_HotelManager/Project_Group5/Pages/Admin/RoomManagement/Feedback.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cUm9vbU1hbmFnZW1lbnRcRmVlZGJhY2suY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/MY PC/Documents/GitHub/PRN221_HotelManager/Project_Group5/Pages/Admin/RoomManagement/Index.cshtml]

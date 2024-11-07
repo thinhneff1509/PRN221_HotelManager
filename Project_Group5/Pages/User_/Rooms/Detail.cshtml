@@ -10,21 +10,43 @@
 
 
 <h1>@Model.RoomType?.Name</h1>
-<div class="image-gallery">
-    @if (Model.ImageRoom != null && Model.ImageRoom.Any())
-    {
-        @for (int i = 0; i < Model.ImageRoom.Count; i++)
-        {
-            <img src="/images/@Model.ImageRoom[i].Path" alt="Room Image"
-                 class="gallery-image @(i == 0 ? "active" : "")" />
-        }
-    }
-    else
-    {
-        <p>No images available for this room.</p>
-    }
-    <button class="prev" onclick="changeImage(-1)">&#10094;</button>
-    <button class="next" onclick="changeImage(1)">&#10095;</button>
+<div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
+    <!-- Left Column: Image Gallery -->
+    <div style="flex: 3; margin-right: 20px;">
+        <div class="image-gallery">
+            @if (Model.ImageRoom != null && Model.ImageRoom.Any())
+            {
+                @for (int i = 0; i < Model.ImageRoom.Count; i++)
+                {
+                    <img src="/images/@Model.ImageRoom[i].Path" alt="Room Image"
+                         class="gallery-image @(i == 0 ? "active" : "")" style="width: 100%; height: auto;" />
+                }
+            }
+            else
+            {
+                <p>No images available for this room.</p>
+            }
+            <button class="prev" onclick="changeImage(-1)">&#10094;</button>
+            <button class="next" onclick="changeImage(1)">&#10095;</button>
+        </div>
+    </div>
+
+    <!-- Right Column: Room Information -->
+    <div style="flex: 1;">
+        <p>@Model.RoomType?.Description</p>
+        <div>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <p class="price">Giá chỉ từ: <strong>@String.Format("{0:N0}", @Model.RoomType.Price) VND</strong> / đêm</p>
+                            <span>Số giường: @Model.RoomType?.Bed</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>
 
 <script>
@@ -46,19 +68,6 @@
     showImage(currentImageIndex);
 </script>
 
-<p>@Model.RoomType?.Description</p>
-<div>
-    <table>
-        <tbody>
-            <tr>
-                <td>
-                    <p class="price">Giá chỉ từ: <strong>@String.Format("{0:N0}", @Model.RoomType.Price) VND</strong> / đêm</p>
-                    <span>Số giường: @Model.RoomType?.Bed</span>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</div>
 
 <!-- Amenities section -->
 <div class="amenities-section">

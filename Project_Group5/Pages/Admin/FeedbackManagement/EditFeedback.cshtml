@@ -1,5 +1,5 @@
 ﻿@page "{id:int}"
-@model Project_Group5.Pages.Admin.RoomManagement.EditFeedbackModel
+@model EditFeedbackModel
 @{
     ViewData["Title"] = "Edit Feedback";
     Layout = "_Layout";
@@ -154,26 +154,26 @@
     <input type="hidden" asp-for="Feedback.RoomId" />
     <input type="hidden" asp-for="Feedback.FeedbackDate" />
     <div class="form-group">
-        <label for="Customer">Customer</label>
+        <label for="Customer">Khách Hàng</label>
         <input type="text" id="Customer" class="form-control" value="@Model.Feedback.Customer?.Name" disabled="disabled" />
     </div>
     <div class="form-group">
-        <label for="Room">Room</label>
+        <label for="Room">Loại Phòng</label>
         <input type="text" id="Room" class="form-control" value="@Model.Feedback.Room?.Roomtype?.Name" disabled="disabled" />
     </div>
 
     <div class="form-group">
-        <label for="Content">Content</label>
+        <label for="Content">Nội Dung</label>
         <textarea id="Content" class="form-control" asp-for="Feedback.Content"></textarea>
     </div>
 
     <div class="form-group">
-        <label for="FeedbackDate">Feedback Date</label>
+        <label for="FeedbackDate">Ngày</label>
         <input type="date" id="FeedbackDate" class="form-control" asp-for="Feedback.FeedbackDate" disabled="disabled" />
     </div>
 
     <div class="form-group">
-        <label for="Rating">Rating</label>
+        <label for="Rating">Đánh giá</label>
         <select id="Rating" class="form-control" asp-for="Feedback.Rating">
             <option value="1">1</option>
             <option value="2">2</option>
@@ -182,6 +182,6 @@
             <option value="5">5</option>
         </select>
     </div>
-    <button type="submit" class="btn btn-primary">Save</button>
-    <a asp-page="./Feedback" class="btn btn-secondary">Cancel</a>
+    <button type="submit" class="btn btn-primary">Lưu</button>
+    <a asp-page="./Feedback" class="btn btn-secondary">Quay lại</a>
 </form>
