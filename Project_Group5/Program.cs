@@ -1,6 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Mvc.ViewFeatures;
+using Microsoft.EntityFrameworkCore;
 using Project_Group5.Models;
-using Microsoft.AspNetCore.Authentication.Cookies;
 
 namespace Project_Group5
 {
@@ -29,6 +30,8 @@ namespace Project_Group5
             // Cấu hình Authorization
             builder.Services.AddAuthorization();
 
+            builder.Services.AddControllersWithViews().AddSessionStateTempDataProvider();
+            builder.Services.AddSingleton<ITempDataProvider, CookieTempDataProvider>();
             var app = builder.Build();
 
             // Cấu hình HTTP request pipeline
@@ -48,7 +51,7 @@ namespace Project_Group5
             app.UseAuthorization();
 
             // Thêm middleware để chuyển hướng đến trang /home
-    
+
 
 
 
