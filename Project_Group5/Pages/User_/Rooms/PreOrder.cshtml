@@ -1,4 +1,4 @@
-﻿@page
+﻿@page "/BookingRoom"
 @model Project_Group5.Pages.Rooms.PreOrderModel
 @{
     var SelectedRooms = Model.SelectedRooms;
@@ -18,7 +18,9 @@
 
             <div class="d-flex justify-content-between">
                 <div class="col-md-8">
+                    
                     <!-- Room Details -->
+                    
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">Chi tiết đặt phòng</h5>
@@ -31,19 +33,10 @@
                                             <h6 id="room_name_@r.RoomType">@r.Name</h6>
                                             <p class="flash-sales">Không hoàn trả tiền khi hủy phòng</p>
                                             <p>Chi tiết: @r.RoomList.Count phòng, @Model.StayDuration ngày</p>
-                                            <input type="hidden" id="room_bed_@r.RoomType" value="@r.Bed" />
-                                            <input type="hidden" id="room_count_@r.RoomType" value="@r.RoomList.Count" />
+                                            <input type="hidden" id="room_bed_@r.RoomType" value="@r.Bed"/>
+                                            <input type="hidden" id="room_count_@r.RoomType" value="@r.RoomList.Count"/>
                                         </div>
                                         <div class="col-md-5 d-flex justify-content-between">
-                                            @*                                <div class="col-md-3">
-                                        <p>Số lượng phòng</p>
-                                        <select>
-                                            @for (int i = 0; i <= r.RoomList.Count; i++)
-                                            {
-                                                <option selected value="@i">@i phòng</option>
-                                            }
-                                        </select>
-                                    </div>*@
                                             <div class="col-md-7">
                                                 <p>Số lượng khách</p>
                                                 @foreach (var ri in r.RoomList)
@@ -62,11 +55,11 @@
                                                             </option>
                                                         }
                                                     </select>
-                                                    <br />
+                                                    <br/>
                                                 }
                                             </div>
                                             <div class="col-md-5">
-                                                <p>Số trẻ em ở ghép</p>
+                                                <p>Trẻ em</p>
                                                 @foreach (var ri in r.RoomList)
                                                 {
                                                     <select class="form-select" id="children_count_@(r.RoomType)_@ri.Id">
@@ -77,15 +70,15 @@
                                                             </option>
                                                         }
                                                     </select>
-                                                    <br />
+                                                    <br/>
                                                 }
                                             </div>
                                         </div>
                                         <div class="text-end">
-
                                             <p>
-                                                <input type="hidden" id="room_original_price_@r.RoomType" value="@r.Price" />
-                                                @{ double RoomPrice = r.Price;
+                                                <input type="hidden" id="room_original_price_@r.RoomType" value="@r.Price"/>
+                                                @{
+                                                    double RoomPrice = r.Price;
                                                     double TotalPrice = 0;
                                                     foreach (var ri in r.RoomList)
                                                     {
@@ -98,7 +91,8 @@
                                                         {
                                                             TotalPrice += r.Price;
                                                         }
-                                                        <input type="hidden" id="room_price_(@r.RoomType)_@ri.Id" value="@RoomPrice" />
+
+                                                        <input type="hidden" id="room_price_(@r.RoomType)_@ri.Id" value="@RoomPrice"/>
                                                     }
                                                 }
                                                 <strong id="total_room_price_@r.RoomType">
@@ -108,13 +102,13 @@
                                             </p>
                                         </div>
                                     </div>
-                                    <hr />
-                                                    }
-                                <!-- Room 1 -->
-                                                    }
+                                    <hr>
+                                }
+                            }
                             <hr>
 
                             <!-- Total Price -->
+                            
                             <div class="d-flex justify-content-between total-price">
                                 <p>Tổng giá trị</p>
                                 <p id="display_total_price">0 VND</p>
@@ -173,52 +167,6 @@
             
 
             <div>
-                <!-- Payment Section -->
-                <!--<div class="card mt-4">
-                <div class="card-body">
-                    <h5 class="card-title">Thanh toán</h5>-->
-                <!-- Payment Method -->
-                <!--<div class="mb-3">
-                    <label for="payment-method" class="form-label">Chọn phương thức thanh toán</label>
-                    <select class="form-select" id="payment-method">
-                        <option value="credit-card">Thẻ tín dụng</option>
-                    </select>
-                </div>-->
-                <!-- Credit Card Details -->
-                <!--<div class="row mb-3">
-                    <div class="col-md-6">
-                        <label for="credit-card-number" class="form-label">Số thẻ tín dụng</label>
-                        <input type="text" class="form-control" id="credit-card-number">
-                    </div>
-                    <div class="col-md-6">
-                        <label for="cardholder-name" class="form-label">Tên trên thẻ</label>
-                        <input type="text" class="form-control" id="cardholder-name">
-                    </div>
-                </div>
-
-                <div class="row mb-3">
-                    <div class="col-md-6">
-                        <label for="expiry-date" class="form-label">Ngày hết hạn</label>
-                        <input type="month" class="form-control" id="expiry-date">
-                    </div>
-                    <div class="col-md-6">
-                        <label for="cvv" class="form-label">Mã xác thực thẻ (CVV)</label>
-                        <input type="text" class="form-control" id="cvv">
-                    </div>
-                </div>-->
-                <!-- Terms and Confirmation -->
-                <!--<div class="form-check mb-3">
-                            <input class="form-check-input" type="checkbox" id="terms-check">
-                            <label class="form-check-label terms" for="terms-check">
-                                Vui lòng đọc và đồng ý với điều khoản đặt phòng.
-                            </label>
-                        </div>
-
-                        <div class="text-center">
-                            <button type="button" class="btn btn-primary">Xác nhận đặt phòng</button>
-                        </div>
-                    </div>
-                </div>-->
             </div>
         </div>
 
