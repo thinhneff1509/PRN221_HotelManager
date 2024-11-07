@@ -6,6 +6,12 @@
         @TempData["SuccessMessage"]
     </div>
 }
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger" role="alert">
+        @TempData["Error"]
+    </div>
+}
 <h2>Quản lý Phòng</h2>
 
 <div class="container mt-4">
@@ -36,10 +42,8 @@
                     <td>
                         @if (room.ImageRooms.Any()) // Kiểm tra nếu có ảnh
                         {
-                            foreach (var image in room.ImageRooms)
-                            {
-                                <img src="@image.Path" alt="Hình ảnh phòng" style="width: 100px; height: auto; margin-right: 5px;" /> <!-- Hiển thị ảnh -->
-                            }
+                            var image = room.ImageRooms.FirstOrDefault();
+                            <img src="~/images/@image.Path" alt="Hình ảnh phòng" style="width: 100px; height: auto; margin-right: 5px;" /> <!-- Hiển thị ảnh -->
                         }
                         else
                         {
@@ -72,7 +76,7 @@
 <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-            <form method="post" asp-page-handler="Add">
+            <form method="post" asp-page-handler="Add" enctype="multipart/form-data">
                 <div class="modal-header">
                     <h5 class="modal-title" id="addModalLabel">Thêm Phòng</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -82,21 +86,32 @@
                 <div class="modal-body">
                     <div class="form-group">
                         <label>Số Phòng</label>
-                        <input type="text" name="Room.RoomNumber" class="form-control" required />
+                        <input type="text" asp-for="Room.RoomNumber" class="form-control" required />
+                        <span asp-validation-for="Room.RoomNumber" class="text-danger"></span>
                     </div>
                     <div class="form-group">
                         <label>Loại Phòng</label>
-                        <select name="Room.RoomtypeId" class="form-control" required>
+                        <select asp-for="Room.RoomtypeId" class="form-control" required>
                             <option value="">Chọn loại phòng</option>
                             @foreach (var roomType in Model.RoomTypes)
                             {
                                 <option value="@roomType.Id">@roomType.Name</option>
                             }
                         </select>
+                        <span asp-validation-for="Room.RoomtypeId" class="text-danger"></span>
                     </div>
                     <div class="form-group">
                         <label>Trạng Thái</label>
-                        <input type="text" name="Room.Status" class="form-control" required />
+                        <select name="Room.Status" class="form-control" required>
+                            <option value="Còn phòng">Còn phòng </option>
+                            <option value="Hết phòng">Hết phòng </option>
+                            <option value="Đang đặt cọc">Đang đặt cọc </option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Hình Ảnh Phòng</label>
+                        <input type="file" asp-for="Room.ImageFiles" class="form-control" multiple />
+                        <span asp-validation-for="Room.ImageFiles" class="text-danger"></span>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -112,7 +127,7 @@
 <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-            <form method="post" asp-page-handler="Update">
+            <form method="post" asp-page-handler="Update"enctype="multipart/form-data">
                 <div class="modal-header">
                     <h5 class="modal-title" id="editModalLabel">Cập Nhật Phòng</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -137,7 +152,16 @@
                     </div>
                     <div class="form-group">
                         <label>Trạng Thái</label>
-                        <input type="text" name="Room.Status" class="form-control" required />
+                        <select name="Room.Status" class="form-control" required>
+                            <option value="Còn phòng">Còn phòng </option>
+                            <option value="Hết phòng">Hết phòng </option>
+                            <option value="Đang đặt cọc">Đang đặt cọc </option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Hình Ảnh Phòng</label>
+                        <input type="file" asp-for="Room.ImageFiles" class="form-control" multiple />
+                        <span asp-validation-for="Room.ImageFiles" class="text-danger"></span>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -185,7 +209,7 @@
             var modal = $(this);
             modal.find('input[name="Room.Id"]').val(roomId);
             modal.find('input[name="Room.RoomNumber"]').val(roomNumber);
-            modal.find('input[name="Room.Status"]').val(roomStatus);
+            modal.find('select[name="Room.Status"]').val(roomStatus);
             modal.find('select[name="Room.RoomtypeId"]').val(roomTypeId);
         });
 

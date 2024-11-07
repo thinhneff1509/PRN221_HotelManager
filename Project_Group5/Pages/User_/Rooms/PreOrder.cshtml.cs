@@ -109,10 +109,10 @@ namespace Project_Group5.Pages.Rooms
                     DateTime CheckOutDate = DateTime.Parse(CheckoutDate);
                     foreach (var r in SelectedRooms)
                     {
-                        var listRoom = await context.Rooms.Where(lr => lr.RoomtypeId == int.Parse(r.RoomType) && !lr.Status.Equals("full")).Take(r.RoomList.Count).ToListAsync();
+                        var listRoom = await context.Rooms.Where(lr => lr.RoomtypeId == int.Parse(r.RoomType) && !lr.Status.Equals("Đang đặt cọc")).Take(r.RoomList.Count).ToListAsync();
                         foreach (var ri in listRoom)
                         {
-                            ri.Status = "full";
+                            ri.Status = "Đang đặt cọc";
                             context.Update(ri);
                             var booking = new Booking
                             {
