@@ -108,6 +108,9 @@ D:\PRN221\PRN221_Project_DTF\PRN221_HotelManager\Project_Group5\bin\Debug\net6.0
 D:\PRN221\PRN221_Project_DTF\PRN221_HotelManager\Project_Group5\bin\Debug\net6.0\Project_Group5.dll
 D:\PRN221\PRN221_Project_DTF\PRN221_HotelManager\Project_Group5\bin\Debug\net6.0\Project_Group5.pdb
 D:\PRN221\PRN221_Project_DTF\PRN221_HotelManager\Project_Group5\bin\Debug\net6.0\Humanizer.dll
+D:\PRN221\PRN221_Project_DTF\PRN221_HotelManager\Project_Group5\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\PRN221\PRN221_Project_DTF\PRN221_HotelManager\Project_Group5\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\PRN221\PRN221_Project_DTF\PRN221_HotelManager\Project_Group5\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 D:\PRN221\PRN221_Project_DTF\PRN221_HotelManager\Project_Group5\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
 D:\PRN221\PRN221_Project_DTF\PRN221_HotelManager\Project_Group5\bin\Debug\net6.0\Microsoft.Bcl.TimeProvider.dll
 D:\PRN221\PRN221_Project_DTF\PRN221_HotelManager\Project_Group5\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
@@ -120,6 +123,8 @@ D:\PRN221\PRN221_Project_DTF\PRN221_HotelManager\Project_Group5\bin\Debug\net6.0
 D:\PRN221\PRN221_Project_DTF\PRN221_HotelManager\Project_Group5\bin\Debug\net6.0\Microsoft.Extensions.Configuration.dll
 D:\PRN221\PRN221_Project_DTF\PRN221_HotelManager\Project_Group5\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
 D:\PRN221\PRN221_Project_DTF\PRN221_HotelManager\Project_Group5\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+D:\PRN221\PRN221_Project_DTF\PRN221_HotelManager\Project_Group5\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
+D:\PRN221\PRN221_Project_DTF\PRN221_HotelManager\Project_Group5\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
 D:\PRN221\PRN221_Project_DTF\PRN221_HotelManager\Project_Group5\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
 D:\PRN221\PRN221_Project_DTF\PRN221_HotelManager\Project_Group5\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
 D:\PRN221\PRN221_Project_DTF\PRN221_HotelManager\Project_Group5\bin\Debug\net6.0\Microsoft.Identity.Client.dll
