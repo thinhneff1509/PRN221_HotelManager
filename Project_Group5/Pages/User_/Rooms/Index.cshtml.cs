@@ -15,11 +15,13 @@ public class IndexModel : PageModel
 
     [TempData]
     public string SelectedRoomsJson { get; set; }
+
     public List<SelectedRoom> SelectedRooms
     {
-        get => string.IsNullOrEmpty(SelectedRoomsJson) ? new List<SelectedRoom>() : JsonSerializer.Deserialize<List<SelectedRoom>>(SelectedRoomsJson);
+        get => JsonSerializer.Deserialize<List<SelectedRoom>>(SelectedRoomsJson ?? "[]");
         set => SelectedRoomsJson = JsonSerializer.Serialize(value);
     }
+
 
     [BindProperty]
     public int SelectedRoomId { get; set; }
@@ -34,10 +36,13 @@ public class IndexModel : PageModel
 
     [BindProperty]
     public string PromoCode { get; set; }
-
+    [BindProperty]
     public decimal TotalPrice { get; set; }
     [BindProperty]
     public int SelectedRoomCount { get; set; } = 1;
+    public int AdultCount { get; set; } = 1;
+    public int ChildrenCount { get; set; } = 0;
+
 
     public IndexModel(Fall24_SE1745_PRN221_Group5Context context)
     {
@@ -52,77 +57,164 @@ public class IndexModel : PageModel
     public async Task<IActionResult> OnPostChooseRoomAsync(int SelectedRoomId, int SelectedRoomCount)
     {
         RoomTypes = await _context.RoomTypes.Include(r => r.Rooms).ThenInclude(r => r.ImageRooms).ToListAsync();
-        if (RoomTypes == null)
-        {
-            return NotFound();
-        }
-        // Ensure SelectedRooms is never null
-        var selectedRooms = SelectedRooms ?? new List<SelectedRoom>();
 
+        var selectedRooms = SelectedRooms;
         var roomType = RoomTypes.FirstOrDefault(r => r.Id == SelectedRoomId);
+
         if (roomType != null)
         {
-            // Find all available rooms of the selected type
-            var availableRooms = roomType.Rooms
-                .Where(r => r.Status.Equals("Còn phòng") && !SelectedRooms.Any(sr => sr.RoomId == r.Id))
-                .ToList();
-
-            // Calculate the current count of selected rooms for this room type
-            var currentRoomCount = SelectedRooms.Count(r => r.RoomTypeId == SelectedRoomId);
-            var roomsToAdd = SelectedRoomCount - currentRoomCount;
+            var availableRooms = roomType.Rooms.Where(r => r.Status == "Còn phòng" && !selectedRooms.Any(sr => sr.RoomId == r.Id)).ToList();
+            var existingRooms = selectedRooms.Where(sr => sr.RoomTypeId == SelectedRoomId).ToList();
+            int roomsToAdd = SelectedRoomCount - existingRooms.Count;
 
             if (roomsToAdd > 0)
             {
-                // Add unique available rooms
-                for (int i = 0; i < roomsToAdd && i < availableRooms.Count; i++)
+                selectedRooms.AddRange(availableRooms.Take(roomsToAdd).Select(r => new SelectedRoom
                 {
-                    var newRoom = availableRooms[i];
-                    selectedRooms.Add(new SelectedRoom
-                    {
-                        RoomTypeId = roomType.Id,
-                        RoomId = newRoom.Id,
-                        Name = newRoom.RoomNumber,
-                        RoomType = roomType.Name,
-                        Price = roomType.Price
-                    });
-                }
+                    RoomTypeId = roomType.Id,
+                    RoomId = r.Id,
+                    Name = r.RoomNumber,
+                    RoomType = roomType.Name,
+                    Price = roomType.Price,
+                    Bed = roomType.Bed,
+                    AdultCount = 1
+                }));
             }
             else if (roomsToAdd < 0)
             {
-                // Remove rooms if SelectedRoomCount is reduced
-                for (int i = 0; i < -roomsToAdd; i++)
-                {
-                    var roomToRemove = selectedRooms.FirstOrDefault(sr => sr.RoomTypeId == SelectedRoomId);
-                    if (roomToRemove != null)
-                    {
-                        selectedRooms.Remove(roomToRemove);
-                    }
-                }
+                selectedRooms.RemoveAll(sr => sr.RoomTypeId == SelectedRoomId && roomsToAdd++ < 0);
             }
 
-            // After modifying the list, update the SelectedRoomsJson in TempData
             SelectedRooms = selectedRooms;
-
-            // Recalculate total price after selection change
             CalculateTotalPrice();
         }
-
         return Page();
     }
 
+    public async Task<IActionResult> OnPostChangeAdultAndChildrenCount(int SelectedRoomId, int AdultCount, int ChildrenCount)
+    {
+        RoomTypes = await _context.RoomTypes.Include(r => r.Rooms).ThenInclude(r => r.ImageRooms).ToListAsync();
 
+        var selectedRoomList = SelectedRooms;
+        var selectedRoom = selectedRoomList.FirstOrDefault(r => r.RoomId == SelectedRoomId);
+        if (selectedRoom != null)
+        {
+            selectedRoom.AdultCount = AdultCount;
+            selectedRoom.ChildrenCount = ChildrenCount;
+        }
+        SelectedRooms = selectedRoomList;
+        CalculateTotalPrice();
+        return Page();
+    }
     private void CalculateTotalPrice()
     {
         var stayDuration = (CheckOutDate - CheckInDate).Days;
-        if (stayDuration <= 0) stayDuration = 1;
+        stayDuration = Math.Max(1, stayDuration); // Ensure at least 1 day.
 
-        TotalPrice = SelectedRooms.Sum(r => r.Price * stayDuration);
+        TotalPrice = 0;
+
+        foreach (var room in SelectedRooms)
+        {
+            var roomType = RoomTypes.FirstOrDefault(r => r.Id == room.RoomTypeId);
+
+            if (roomType != null)
+            {
+                int totalGuests = room.AdultCount + room.ChildrenCount;
+                decimal roomPrice = room.Price;
+
+                if (totalGuests > roomType.Bed)
+                {
+                    int extraGuests = totalGuests - roomType.Bed;
+                    roomPrice += room.Price * 0.3m * extraGuests; // Increase price by 30% for each extra guest
+                }
+
+                TotalPrice += roomPrice * stayDuration;
+            }
+        }
 
         // Apply promo code discount if applicable
         if (!string.IsNullOrEmpty(PromoCode))
         {
             TotalPrice *= 0.9m; // Example: 10% discount
         }
+    }
+
+    public async Task<IActionResult> OnPostCalculateTotalPrice(DateTime CheckInDate, DateTime CheckOutDate, string PromoCode)
+    {
+        RoomTypes = await _context.RoomTypes.Include(r => r.Rooms).ThenInclude(r => r.ImageRooms).ToListAsync();
+        var stayDuration = (CheckOutDate - CheckInDate).Days;
+        stayDuration = Math.Max(1, stayDuration); // Ensure at least 1 day.
+
+        TotalPrice = 0;
+
+        foreach (var room in SelectedRooms)
+        {
+            var roomType = RoomTypes.FirstOrDefault(r => r.Id == room.RoomTypeId);
+
+            if (roomType != null)
+            {
+                int totalGuests = room.AdultCount + room.ChildrenCount;
+                decimal roomPrice = room.Price;
+
+                if (totalGuests > roomType.Bed)
+                {
+                    int extraGuests = totalGuests - roomType.Bed;
+                    roomPrice += room.Price * 0.3m * extraGuests; // Increase price by 30% for each extra guest
+                }
+
+                TotalPrice += roomPrice * stayDuration;
+            }
+        }
+
+        // Apply promo code discount if applicable
+        if (!string.IsNullOrEmpty(PromoCode))
+        {
+            TotalPrice *= 0.9m; // Example: 10% discount
+        }
+
+        // Return the page after recalculating the total price
+        return Page();
+    }
+
+    private async Task<bool> IsRoomBooked(int roomId, DateTime checkIn, DateTime checkOut)
+    {
+        return await _context.Bookings
+            .AnyAsync(b => b.RoomId == roomId &&
+                           ((b.CheckInDate <= checkIn && b.CheckOutDate > checkIn) ||
+                            (b.CheckInDate < checkOut && b.CheckOutDate >= checkOut) ||
+                            (b.CheckInDate >= checkIn && b.CheckOutDate <= checkOut)));
+    }
+
+    public async Task<IActionResult> OnPostCheckAvailabilityAsync()
+    {
+        if (!ModelState.IsValid)
+        {
+            return Page();
+        }
+
+        RoomTypes = await _context.RoomTypes
+            .Include(rt => rt.Rooms)
+            .ThenInclude(r => r.ImageRooms)
+            .ToListAsync();
+
+        foreach (var roomType in RoomTypes)
+        {
+            var availableRooms = new List<Room>();
+            foreach (var room in roomType.Rooms)
+            {
+                if (!await IsRoomBooked(room.Id, CheckInDate, CheckOutDate))
+                {
+                    availableRooms.Add(room);
+                }
+            }
+            roomType.Rooms = availableRooms;
+        }
+
+        // Remove room types with no available rooms
+        RoomTypes = RoomTypes.Where(rt => rt.Rooms.Any()).ToList();
+
+        TempData["AvailabilityChecked"] = true;
+        return Page();
     }
 
 }
@@ -134,4 +226,7 @@ public class SelectedRoom
     public string Name { get; set; }
     public string RoomType { get; set; }
     public decimal Price { get; set; }
+    public int AdultCount { get; set; }
+    public int ChildrenCount { get; set; }
+    public int Bed { get; set; }
 }
