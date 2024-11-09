@@ -229,3 +229,5 @@ D:\PRN221\project\PRN221_HotelManager\Project_Group5\obj\Debug\net6.0\Project_Gr
 D:\PRN221\project\PRN221_HotelManager\Project_Group5\obj\Debug\net6.0\Project_Group5.genruntimeconfig.cache
 D:\PRN221\project\PRN221_HotelManager\Project_Group5\obj\Debug\net6.0\ref\Project_Group5.dll
 D:\PRN221\project\PRN221_HotelManager\Project_Group5\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.Google.dll
+D:\PRN221\project\PRN221_HotelManager\Project_Group5\bin\Debug\net6.0\DotNetEnv.dll
+D:\PRN221\project\PRN221_HotelManager\Project_Group5\bin\Debug\net6.0\Sprache.dll
