@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9A2393C9-4A9C-4C05-93B4-67304C2480E3}|Project_Group5.csproj|d:\\prn221\\project\\prn221_hotelmanager\\project_group5\\pages\\user_\\rooms\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9A2393C9-4A9C-4C05-93B4-67304C2480E3}|Project_Group5.csproj|solutionrelative:pages\\user_\\rooms\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9A2393C9-4A9C-4C05-93B4-67304C2480E3}|Project_Group5.csproj|d:\\prn221\\project\\prn221_hotelmanager\\project_group5\\pages\\user_\\rooms\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A2393C9-4A9C-4C05-93B4-67304C2480E3}|Project_Group5.csproj|solutionrelative:pages\\user_\\rooms\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9A2393C9-4A9C-4C05-93B4-67304C2480E3}|Project_Group5.csproj|d:\\prn221\\project\\prn221_hotelmanager\\project_group5\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{9A2393C9-4A9C-4C05-93B4-67304C2480E3}|Project_Group5.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9A2393C9-4A9C-4C05-93B4-67304C2480E3}|Project_Group5.csproj|d:\\prn221\\project\\prn221_hotelmanager\\project_group5\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9A2393C9-4A9C-4C05-93B4-67304C2480E3}|Project_Group5.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A2393C9-4A9C-4C05-93B4-67304C2480E3}|Project_Group5.csproj|d:\\prn221\\project\\prn221_hotelmanager\\project_group5\\pages\\user_\\rooms\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A2393C9-4A9C-4C05-93B4-67304C2480E3}|Project_Group5.csproj|solutionrelative:pages\\user_\\rooms\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A2393C9-4A9C-4C05-93B4-67304C2480E3}|Project_Group5.csproj|d:\\prn221\\project\\prn221_hotelmanager\\project_group5\\pages\\user_\\rooms\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9A2393C9-4A9C-4C05-93B4-67304C2480E3}|Project_Group5.csproj|solutionrelative:pages\\user_\\rooms\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9A2393C9-4A9C-4C05-93B4-67304C2480E3}|Project_Group5.csproj|d:\\prn221\\project\\prn221_hotelmanager\\project_group5\\pages\\login\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -46,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 324,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 15,
           "Children": [
             {
               "$type": "Bookmark",
@@ -82,7 +82,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Index.cshtml.cs",
               "DocumentMoniker": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\Pages\\User_\\Rooms\\Index.cshtml.cs",
               "RelativeDocumentMoniker": "Pages\\User_\\Rooms\\Index.cshtml.cs",
@@ -95,7 +95,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\Pages\\User_\\Rooms\\Index.cshtml",
               "RelativeDocumentMoniker": "Pages\\User_\\Rooms\\Index.cshtml",
@@ -160,20 +160,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAB4AAAA7AAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAgAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-09T16:15:45.717Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",

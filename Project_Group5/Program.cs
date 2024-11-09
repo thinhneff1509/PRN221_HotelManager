@@ -30,14 +30,7 @@ namespace Project_Group5
                 options.LogoutPath = "/Logout"; // Đường dẫn để đăng xuất
                 options.AccessDeniedPath = "/AccessDenied"; // Đường dẫn khi không có quyền truy cập
             })
-            .AddGoogle(GoogleDefaults.AuthenticationScheme, options =>
-            {
-                options.ClientId = builder.Configuration.GetSection("GoogleKeys:ClientId").Value;
-                options.ClientSecret = builder.Configuration.GetSection("GoogleKeys:ClientSecret").Value;
-
-                options.CallbackPath = "/signin-google";
-
-            });
+           ;
 
 
             // Cấu hình Authorization
