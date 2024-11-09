@@ -8,7 +8,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3854dc94-ba40-4661-bc4c-01bd491d4348" name="Changes" comment="test" />
+    <list default="true" id="3854dc94-ba40-4661-bc4c-01bd491d4348" name="Changes" comment=".evn">
+      <change beforePath="$PROJECT_DIR$/.vs/ProjectEvaluation/project_group5.projects.v8.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/ProjectEvaluation/project_group5.projects.v8.bin" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,6 +26,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RESET_MODE" value="MIXED" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -38,26 +41,29 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/.vs/Project_Group5/v17/DocumentLayout.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Models/Fall24_SE1745_PRN221_Group5Context.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/Models/Fall24_SE1745_PRN221_Group5Context.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/Models/Fall24_SE1745_PRN221_Group5Context.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/Admin/DashBoard/Dashboard.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/Admin/DashBoard/Dashboard.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/Admin/DashBoard/Dashboard.cshtml.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/Admin/DashBoard/Dashboard.cshtml.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Pages/Admin/PaymentManagerment/PaymentManagement.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Pages/Admin/PaymentManagerment/PaymentManagement.cshtml.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Pages/Homepage/Home.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/Shared/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/User_/Rooms/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/User_/Rooms/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Pages/User_/Rooms/PreOrder.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Pages/User_/Rooms/PreOrder.cshtml.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/Program.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/Program.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/appsettings.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/bin/Debug/net6.0/Project_Group5.deps.json" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/bin/Debug/net6.0/Project_Group5.deps.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/bin/Debug/net6.0/Project_Group5.staticwebassets.runtime.json" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/bin/Debug/net6.0/appsettings.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/obj/Debug/net6.0/Project_Group5.AssemblyInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/obj/Debug/net6.0/Project_Group5.AssemblyInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/obj/Debug/net6.0/Project_Group5.AssemblyInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/obj/Debug/net6.0/Project_Group5.AssemblyInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/obj/Debug/net6.0/Project_Group5.AssemblyInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/obj/Debug/net6.0/Project_Group5.AssemblyInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/obj/Debug/net6.0/Project_Group5.sourcelink.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/obj/Project_Group5.csproj.nuget.dgspec.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/obj/project.assets.json" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
@@ -143,7 +149,7 @@
       <workItem from="1730967877410" duration="4563000" />
       <workItem from="1730991688435" duration="1280000" />
       <workItem from="1731158052606" duration="2235000" />
-      <workItem from="1731164706941" duration="2000000" />
+      <workItem from="1731164706941" duration="2313000" />
     </task>
     <task id="LOCAL-00001" summary="merge feedback">
       <option name="closed" value="true" />
@@ -473,7 +479,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731166433182</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary=".evn">
+      <option name="closed" value="true" />
+      <created>1731167042257</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1731167042257</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -487,6 +501,11 @@
         <entry key="Branch">
           <value>
             <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="thinh_Authen" />
+                </option>
+              </RecentGroup>
               <RecentGroup>
                 <option name="FILTER_VALUES">
                   <option value="origin/thinh_Authen" />
@@ -506,7 +525,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="thinh_Authen" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -514,7 +545,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="fix useradmin" />
     <MESSAGE value="fixx" />
     <MESSAGE value="merge Quang details" />
     <MESSAGE value="cấu trúc lại" />
@@ -539,6 +569,7 @@
     <MESSAGE value="merge Hoang Admin payment" />
     <MESSAGE value="file evn" />
     <MESSAGE value="test" />
-    <option name="LAST_COMMIT_MESSAGE" value="test" />
+    <MESSAGE value=".evn" />
+    <option name="LAST_COMMIT_MESSAGE" value=".evn" />
   </component>
 </project>
