@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\Project_Group5.csproj": {}
+    "D:\\Ki 7\\PRN221_Retake\\Group5_Assignment\\Project_Group5\\Project_Group5.csproj": {}
   },
   "projects": {
-    "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\Project_Group5.csproj": {
+    "D:\\Ki 7\\PRN221_Retake\\Group5_Assignment\\Project_Group5\\Project_Group5.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\Project_Group5.csproj",
+        "projectUniqueName": "D:\\Ki 7\\PRN221_Retake\\Group5_Assignment\\Project_Group5\\Project_Group5.csproj",
         "projectName": "Project_Group5",
-        "projectPath": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\Project_Group5.csproj",
-        "packagesPath": "C:\\Users\\MY PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\obj\\",
+        "projectPath": "D:\\Ki 7\\PRN221_Retake\\Group5_Assignment\\Project_Group5\\Project_Group5.csproj",
+        "packagesPath": "C:\\Users\\acer\\.nuget\\packages\\",
+        "outputPath": "D:\\Ki 7\\PRN221_Retake\\Group5_Assignment\\Project_Group5\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\MY PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\acer\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -93,24 +93,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.29, 6.0.29]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[6.0.29, 6.0.29]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.29, 6.0.29]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[6.0.29, 6.0.29]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -119,7 +101,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }
