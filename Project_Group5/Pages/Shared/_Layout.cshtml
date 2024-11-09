@@ -19,7 +19,7 @@
           crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <!--script-->
-   
+
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <!-- CSS thư viện -->
@@ -45,154 +45,166 @@
 
             <!-- Header Navigation Links -->
             <div class="hidden md:flex items-center justify-end flex-grow gap-5">
-                <a href="/" class="text-gray-800 hover:text-blue-600">Trang chủ</a>
-                <a href="/gioi-thieu" class="text-gray-800 hover:text-blue-600">Giới thiệu</a>
-                <a href="/lien-he" class="text-gray-800 hover:text-blue-600">Liên hệ</a>
-
+                <a href="/home" class="text-gray-800 hover:text-blue-600">Trang chủ</a>
+                <a href="/gioithieu" class="text-gray-800 hover:text-blue-600">Giới thiệu</a>
+                <a href="/" class="text-gray-800 hover:text-blue-600">Về chúng tôi</a>
+                <a href="/Room/booking" class="text-gray-800 hover:text-blue-600">Xem phòng</a>
                 <!-- Account Section -->
                 <div class="relative">
-                    @if (User.Identity.IsAuthenticated)
-                    {
-                        var role = User.IsInRole("Admin") ? 1 :
-                        User.IsInRole("Customer") ? 2 :
-                        User.IsInRole("Receptionist") ? 3 : 0;
+                    @{
+                        if (User.Identity.IsAuthenticated)
+                        {
+                            var role = User.IsInRole("Admin") ? 1 :
+                            User.IsInRole("Customer") ? 2 :
+                            User.IsInRole("Receptionist") ? 3 : 0;
 
-                        if (role == 1)  // Nếu role là Admin
-                        {
-                            <div class="flex items-center space-x-2">
-                                <span class="text-gray-800 font-semibold">Hello, Admin @User.Identity.Name</span>
-                                <div class="relative group">
-                                    <button class="text-gray-800 hover:text-blue-600">Admin Menu <i class="fa-solid fa-sort-down"></i></button>
-                                    <div class="hidden group-hover:block absolute right-0 w-48 bg-white border border-gray-200 rounded-md shadow-lg">
-                                        <a href="/Admin/Dashboard" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Dashboard</a>
-                                        <a href="/Admin/UserManagement" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Manage Users</a>
-                                        <a href="/Admin/PaymentManagement" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Manage Payment</a>
-                                        <a href="/Admin/RoomManagement" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Manage Room</a>
-                                        <a href="/Login?handler=Logout" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Logout</a>
+                            if (role == 1)  // Nếu role là Admin
+                            {
+                                <div class="flex items-center space-x-2">
+                                    <span class="text-gray-800 font-semibold">Hello, Admin @User.Identity.Name</span>
+                                    <div class="relative group">
+                                        <button class="text-gray-800 hover:text-blue-600">Admin Menu <i class="fa-solid fa-sort-down"></i></button>
+                                        <div class="hidden group-hover:block absolute right-0 w-48 bg-white border border-gray-200 rounded-md shadow-lg">
+                                            <a href="/Admin/Dashboard" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Dashboard</a>
+                                            <a href="/Admin/UserManagement" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Manage Users</a>
+                                            <a href="/Admin/PaymentManagement" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Manage Payment</a>
+                                            <a href="/Admin/RoomManagement" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Manage Room</a>
+                                            <a href="/Login?handler=Logout" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Logout</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        }
-                        else if (role == 2)  // Nếu role là Customer
-                        {
-                            <div class="flex items-center space-x-2">
-                                <span class="text-gray-800 font-semibold">Hello, @User.Identity.Name</span>
-                                <a href="/Customer/Profile" class="text-gray-800 hover:text-blue-600">Profile</a>
-                                <a href="/Logout" class="text-gray-800 hover:text-blue-600">Logout</a>
-                            </div>
-                        }
-                        else if (role == 3)  // Nếu role là Receptionist
-                        {
-                            <div class="flex items-center space-x-2">
-                                <span class="text-gray-800 font-semibold">Hello, Receptionist @User.Identity.Name</span>
-                                <div class="relative group">
-                                    <button class="text-gray-800 hover:text-blue-600">Receptionist Menu <i class="fa-solid fa-sort-down"></i></button>
-                                    <div class="hidden group-hover:block absolute right-0 w-48 bg-white border border-gray-200 rounded-md shadow-lg">
-                                        <a href="/Receptionist/ManageBookings" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Manage Bookings</a>
-                                        <a href="/Receptionist/ViewMessages" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">View Messages</a>
-                                        <a href="/Logout" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Logout</a>
+                            }
+                            else if (role == 2)  // Nếu role là Customer
+                            {
+                                <div class="flex items-center space-x-2">
+                                    <span class="text-gray-800 font-semibold">Hello, @User.Identity.Name</span>
+                                    <a href="/Customer/Profile" class="text-gray-800 hover:text-blue-600">Profile</a>
+                                    <a href="/Login?handler=Logout" class="text-gray-800 hover:text-blue-600">Logout</a>
+                                    <!-- Icon Đặt Phòng -->
+                                    <div class="relative">
+                                        <a href="/gioithieu" class="relative flex items-center justify-center w-10 h-10 text-white bg-blue-600 rounded-full hover:bg-blue-700 focus:outline-none">
+                                            <i class="fas fa-door-open text-lg"></i>
+                                            <!-- Badge số lượng đặt phòng, nếu cần -->
+                                            <span class="absolute top-0 right-0 flex items-center justify-center w-4 h-4 text-xs font-semibold text-white bg-red-500 rounded-full">100</span>
+                                        </a>
                                     </div>
                                 </div>
+                           
+                            }
+                            else if (role == 3)  // Nếu role là Receptionist
+                            {
+                                <div class="flex items-center space-x-2">
+                                    <span class="text-gray-800 font-semibold">Hello, Receptionist @User.Identity.Name</span>
+                                    <div class="relative group">
+                                        <button class="text-gray-800 hover:text-blue-600">Receptionist Menu <i class="fa-solid fa-sort-down"></i></button>
+                                        <div class="hidden group-hover:block absolute right-0 w-48 bg-white border border-gray-200 rounded-md shadow-lg">
+                                            <a href="/Receptionist/ManageBookings" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Manage Bookings</a>
+                                            <a href="/Receptionist/ViewMessages" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">View Messages</a>
+                                            <a href="/Login?handler=Logout" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Logout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        }
+                        else
+                        {
+                            <!-- Hiển thị khi người dùng chưa đăng nhập -->
+                            <div class="flex items-center space-x-2">
+                                <a href="/Login" class="text-gray-800 hover:text-blue-600">Đăng nhập</a>
+                                <a href="/Register" class="text-gray-800 hover:text-blue-600">Đăng ký</a>
                             </div>
                         }
-                    }
-                    else
-                    {
-                        <div class="flex items-center space-x-2">
-                            <a href="/Login" class="text-gray-800 hover:text-blue-600">Đăng nhập</a>
-                            <a href="/Register" class="text-gray-800 hover:text-blue-600">Đăng ký</a>
-                        </div>
                     }
                 </div>
+             
+
             </div>
+
         </div>
     </header>
 
 
-            <!--Header mobile-->
-            <div class="block md:hidden">
-                <!--Menu-->
-                <div id="open_menu" onclick="openModal()"
-                     class="min-sm:block md:block lg:hidden  cursor-pointer pt-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <g clip-path="url(#clip0_372_1645)">
-                            <path
-                                d="M23 10.9998H1C0.447715 10.9998 0 11.4475 0 11.9998C0 12.552 0.447715 12.9998 1 12.9998H23C23.5523 12.9998 24 12.552 24 11.9998C24 11.4475 23.5523 10.9998 23 10.9998Z"
-                                  fill="white" />
-                            <path
-                                d="M23 4.00024H1C0.447715 4.00024 0 4.44796 0 5.00024C0 5.55253 0.447715 6.00024 1 6.00024H23C23.5523 6.00024 24 5.55253 24 5.00024C24 4.44796 23.5523 4.00024 23 4.00024Z"
-                                  fill="white" />
-                            <path
-                                d="M23 18H1C0.447715 18 0 18.4477 0 19C0 19.5523 0.447715 20 1 20H23C23.5523 20 24 19.5523 24 19C24 18.4477 23.5523 18 23 18Z"
-                                  fill="white" />
-                        </g>
-                        <defs>
-                            <clipPath id="clip0_372_1645">
-                                <rect width="24" height="24" fill="white" />
-                            </clipPath>
-                        </defs>
-                    </svg>
+    <!--Header mobile-->
+    <div class="block md:hidden">
+        <!--Menu-->
+        <div id="open_menu" onclick="openModal()"
+             class="min-sm:block md:block lg:hidden  cursor-pointer pt-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <g clip-path="url(#clip0_372_1645)">
+                    <path d="M23 10.9998H1C0.447715 10.9998 0 11.4475 0 11.9998C0 12.552 0.447715 12.9998 1 12.9998H23C23.5523 12.9998 24 12.552 24 11.9998C24 11.4475 23.5523 10.9998 23 10.9998Z"
+                          fill="white" />
+                    <path d="M23 4.00024H1C0.447715 4.00024 0 4.44796 0 5.00024C0 5.55253 0.447715 6.00024 1 6.00024H23C23.5523 6.00024 24 5.55253 24 5.00024C24 4.44796 23.5523 4.00024 23 4.00024Z"
+                          fill="white" />
+                    <path d="M23 18H1C0.447715 18 0 18.4477 0 19C0 19.5523 0.447715 20 1 20H23C23.5523 20 24 19.5523 24 19C24 18.4477 23.5523 18 23 18Z"
+                          fill="white" />
+                </g>
+                <defs>
+                    <clipPath id="clip0_372_1645">
+                        <rect width="24" height="24" fill="white" />
+                    </clipPath>
+                </defs>
+            </svg>
+        </div>
+        <!--Modal-->
+        <div class="modal hidden" id="modalContainer">
+            <div id="close_menu" class="pt-2 hidden" onclick="closeModalMobile()">
+                <svg width="32" height="32" viewBox="0 0 16 16" fill="#222"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.99999 7.05732L11.3 3.75732L12.2427 4.69999L8.94266 7.99999L12.2427 11.3L11.3 12.2427L7.99999 8.94266L4.69999 12.2427L3.75732 11.3L7.05732 7.99999L3.75732 4.69999L4.69999 3.75732L7.99999 7.05732Z"
+                          fill="#222" />
+                </svg>
+            </div>
+            <div class="h-screen mt-[4px] p-8 absolute z-50 bg-white top-14 left-0 right-0 md:relative md:top-0 md:bg-transparent items-stretch flex flex-col md:flex-row gap-5">
+                <div class="text-gray-700  text-[18px] font-medium leading-6  whitespace-nowrap">
+                    <a onclick="closeModalMobile()" href="/">
+                        Trang chủ
+                    </a>
                 </div>
-                <!--Modal-->
-                <div class="modal hidden" id="modalContainer">
-                    <div id="close_menu" class="pt-2 hidden" onclick="closeModalMobile()">
-                        <svg width="32" height="32" viewBox="0 0 16 16" fill="#222"
-                             xmlns="http://www.w3.org/2000/svg">
-                            <path d="M7.99999 7.05732L11.3 3.75732L12.2427 4.69999L8.94266 7.99999L12.2427 11.3L11.3 12.2427L7.99999 8.94266L4.69999 12.2427L3.75732 11.3L7.05732 7.99999L3.75732 4.69999L4.69999 3.75732L7.99999 7.05732Z"
-                                  fill="#222" />
-                        </svg>
+                <div class="text-gray-700  text-[18px] font-medium leading-6 leading-6">
+                    <a onclick="closeModalMobile()" href="">
+                        Giới thiệu
+                    </a>
+                </div>
+                <div class="menu relative">
+                    <div class="text-gray-700  text-[18px] font-medium leading-6 leading-6">
+                        <ul onclick="closeModalMobile()">
+                            Danh sách khách sạn
+                        </ul>
                     </div>
-                    <div class="h-screen mt-[4px] p-8 absolute z-50 bg-white top-14 left-0 right-0 md:relative md:top-0 md:bg-transparent items-stretch flex flex-col md:flex-row gap-5">
-                        <div class="text-gray-700  text-[18px] font-medium leading-6  whitespace-nowrap">
-                            <a onclick="closeModalMobile()" href="/">
-                                Trang chủ
-                            </a>
-                        </div>
-                        <div class="text-gray-700  text-[18px] font-medium leading-6 leading-6">
-                            <a onclick="closeModalMobile()" href="">
-                                Giới thiệu
-                            </a>
-                        </div>
-                        <div class="menu relative">
-                            <div class="text-gray-700  text-[18px] font-medium leading-6 leading-6">
-                                <ul onclick="closeModalMobile()">
-                                    Danh sách khách sạn
-                                </ul>
-                            </div>
-                            <!-- Sub Menu -->
-                            <ul id="sub-menu"
-                                class="hidden sub-menu transition background_second  py-2 flex flex-col  text-base font-semibold leading-6 rounded-lg border border-gray-100 border-solid shadow-lg text-neutral-800">
+                    <!-- Sub Menu -->
+                    <ul id="sub-menu"
+                        class="hidden sub-menu transition background_second  py-2 flex flex-col  text-base font-semibold leading-6 rounded-lg border border-gray-100 border-solid shadow-lg text-neutral-800">
 
-                                <li class="nav__link2 py-2 pl-4">
-                                    <a href="#" onclick="highlightParent(this)" class="text-[18px]">Hennessy Mũi Né</a>
-                                </li>
-                                <li class="nav__link2 py-2 pl-4">
-                                    <a href="#" onclick="highlightParent(this)" class="text-[18px]">Hennessy Bắc Giang</a>
-                                </li>
-                                <li class="nav__link2 py-2 pl-4">
-                                    <a href="#" onclick="highlightParent(this)" class="text-[18px]">Hennessy Bắc Ninh</a>
-                                </li>
-                                <li class="nav__link2 py-2 pl-4">
-                                    <a href="#" onclick="highlightParent(this)" class="text-[18px]">Hennessy Kim Bôi</a>
-                                </li>
-                                <li class="nav__link2 py-2 pl-4">
-                                    <a href="#" onclick="highlightParent(this)" class="text-[18px]">Hennessy Hải Dương</a>
-                                </li>
-                                <li class="nav__link2 py-2 pl-4">
-                                    <a href="#" onclick="highlightParent(this)" class="text-[18px]">Hennessy Phú Yên</a>
-                                </li>
-                            </ul>
-                        </div>
+                        <li class="nav__link2 py-2 pl-4">
+                            <a href="#" onclick="highlightParent(this)" class="text-[18px]">Hennessy Mũi Né</a>
+                        </li>
+                        <li class="nav__link2 py-2 pl-4">
+                            <a href="#" onclick="highlightParent(this)" class="text-[18px]">Hennessy Bắc Giang</a>
+                        </li>
+                        <li class="nav__link2 py-2 pl-4">
+                            <a href="#" onclick="highlightParent(this)" class="text-[18px]">Hennessy Bắc Ninh</a>
+                        </li>
+                        <li class="nav__link2 py-2 pl-4">
+                            <a href="#" onclick="highlightParent(this)" class="text-[18px]">Hennessy Kim Bôi</a>
+                        </li>
+                        <li class="nav__link2 py-2 pl-4">
+                            <a href="#" onclick="highlightParent(this)" class="text-[18px]">Hennessy Hải Dương</a>
+                        </li>
+                        <li class="nav__link2 py-2 pl-4">
+                            <a href="#" onclick="highlightParent(this)" class="text-[18px]">Hennessy Phú Yên</a>
+                        </li>
+                    </ul>
+                </div>
 
-                        <div class="text-gray-700  text-[18px] font-medium leading-6  whitespace-nowrap">
-                            <a onclick="closeModalMobile()" href="">
-                                Liên hệ
-                            </a>
-                        </div>
-                    </div>
+                <div class="text-gray-700  text-[18px] font-medium leading-6  whitespace-nowrap">
+                    <a onclick="closeModalMobile()" href="">
+                        Liên hệ
+                    </a>
                 </div>
             </div>
- 
+        </div>
+    </div>
+
 
     <main class="pt-20">
         @RenderBody()
