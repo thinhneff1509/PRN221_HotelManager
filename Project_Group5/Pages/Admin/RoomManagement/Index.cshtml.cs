@@ -1,12 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
+using Project_Group5.Dto;
 using Project_Group5.Models;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace Project_Group5.Pages.RoomManagement
+namespace Project_Group5.Pages.Admin.RoomManagement
 {
     public class IndexModel : PageModel
     {
@@ -17,8 +15,10 @@ namespace Project_Group5.Pages.RoomManagement
             _context = context;
         }
 
+        /*        [BindProperty]
+                public Room Room { get; set; }*/
         [BindProperty]
-        public Room Room { get; set; }
+        public RoomDto Room { get; set; }
         public List<Room> Rooms { get; set; }
         public List<RoomType> RoomTypes { get; set; }
 
@@ -31,6 +31,7 @@ namespace Project_Group5.Pages.RoomManagement
                             r.RoomNumber.Contains(searchString) ||
                             r.Status.Contains(searchString))
                 .Include(r => r.Roomtype) // Bao gồm RoomType để hiển thị loại phòng
+                .Include(r => r.ImageRooms)
                 .ToListAsync();
 
             // Lấy danh sách các loại phòng
@@ -47,9 +48,37 @@ namespace Project_Group5.Pages.RoomManagement
                 Rooms = await _context.Rooms.Include(r => r.Roomtype).ToListAsync();
                 return Page(); // Nếu dữ liệu không hợp lệ, trở lại trang
             }
+            if (await _context.Rooms.AnyAsync(r => r.RoomNumber == Room.RoomNumber))
+            {
+                RoomTypes = await _context.RoomTypes.ToListAsync();
+                ViewData["ShowModal"] = true;
+                Rooms = await _context.Rooms.Include(r => r.Roomtype).ToListAsync();
+                TempData["Error"] = "Phòng đã tồn tại";
+                return Page();
+            }
+            var room = new Room
+            {
+                RoomNumber = Room.RoomNumber,
+                Status = Room.Status,
+                RoomtypeId = Room.RoomtypeId
+            };
 
-            _context.Rooms.Add(Room); // Thêm phòng mới vào DbContext
+            _context.Rooms.Add(room); // Thêm phòng mới vào DbContext
             await _context.SaveChangesAsync(); // Lưu thay đổi vào cơ sở dữ liệu
+
+            if (Room.ImageFiles != null && Room.ImageFiles.Count > 0)
+            {
+                foreach (var file in Room.ImageFiles)
+                {
+                    var imageRoom = new ImageRoom
+                    {
+                        RoomId = room.Id,
+                        Path = await SaveImageFileAsync(file) // Save the file and get the path
+                    };
+                    _context.ImageRooms.Add(imageRoom);
+                }
+                await _context.SaveChangesAsync();
+            }
 
             return RedirectToPage(); // Chuyển hướng về trang danh sách phòng
         }
@@ -69,6 +98,21 @@ namespace Project_Group5.Pages.RoomManagement
             roomToUpdate.RoomtypeId = Room.RoomtypeId;
 
             await _context.SaveChangesAsync(); // Lưu thay đổi vào cơ sở dữ liệu
+
+            if (Room.ImageFiles != null && Room.ImageFiles.Count > 0)
+            {
+                foreach (var file in Room.ImageFiles)
+                {
+                    var imageRoom = new ImageRoom
+                    {
+                        RoomId = roomToUpdate.Id,
+                        Path = await SaveImageFileAsync(file)
+                    };
+                    _context.ImageRooms.Add(imageRoom);
+                }
+                await _context.SaveChangesAsync();
+            }
+
 
             return RedirectToPage(); // Chuyển hướng về trang danh sách phòng
         }
@@ -142,6 +186,20 @@ namespace Project_Group5.Pages.RoomManagement
             return RedirectToPage();
         }
 
+        private async Task<string> SaveImageFileAsync(IFormFile file)
+        {
+            string uploadFolder = "wwwroot/images/rooms";
+            if (!Directory.Exists(uploadFolder))
+            {
+                Directory.CreateDirectory(uploadFolder);
+            }
+            var filePath = Path.Combine(uploadFolder, Guid.NewGuid().ToString() + Path.GetExtension(file.FileName));
+            using (var fileStream = new FileStream(filePath, FileMode.Create))
+            {
+                await file.CopyToAsync(fileStream);
+            }
+            return "rooms/" + Path.GetFileName(filePath); // Return relative path
+        }
 
     }
 }

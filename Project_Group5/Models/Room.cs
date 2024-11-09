@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace Project_Group5.Models
+﻿namespace Project_Group5.Models
 {
     public partial class Room
     {
@@ -14,15 +11,14 @@ namespace Project_Group5.Models
         }
 
         public int Id { get; set; }
-        public string? RoomNumber { get; set; } = null!;
-        public string? Status { get; set; } = null!;
-        public int? RoomtypeId { get; set; }
+        public string RoomNumber { get; set; } = null!;
+        public string Status { get; set; } = null!;
+        public int RoomtypeId { get; set; }
 
         public virtual RoomType Roomtype { get; set; } = null!;
         public virtual ICollection<Booking> Bookings { get; set; }
         public virtual ICollection<Feedback> Feedbacks { get; set; }
         public virtual ICollection<ImageRoom> ImageRooms { get; set; }
         public virtual ICollection<Wishlist> Wishlists { get; set; }
-        public ICollection<ServiceRegistration> ServiceRegistrations { get; set; }
     }
 }

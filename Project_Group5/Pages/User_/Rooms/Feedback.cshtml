@@ -6,42 +6,7 @@
 
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 
-<style>
-    .rating-bar {
-        height: 20px;
-        background-color: #e9ecef;
-        border-radius: 10px;
-        overflow: hidden;
-    }
-
-    .rating-fill {
-        height: 100%;
-        background-color: #0d6efd;
-        transition: width 0.3s ease;
-    }
-
-    .rating-circle {
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        background-color: #0d6efd;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        font-size: 2.5rem;
-        font-weight: bold;
-        margin: 0 auto;
-    }
-
-    .category-rating {
-        color: #0d6efd;
-    }
-
-    .star-rating {
-        color: #ffc107;
-    }
-</style>
+<link href="~/css/feedback.css" rel="stylesheet">
 
 <div class="container mt-4">
     <!-- Tổng quan đánh giá -->
@@ -131,12 +96,12 @@
             <form method="post">
                 <div class="row mb-3">
                     <div class="col-md-6">
-                        <label asp-for="Feedback.CustomerId" class="form-label">Mã khách hàng</label>
-                        <input asp-for="Feedback.CustomerId" class="form-control" required />
-                        <span asp-validation-for="Feedback.CustomerId" class="text-danger"></span>
+                        <label class="form-label">Khách hàng</label>
+                        <input type="text" class="form-control" value="@Model.CustomerName" disabled />
+                        @* <input type="hidden" asp-for="Feedback.CustomerId" value="@Model.CustomerName" /> *@
                     </div>
                     <div class="col-md-6">
-                        <label asp-for="Feedback.RoomId" class="form-label">Mã phòng</label>
+                        <label asp-for="Feedback.RoomId" class="form-label">Phòng</label>
                         <input asp-for="Feedback.RoomId" class="form-control" required />
                         <span asp-validation-for="Feedback.RoomId" class="text-danger"></span>
                     </div>

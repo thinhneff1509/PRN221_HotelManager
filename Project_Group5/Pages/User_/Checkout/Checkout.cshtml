@@ -68,7 +68,7 @@
                             <div class="flex items-center">
                                 <input type="radio" id="f-option6" name="paymentMethod" class="mr-2" />
                                 <label for="f-option6" class="text-gray-700">Paypal</label>
-                                <img src="~/assets/images/card.jpg" alt="Paypal" class="ml-2" />
+                           @*     <img src="~/assets/images/card.jpg" alt="Paypal" class="ml-2" /> *@
                             </div>
                             <p class="text-sm text-gray-600 mt-1">
                                 Please send a check to Store Name, Store Street, Store Town,
@@ -80,6 +80,9 @@
                             <label for="f-option4" class="text-gray-700">I’ve read and accept the </label>
                             <a href="#" class="text-blue-500 hover:underline">terms & conditions*</a>
                         </div>
+                        <button type="submit" formaction="/Checkout/OnPostCheckout" class="btn_3 bg-blue-500 text-white px-4 py-2 rounded mt-4 inline-block hover:bg-blue-600">
+                            Thanh toán qua VNPAY
+                        </button>
                         <button type="submit" class="btn_3 bg-blue-500 text-white px-4 py-2 rounded mt-4 inline-block hover:bg-blue-600">Proceed to Paypal</button>
                     </div>
                 </div>

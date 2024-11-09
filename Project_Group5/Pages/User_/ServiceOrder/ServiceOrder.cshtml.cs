@@ -5,9 +5,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Project_Group5.Pages.ServiceOrder
 {
+    //[Authorize(Roles = "1,2")]
     public class ServiceOrderModel : PageModel
     {
         private readonly Fall24_SE1745_PRN221_Group5Context _context;
@@ -33,6 +35,7 @@ namespace Project_Group5.Pages.ServiceOrder
         public async Task OnGetAsync(int bookingId)
         {
             BookingId = bookingId;
+
             // Lấy danh sách phòng và dịch vụ từ cơ sở dữ liệu
             Rooms = await _context.Rooms.Include(r => r.Roomtype).ToListAsync();
             Services = await _context.Services.Where(s => s.Status == "Available").ToListAsync();
@@ -50,7 +53,6 @@ namespace Project_Group5.Pages.ServiceOrder
 
         public async Task<IActionResult> OnPostAddServiceAsync()
         {
-            // Lấy booking cùng với các dịch vụ đã đăng ký
             var booking = await _context.Bookings
                 .Include(b => b.Room) // Bao gồm Room qua Booking
                 .Include(b => b.ServiceRegistrations)
