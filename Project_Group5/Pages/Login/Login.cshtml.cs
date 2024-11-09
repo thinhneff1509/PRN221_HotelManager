@@ -41,7 +41,8 @@ namespace Project_Group5.Pages.Login
             {
                 new Claim(ClaimTypes.Name, customer.Username),
                 new Claim(ClaimTypes.NameIdentifier, customer.Id.ToString()),
-                new Claim(ClaimTypes.Role, customer.Role.Id == 1 ? "Admin" : "User") // Assign role based on Role ID
+                 new Claim(ClaimTypes.Role, customer.Role.Id == 1 ? "Admin" :
+                           customer.Role.Id == 3 ? "Receptionist" : "Customer") // Set Role based on Role ID
 			};
 
             var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);

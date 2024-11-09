@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "6Op9pH98Bns=",
+  "dgSpecHash": "dRt7bd7rUgs=",
   "success": true,
   "projectFilePath": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\Project_Group5.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Le Cong Truong Thinh\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\Le Cong Truong Thinh\\.nuget\\packages\\microsoft.aspnetcore.authentication.google\\6.0.35\\microsoft.aspnetcore.authentication.google.6.0.35.nupkg.sha512",
     "C:\\Users\\Le Cong Truong Thinh\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.35\\microsoft.aspnetcore.cryptography.internal.6.0.35.nupkg.sha512",
     "C:\\Users\\Le Cong Truong Thinh\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\6.0.35\\microsoft.aspnetcore.cryptography.keyderivation.6.0.35.nupkg.sha512",
     "C:\\Users\\Le Cong Truong Thinh\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\6.0.35\\microsoft.aspnetcore.identity.entityframeworkcore.6.0.35.nupkg.sha512",
@@ -18,6 +19,7 @@
     "C:\\Users\\Le Cong Truong Thinh\\.nuget\\packages\\microsoft.entityframeworkcore.design\\6.0.35\\microsoft.entityframeworkcore.design.6.0.35.nupkg.sha512",
     "C:\\Users\\Le Cong Truong Thinh\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\6.0.35\\microsoft.entityframeworkcore.relational.6.0.35.nupkg.sha512",
     "C:\\Users\\Le Cong Truong Thinh\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\6.0.35\\microsoft.entityframeworkcore.sqlserver.6.0.35.nupkg.sha512",
+    "C:\\Users\\Le Cong Truong Thinh\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\6.0.35\\microsoft.entityframeworkcore.tools.6.0.35.nupkg.sha512",
     "C:\\Users\\Le Cong Truong Thinh\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\6.0.0\\microsoft.extensions.caching.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\Le Cong Truong Thinh\\.nuget\\packages\\microsoft.extensions.caching.memory\\6.0.2\\microsoft.extensions.caching.memory.6.0.2.nupkg.sha512",
     "C:\\Users\\Le Cong Truong Thinh\\.nuget\\packages\\microsoft.extensions.configuration\\8.0.0\\microsoft.extensions.configuration.8.0.0.nupkg.sha512",

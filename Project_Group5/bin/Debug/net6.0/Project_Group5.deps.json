@@ -8,9 +8,11 @@
     ".NETCoreApp,Version=v6.0": {
       "Project_Group5/1.0.0": {
         "dependencies": {
+          "Microsoft.AspNetCore.Authentication.Google": "6.0.35",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.35",
           "Microsoft.EntityFrameworkCore.Design": "6.0.35",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.35",
+          "Microsoft.EntityFrameworkCore.Tools": "6.0.35",
           "Microsoft.Extensions.Configuration": "8.0.0",
           "Microsoft.IdentityModel.JsonWebTokens": "8.2.0",
           "Newtonsoft.Json": "13.0.3"
@@ -24,6 +26,14 @@
           "lib/netstandard2.0/Humanizer.dll": {
             "assemblyVersion": "2.8.0.0",
             "fileVersion": "2.8.26.1919"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Authentication.Google/6.0.35": {
+        "runtime": {
+          "lib/net6.0/Microsoft.AspNetCore.Authentication.Google.dll": {
+            "assemblyVersion": "6.0.35.0",
+            "fileVersion": "6.0.3524.46214"
           }
         }
       },
@@ -195,6 +205,11 @@
             "assemblyVersion": "6.0.35.0",
             "fileVersion": "6.0.3524.46208"
           }
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Tools/6.0.35": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Design": "6.0.35"
         }
       },
       "Microsoft.Extensions.Caching.Abstractions/6.0.0": {
@@ -582,6 +597,13 @@
       "path": "humanizer.core/2.8.26",
       "hashPath": "humanizer.core.2.8.26.nupkg.sha512"
     },
+    "Microsoft.AspNetCore.Authentication.Google/6.0.35": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3gT/slFxF7l28kWJNEYxYZry2J9NDX6B4RhQyOGQA9l7k6RI80IWse9CgHvMdCbxIPqZC2yFbJl3epdC6Nq7Fw==",
+      "path": "microsoft.aspnetcore.authentication.google/6.0.35",
+      "hashPath": "microsoft.aspnetcore.authentication.google.6.0.35.nupkg.sha512"
+    },
     "Microsoft.AspNetCore.Cryptography.Internal/6.0.35": {
       "type": "package",
       "serviceable": true,
@@ -672,6 +694,13 @@
       "sha512": "sha512-etudN81bkWf+dvlomKAA5AwdHkfvuFw/eLr0aV8l7L7z8i1aciaEatqO4L9eQvYKBCGUV4fQ2IJcLMyF+k/Zcg==",
       "path": "microsoft.entityframeworkcore.sqlserver/6.0.35",
       "hashPath": "microsoft.entityframeworkcore.sqlserver.6.0.35.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore.Tools/6.0.35": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3zc8pE7wzfB/9V7/eQB0O2obELKa+/Iy6KL0cwQWo+z8uZcHCHGhzieeKWHXQE/ZWibJY3W4ps87bWb9ByLBkQ==",
+      "path": "microsoft.entityframeworkcore.tools/6.0.35",
+      "hashPath": "microsoft.entityframeworkcore.tools.6.0.35.nupkg.sha512"
     },
     "Microsoft.Extensions.Caching.Abstractions/6.0.0": {
       "type": "package",
