@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace Project_Group5.Models
+﻿namespace Project_Group5.Models
 {
     public partial class Room
     {

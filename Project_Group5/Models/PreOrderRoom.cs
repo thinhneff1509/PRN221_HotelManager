@@ -2,6 +2,7 @@
 {
     public class PreOrderRoom
     {
+        public int? RoomTypeId { get; set; }
         public int Id { get; set; }
         public int price { get; set; }
         public int AdultCount { get; set; }

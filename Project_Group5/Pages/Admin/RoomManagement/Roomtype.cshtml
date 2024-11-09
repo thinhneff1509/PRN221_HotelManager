@@ -1,0 +1,207 @@
+﻿@page
+@model Project_Group5.Pages.Admin.RoomManagement.RoomtypeModel
+@{
+}
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success" role="alert">
+        @TempData["SuccessMessage"]
+    </div>
+}
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger" role="alert">
+        @TempData["Error"]
+    </div>
+}
+<h2>Quản lý Phòng</h2>
+
+<div class="container mt-4">
+    <!-- Tìm kiếm phòng -->
+    <form method="get" class="form-inline mb-4">
+        <input type="text" name="searchString" class="form-control mr-2" placeholder="Tìm kiếm phòng" value="@Request.Query["searchString"]" />
+        <button type="submit" class="btn btn-primary">Tìm kiếm</button>
+    </form>
+
+    <!-- Danh sách phòng -->
+    <table class="table table-bordered">
+        <thead class="thead-light">
+            <tr>
+                <th>Tên Hạng Phòng</th>
+                <th>Mô tả</th>
+                <th>Giá</th>
+                <th>Số giường</th> <!-- Thêm cột hình ảnh -->
+                <th>Số phòng</th>
+                <th>Hành Động</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var roomType in Model.RoomTypes)
+            {
+                <tr>
+                    <td>@roomType.Name</td>
+                    <td>@roomType.Description</td>
+                    <td>@roomType.Price</td>
+                    <td>@roomType.Bed</td>
+                    <td>@roomType.Rooms.Count</td>
+                    <td>
+                        <button class="btn btn-warning" data-toggle="modal" data-target="#editModal"
+                                data-room-id="@roomType.Id"
+                                data-room-name="@roomType.Name"
+                                data-room-description="@roomType.Description"
+                                data-room-price="@roomType.Price"
+                                data-room-bed="@roomType.Bed">
+                            Sửa
+                        </button>
+                        <button class="btn btn-danger" data-toggle="modal" data-target="#deleteModal" data-room-id="@roomType.Id">
+                            Xóa
+                        </button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+
+    <!-- Button Thêm phòng -->
+    <button class="btn btn-success" data-toggle="modal" data-target="#addModal">Thêm Hạng Phòng</button>
+</div>
+
+<!-- Modal Thêm Phòng -->
+<div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <form method="post" asp-page-handler="Add">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addModalLabel">Thêm Hạng Phòng</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>Tên hạng phòng</label>
+                        <input type="text" asp-for="RoomType.Name" class="form-control" required />
+                        <span asp-validation-for="RoomType.Name" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label>Giá</label>
+                        <input type="number" asp-for="RoomType.Price" class="form-control" required>
+                        <span asp-validation-for="RoomType.Price" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label>Mô Tả</label>
+                        <input type="text" asp-for="RoomType.Description" class="form-control" required />
+                        <span asp-validation-for="RoomType.Description" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label>Số Giường</label>
+                        <input type="number" asp-for="RoomType.Bed" class="form-control" multiple />
+                        <span asp-validation-for="RoomType.Bed" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                    <button type="submit" class="btn btn-primary">Lưu</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Cập nhật Phòng -->
+<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <form method="post" asp-page-handler="Update" enctype="multipart/form-data">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editModalLabel">Cập Nhật Phòng</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <input name="RoomType.Id"type="hidden"/>
+                    <div class="form-group">
+                        <label>Tên hạng phòng</label>
+                        <input type="text" name="RoomType.Name" class="form-control" required />
+                        <span asp-validation-for="RoomType.Name" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label>Giá</label>
+                        <input type="number" name="RoomType.Price" class="form-control" required>
+                        <span asp-validation-for="RoomType.Price" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label>Mô Tả</label>
+                        <input type="text" name="RoomType.Description" class="form-control" required />
+                        <span asp-validation-for="RoomType.Description" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label>Số Giường</label>
+                        <input type="number" name="RoomType.Bed" class="form-control" required />
+                        <span asp-validation-for="RoomType.Bed" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                    <button type="submit" class="btn btn-primary">Lưu Thay Đổi</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Xóa Phòng -->
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <form method="post" asp-page-handler="Delete">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deleteModalLabel">Xóa Phòng</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Bạn có chắc chắn muốn xóa phòng này?</p>
+                    <input type="hidden" name="id" />
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
+                    <button type="submit" class="btn btn-danger">Xóa</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $('#editModal').on('show.bs.modal', function (event) {
+            var button = $(event.relatedTarget);
+            var roomTypeId = button.data('room-id');
+            var roomTypeName = button.data('room-name');
+            var roomTypeDescription = button.data('room-description');
+            var roomTypePrice = button.data('room-price');
+            var roomTypeBed = button.data('room-bed');
+
+
+            var modal = $(this);
+            modal.find('input[name="RoomType.Id"]').val(roomTypeId);
+            modal.find('input[name="RoomType.Name"]').val(roomTypeName);
+            modal.find('input[name="RoomType.Description"]').val(roomTypeDescription);
+            modal.find('input[name="RoomType.Price"]').val(roomTypePrice);
+            modal.find('input[name="RoomType.Bed"]').val(roomTypeBed);
+
+        });
+
+        $('#deleteModal').on('show.bs.modal', function (event) {
+            var button = $(event.relatedTarget);
+            var roomTypeId = button.data('room-id');
+            console.log("RoomType ID:", roomTypeId); // In ra để kiểm tra
+            var modal = $(this);
+            modal.find('input[name="id"]').val(roomTypeId);
+        });
+    </script>
+}

@@ -103,23 +103,18 @@ namespace Project_Group5.Pages.Rooms
                     DateTime CheckOutDate = DateTime.Parse(CheckoutDate);
                     foreach (var r in SelectedRooms)
                     {
-                        var listRoom = await context.Rooms
-                            .Where(lr => lr.RoomtypeId == int.Parse(r.RoomType) && !lr.Status.Equals("full"))
-                            .Take(r.RoomList.Count)
-                            .ToListAsync();
-
+                        var listRoom = await context.Rooms.Where(lr => lr.RoomtypeId == int.Parse(r.RoomType) && !lr.Status.Equals("Đang đặt cọc")).Take(r.RoomList.Count).ToListAsync();
                         foreach (var ri in listRoom)
                         {
-                            ri.Status = "full";
+                            ri.Status = "Đang đặt cọc";
                             context.Update(ri);
-
                             // Tính toán giảm giá, nếu có
                             var discount = await context.Discounts.FirstOrDefaultAsync(d => d.BookingId == ri.Id);
                             double finalAmount = double.Parse(TotalAmount);
                             if (discount != null)
                             {
                                 // Giả sử giảm giá là theo phần trăm
-                          //      finalAmount = finalAmount * (1 -(discount.Amount / 100));
+                                //      finalAmount = finalAmount * (1 -(discount.Amount / 100));
                             }
 
                             var booking = new Booking
