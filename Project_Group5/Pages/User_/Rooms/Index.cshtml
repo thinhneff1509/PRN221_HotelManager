@@ -1,4 +1,4 @@
-@page "/Room/Index"
+@page "/Room/Booking"
 @model Project_Group5.Pages.Rooms.IndexModel
 @{
     var rooms = Model.Rooms;
@@ -10,24 +10,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotel Room</title>
     <link href="~/css/listroom.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
     <main>
         <div class="search-bar">
-            <form class="row g-3 align-items-center">
+            <form method="post" asp-page-handler="CalculatePrice" class="row g-3 align-items-center">
                 <div class="col-auto">
                     <label for="checkin-date" class="col-form-label">Ngày đến</label>
-                    <input type="date" id="checkin-date" class="form-control" value="2024-10-25" onchange="calculateTotalPrice()">
+                    <input type="date" id="checkin-date" name="CheckInDate" class="form-control" value="@Model.CheckInDate.ToString("yyyy-MM-dd")">
                 </div>
 
                 <div class="col-auto">
                     <label for="checkout-date" class="col-form-label">Ngày đi</label>
-                    <input type="date" id="checkout-date" class="form-control" value="2024-10-26" onchange="calculateTotalPrice()">
+                    <input type="date" id="checkout-date" name="CheckOutDate" class="form-control" value="@Model.CheckOutDate.ToString("yyyy-MM-dd")">
                 </div>
 
                 <div class="col-auto">
                     <label for="promo-code" class="col-form-label">Mã khuyến mại</label>
-                    <input type="text" id="promo-code" class="form-control" placeholder="Mã khuyến mại">
+                    <input type="text" id="promo-code" name="PromoCode" class="form-control" placeholder="Mã khuyến mại" value="@Model.PromoCode">
                 </div>
 
                 <div class="col-auto">
@@ -54,7 +55,6 @@
                                                     <img src="/images/@image.Path" class="d-block w-100 room-image" alt="Room Image">
                                                 </div>
                                             }
-
                                         }
                                     </div>
                                     <button class="carousel-control-prev" type="button" data-bs-target="#roomCarousel_@room.Id" data-bs-slide="prev">
@@ -71,41 +71,22 @@
                                     <h2>@room.Name</h2>
                                     <p>Số giường: @room.Bed</p>
                                     <ul class="amenities">
-                                        <li><i class="fa fa-wifi"></i>Wifi</li>
+                                        <li><i class="fa fa-wifi"></i> Wifi</li>
                                         <li><i class="fa fa-tv"></i> TV</li>
                                         <li><i class="fa fa-bath"></i> Bồn tắm</li>
                                     </ul>
                                     <p class="price">Giá chỉ từ: <strong>@String.Format("{0:N0}", room.Price) VND</strong> / đêm</p>
 
                                     <div class="row col-md-12 d-flex justify-content-between">
-                                        <button class="choose-btn col-md-5" data-bs-toggle="collapse" data-bs-target="#roomOptions_@room.Id" aria-expanded="false" aria-controls="roomOptions_@room.Id">
-                                            Lựa chọn
-                                        </button>
-                                        @* <button class="choose-btn col-md-5">Xem chi tiết phòng</button> *@
+                                        <form method="post" asp-page-handler="ChooseRoom">
+                                            <input type="hidden" name="SelectedRoomId" value="@room.Id" />
+                                            <button type="submit" class="choose-btn col-md-5">Lựa chọn</button>
+                                        </form>
                                         <div class="choose-btn col-md-5" onclick="window.location='/User_/Rooms/Detail/@room.Id'">
                                             Xem chi tiết phòng <i class="bi bi-chevron-down"></i>
                                         </div>
-
                                     </div>
                                 </div>
-                            </div>
-
-                            <!-- Hidden by default, shown when "Lựa chọn" is clicked -->
-                            <div id="roomOptions_@room.Id" class="room-options collapse">
-                                <p><strong>@room.Name</strong></p>
-                                <p><del>@String.Format("{0:N0}", room.Price) VND</del> <strong>@String.Format("{0:N0}", room.Price) VND</strong> / đêm</p>
-                                <label for="room-count">Số phòng:</label>
-                                <select id="room-count_@room.Id" onchange="updateRoomOptions('@room.Id', @room.Bed, '@room.Name', @room.Price)">
-                                    @for (int i = 0; i <= room.Rooms.Where(r => !r.Status.Equals("full")).Count(); i++)
-                                    {
-                                        <option value="@i">@i phòng</option>
-                                    }
-                                </select>
-
-                                <label>2 người lớn:</label>
-
-                                <div id="room-selectors_@room.Id"></div>
-
                             </div>
                         </div>
                     }
@@ -117,13 +98,14 @@
                 <div class="selected-rooms">
                     <h3>Thông Tin Phòng</h3>
                     <div class="selected-room">
-
-                        @foreach (var room in rooms)
+                        @foreach (var selectedRoom in Model.SelectedRooms)
                         {
-                            <div class="content-block" id="selected_room_@room.Id">
+                            <div class="content-block">
+                                <p><strong>Phòng: </strong>@selectedRoom.RoomName</p>
+                                <p><strong>Giá: </strong>@selectedRoom.Price.ToString("N0") VND / đêm</p>
                             </div>
                         }
-                        <p><strong>Tổng cộng: <span id="total-price">0</span> VND</strong></p>
+                        <p><strong>Tổng cộng: @Model.TotalPrice.ToString("N0") VND</strong></p>
                         <button class="choose-btn">Đặt Ngay</button>
                     </div>
                 </div>
@@ -131,109 +113,6 @@
         </div>
     </main>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
-
-<script>
-    // Select all collapse toggle buttons
-    document.querySelectorAll('.choose-btn').forEach(button => {
-        button.addEventListener('click', function () {
-            const target = document.querySelector(this.getAttribute('data-bs-target')); // Get the target element
-            const isCollapsed = target.style.display === 'block'; // Check if it's currently shown
-
-            // Toggle the display property
-            target.style.display = isCollapsed ? 'none' : 'block';
-
-            // Optionally, you can add smooth transitions
-            if (isCollapsed) {
-                target.style.display = 'none';
-            }
-        });
-    });
-</script>
-
-<script>
-    function updateRoomOptions(roomId, maxBed, roomName, price) {
-        const roomCount = document.getElementById(room - count_${ roomId }).value;
-        const selectorsContainer = document.getElementById(room - selectors_${ roomId });
-        const selectedRoomsContainer = document.getElementById(selected_room_${ roomId });
-
-        // Clear previous selectors and selected rooms
-        selectorsContainer.innerHTML = '';
-        selectedRoomsContainer.innerHTML = '';
-
-        // Generate adult and children selectors for each room
-        for (let i = 1; i <= roomCount; i++) {
-            const roomLabel = <p><strong>Phòng ${ i }</strong></p >;
-            const adultSelector = `
-                <label for="adult-count_${roomId}_${i}">Người lớn:</label>
-                <select id="adult-count_${roomId}_${i}">
-                    ${Array.from({ length: maxBed }, (_, index) => <option value="${index + 1}" > ${ index + 1}</option>).join('')}
-                </select>
-            `;
-            const childrenSelector = `
-                <label for="children-count_${roomId}_${i}">Trẻ em (6-11 tuổi):</label>
-                <select id="children-count_${roomId}_${i}">
-                    ${Array.from({ length: maxBed + 1 }, (_, index) => <option value="${index}" > ${ index } < /option>).join('')}
-                < /select>
-                    `;
-
-            // Append selectors to the container
-            selectorsContainer.innerHTML += roomLabel + adultSelector + childrenSelector;
-
-            // Append selected rooms info to the selected rooms container
-            selectedRoomsContainer.innerHTML += `
-                < p > <strong>Phòng ${ i } < /strong></p >
-            <p><strong>${ roomName } < /strong></p >
-            <p>Giá: ${ formatPrice(price) } VND / đêm < /p>
-            < input type = "hidden" class= "selected_room_price" value = "${price}" >
-            <p>Số người lớn: <span id="adult-count-display_${roomId}_${i}" > 1 < /span></p >
-            <p>Số trẻ em: <span id="children-count-display_${roomId}_${i}" > 0 < /span></p >
-            `;
-        }
-
-        // Add event listeners to update displayed counts in selected room info
-        for (let i = 1; i <= roomCount; i++) {
-            document.getElementById(adult-count_${roomId}_${i}).addEventListener('change', function () {
-                document.getElementById(adult-count-display_${roomId}_${i}).innerText = this.value;
-            });
-
-            document.getElementById(children-count_${roomId}_${i}).addEventListener('change', function () {
-                document.getElementById(children-count-display_${roomId}_${i}).innerText = this.value;
-            });
-        }
-        calculateTotalPrice();
-    }
-
-    function calculateTotalPrice() {
-            const selectedRoomPrices = document.querySelectorAll('.selected_room_price');
-            let totalPrice = 0;
-
-            selectedRoomPrices.forEach(priceInput => {
-                totalPrice += parseInt(priceInput.value);
-            });
-
-            let stayDuration = 1;
-            const checkinDate = new Date(document.getElementById('checkin-date').value);
-            const checkoutDate = new Date(document.getElementById('checkout-date').value);
-
-            // Tính số ngày lưu trú
-            if (checkoutDate > checkinDate) {
-                stayDuration = (checkoutDate - checkinDate) / (1000 * 3600 * 24);
-            } else {
-                stayDuration = 1;
-            }
-
-            totalPrice *= stayDuration;
-
-            // Display the total price
-            document.getElementById('total-price').innerText = formatPrice(totalPrice);
-        }
-
-    function formatPrice(amount) {
-            return new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(amount);
-        }
-</script>
-
 </html>
