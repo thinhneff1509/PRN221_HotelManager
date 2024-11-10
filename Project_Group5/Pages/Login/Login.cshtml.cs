@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
@@ -23,6 +23,21 @@ namespace Project_Group5.Pages.Login
         {
             _context = context;
         }
+
+        public IActionResult OnGet()
+        {
+            // Kiểm tra nếu người dùng đã đăng nhập và không phải là Customer
+            if (User.Identity.IsAuthenticated)
+            {
+                var userRole = User.FindFirst(ClaimTypes.Role)?.Value;
+                if (userRole != "Customer") // Role khác Customer
+                {
+                    return RedirectToPage("/Homepage/Home"); // Điều hướng đến trang chính hoặc trang phù hợp
+                }
+            }
+            return Page(); // Nếu chưa đăng nhập hoặc là Customer, hiển thị trang đăng nhập
+        }
+
 
         public async Task<IActionResult> OnPostAsync()
         {
