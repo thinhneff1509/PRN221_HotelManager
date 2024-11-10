@@ -31,11 +31,12 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="thinh_loginbygg" />
+        <entry key="$PROJECT_DIR$/.." value="3389ec1a055197b318e312757984cf6f895f5a37" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
-    <option name="RESET_MODE" value="MIXED" />
+    <option name="RESET_MODE" value="HARD" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -64,6 +65,8 @@
     <setting file="file://$PROJECT_DIR$/Pages/Admin/PaymentManagerment/PaymentManagement.cshtml.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Pages/Homepage/Home.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Pages/Shared/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/Shared/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/Shared/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Pages/User_/Rooms/Detail.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Pages/User_/Rooms/Detail.cshtml.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Pages/User_/Rooms/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
@@ -100,7 +103,7 @@
     "settings.editor.selected.configurable": "advanced.settings",
     "vue.rearranger.settings.migration": "true"
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.Project_Group5">
     <configuration name="Project_Group5" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/Project_Group5.csproj" />
@@ -440,63 +443,55 @@
       <option name="project" value="LOCAL" />
       <updated>1730991766106</updated>
     </task>
-    <task id="LOCAL-00036" summary="lgin by gg , payment vnpay">
+    <task id="LOCAL-00036" summary="commit">
       <option name="closed" value="true" />
-      <created>1731158078739</created>
+      <created>1731170054269</created>
       <option name="number" value="00036" />
       <option name="presentableId" value="LOCAL-00036" />
       <option name="project" value="LOCAL" />
-      <updated>1731158078739</updated>
+      <updated>1731170054269</updated>
     </task>
-    <task id="LOCAL-00037" summary="tesst">
+    <task id="LOCAL-00037" summary="delete gg">
       <option name="closed" value="true" />
-      <created>1731158105207</created>
+      <created>1731170248878</created>
       <option name="number" value="00037" />
       <option name="presentableId" value="LOCAL-00037" />
       <option name="project" value="LOCAL" />
-      <updated>1731158105207</updated>
+      <updated>1731170248878</updated>
     </task>
-    <task id="LOCAL-00038" summary="change password">
+    <task id="LOCAL-00038" summary="mergecodeloi">
       <option name="closed" value="true" />
-      <created>1731158127364</created>
+      <created>1731208350452</created>
       <option name="number" value="00038" />
       <option name="presentableId" value="LOCAL-00038" />
       <option name="project" value="LOCAL" />
-      <updated>1731158127364</updated>
+      <updated>1731208350452</updated>
     </task>
-    <task id="LOCAL-00039" summary="merge Hoang Admin payment">
+    <task id="LOCAL-00039" summary="Add to cart">
       <option name="closed" value="true" />
-      <created>1731158874527</created>
+      <created>1731217214200</created>
       <option name="number" value="00039" />
       <option name="presentableId" value="LOCAL-00039" />
       <option name="project" value="LOCAL" />
-      <updated>1731158874527</updated>
+      <updated>1731217214200</updated>
     </task>
-    <task id="LOCAL-00040" summary="file evn">
+    <task id="LOCAL-00040" summary="Login gg done 1/2">
       <option name="closed" value="true" />
-      <created>1731166397442</created>
+      <created>1731247723656</created>
       <option name="number" value="00040" />
       <option name="presentableId" value="LOCAL-00040" />
       <option name="project" value="LOCAL" />
-      <updated>1731166397442</updated>
+      <updated>1731247723656</updated>
     </task>
-    <task id="LOCAL-00041" summary="test">
+    <task id="LOCAL-00041" summary="check">
       <option name="closed" value="true" />
-      <created>1731166433182</created>
+      <created>1731247756115</created>
       <option name="number" value="00041" />
       <option name="presentableId" value="LOCAL-00041" />
       <option name="project" value="LOCAL" />
-      <updated>1731166433182</updated>
+      <updated>1731247756115</updated>
     </task>
-    <task id="LOCAL-00042" summary=".evn">
-      <option name="closed" value="true" />
-      <created>1731167042257</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1731167042257</updated>
-    </task>
-    <option name="localTasksCounter" value="43" />
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -512,7 +507,17 @@
             <list>
               <RecentGroup>
                 <option name="FILTER_VALUES">
-                  <option value="thinh_Authen" />
+                  <option value="origin/Hoang_PaymentAdmin" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="HEAD" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/thinh_loginbygg" />
                 </option>
               </RecentGroup>
               <RecentGroup>
@@ -540,7 +545,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="thinh_Authen" />
+                        <option value="origin/Hoang_PaymentAdmin" />
                       </list>
                     </value>
                   </entry>
@@ -554,8 +559,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="dich vu dat do an" />
-    <MESSAGE value="Login admin" />
     <MESSAGE value="merge code admin" />
     <MESSAGE value="fix useradmin" />
     <MESSAGE value="fixx" />

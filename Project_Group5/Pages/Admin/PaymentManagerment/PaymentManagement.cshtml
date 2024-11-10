@@ -3,6 +3,9 @@
 @{
     ViewData["Title"] = "Quản lý Thanh Toán";
     var successMessage = TempData["SuccessMessage"] as string;
+    var isNewestSelected = Model.DateFilter == "Newest" ? "selected" : "";
+    var isOldestSelected = Model.DateFilter == "Oldest" ? "selected" : "";
+
 }
 @if (!string.IsNullOrEmpty(successMessage))
 {
@@ -13,10 +16,15 @@
 }
 
 <h2 class="text-3xl font-semibold text-center my-8">Quản lý Thanh Toán</h2>
-
 <div class="flex justify-between items-center my-4 mx-4">
     <form method="get" class="flex space-x-2">
         <input type="text" name="searchQuery" placeholder="Nhập tên khách hàng..." value="@Model.SearchQuery" class="p-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500" />
+        
+         <select name="sortOrder" class="p-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+            <option value="Newest" isNewestSelected>Mới nhất</option>
+            <option value="Oldest" isOldestSelected>Cũ nhất</option>
+        </select>
+        
         <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-400">Tìm kiếm</button>
     </form>
 </div>
@@ -77,6 +85,7 @@
                                     data-status="@payment.Status">
                                 Sửa
                             </button>
+
                         </td>
                     </tr>
                 }
@@ -177,6 +186,7 @@ else
                         <label asp-for="Payment.Status" class="block text-sm font-medium text-gray-700">Trạng Thái</label>
                         <select asp-for="Payment.Status" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
                             <option value="Pending">Đang chờ</option>
+                            <option value="Booking">Booking</option>
                             <option value="Cancel">Hủy</option>
                             <option value="Success">Thành công</option>
                         </select>
@@ -219,7 +229,7 @@ else
             return confirm("Bạn có chắc chắn muốn cập nhật thanh toán này?");
         }
         $('#editPaymentModal').on('show.bs.modal', function (event) {
-            var button = $(event.relatedTarget);
+            var button = $(event.relatedTarget); // Lấy đối tượng nút "Sửa"
             var id = button.data('id');
             var bookingId = button.data('bookingid');
             var paymentDate = button.data('paymentdate');
@@ -228,17 +238,21 @@ else
             var status = button.data('status');
 
             var modal = $(this);
-            modal.find('input[name="Payment.Id"]').val(id);
+            modal.find('input[name="Payment.Id"]').val(id);  // ID Đặt Chỗ
             modal.find('input[name="Payment.BookingId"]').val(bookingId);  // ID Đặt Chỗ
             modal.find('input[name="Payment.PaymentDate"]').val(paymentDate); // Ngày Thanh Toán (Chỉ Đọc)
             modal.find('input[name="Payment.Amount"]').val(amount);
-
-            // Chọn Phương Thức Thanh Toán
             modal.find('select[name="Payment.PaymentMethod"]').val(paymentMethod);
-
-            // Chọn Trạng Thái
             modal.find('select[name="Payment.Status"]').val(status);
+
+            console.log("ID: ", id);
+            console.log("BookingId: ", bookingId);
+            console.log("PaymentDate: ", paymentDate);
+            console.log("Amount: ", amount);
+            console.log("PaymentMethod: ", paymentMethod);
+            console.log("Status: ", status);
         });
+
 
         // Hiển thị thông báo rồi tự động ẩn sau 3 giây
         if (document.getElementById('successMessage')) {

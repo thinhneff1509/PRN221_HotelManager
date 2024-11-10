@@ -2,6 +2,7 @@
 {
     public class RoomData
     {
+        public int RoomId { get; set; }
         public int RoomTypeId { get; set; }
         public int Bed { get; set; }
         public double Price { get; set; }

@@ -15,15 +15,34 @@
     </div><!-- End Page Title -->
 
     <section class="section dashboard">
-        <div class="row">
-            <div class="col-12 mt-6">
-                <div class="card bg-white shadow-lg rounded-lg p-4">
-                    <div class="card-body text-center">
-                        <h3 class="text-lg font-bold mb-4">Doanh thu hàng tháng (Năm nay)</h3>
-                        <canvas id="revenueChart" style="width: 100%; height: 400px;"></canvas>
+        <!-- Dropdown chọn tháng -->
+        <form method="get" asp-page="/Admin/Dashboard">
+            <label for="month" class="mr-2">Chọn tháng:</label>
+            <select id="month" name="month" class="mb-4">
+                <option value="">Cả năm</option>
+                @for (int i = 1; i <= 12; i++)
+                {
+                    <option value="@i" selected="@(Model.SelectedMonth == i ? "selected" : "")">Tháng @i</option>
+                }
+            </select>
+            <button type="submit" class="btn btn-primary">Lọc</button>
+        </form>
 
-                        <h3 class="text-lg font-bold mb-4 mt-6">Đơn đặt phòng hàng tháng (Năm nay)</h3>
-                        <canvas id="bookingChart" style="width: 100%; height: 400px;"></canvas>
+        <div class="row mt-6">
+            <div class="col-12">
+                <div class="card bg-white shadow-lg rounded-lg p-4">
+                    <div class="card-body">
+                        <h3 class="text-lg font-bold mb-4 text-center">Doanh thu và Đơn đặt phòng hàng tháng (Năm nay)</h3>
+                        <div class="d-flex justify-content-between">
+                            <div style="flex: 1; margin-right: 10px;">
+                                <h4 class="text-center mb-4">Doanh thu hàng tháng</h4>
+                                <canvas id="revenueChart" style="width: 100%; height: 300px;"></canvas>
+                            </div>
+                            <div style="flex: 1; margin-left: 10px;">
+                                <h4 class="text-center mb-4">Đơn đặt phòng hàng tháng</h4>
+                                <canvas id="bookingChart" style="width: 100%; height: 300px;"></canvas>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -81,3 +100,4 @@
         }
     });
 </script>
+

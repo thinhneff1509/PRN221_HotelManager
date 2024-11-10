@@ -1,0 +1,75 @@
+﻿@page "/ViewCart"
+@model Project_Group5.Pages.User_.ViewCart.ViewCartModel
+@{
+    ViewData["Title"] = "Phòng Đã Đặt Cọc và Thanh Toán";
+}
+
+<h2 class="text-3xl font-semibold text-center my-8">Phòng Đã Đặt Cọc và Thanh Toán</h2>
+
+@if (Model.BookedRooms != null && Model.BookedRooms.Any())
+{
+    <div class="overflow-x-auto shadow-md rounded-lg mx-4">
+        <table class="min-w-full table-auto bg-white border-separate border-spacing-0">
+            <thead class="bg-gray-100">
+                <tr>
+                    <th class="px-6 py-3 text-left text-sm font-medium text-gray-500 border border-gray-300">ID Đặt Phòng</th>
+                    <th class="px-6 py-3 text-left text-sm font-medium text-gray-500 border border-gray-300">Tên Phòng</th>
+                    <th class="px-6 py-3 text-left text-sm font-medium text-gray-500 border border-gray-300">Loại Phòng</th>
+                    <th class="px-6 py-3 text-left text-sm font-medium text-gray-500 border border-gray-300">Ngày Check-In</th>
+                    <th class="px-6 py-3 text-left text-sm font-medium text-gray-500 border border-gray-300">Ngày Check-Out</th>
+                    <th class="px-6 py-3 text-left text-sm font-medium text-gray-500 border border-gray-300">Tổng Tiền</th>
+                    <th class="px-6 py-3 text-left text-sm font-medium text-gray-500 border border-gray-300">Phương Thức Thanh Toán</th>
+                    <th class="px-6 py-3 text-left text-sm font-medium text-gray-500 border border-gray-300">Trạng Thái Thanh Toán</th>
+                    <th class="px-6 py-3 text-left text-sm font-medium text-gray-500 border border-gray-300">Dịch Vụ Đã Đặt</th>
+                </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200">
+                @foreach (var booking in Model.BookedRooms)
+                {
+                    <tr class="border-b border-gray-200">
+                        <td class="px-6 py-4 text-sm text-gray-900 border border-gray-300">@booking.Id</td>
+                        <td class="px-6 py-4 text-sm text-gray-900 border border-gray-300">@booking.Room?.RoomNumber</td>
+                        <td class="px-6 py-4 text-sm text-gray-900 border border-gray-300">@booking.Room?.Roomtype?.Name</td> <!-- Hiển thị loại phòng -->
+                        <td class="px-6 py-4 text-sm text-gray-900 border border-gray-300">@booking.CheckInDate?.ToString("yyyy-MM-dd")</td>
+                        <!-- Chỉ hiển thị ngày Check-Out nếu trạng thái thanh toán là Completed -->
+                        <td class="px-6 py-4 text-sm text-gray-900 border border-gray-300">
+                            @if (booking.Payments.Any(p => p.Status == "Completed"))
+                            {
+                                @booking.CheckOutDate?.ToString("yyyy-MM-dd")
+                            }
+                            else
+                            {
+                                <span>Không xác định</span> <!-- Hoặc để trống nếu muốn -->
+                            }
+                        </td>
+                        <td class="px-6 py-4 text-sm text-gray-900 border border-gray-300">@booking.TotalAmount</td>
+                        <td class="px-6 py-4 text-sm text-gray-900 border border-gray-300">
+                            @foreach (var payment in booking.Payments)
+                            {
+                                <div>@payment.PaymentMethod</div>
+                            }
+                        </td>
+                        <td class="px-6 py-4 text-sm text-gray-900 border border-gray-300">
+                            @foreach (var payment in booking.Payments)
+                            {
+                                <div>@payment.Status</div>
+                            }
+                        </td>
+                        <td class="px-6 py-4 text-sm text-gray-900 border border-gray-300">
+                            @foreach (var serviceRegistration in booking.ServiceRegistrations)
+                            {
+                                <div>@serviceRegistration.Service?.ServiceName - @serviceRegistration.Quantity x @serviceRegistration.Service?.Price</div>
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
+else
+{
+    <div class="text-center text-gray-500 mt-8">
+        Không tìm thấy phòng nào đã được đặt cọc hoặc thanh toán.
+    </div>
+}
