@@ -4,8 +4,11 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 using Project_Group5.Models;
+using System.Collections.Generic;
+using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Project_Group5.Pages.Checkout
 {
@@ -208,23 +211,20 @@ namespace Project_Group5.Pages.Checkout
                 return RedirectToPage("/Error");
             }
 
-            foreach (var r in SelectedRooms)
-            {
-                var booking = new Booking
-                {
-                    CustomerId = customer.Id, // Lấy ID của khách hàng đã đăng nhập
-                    RoomId = r.RoomTypeId, // Nếu có phòng đã chọn, lấy RoomId
-                    CheckInDate = DateTime.Now,
-                    CheckOutDate = DateTime.Now.AddDays(StayDuration),
-                    TotalAmount = TotalAmount.ToString(),
-                    PaymentStatus = "Pending",
-                    Status = "Processing"
-                };
-                _context.Bookings.Add(booking);
-            }
             // Tạo đối tượng Booking mới
+            var booking = new Booking
+            {
+                CustomerId = customer.Id, // Lấy ID của khách hàng đã đăng nhập
+                RoomId = SelectedRooms.FirstOrDefault()?.RoomId ?? 0, // Nếu có phòng đã chọn, lấy RoomId
+                CheckInDate = DateTime.Now,
+                CheckOutDate = DateTime.Now.AddDays(StayDuration),
+                TotalAmount = TotalAmount.ToString(),
+                PaymentStatus = "Pending",
+                Status = "Processing"
+            };
 
             // Lưu thông tin Booking vào database
+            _context.Bookings.Add(booking);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("Homepage/Home");
