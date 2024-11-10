@@ -54,7 +54,7 @@ public class IndexModel : PageModel
         RoomTypes = await _context.RoomTypes.Include(r => r.Rooms).ThenInclude(r => r.ImageRooms).ToListAsync();
     }
 
-    public async Task<IActionResult> OnPostChooseRoomAsync(int SelectedRoomId, int SelectedRoomCount)
+    public async Task<IActionResult> OnPostChooseRoomAsync(int SelectedRoomId, int SelectedRoomCount, DateTime CheckInDate, DateTime CheckOutDate)
     {
         RoomTypes = await _context.RoomTypes.Include(r => r.Rooms).ThenInclude(r => r.ImageRooms).ToListAsync();
 
@@ -84,14 +84,15 @@ public class IndexModel : PageModel
             {
                 selectedRooms.RemoveAll(sr => sr.RoomTypeId == SelectedRoomId && roomsToAdd++ < 0);
             }
-
-            SelectedRooms = selectedRooms;
-            CalculateTotalPrice();
         }
+        this.CheckInDate = CheckInDate;
+        this.CheckOutDate = CheckOutDate;
+        SelectedRooms = selectedRooms;
+        CalculatePrice();
         return Page();
     }
 
-    public async Task<IActionResult> OnPostChangeAdultAndChildrenCount(int SelectedRoomId, int AdultCount, int ChildrenCount)
+    public async Task<IActionResult> OnPostChangeAdultAndChildrenCount(int SelectedRoomId, int AdultCount, int ChildrenCount, DateTime CheckInDate, DateTime CheckOutDate)
     {
         RoomTypes = await _context.RoomTypes.Include(r => r.Rooms).ThenInclude(r => r.ImageRooms).ToListAsync();
 
@@ -102,18 +103,21 @@ public class IndexModel : PageModel
             selectedRoom.AdultCount = AdultCount;
             selectedRoom.ChildrenCount = ChildrenCount;
         }
+        this.CheckInDate = CheckInDate;
+        this.CheckOutDate = CheckOutDate;
         SelectedRooms = selectedRoomList;
-        CalculateTotalPrice();
+        CalculatePrice();
         return Page();
     }
-    private void CalculateTotalPrice()
+    private void CalculatePrice()
     {
+        var selectedRoomList = SelectedRooms;
         var stayDuration = (CheckOutDate - CheckInDate).Days;
         stayDuration = Math.Max(1, stayDuration); // Ensure at least 1 day.
 
         TotalPrice = 0;
 
-        foreach (var room in SelectedRooms)
+        foreach (var room in selectedRoomList)
         {
             var roomType = RoomTypes.FirstOrDefault(r => r.Id == room.RoomTypeId);
 
@@ -137,17 +141,28 @@ public class IndexModel : PageModel
         {
             TotalPrice *= 0.9m; // Example: 10% discount
         }
+        this.CheckInDate = CheckInDate;
+        this.CheckOutDate = CheckOutDate;
+        SelectedRooms = selectedRoomList;
+
     }
 
-    public async Task<IActionResult> OnPostCalculateTotalPrice(DateTime CheckInDate, DateTime CheckOutDate, string PromoCode)
+    public async Task<IActionResult> OnPostCalculateTotalPrice(DateTime CheckInDate, DateTime CheckOutDate, string PromoCode, string selectedRoomJson)
     {
+        if (!String.IsNullOrEmpty(selectedRoomJson))
+        {
+            SelectedRoomsJson = selectedRoomJson;
+
+        }
+        var selectedRoomList = SelectedRooms;
+
         RoomTypes = await _context.RoomTypes.Include(r => r.Rooms).ThenInclude(r => r.ImageRooms).ToListAsync();
         var stayDuration = (CheckOutDate - CheckInDate).Days;
         stayDuration = Math.Max(1, stayDuration); // Ensure at least 1 day.
 
         TotalPrice = 0;
 
-        foreach (var room in SelectedRooms)
+        foreach (var room in selectedRoomList)
         {
             var roomType = RoomTypes.FirstOrDefault(r => r.Id == room.RoomTypeId);
 
@@ -171,7 +186,9 @@ public class IndexModel : PageModel
         {
             TotalPrice *= 0.9m; // Example: 10% discount
         }
-
+        this.CheckInDate = CheckInDate;
+        this.CheckOutDate = CheckOutDate;
+        SelectedRooms = selectedRoomList;
         // Return the page after recalculating the total price
         return Page();
     }
@@ -187,6 +204,7 @@ public class IndexModel : PageModel
 
     public async Task<IActionResult> OnPostCheckAvailabilityAsync()
     {
+        var selectedRoomList = SelectedRooms;
         if (!ModelState.IsValid)
         {
             return Page();
@@ -212,13 +230,19 @@ public class IndexModel : PageModel
 
         // Remove room types with no available rooms
         RoomTypes = RoomTypes.Where(rt => rt.Rooms.Any()).ToList();
-
+        this.CheckInDate = CheckInDate;
+        this.CheckOutDate = CheckOutDate;
+        SelectedRooms = selectedRoomList;
         TempData["AvailabilityChecked"] = true;
         return Page();
     }
 
-    public async Task<IActionResult> OnPostPreOrder()
+    public async Task<IActionResult> OnPostPreOrder(DateTime CheckInDate, DateTime CheckOutDate, string selectedRoomJson)
     {
+        if (!String.IsNullOrEmpty(selectedRoomJson))
+        {
+            SelectedRoomsJson = selectedRoomJson;
+        }
         List<RoomData> roomDatas = new List<RoomData>();
         RoomTypes = await _context.RoomTypes.Include(r => r.Rooms).ThenInclude(r => r.ImageRooms).ToListAsync();
         var selectedRoomList = SelectedRooms;
@@ -234,7 +258,7 @@ public class IndexModel : PageModel
             {
                 var roomData = new RoomData
                 {
-                    Id = roomType.Id,
+                    RoomTypeId = roomType.Id,
                     RoomType = roomType.Name,
                     Bed = roomType.Bed,
                     Price = roomType.Price,
@@ -244,7 +268,9 @@ public class IndexModel : PageModel
                 roomDatas.Add(roomData);
             }
         }
-
+        this.CheckInDate = CheckInDate;
+        this.CheckOutDate = CheckOutDate;
+        SelectedRooms = selectedRoomList;
         // Store data in TempData for the redirect
         var serializedRoomData = JsonSerializer.Serialize(roomDatas);
         return RedirectToPage("PreOrder", new { CheckInDate, CheckOutDate, roomData = serializedRoomData });

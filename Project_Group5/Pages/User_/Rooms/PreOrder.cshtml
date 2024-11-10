@@ -36,9 +36,11 @@
                                     <p>Chi tiết: @r.RoomList.Count phòng, @Model.StayDuration ngày</p>
                                 </div>
                                 <form method="post" asp-page-handler="ChangeRoomNum" class="col-md-2">
-                                    <input type="hidden" name="roomTypeId" value="@r.Id" />
+                                    <input type="hidden" name="roomTypeId" value="@r.RoomTypeId" />
                                     <input type="hidden" name="CheckinDate" value="@Model.CheckinDate" />
                                     <input type="hidden" name="CheckoutDate" value="@Model.CheckoutDate" />
+                                    <input type="hidden" asp-for="StayDuration" value="@Model.StayDuration" />
+
                                     <p>Số phòng</p>
                                     <select class="form-select" name="roomCount" onchange="this.form.submit()">
                                         @for (int i = 1; i <= r.AvailableRoom; i++)
@@ -54,9 +56,11 @@
                                     {
                                         <form method="post" asp-page-handler="ChangeBookingInfo" class="d-flex align-items-center">
                                             <input type="hidden" name="roomId" value="@ri.RoomId" />
-                                            <input type="hidden" name="roomTypeId" value="@r.Id" />
+                                            <input type="hidden" name="roomTypeId" value="@r.RoomTypeId" />
                                             <input type="hidden" name="CheckinDate" value="@Model.CheckinDate" />
                                             <input type="hidden" name="CheckoutDate" value="@Model.CheckoutDate" />
+                                            <input type="hidden" asp-for="StayDuration" value="@Model.StayDuration" />
+
                                             <div class="me-2">
                                                 <p>Số lượng khách</p>
                                                 <select class="form-select" name="AdultCount" onchange="this.form.submit()">
@@ -112,6 +116,8 @@
                         <input type="hidden" asp-for="CheckinDate" id="hidden-checkin-date" value="@Model.CheckinDate" />
                         <input type="hidden" asp-for="CheckoutDate" id="hidden-checkout-date" value="@Model.CheckoutDate" />
                         <input type="hidden" asp-for="TotalAmount" id="hidden-checkout-date" value="@CalculateTotalAmount(SelectedRooms)" />
+                        <input type="hidden" asp-for="StayDuration" value="@Model.StayDuration" />
+
                         @if (!isLoggedIn)
                         {
                             <form id="preorderForm" method="post">
@@ -155,17 +161,21 @@
             foreach (var ri in roomData.RoomList)
             {
                 double roomPrice = roomData.Price;
+
+                // Adjust the price if the total number of people exceeds the room's bed capacity
                 if (ri.ChildrenCount + ri.AdultCount > roomData.Bed)
                 {
                     roomPrice += roomData.Price * (ri.ChildrenCount + ri.AdultCount - roomData.Bed) * 0.3;
                 }
-                totalPrice += roomPrice;
+
+                // Multiply by the stay duration to get the total price for the entire stay
+                totalPrice += roomPrice * Model.StayDuration;
             }
             return totalPrice;
         }
         return 0;
     }
-
+    
     private decimal CalculateTotalAmount(IEnumerable<RoomData>? selectedRooms)
     {
         if(selectedRooms != null)
@@ -179,4 +189,5 @@
         }
         return 0;
     }
+
 }

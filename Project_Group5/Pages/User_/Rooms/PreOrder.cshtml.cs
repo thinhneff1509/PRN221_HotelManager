@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using Project_Group5.Models;
+using System.ComponentModel.DataAnnotations;
 using System.Security.Claims;
 using System.Text.Json;
 
@@ -10,13 +11,15 @@ namespace Project_Group5.Pages.Rooms
     public class PreOrderModel : PageModel
     {
         [BindProperty]
-        public string CheckinDate { get; set; }
+        [DataType(DataType.Date)]
+        public DateTime CheckinDate { get; set; } = DateTime.Now;
 
         [BindProperty]
-        public string CheckoutDate { get; set; }
+        [DataType(DataType.Date)]
+        public DateTime CheckoutDate { get; set; } = DateTime.Now.AddDays(1);
 
         [BindProperty]
-        public int StayDuration { get; set; }
+        public int StayDuration { get; set; } = 1;
         [BindProperty]
         public string Name { get; set; }
         [BindProperty]
@@ -42,43 +45,56 @@ namespace Project_Group5.Pages.Rooms
         {
             if (checkinDate != null)
             {
-                CheckinDate = checkinDate;
+                CheckinDate = DateTime.Parse(checkinDate);
+            }
+            else
+            {
+                CheckinDate = DateTime.Today;
             }
             if (checkoutDate != null)
             {
-                CheckoutDate = checkoutDate;
+                CheckoutDate = DateTime.Parse(checkoutDate);
+            }
+            else
+            {
+                CheckinDate = DateTime.Today.AddDays(1);
             }
             if (roomData != null)
             {
                 SelectedRoomsJson = roomData;
             }
-            if (DateOnly.TryParse(CheckinDate, out var checkInDate) && DateOnly.TryParse(CheckoutDate, out var checkOutDate))
-            {
-                TimeSpan dateDifference = checkOutDate.ToDateTime(new TimeOnly()) - checkInDate.ToDateTime(new TimeOnly());
 
-                StayDuration = dateDifference.Days;
+            TimeSpan dateDifference = CheckinDate - CheckoutDate;
+
+            StayDuration = Math.Abs(dateDifference.Days);
+            if (StayDuration <= 0)
+            {
+                StayDuration = 1;
             }
-            // Deserialize RoomData JSON into a list of RoomData objects
-            SelectedRooms = JsonSerializer.Deserialize<List<RoomData>>(SelectedRoomsJson);
+            this.StayDuration = StayDuration;
+
             var selectedRooms = SelectedRooms;
             using (Fall24_SE1745_PRN221_Group5Context context = new Fall24_SE1745_PRN221_Group5Context())
             {
                 var RoomTypes = await context.RoomTypes.Include(r => r.Rooms).ThenInclude(r => r.ImageRooms).ToListAsync();
                 foreach (var r in selectedRooms)
                 {
-                    r.AvailableRoom = context.Rooms.Where(rl => rl.Status == "Còn phòng" && r.Id == rl.RoomtypeId).Count();
+                    r.AvailableRoom = context.Rooms.Where(rl => rl.Status == "Còn phòng" && r.RoomTypeId == rl.RoomtypeId).Count();
                 }
             }
             SelectedRooms = selectedRooms;
+            this.CheckinDate = CheckinDate;
+            this.CheckoutDate = CheckoutDate;
+            this.StayDuration = StayDuration;
             return Page();
         }
 
-        public Task<IActionResult> OnPostChangeBookingInfo(int roomId, int roomTypeId, int AdultCount, int ChildrenCount, string checkinDate, string checkoutDate)
+        public Task<IActionResult> OnPostChangeBookingInfo(int roomId, int roomTypeId, int AdultCount, int ChildrenCount, DateTime checkinDate, DateTime checkoutDate)
         {
             CheckinDate = checkinDate;
             CheckoutDate = checkoutDate;
+            this.StayDuration = StayDuration;
             var selectedRooms = SelectedRooms;
-
             if (SelectedRooms == null)
             {
                 return Task.FromResult<IActionResult>(BadRequest("Invalid room data."));
@@ -88,7 +104,7 @@ namespace Project_Group5.Pages.Rooms
             {
 
                 // Locate the corresponding RoomData in SelectedRooms
-                var roomGroup = selectedRooms.FirstOrDefault(r => r.Id == roomTypeId);
+                var roomGroup = selectedRooms.FirstOrDefault(r => r.RoomTypeId == roomTypeId);
 
                 if (roomGroup == null)
                 {
@@ -108,10 +124,11 @@ namespace Project_Group5.Pages.Rooms
             return Task.FromResult<IActionResult>(Page());
         }
 
-        public async Task<IActionResult> OnPostChangeRoomNum(int roomTypeId, int roomCount, string checkinDate, string checkoutDate)
+        public async Task<IActionResult> OnPostChangeRoomNum(int roomTypeId, int roomCount, DateTime checkinDate, DateTime checkoutDate)
         {
             CheckinDate = checkinDate;
             CheckoutDate = checkoutDate;
+            this.StayDuration = StayDuration;
             // Deserialize the room data from JSON input
             var selectedRooms = SelectedRooms;
 
@@ -134,7 +151,7 @@ namespace Project_Group5.Pages.Rooms
                 }
 
                 // Locate the corresponding RoomData in SelectedRooms
-                var roomGroup = selectedRooms.FirstOrDefault(r => r.Id == roomTypeId);
+                var roomGroup = selectedRooms.FirstOrDefault(r => r.RoomTypeId == roomTypeId);
 
                 if (roomGroup == null)
                 {
@@ -214,12 +231,10 @@ namespace Project_Group5.Pages.Rooms
                     {
                         ModelState.AddModelError("Email", "Invalid email address.");
                     }
-                }
-
-
-                if (!ModelState.IsValid)
-                {
-                    return Page();
+                    if (!ModelState.IsValid)
+                    {
+                        return Page();
+                    }
                 }
 
                 if (SelectedRoomsJson != null)
@@ -242,8 +257,8 @@ namespace Project_Group5.Pages.Rooms
                         await context.SaveChangesAsync();
                         customer = newCustomer;
                     }
-                    DateTime CheckInDate = DateTime.Parse(CheckinDate);
-                    DateTime CheckOutDate = DateTime.Parse(CheckoutDate);
+                    DateTime CheckInDate = CheckinDate;
+                    DateTime CheckOutDate = CheckoutDate;
                     foreach (var r in selectedRooms)
                     {
                         foreach (var selectedRoom in r.RoomList)
