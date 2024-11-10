@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Authentication.Cookies;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using Project_Group5.Models;
@@ -272,7 +270,7 @@ namespace Project_Group5.Pages.Rooms
                                     CustomerId = customer.Id,
                                     CheckInDate = CheckInDate,
                                     CheckOutDate = CheckOutDate,
-                                    Status =
+                                    Status = "Chờ thanh toán",
                                     TotalAmount = finalAmount.ToString(), // Store the total after applying discount
                                     RoomId = room.Id
                                 };
@@ -283,9 +281,6 @@ namespace Project_Group5.Pages.Rooms
                     SelectedRooms = selectedRooms;
 
                     await context.SaveChangesAsync();
-
-                    //Simulate log out
-                    await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
 
                     return RedirectToPage("/Homepage/Home");
                 }
