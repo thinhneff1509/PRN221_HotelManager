@@ -318,3 +318,5 @@ D:\Ki 7\PRN221_Retake\Group5_Assignment\Project_Group5\obj\Debug\net6.0\refint\P
 D:\Ki 7\PRN221_Retake\Group5_Assignment\Project_Group5\obj\Debug\net6.0\Project_Group5.pdb
 D:\Ki 7\PRN221_Retake\Group5_Assignment\Project_Group5\obj\Debug\net6.0\Project_Group5.genruntimeconfig.cache
 D:\Ki 7\PRN221_Retake\Group5_Assignment\Project_Group5\obj\Debug\net6.0\ref\Project_Group5.dll
+D:\PRN221\project\PRN221_HotelManager\Project_Group5\bin\Debug\net6.0\DotNetEnv.dll
+D:\PRN221\project\PRN221_HotelManager\Project_Group5\bin\Debug\net6.0\Sprache.dll
