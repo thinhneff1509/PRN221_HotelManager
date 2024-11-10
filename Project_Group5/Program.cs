@@ -34,14 +34,17 @@ namespace Project_Group5
             {
                 options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
                 options.DefaultAuthenticateScheme = GoogleDefaults.AuthenticationScheme;
+                options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+
             })
-                .AddCookie()
-                //(options =>
-                //{
-                //    options.LoginPath = "/Login"; // Đường dẫn đến trang đăng nhập
-                //    options.LogoutPath = "/Logout"; // Đường dẫn để đăng xuất
-                //    options.AccessDeniedPath = "/AccessDenied"; // Đường dẫn khi không có quyền truy cập
-                //})
+                .AddCookie(
+                options =>
+                {
+                    options.LoginPath = "/Login"; // Đường dẫn đến trang đăng nhập
+                   options.LogoutPath = "/Logout"; // Đường dẫn để đăng xuất
+                    options.AccessDeniedPath = "/AccessDenied"; // Đường dẫn khi không có quyền truy cập
+                })
                 .AddGoogle(GoogleDefaults.AuthenticationScheme,options =>
                 {
                     options.ClientId = builder.Configuration.GetSection("GoogleKeys:ClientId").Value;

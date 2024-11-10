@@ -137,7 +137,7 @@ namespace Project_Group5.Pages.Checkout
             return $"{baseUrl}?{query}";
         }
 
-        public IActionResult OnPostCheckout()
+        public async Task<IActionResult> OnPostCheckout(string paymentMethod)
         {
             // Kiểm tra xem TotalAmount có giá trị chưa, nếu không, hãy gán giá trị từ Model hoặc từ cơ sở dữ liệu
             // Đảm bảo rằng `TotalAmount` có giá trị
@@ -147,9 +147,51 @@ namespace Project_Group5.Pages.Checkout
                 TotalAmount = SelectedRooms.Sum(room => (decimal)room.Price * StayDuration);
             }
 
+            var username = User.Identity.Name;
+            var customer = await _context.Customers.FirstOrDefaultAsync(c => c.Username == username);
+            if (customer == null)
+            {
+                return RedirectToPage("/Error");
+            }
+
+            // Tạo Booking mới
+            var booking = new Booking
+            {
+                CustomerId = customer.Id,
+                RoomId = SelectedRooms.FirstOrDefault()?.RoomId ?? 0,
+                CheckInDate = DateTime.Now,
+                CheckOutDate = DateTime.Now.AddDays(StayDuration),
+                TotalAmount = TotalAmount.ToString(),
+                PaymentStatus = "Completed",  // Đánh dấu thanh toán hoàn tất
+                Status = "Processed"
+            };
+            _context.Bookings.Add(booking);
+            await _context.SaveChangesAsync();
+
+            // Tạo Payment mới với phương thức thanh toán được chọn
+            var payment = new Payment
+            {
+                BookingId = booking.Id,
+                PaymentDate = DateTime.Now,
+                Amount = TotalAmount.ToString(),
+                PaymentMethod = paymentMethod, // Lưu phương thức thanh toán
+                Status = "Completed",  // Trạng thái thanh toán hoàn tất
+                CheckIn = DateTime.Now,
+                CheckOut = DateTime.Now.AddDays(StayDuration)
+            };
+            _context.Payments.Add(payment);
+            await _context.SaveChangesAsync();
+
+
             // Tạo URL thanh toán và chuyển hướng đến VNPAY
             string paymentUrl = CreateVnPayUrl(TotalAmount);
             return Redirect(paymentUrl);
+
+            // Thông báo thanh toán thành công và chuyển hướng về trang chủ
+            TempData["PaymentMessage"] = "Thanh toán thành công!";
+
+            return RedirectToPage("/User_/ViewCart");
+
         }
 
         public async Task<IActionResult> OnPostAsync()

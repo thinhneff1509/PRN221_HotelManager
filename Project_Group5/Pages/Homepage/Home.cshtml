@@ -3,14 +3,7 @@
 @{
     Layout = "_Layout";
 }
-<br />
-@if (User.Identity.IsAuthenticated)
-{
-    var role = @User.IsInRole("Admin") ? 1 :
-                            User.IsInRole("Customer") ? 2 :
-                            User.IsInRole("Receptionist") ? 3 : 0;
-    <h2>hello role</h2>
-}
+
 <style>
     /* Hiệu ứng phóng to khi rê chuột */
     .hover\\:scale-105:hover {

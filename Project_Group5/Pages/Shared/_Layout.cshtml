@@ -51,7 +51,7 @@
                 <a href="/Room/booking" class="text-gray-800 hover:text-blue-600">Xem phòng</a>
                 <!-- Account Section -->
                 <div class="relative">
-                    @{
+                    
                         if (User.Identity.IsAuthenticated)
                         {
                             var role = User.IsInRole("Admin") ? 1 :
@@ -114,7 +114,7 @@
                                 <a href="/Register" class="text-gray-800 hover:text-blue-600">Đăng ký</a>
                             </div>
                         }
-                    }
+                    
                 </div>
              
 

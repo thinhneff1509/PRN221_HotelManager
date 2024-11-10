@@ -4,6 +4,13 @@
     ViewData["Title"] = "Checkout";
     Layout = "_Layout";
 }
+@if (ViewData["PaymentMessage"] != null)
+{
+    <div class="alert alert-success">
+        @ViewData["PaymentMessage"]
+    </div>
+}
+
 
 <section class="checkout_area pt-10 pb-10">
     <div class="container mx-auto">
@@ -68,7 +75,7 @@
                             <div class="flex items-center">
                                 <input type="radio" id="f-option6" name="paymentMethod" class="mr-2" />
                                 <label for="f-option6" class="text-gray-700">Paypal</label>
-                           @*     <img src="~/assets/images/card.jpg" alt="Paypal" class="ml-2" /> *@
+                               <img src="~/assets/images/card.jpg" alt="Paypal" class="ml-2" />
                             </div>
                             <p class="text-sm text-gray-600 mt-1">
                                 Please send a check to Store Name, Store Street, Store Town,
@@ -90,3 +97,6 @@
         </div>
     </div>
 </section>
+
+
+<img src="~/assets/images/card.jpg" alt="Paypal" class="ml-2" />

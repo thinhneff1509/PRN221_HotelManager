@@ -129,19 +129,45 @@ namespace Project_Group5.Pages.Login
             if (!authenticateResult.Succeeded)
                 return RedirectToPage("/Login");
 
-            var claims = authenticateResult.Principal.Identities.FirstOrDefault().Claims.ToList();
+            var email = authenticateResult.Principal.FindFirst(ClaimTypes.Email)?.Value;
+            var name = authenticateResult.Principal.FindFirst(ClaimTypes.Name)?.Value;
+
+            if (email == null)
+                return RedirectToPage("/Login");
+
+            // Kiểm tra email trong database
+            var customer = await _context.Customers
+                                          .Include(c => c.Role)
+                                          .FirstOrDefaultAsync(c => c.Email == email && c.Banned != true);
+
+            if (customer == null)
+            {
+                // Nếu người dùng chưa có trong database, có thể thêm vào database hoặc chuyển hướng đăng ký
+                // Ví dụ thêm người dùng mới với role Customer (role = 2)
+                customer = new Customer
+                {
+                    Username = name ?? email.Split('@')[0],
+                    Email = email,
+                    RoleId = 2 // Customer role
+                };
+                _context.Customers.Add(customer);
+                await _context.SaveChangesAsync();
+            }
+
+            // Tạo các claims cho người dùng với role mặc định là Customer nếu không có role khác
+            var claims = new List<Claim>
+    {
+        new Claim(ClaimTypes.Name, customer.Username),
+        new Claim(ClaimTypes.NameIdentifier, customer.Id.ToString()),
+        new Claim(ClaimTypes.Email, customer.Email),
+        new Claim(ClaimTypes.Role, "Customer") // Đặt role là "Customer"
+    };
 
             var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
             var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
-
             await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, claimsPrincipal);
-
             return RedirectToPage("/Homepage/Home"); // Điều hướng sau khi đăng nhập thành công
         }
-
-
-
-
 
     }
 }

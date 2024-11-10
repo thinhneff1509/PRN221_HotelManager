@@ -11,26 +11,31 @@
     <list default="true" id="3854dc94-ba40-4661-bc4c-01bd491d4348" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.vs/ProjectEvaluation/project_group5.metadata.v8.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/ProjectEvaluation/project_group5.metadata.v8.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.vs/ProjectEvaluation/project_group5.projects.v8.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/ProjectEvaluation/project_group5.projects.v8.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/ProjectEvaluation/project_group5.strings.v8.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/ProjectEvaluation/project_group5.strings.v8.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/Project_Group5/DesignTimeBuild/.dtbcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/Project_Group5/DesignTimeBuild/.dtbcache.v2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.vs/Project_Group5/v17/.futdcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/Project_Group5/v17/.futdcache.v2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.vs/Project_Group5/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/Project_Group5/v17/.suo" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.vs/Project_Group5/v17/DocumentLayout.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/Project_Group5/v17/DocumentLayout.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/Login/Login.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Login/Login.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/Homepage/Home.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Homepage/Home.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Pages/Login/Login.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Login/Login.cshtml.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/appsettings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/net6.0/Project_Group5.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net6.0/Project_Group5.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/net6.0/Project_Group5.exe" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net6.0/Project_Group5.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/net6.0/Project_Group5.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net6.0/Project_Group5.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net6.0/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net6.0/appsettings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net6.0/Project_Group5.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net6.0/Project_Group5.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net6.0/Project_Group5.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net6.0/Project_Group5.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net6.0/Project_Group5.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net6.0/Project_Group5.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net6.0/Project_Group5.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net6.0/Project_Group5.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net6.0/Project_Group5.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net6.0/Project_Group5.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net6.0/Project_Group5.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net6.0/Project_Group5.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net6.0/Project_Group5.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net6.0/Project_Group5.sourcelink.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net6.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net6.0/apphost.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net6.0/ref/Project_Group5.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net6.0/ref/Project_Group5.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net6.0/refint/Project_Group5.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net6.0/refint/Project_Group5.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Project_Group5.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Project_Group5.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Project_Group5.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Project_Group5.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/obj/rider.project.model.nuget.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,22 +85,20 @@
     <setting file="file://$PROJECT_DIR$/Pages/User_/Rooms/PreOrder.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Pages/User_/Rooms/PreOrder.cshtml.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Program.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/Program.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/Program.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/Program.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/appsettings.Development.json" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/appsettings.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/appsettings.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/appsettings.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/appsettings.json" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/appsettings.json" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/bin/Debug/net6.0/Project_Group5.deps.json" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/bin/Debug/net6.0/appsettings.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/bin/Debug/net6.0/appsettings.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/bin/Debug/net6.0/appsettings.json" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/obj/Debug/net6.0/Project_Group5.AssemblyInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/bin/Debug/net6.0/appsettings.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/bin/Debug/net6.0/appsettings.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/bin/Debug/net6.0/appsettings.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/bin/Debug/net6.0/appsettings.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/bin/Debug/net6.0/appsettings.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/obj/Debug/net6.0/Project_Group5.AssemblyInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/obj/Debug/net6.0/Project_Group5.AssemblyInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/obj/Debug/net6.0/Project_Group5.AssemblyInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/obj/Debug/net6.0/Project_Group5.sourcelink.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/obj/Debug/net6.0/Project_Group5.sourcelink.json" root0="FORCE_HIGHLIGHTING" />
@@ -185,6 +188,7 @@
       <workItem from="1730991688435" duration="1280000" />
       <workItem from="1731172881696" duration="1853000" />
       <workItem from="1731206865706" duration="5602000" />
+      <workItem from="1731247583689" duration="1647000" />
     </task>
     <task id="LOCAL-00001" summary="merge feedback">
       <option name="closed" value="true" />
@@ -498,7 +502,23 @@
       <option name="project" value="LOCAL" />
       <updated>1731217214200</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="Login gg done 1/2">
+      <option name="closed" value="true" />
+      <created>1731247723656</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1731247723656</updated>
+    </task>
+    <task id="LOCAL-00041" summary="check">
+      <option name="closed" value="true" />
+      <created>1731247756115</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1731247756115</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -514,12 +534,12 @@
             <list>
               <RecentGroup>
                 <option name="FILTER_VALUES">
-                  <option value="HEAD" />
+                  <option value="origin/Hoang_PaymentAdmin" />
                 </option>
               </RecentGroup>
               <RecentGroup>
                 <option name="FILTER_VALUES">
-                  <option value="origin/Hoang_PaymentAdmin" />
+                  <option value="HEAD" />
                 </option>
               </RecentGroup>
               <RecentGroup>
@@ -552,9 +572,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="HEAD" />
-                        <option value="main" />
-                        <option value="origin/main" />
+                        <option value="origin/Hoang_PaymentAdmin" />
                       </list>
                     </value>
                   </entry>
@@ -568,8 +586,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="dich vu dat do an" />
-    <MESSAGE value="Login admin" />
     <MESSAGE value="merge code admin" />
     <MESSAGE value="fix useradmin" />
     <MESSAGE value="fixx" />
@@ -593,6 +609,8 @@
     <MESSAGE value="delete gg" />
     <MESSAGE value="mergecodeloi" />
     <MESSAGE value="Add to cart" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add to cart" />
+    <MESSAGE value="Login gg done 1/2" />
+    <MESSAGE value="check" />
+    <option name="LAST_COMMIT_MESSAGE" value="check" />
   </component>
 </project>
