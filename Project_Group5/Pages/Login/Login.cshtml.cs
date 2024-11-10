@@ -53,7 +53,7 @@ namespace Project_Group5.Pages.Login
             // Redirect based on role
             if (customer.Role.Id == 1)
             {
-                return RedirectToPage("/Homepage/Home"); // Admin page
+                return RedirectToPage("/Admin/DashBoard/Dashboard"); // Admin page
             }
             else
             {

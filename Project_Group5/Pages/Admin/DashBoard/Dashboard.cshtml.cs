@@ -7,7 +7,8 @@ using System.Linq;
 
 namespace Project_Group5.Pages.Admin.DashBoard
 {
-    
+    [Authorize(Roles = "Admin")]
+
     public class DashboardModel : PageModel
     {
         private readonly Fall24_SE1745_PRN221_Group5Context _context;
