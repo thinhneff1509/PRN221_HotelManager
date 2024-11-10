@@ -1,6 +1,7 @@
 ﻿@page "/Room/Booking"
 @model Project_Group5.Pages.Rooms.IndexModel;
 @using Project_Group5.Pages.Rooms;
+@using Project_Group5.Models;
 @using System.Text.Json;
 @{
     var rooms = Model.RoomTypes;
@@ -44,7 +45,7 @@
                         {
                             <div class="room-card">
                                 <div class="room-info">
-                                    <div id="roomCarousel_@room.Id" class="carousel slide col-md-6" data-bs-ride="carousel">
+                                    <div class="carousel slide col-md-6" data-bs-ride="carousel">
                                         <div class="carousel-inner">
                                             @foreach (var r in room.Rooms)
                                             {
@@ -228,7 +229,9 @@
 
 
                         <p><strong>Tổng cộng: @Model.TotalPrice.ToString("N0") VND</strong></p>
-                        <button class="choose-btn">Đặt Ngay</button>
+                        <form method="post" asp-page-handler="PreOrder">
+                            <button type="submit" class="choose-btn">Đặt Ngay</button>
+                        </form>
                     </div>
                 </div>
             </div>

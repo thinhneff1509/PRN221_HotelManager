@@ -217,16 +217,40 @@ public class IndexModel : PageModel
         return Page();
     }
 
+    public async Task<IActionResult> OnPostPreOrder()
+    {
+        List<RoomData> roomDatas = new List<RoomData>();
+        RoomTypes = await _context.RoomTypes.Include(r => r.Rooms).ThenInclude(r => r.ImageRooms).ToListAsync();
+        var selectedRoomList = SelectedRooms;
+
+        // Group selected rooms by RoomTypeId
+        var groupedRooms = selectedRoomList.GroupBy(r => r.RoomTypeId);
+
+        // Create a RoomData object for each unique RoomTypeId
+        foreach (var group in groupedRooms)
+        {
+            var roomType = RoomTypes.FirstOrDefault(rt => rt.Id == group.Key);
+            if (roomType != null)
+            {
+                var roomData = new RoomData
+                {
+                    Id = roomType.Id,
+                    RoomType = roomType.Name,
+                    Bed = roomType.Bed,
+                    Price = roomType.Price,
+                    Name = roomType.Name,
+                    RoomList = group.ToList()
+                };
+                roomDatas.Add(roomData);
+            }
+        }
+
+        // Store data in TempData for the redirect
+        var serializedRoomData = JsonSerializer.Serialize(roomDatas);
+        return RedirectToPage("PreOrder", new { CheckInDate, CheckOutDate, roomData = serializedRoomData });
+    }
+
+
 }
 
-public class SelectedRoom
-{
-    public int RoomTypeId { get; set; }
-    public int RoomId { get; set; }
-    public string Name { get; set; }
-    public string RoomType { get; set; }
-    public decimal Price { get; set; }
-    public int AdultCount { get; set; }
-    public int ChildrenCount { get; set; }
-    public int Bed { get; set; }
-}
+

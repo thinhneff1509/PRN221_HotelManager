@@ -1,323 +1,182 @@
 ﻿@page "/BookingRoom"
+@using Microsoft.AspNetCore.Http;
 @model Project_Group5.Pages.Rooms.PreOrderModel
+@using Project_Group5.Models
 @{
     var SelectedRooms = Model.SelectedRooms;
+    var isLoggedIn = User.Identity.IsAuthenticated;
+
     <link href="~/css/pre_order.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 }
-        <div class="container">
-            <!-- Booking Information -->
-            <div class="card">
+<div class="container mt-4">
+    <!-- Booking Information -->
+    <div class="card mb-4">
+        <div class="card-body">
+            <p><strong>Nhận phòng:</strong> @Model.CheckinDate</p>
+            <p><strong>Trả phòng:</strong> @Model.CheckoutDate</p>
+            <p><a href="#">(Bạn có muốn thay đổi ngày lưu trú?)</a></p>
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- Room Details Section -->
+        <div class="col-md-8">
+            <div class="card mb-4">
                 <div class="card-body">
-                    <p><strong>Nhận phòng:</strong> @Model.CheckinDate</p>
-                    <p><strong>Trả phòng:</strong> @Model.CheckoutDate</p>
-                    <p><a href="#">(Bạn có muốn thay đổi ngày lưu trú?)</a></p>
-                </div>
-            </div>
-
-            <div class="d-flex justify-content-between">
-                <div class="col-md-8">
-                    
-                    <!-- Room Details -->
-                    
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Chi tiết đặt phòng</h5>
-                            @if (SelectedRooms != null)
-                            {
-                                @foreach (var r in SelectedRooms)
-                                {
-                                    <div class="d-flex justify-content-between">
-                                        <div class="col-md-5">
-                                            <h6 id="room_name_@r.RoomType">@r.Name</h6>
-                                            <p class="flash-sales">Không hoàn trả tiền khi hủy phòng</p>
-                                            <p>Chi tiết: @r.RoomList.Count phòng, @Model.StayDuration ngày</p>
-                                            <input type="hidden" id="room_bed_@r.RoomType" value="@r.Bed"/>
-                                            <input type="hidden" id="room_count_@r.RoomType" value="@r.RoomList.Count"/>
-                                        </div>
-                                        <div class="col-md-5 d-flex justify-content-between">
-                                            <div class="col-md-7">
+                    <h5 class="card-title">Chi tiết đặt phòng</h5>
+                    @if (SelectedRooms != null)
+                    {
+                        @foreach (var r in SelectedRooms)
+                        {
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <div class="col-md-4">
+                                    <h6>@r.Name</h6>
+                                    <p class="flash-sales">Không hoàn trả tiền khi hủy phòng</p>
+                                    <p>Chi tiết: @r.RoomList.Count phòng, @Model.StayDuration ngày</p>
+                                </div>
+                                <form method="post" asp-page-handler="ChangeRoomNum" class="col-md-2">
+                                    <input type="hidden" name="roomTypeId" value="@r.Id" />
+                                    <input type="hidden" name="CheckinDate" value="@Model.CheckinDate" />
+                                    <input type="hidden" name="CheckoutDate" value="@Model.CheckoutDate" />
+                                    <p>Số phòng</p>
+                                    <select class="form-select" name="roomCount" onchange="this.form.submit()">
+                                        @for (int i = 1; i <= r.AvailableRoom; i++)
+                                        {
+                                            <option selected="@(i == r.RoomList.Count ? "selected" : null)" value="@i">
+                                                @i phòng
+                                            </option>
+                                        }
+                                    </select>
+                                </form>
+                                <div class="col-md-4">
+                                    @foreach (var ri in r.RoomList)
+                                    {
+                                        <form method="post" asp-page-handler="ChangeBookingInfo" class="d-flex align-items-center">
+                                            <input type="hidden" name="roomId" value="@ri.RoomId" />
+                                            <input type="hidden" name="roomTypeId" value="@r.Id" />
+                                            <input type="hidden" name="CheckinDate" value="@Model.CheckinDate" />
+                                            <input type="hidden" name="CheckoutDate" value="@Model.CheckoutDate" />
+                                            <div class="me-2">
                                                 <p>Số lượng khách</p>
-                                                @foreach (var ri in r.RoomList)
-                                                {
-                                                    <select class="form-select" id="adult_count_@(r.RoomType)_@ri.Id">
-                                                        <option selected="@(ri.AdultCount == r.Bed ? "selected" : null)" value="@r.Bed">
-                                                            @r.Bed người lớn
-                                                        </option>
-                                                        @for (int i = 1; i <= r.Bed - 1; i++)
-                                                        {
-                                                            <option value="@r.Bed">
-                                                                @(r.Bed - i) người lớn @((i == 0) ? "" : $", {i} trẻ em")
-                                                            </option>
-                                                            <option value="@(r.Bed - i)" selected="@(ri.AdultCount == i ? "selected" : null)">
-                                                                @(r.Bed - i) người lớn
-                                                            </option>
-                                                        }
-                                                    </select>
-                                                    <br/>
-                                                }
-                                            </div>
-                                            <div class="col-md-5">
-                                                <p>Trẻ em</p>
-                                                @foreach (var ri in r.RoomList)
-                                                {
-                                                    <select class="form-select" id="children_count_@(r.RoomType)_@ri.Id">
-                                                        @for (int i = 0; i <= r.Bed; i++)
-                                                        {
-                                                            <option value="@i" selected="@(ri.ChildrenCount == i ? "selected" : null)">
-                                                                @i trẻ em
-                                                            </option>
-                                                        }
-                                                    </select>
-                                                    <br/>
-                                                }
-                                            </div>
-                                        </div>
-                                        <div class="text-end">
-                                            <p>
-                                                <input type="hidden" id="room_original_price_@r.RoomType" value="@r.Price"/>
-                                                @{
-                                                    double RoomPrice = r.Price;
-                                                    double TotalPrice = 0;
-                                                    foreach (var ri in r.RoomList)
+                                                <select class="form-select" name="AdultCount" onchange="this.form.submit()">
+                                                    <option selected="@(ri.AdultCount == r.Bed ? "selected" : null)" value="@r.Bed">
+                                                        @r.Bed người lớn
+                                                    </option>
+                                                    @for (int i = 1; i <= r.Bed - 1; i++)
                                                     {
-                                                        if (ri.ChildrenCount + ri.AdultCount > r.Bed)
-                                                        {
-                                                            RoomPrice = r.Price * (1 + (ri.ChildrenCount + ri.AdultCount - r.Bed) * 0.3);
-                                                            TotalPrice += RoomPrice;
-                                                        }
-                                                        else
-                                                        {
-                                                            TotalPrice += r.Price;
-                                                        }
-
-                                                        <input type="hidden" id="room_price_(@r.RoomType)_@ri.Id" value="@RoomPrice"/>
+                                                        <option value="@r.Bed">
+                                                            @(r.Bed - i) người lớn @((i == 0) ? "" : $", {i} trẻ em")
+                                                        </option>
+                                                        <option value="@(r.Bed - i)" selected="@(ri.AdultCount == i ? "selected" : null)">
+                                                            @(r.Bed - i) người lớn
+                                                        </option>
                                                     }
-                                                }
-                                                <strong id="total_room_price_@r.RoomType">
-
-                                                    @String.Format("{0:N0}", TotalPrice) VND
-                                                </strong>
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <hr>
-                                }
-                            }
-                            <hr>
-
-                            <!-- Total Price -->
-                            
-                            <div class="d-flex justify-content-between total-price">
-                                <p>Tổng giá trị</p>
-                                <p id="display_total_price">0 VND</p>
-                                <input type="hidden" id="total_price"/>
+                                                </select>
+                                            </div>
+                                            <div>
+                                                <p>Trẻ em</p>
+                                                <select class="form-select" name="ChildrenCount" onchange="this.form.submit()">
+                                                    @for (int i = 0; i <= r.Bed; i++)
+                                                    {
+                                                        <option value="@i" selected="@(ri.ChildrenCount == i ? "selected" : null)">
+                                                            @i trẻ em
+                                                        </option>
+                                                    }
+                                                </select>
+                                            </div>
+                                        </form>
+                                    }
+                                </div>
+                                <div class="col-md-2 text-end">
+                                    <p><strong>@String.Format("{0:N0}", CalculateTotalPrice(r)) VND</strong></p>
+                                </div>
                             </div>
-                        </div>
+                            <hr />
+                        }
+                    }
+                    <div class="d-flex justify-content-between total-price">
+                        <p><strong>Tổng giá trị</strong></p>
+                        <p><strong>@String.Format("{0:N0}", CalculateTotalAmount(SelectedRooms)) VND</strong></p>
                     </div>
                 </div>
-
-                <div class="col-md-4">
-                    <!-- Guest Information -->
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Thông tin khách</h5>
-                            <form id="preorderForm" method="post">
-                                <div class="row mb-3">
-                                    <div class="col-md-7">
-                                        <label for="name" class="form-label">Họ và tên</label>
-                                        <input type="text" class="form-control" asp-for="Name" placeholder="Họ và tên" />
-                                        <span asp-validation-for="Name" class="text-danger"></span>
-                                    </div>
-
-                                    <div class="col-md-5">
-                                        <label for="phone" class="form-label">Số điện thoại</label>
-                                        <input type="text" class="form-control" asp-for="Phone" placeholder="Phone" />
-                                        <span asp-validation-for="Phone" class="text-danger"></span>
-                                    </div>
-                                </div>
-
-                                <div class="row mb-3">
-                                    <div class="col-md-7">
-                                        <label for="email" class="form-label">Email</label>
-                                        <input type="email" class="form-control" asp-for="Email" placeholder="Địa chỉ Email" />
-                                        <span asp-validation-for="Email" class="text-danger"></span>
-                                    </div>
-
-                                    <div class="col-md-5">
-                                        <label for="dob" class="form-label">Ngày sinh</label>
-                                        <input type="date" class="form-control" asp-for="Dob" placeholder="Ngày sinh" />
-                                        <span asp-validation-for="Dob" class="text-danger"></span>
-                                    </div>
-                                </div>
-
-                                    <input type="hidden" name="CheckinDate" id="hidden-checkin-date" value="@Model.CheckinDate" />
-                                    <input type="hidden" name="CheckoutDate" id="hidden-checkout-date" value="@Model.CheckoutDate" />
-                                    <input type="hidden" name="RoomData" id="roomData">
-                                    <input type="hidden" name="TotalAmount" id="totalAmount"/>
-
-                                <button class="btn-booking" onclick="sendRoomData()">Đặt phòng</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            
-
-            <div>
             </div>
         </div>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        function recalculatePrice(roomType, roomId) {
-            // Get the number of adults and children
-            const adultSelect = document.getElementById(`adult_count_${roomType}_${roomId}`);
-            const childrenSelect = document.getElementById(`children_count_${roomType}_${roomId}`);
+        <!-- Guest Information Section -->
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Thông tin khách</h5>
+                    <form id="preorderForm" method="post" asp-page-handler="PreOrder">
+                        <input type="hidden" asp-for="CheckinDate" id="hidden-checkin-date" value="@Model.CheckinDate" />
+                        <input type="hidden" asp-for="CheckoutDate" id="hidden-checkout-date" value="@Model.CheckoutDate" />
+                        <input type="hidden" asp-for="TotalAmount" id="hidden-checkout-date" value="@CalculateTotalAmount(SelectedRooms)" />
+                        @if (!isLoggedIn)
+                        {
+                            <form id="preorderForm" method="post">
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Họ và tên</label>
+                                    <input type="text" class="form-control" asp-for="Name" placeholder="Họ và tên" />
+                                    <span asp-validation-for="Name" class="text-danger"></span>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="phone" class="form-label">Số điện thoại</label>
+                                    <input type="text" class="form-control" asp-for="Phone" placeholder="Phone" />
+                                    <span asp-validation-for="Phone" class="text-danger"></span>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" asp-for="Email" placeholder="Địa chỉ Email" />
+                                    <span asp-validation-for="Email" class="text-danger"></span>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="dob" class="form-label">Ngày sinh</label>
+                                    <input type="date" class="form-control" asp-for="Dob" placeholder="Ngày sinh" />
+                                    <span asp-validation-for="Dob" class="text-danger"></span>
+                                </div>
+                                <button class="btn btn-primary w-100" type="submit">Đặt phòng</button>
+                            </form>
+                        }
 
-            const selectedAdults = parseInt(adultSelect.value) || 0;
-            const selectedChildren = parseInt(childrenSelect.value) || 0;
-            const roomPrice = parseFloat(document.getElementById(`room_original_price_${roomType}`).value) || 0;
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-            const bed = parseInt(document.getElementById(`room_bed_${roomType}`).value) || 0;
-
-            // Calculate total price for the room
-            let roomTotalPrice = roomPrice;
-            const totalOccupants = selectedAdults + selectedChildren;
-
-            // Apply additional charge if total occupants exceed bed capacity
-            if (totalOccupants > bed) {
-                const extraOccupants = totalOccupants - bed;
-                roomTotalPrice += (extraOccupants * roomPrice * 0.3);
+@functions {
+    private double CalculateTotalPrice(RoomData? roomData)
+    {
+        if(roomData != null)
+        {
+            double totalPrice = 0;
+            foreach (var ri in roomData.RoomList)
+            {
+                double roomPrice = roomData.Price;
+                if (ri.ChildrenCount + ri.AdultCount > roomData.Bed)
+                {
+                    roomPrice += roomData.Price * (ri.ChildrenCount + ri.AdultCount - roomData.Bed) * 0.3;
+                }
+                totalPrice += roomPrice;
             }
-
-            // Update the total price for the room
-            document.getElementById(`room_price_(${roomType})_${roomId}`).value = roomTotalPrice;
-
-            // Recalculate overall total price
-            recalculateTotalRoomPriceById(roomType);
+            return totalPrice;
         }
-
-        function recalculateTotalRoomPriceById(roomType) {
-            // Initialize total price
-            let totalRoomPrice = 0;
-
-            // Select all room price inputs for the given room type
-            const roomPriceInputs = document.querySelectorAll(`input[id^="room_price_(${roomType})"]`);
-
-            // Sum up the values
-            roomPriceInputs.forEach(input => {
-                const price = parseFloat(input.value) || 0; // Default to 0 if the value is NaN
-                totalRoomPrice += price;
-            });
-
-            // Update the total price display
-            document.getElementById(`total_room_price_${roomType}`).innerText =
-                `${totalRoomPrice.toLocaleString('vi-VN')} VND`;
-
-            updateTotalPrice();
-        }
-
-        // Function to update the total price displayed
-        function updateTotalPrice() {
-            let totalPrice = 0;
-
-            // Get all room price inputs and sum their values
-            const roomPriceInputs = document.querySelectorAll('input[id^="room_price_"]');
-            roomPriceInputs.forEach(input => {
-                totalPrice += parseFloat(input.value) || 0; // Add up the values
-            });
-
-            // Update the displayed total price
-            const totalPriceDisplay = document.getElementById(`display_total_price`); // Select the total price paragraph
-            if (totalPriceDisplay) {
-                totalPriceDisplay.innerText = `${totalPrice.toLocaleString('vi-VN')} VND`; // Format and set the total price
-                document.getElementById(`total_price`).value = totalPrice;
-            } else {
-                console.error("Total price display element not found.");
-            }
-        }
-    </script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            // Get all adult count select elements
-            const adultSelects = document.querySelectorAll('select[id^="adult_count_"]');
-
-            // Attach onchange event listener to each adult count select element
-            adultSelects.forEach(select => {
-                const roomType = select.id.split('_')[2]; // Extract room type
-                const roomId = select.id.split('_')[3]; // Extract room ID
-
-                select.addEventListener('change', function () {
-                    recalculatePrice(roomType, roomId);
-                });
-            });
-
-            // Get all children count select elements
-            const childrenSelects = document.querySelectorAll('select[id^="children_count_"]');
-
-            // Attach onchange event listener to each children count select element
-            childrenSelects.forEach(select => {
-                const roomType = select.id.split('_')[2]; // Extract room type
-                const roomId = select.id.split('_')[3]; // Extract room ID
-
-                select.addEventListener('change', function () {
-                    recalculatePrice(roomType, roomId);
-                });
-            });
-        });
-
-        window.onload = function () {
-            updateTotalPrice();
-        }
-    </script>
-
-    <script>
-    function getRoomsDataById(roomId) {
-        const roomList = [];
-        roomCount = document.getElementById(`room_count_${roomId}`).value;
-        for (let i = 1; i <= roomCount; i++) {
-            const room = {
-            id: i,
-                price: document.getElementById(`room_price_(${roomId})_${i}`).value,
-                adultCount: document.getElementById(`adult_count_${roomId}_${i}`).value,
-                childrenCount: document.getElementById(`children_count_${roomId}_${i}`).value,
-            };
-            roomList.push(room);
-        }
-
-        return {
-            roomType: roomId,
-            bed: 0,
-            price: 0,
-            name: "",
-            roomList
-        };
+        return 0;
     }
 
-    function sendRoomData() {
-        const roomList = [];
-
-        // Use data attributes for better flexibility
-        const roomElements = document.querySelectorAll('[id^="room_name_"]');
-
-        roomElements.forEach(roomElement => {
-            const roomId = roomElement.id.split('_')[2];  // Extract room ID
-            const roomData = getRoomsDataById(roomId);
-            if (roomData.roomList.length > 0) {
-                roomList.push(roomData);
+    private decimal CalculateTotalAmount(IEnumerable<RoomData>? selectedRooms)
+    {
+        if(selectedRooms != null)
+        {
+            decimal total = 0;
+            foreach (var room in selectedRooms)
+            {
+                total += (decimal)CalculateTotalPrice(room);
             }
-        });
-
-        // Store JSON data in a hidden field
-        const roomDataJson = JSON.stringify(roomList);
-        document.getElementById('roomData').value = roomDataJson;
-
-        document.getElementById('totalAmount').value = document.getElementById('total_price').value;
-        // Submit the form
-        document.getElementById('preorderForm').submit();
+            return total;
+        }
+        return 0;
     }
-    </script>
+}
