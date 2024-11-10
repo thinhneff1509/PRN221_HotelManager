@@ -109,25 +109,30 @@
                                             đêm</p>
 
                                         <div class="row col-md-12 d-flex justify-content-between">
-                                            <form method="post" asp-page-handler="ChooseRoom">
-                                                <input type="hidden" name="SelectedRoomId" value="@room.Id" />
-                                                <input type="hidden" name="SelectedRoomCount" value="1" />
-                                                <input type="hidden" asp-for="CheckInDate" forma
-                                                    value="@Model.CheckInDate.ToString("yyyy-MM-dd")" />
-                                                <input type="hidden" asp-for="CheckOutDate"
-                                                    value="@Model.CheckOutDate.ToString("yyyy-MM-dd")" />
-                                                @if (room.Rooms.Count(r => !r.Status.Equals("Hết phòng")) <= 0)
-                                                {
-                                                    <button type="submit" class="choose-btn col-md-5" disabled>Hết phòng</button>
-                                                }
-                                                else
-                                                {
-                                                    <button type="submit" class="choose-btn col-md-5">Lựa chọn</button>
-                                                }
-                                            </form>
-                                            <div class="choose-btn col-md-5"
-                                                onclick="window.location='/User_/Rooms/Detail/@room.Id'">
-                                                Xem chi tiết phòng <i class="bi bi-chevron-down"></i>
+                                            <div class="col-md-6">
+                                                <span>
+                                                    <form method="post" asp-page-handler="ChooseRoom">
+                                                        <input type="hidden" name="SelectedRoomId" value="@room.Id"/>
+                                                        <input type="hidden" name="SelectedRoomCount" value="1"/>
+                                                        <input type="hidden" asp-for="CheckInDate" forma
+                                                               value="@Model.CheckInDate.ToString("yyyy-MM-dd")"/>
+                                                        <input type="hidden" asp-for="CheckOutDate"
+                                                               value="@Model.CheckOutDate.ToString("yyyy-MM-dd")"/>
+                                                        @if (room.Rooms.Count(r => !r.Status.Equals("Hết phòng")) <= 0)
+                                                        {
+                                                            <button type="submit" class="choose-btn col-md-12 py-3" disabled><strong></strong> phòng</button>
+                                                        }
+                                                        else
+                                                        {
+                                                            <button type="submit" class="choose-btn col-md-12 py-3">Lựa chọn</button>
+                                                        }
+                                                    </form>
+                                                </span>
+                                            </div>
+                                            <div class="choose-btn col-md-6 py-3 text-center"
+                                                 onclick="window.location='/User_/Rooms/Detail/@room.Id'">
+                                                Xem chi tiết phòng
+                                                <i class="bi bi-chevron-down"></i>
                                             </div>
                                         </div>
                                     </div>
@@ -135,42 +140,51 @@
                                 @if (selectedRooms.Any(r => r.RoomTypeId == room.Id))
                                 {
                                     <div class="row">
-                                        <div class="row">
+                                        <div class="row mt-5">
                                             <div class="col-md-2">
-                                                <p><strong>@room.Name</strong></p>
+                                                <p class="col-form-label"><strong>@room.Name</strong></p>
                                             </div>
 
-                                            <div class="col-md-4">
-                                                <p><del>@String.Format("{0:N0}", room.Price) VND</del>
-                                                    <strong>@String.Format("{0:N0}", room.Price) VND</strong> / đêm</p>
+                                            <div class="col-md-3">
+                                                <p class="col-form-label">
+                                                    @*
+                                                    <del>@String.Format("{0:N0}", room.Price) VND</del>
+                                                    *@
+                                                    <strong class="col-form-label">@String.Format("{0:N0}", room.Price) VND</strong> / đêm
+                                                </p>
                                             </div>
 
                                             <div class="col-md-2">
-                                                <label>@room.Bed người lớn:</label>
+                                                <label class="col-form-label">@room.Bed người lớn:</label>
                                             </div>
 
-                                            <form method="post" asp-page-handler="ChooseRoom" class="col-md-3">
+                                            <form method="post" asp-page-handler="ChooseRoom" class="col-md-5">
                                                 <input type="hidden" asp-for="CheckInDate"
                                                     value="@Model.CheckInDate.ToString("yyyy-MM-dd")" />
                                                 <input type="hidden" asp-for="CheckOutDate"
                                                     value="@Model.CheckOutDate.ToString("yyyy-MM-dd")" />
-                                                <div class="col-auto">
-                                                    <label for="room-count" class="col-form-label">Số phòng:</label>
-                                                    <select id="selectedRoomCount" name="SelectedRoomCount" class="form-control"
-                                                        onchange="this.form.submit()">
-                                                        @for (int i = 0; i <= room.Rooms.Count(r => !r.Status.Equals("Hết phòng"));
-i++)
-                                                        {
+                                                <div class="col-auto row">
+                                                    <div class="col-md-5">
+                                                        <label for="room-count" class="col-form-label">Số phòng:</label>
+                                                    </div>
+                                                    <div class="col-md-7">
+                                                        <select id="selectedRoomCount" name="SelectedRoomCount" class="form-control"
+                                                                onchange="this.form.submit()">
+                                                            @for (int i = 0;
+                                                            i <= room.Rooms.Count(r => !r.Status.Equals("Hết phòng"));
+                                                            i++)
+                                                            {
                                                             @if (selectedRooms.Where(r => r.RoomTypeId == room.Id).Count() == i)
                                                             {
-                                                                <option selected value="@i">@i phòng</option>
+                                                            <option selected value="@i">@i phòng</option>
                                                             }
                                                             else
                                                             {
-                                                                <option value="@i">@i phòng</option>
+                                                            <option value="@i">@i phòng</option>
                                                             }
-                                                        }
-                                                    </select>
+                                                            }
+                                                        </select>
+                                                    </div>
                                                 </div>
                                                 <input readonly hidden type="number" asp-for="SelectedRoomId" value="@room.Id" />
                                                 <div class="col-auto" hidden>
@@ -180,6 +194,7 @@ i++)
                                         </div>
                                         @foreach (var r in selectedRooms.Where(r => r.RoomTypeId == room.Id))
                                         {
+                                            <hr>
                                             <form method="post" asp-page-handler="ChangeAdultAndChildrenCount">
                                                 <div class="row">
                                                     <div class="col-md-3">
@@ -192,7 +207,7 @@ i++)
                                                             value="@Model.CheckOutDate.ToString("yyyy-MM-dd")" />
                                                     </div>
                                                     <div class="col-md-4">
-                                                        <label>Adults:</label>
+                                                        <label>Người lớn:</label>
                                                         <select asp-for="AdultCount" onchange="this.form.submit()" class="form-control">
                                                             @for (int i = 1; i <= room.Bed; i++)
                                                             {
@@ -210,7 +225,7 @@ i++)
                                                         </select>
                                                     </div>
                                                     <div class="col-md-4">
-                                                        <label>Children:</label>
+                                                        <label>Trẻ em:</label>
                                                         <select asp-for="ChildrenCount" onchange="this.form.submit()"
                                                             class="form-control">
                                                             @for (int i = 0; i <= room.Bed; i++)

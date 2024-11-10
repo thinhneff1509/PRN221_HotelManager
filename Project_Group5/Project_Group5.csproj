@@ -29,6 +29,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Pages\Admin\DiscountManagement\" />
     <Folder Include="wwwroot\images\" />
   </ItemGroup>
 
