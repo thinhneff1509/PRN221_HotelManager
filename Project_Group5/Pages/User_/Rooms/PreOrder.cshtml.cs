@@ -5,6 +5,7 @@ using Project_Group5.Models;
 using System.ComponentModel.DataAnnotations;
 using System.Security.Claims;
 using System.Text.Json;
+using Decimal = System.Decimal;
 
 namespace Project_Group5.Pages.Rooms
 {
@@ -18,21 +19,17 @@ namespace Project_Group5.Pages.Rooms
         [DataType(DataType.Date)]
         public DateTime CheckoutDate { get; set; } = DateTime.Now.AddDays(1);
 
-        [BindProperty]
-        public int StayDuration { get; set; } = 1;
-        [BindProperty]
-        public string Name { get; set; }
-        [BindProperty]
-        public string Phone { get; set; }
-        [BindProperty]
-        public string Email { get; set; }
-        [BindProperty]
-        public DateTime? Dob { get; set; }
-        [BindProperty]
-        public string TotalAmount { get; set; }
-        [TempData]
-        public string SelectedRoomsJson { get; set; }
+        [BindProperty] public int StayDuration { get; set; } = 1;
+        [BindProperty] public string Name { get; set; }
+        [BindProperty] public string Phone { get; set; }
+        [BindProperty] public string Email { get; set; }
+        [BindProperty] public DateTime? Dob { get; set; }
+        [BindProperty] public string TotalAmount { get; set; }
+        [TempData] public string SelectedRoomsJson { get; set; }
         public Customer LoggedInCustomer { get; set; }
+        [BindProperty] public string PromoCode { get; set; }
+        [BindProperty] public decimal Discount { get; set; }
+        [BindProperty] public string SDiscount { get; set; }
 
 
         public List<RoomData> SelectedRooms
@@ -41,7 +38,8 @@ namespace Project_Group5.Pages.Rooms
             set => SelectedRoomsJson = JsonSerializer.Serialize(value);
         }
 
-        public async Task<IActionResult> OnGet(string checkinDate, string checkoutDate, string roomData)
+        public async Task<IActionResult> OnGet(string checkinDate, string checkoutDate, string promoCode,
+            string sDiscount, string roomData)
         {
             if (checkinDate != null)
             {
@@ -51,6 +49,7 @@ namespace Project_Group5.Pages.Rooms
             {
                 CheckinDate = DateTime.Today;
             }
+
             if (checkoutDate != null)
             {
                 CheckoutDate = DateTime.Parse(checkoutDate);
@@ -59,9 +58,20 @@ namespace Project_Group5.Pages.Rooms
             {
                 CheckinDate = DateTime.Today.AddDays(1);
             }
+
             if (roomData != null)
             {
                 SelectedRoomsJson = roomData;
+            }
+
+            if (promoCode != null)
+            {
+                PromoCode = promoCode;
+            }
+
+            if (sDiscount != null)
+            {
+                SDiscount = sDiscount;
             }
 
             TimeSpan dateDifference = CheckinDate - CheckoutDate;
@@ -71,17 +81,46 @@ namespace Project_Group5.Pages.Rooms
             {
                 StayDuration = 1;
             }
+
             this.StayDuration = StayDuration;
 
             var selectedRooms = SelectedRooms;
             using (Fall24_SE1745_PRN221_Group5Context context = new Fall24_SE1745_PRN221_Group5Context())
             {
-                var RoomTypes = await context.RoomTypes.Include(r => r.Rooms).ThenInclude(r => r.ImageRooms).ToListAsync();
+                var RoomTypes = await context.RoomTypes.Include(r => r.Rooms).ThenInclude(r => r.ImageRooms)
+                    .ToListAsync();
                 foreach (var r in selectedRooms)
                 {
-                    r.AvailableRoom = context.Rooms.Where(rl => rl.Status != "Hết phòng" && r.RoomTypeId == rl.RoomtypeId).Count();
+                    r.AvailableRoom = context.Rooms
+                        .Where(rl => rl.Status != "Hết phòng" && r.RoomTypeId == rl.RoomtypeId).Count();
                 }
             }
+            
+            decimal totalDiscountPercentage = 0;
+
+            // Apply PromoCode discount if applicable
+            if (!string.IsNullOrEmpty(PromoCode))
+            {
+                var discount = await GetDiscountByPromoCode(PromoCode);
+                if (discount != null &&
+                    decimal.TryParse(discount.Amount, out decimal discountAmount))
+                {
+                    totalDiscountPercentage += discountAmount;
+                }
+            }
+
+            // Apply Special discount if applicable
+            if (!string.IsNullOrEmpty(SDiscount))
+            {
+                var discount = await GetDiscountByPromoCode(SDiscount);
+                if (discount != null &&
+                    decimal.TryParse(discount.Amount, out decimal discountAmount))
+                {
+                    totalDiscountPercentage += discountAmount;
+                }
+            }
+            this.Discount = totalDiscountPercentage;
+
             SelectedRooms = selectedRooms;
             this.CheckinDate = CheckinDate;
             this.CheckoutDate = CheckoutDate;
@@ -89,7 +128,8 @@ namespace Project_Group5.Pages.Rooms
             return Page();
         }
 
-        public Task<IActionResult> OnPostChangeBookingInfo(int roomId, int roomTypeId, int AdultCount, int ChildrenCount, DateTime checkinDate, DateTime checkoutDate)
+        public Task<IActionResult> OnPostChangeBookingInfo(int roomId, int roomTypeId, int AdultCount,
+            int ChildrenCount, DateTime checkinDate, DateTime checkoutDate, Decimal Discount, string PromoCode, int SDiscount)
         {
             CheckinDate = checkinDate;
             CheckoutDate = checkoutDate;
@@ -110,6 +150,7 @@ namespace Project_Group5.Pages.Rooms
                 {
                     return Task.FromResult<IActionResult>(BadRequest("Room group data not found."));
                 }
+
                 var room = roomGroup.RoomList.FirstOrDefault(r => r.RoomId == roomId);
 
                 if (roomGroup == null)
@@ -120,11 +161,13 @@ namespace Project_Group5.Pages.Rooms
                 room.AdultCount = AdultCount;
                 room.ChildrenCount = ChildrenCount;
             }
+            this.Discount = Discount;
             SelectedRooms = selectedRooms;
             return Task.FromResult<IActionResult>(Page());
         }
 
-        public async Task<IActionResult> OnPostChangeRoomNum(int roomTypeId, int roomCount, DateTime checkinDate, DateTime checkoutDate)
+        public async Task<IActionResult> OnPostChangeRoomNum(int roomTypeId, int roomCount, DateTime checkinDate,
+            DateTime checkoutDate, Decimal Discount, string PromoCode, int SDiscount)
         {
             CheckinDate = checkinDate;
             CheckoutDate = checkoutDate;
@@ -186,6 +229,7 @@ namespace Project_Group5.Pages.Rooms
                     roomGroup.RoomList.RemoveAll(sr => sr.RoomTypeId == roomTypeId && numberOfRoomChange++ < 0);
                 }
             }
+            this.Discount = Discount;
             SelectedRooms = selectedRooms;
             return Page();
         }
@@ -215,14 +259,17 @@ namespace Project_Group5.Pages.Rooms
                     {
                         ModelState.AddModelError("Name", "Name is required.");
                     }
+
                     if (!Dob.HasValue)
                     {
                         ModelState.AddModelError("Dob", "Date of Birth is required.");
                     }
+
                     if (string.IsNullOrWhiteSpace(Phone))
                     {
                         ModelState.AddModelError("Phone", "Phone number is required.");
                     }
+
                     if (string.IsNullOrWhiteSpace(Email))
                     {
                         ModelState.AddModelError("Email", "Email is required.");
@@ -231,6 +278,7 @@ namespace Project_Group5.Pages.Rooms
                     {
                         ModelState.AddModelError("Email", "Invalid email address.");
                     }
+
                     if (!ModelState.IsValid)
                     {
                         return Page();
@@ -242,7 +290,9 @@ namespace Project_Group5.Pages.Rooms
                     // Deserialize RoomData JSON into a list of RoomData objects
                     var selectedRooms = SelectedRooms;
 
-                    var customer = await context.Customers.FirstOrDefaultAsync(c => c.Email.Equals(Email) || c.Phone.Equals(Phone));
+                    var customer =
+                        await context.Customers.FirstOrDefaultAsync(c =>
+                            c.Email.Equals(Email) || c.Phone.Equals(Phone));
                     if (customer == null)
                     {
                         var newCustomer = new Customer
@@ -257,8 +307,10 @@ namespace Project_Group5.Pages.Rooms
                         await context.SaveChangesAsync();
                         customer = newCustomer;
                     }
+
                     DateTime CheckInDate = CheckinDate;
                     DateTime CheckOutDate = CheckoutDate;
+                    int discountId = context.Discounts.FirstOrDefault(d => d.Name == PromoCode || d.Name == SDiscount)?.Id ?? 0;
                     foreach (var r in selectedRooms)
                     {
                         foreach (var selectedRoom in r.RoomList)
@@ -271,14 +323,39 @@ namespace Project_Group5.Pages.Rooms
                                 context.Update(room);
 
                                 // Calculate discount if applicable
-                                /*                                var discount = await context.Discounts.FirstOrDefaultAsync(d => d.BookingId == room.Id);*/
-                                double finalAmount = double.Parse(TotalAmount);
-                                /*                                if (discount != null)
-                                                                {   
-                                                                    // Assuming discount is a percentage
-                                                                    finalAmount = finalAmount * (1 - (discount.Amount / 100));
-                                                                }
-                                */
+                                Decimal finalAmount = Decimal.Parse(TotalAmount);
+
+                                decimal totalDiscountPercentage = 0;
+
+                                // Apply PromoCode discount if applicable
+                                if (!string.IsNullOrEmpty(PromoCode))
+                                {
+                                    var discount = await GetDiscountByPromoCode(PromoCode);
+                                    if (discount != null &&
+                                        decimal.TryParse(discount.Amount, out decimal discountAmount))
+                                    {
+                                        totalDiscountPercentage += discountAmount;
+                                    }
+                                }
+
+                                // Apply Special discount if applicable
+                                if (!string.IsNullOrEmpty(SDiscount))
+                                {
+                                    var discount = await GetDiscountByPromoCode(SDiscount);
+                                    if (discount != null &&
+                                        decimal.TryParse(discount.Amount, out decimal discountAmount))
+                                    {
+                                        totalDiscountPercentage += discountAmount;
+                                    }
+                                }
+                                this.Discount = totalDiscountPercentage;
+                                
+                                // Apply the total discount
+                                if (totalDiscountPercentage > 0)
+                                {
+                                    finalAmount *= (1 - (totalDiscountPercentage / 100));
+                                }
+
                                 // Create booking with updated amount
                                 var booking = new Booking
                                 {
@@ -287,12 +364,14 @@ namespace Project_Group5.Pages.Rooms
                                     CheckOutDate = CheckOutDate,
                                     Status = "Chờ thanh toán",
                                     TotalAmount = finalAmount.ToString(), // Store the total after applying discount
-                                    RoomId = room.Id
+                                    RoomId = room.Id, 
+                                    DiscountId = (discountId == 0 )? null : discountId
                                 };
                                 context.Add(booking);
                             }
                         }
                     }
+
                     SelectedRooms = selectedRooms;
 
                     await context.SaveChangesAsync();
@@ -300,7 +379,25 @@ namespace Project_Group5.Pages.Rooms
                     return RedirectToPage("/Homepage/Home");
                 }
             }
+
             return Page();
         }
+
+        private async Task<Discount?> GetDiscountByPromoCode(string promoCode)
+        {
+            using (Fall24_SE1745_PRN221_Group5Context context = new Fall24_SE1745_PRN221_Group5Context())
+            {
+                if (string.IsNullOrEmpty(promoCode))
+                {
+                    return null;
+                }
+
+                return await context.Discounts
+                    .FirstOrDefaultAsync(d => d.Name == promoCode
+                                              && d.EffectiveDate <= DateTime.Now
+                                              && d.ExpirationDate >= DateTime.Now);
+            }
+        }
     }
+    
 }

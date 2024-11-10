@@ -39,6 +39,9 @@
                                     <input type="hidden" name="roomTypeId" value="@r.RoomTypeId" />
                                     <input type="hidden" name="CheckinDate" value="@Model.CheckinDate" />
                                     <input type="hidden" name="CheckoutDate" value="@Model.CheckoutDate" />
+                                    <input type="hidden" asp-for="Discount" value="@Model.Discount" />
+                                    <input type="hidden" asp-for="PromoCode" value="@Model.PromoCode"/>
+                                    <input type="hidden" asp-for="SDiscount" value="@Model.SDiscount"/>
                                     <input type="hidden" asp-for="StayDuration" value="@Model.StayDuration" />
 
                                     <p>Số phòng</p>
@@ -60,7 +63,10 @@
                                             <input type="hidden" name="CheckinDate" value="@Model.CheckinDate" />
                                             <input type="hidden" name="CheckoutDate" value="@Model.CheckoutDate" />
                                             <input type="hidden" asp-for="StayDuration" value="@Model.StayDuration" />
-
+                                            <input type="hidden" asp-for="Discount" value="@Model.Discount" />
+                                            <input type="hidden" asp-for="PromoCode" value="@Model.PromoCode"/>
+                                            <input type="hidden" asp-for="SDiscount" value="@Model.SDiscount"/>
+                                            
                                             <div class="me-2">
                                                 <p>Số lượng khách</p>
                                                 <select class="form-select" name="AdultCount" onchange="this.form.submit()">
@@ -100,8 +106,16 @@
                         }
                     }
                     <div class="d-flex justify-content-between total-price">
+
                         <p><strong>Tổng giá trị</strong></p>
-                        <p><strong>@String.Format("{0:N0}", CalculateTotalAmount(SelectedRooms)) VND</strong></p>
+                        @{
+                            var totalPrice = CalculateTotalAmount(SelectedRooms);
+                        }
+                        <p><strong>@String.Format("{0:N0}", totalPrice*(1-Model.Discount/100)) VND</strong></p>
+                        @if (Model.Discount != null && Model.Discount > 0)
+                        {
+                        <p>Đã giảm: @((totalPrice*Model.Discount/100).ToString("N0")) VND</p>
+                        }
                     </div>
                 </div>
             </div>
@@ -116,6 +130,9 @@
                         <input type="hidden" asp-for="CheckoutDate" id="hidden-checkout-date" value="@Model.CheckoutDate" />
                         <input type="hidden" asp-for="TotalAmount" id="hidden-checkout-date" value="@CalculateTotalAmount(SelectedRooms)" />
                         <input type="hidden" asp-for="StayDuration" value="@Model.StayDuration" />
+                        <input type="hidden" asp-for="Discount" value="@Model.Discount" />
+                        <input type="hidden" asp-for="PromoCode" value="@Model.PromoCode"/>
+                        <input type="hidden" asp-for="SDiscount" value="@Model.SDiscount"/>
 
                         @if (!isLoggedIn)
                         {
@@ -140,6 +157,10 @@
                                 <input type="date" class="form-control" asp-for="Dob" placeholder="Ngày sinh" />
                                 <span asp-validation-for="Dob" class="text-danger"></span>
                             </div>
+                            
+                            <strong>
+                                <button class="btn btn-primary w-100" type="submit">Đặt phòng</button>
+                            </strong>
                         }
                         else
                         {

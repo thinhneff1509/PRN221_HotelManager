@@ -19,12 +19,14 @@
                 <div class="col-auto">
                     <label for="checkin-date" class="col-form-label">Ngày đến</label>
                     <input type="date" id="checkin-date" asp-for="CheckInDate" onchange="this.form.submit"
+                           min="@DateTime.Now.ToString("dd-MM-yyyy")" 
                            class="form-control" value="@Model.CheckInDate.ToString("yyyy-MM-dd")">
                 </div>
 
                 <div class="col-auto">
                     <label for="checkout-date" class="col-form-label">Ngày đi</label>
                     <input type="date" id="checkout-date" asp-for="CheckOutDate" onchange="this.form.submit"
+                           min="@DateTime.Now.AddDays(1).ToString("yyyy-MM-dd")"
                            class="form-control" value="@Model.CheckOutDate.ToString("yyyy-MM-dd")">
                 </div>
 
@@ -114,6 +116,8 @@
                                                     <form method="post" asp-page-handler="ChooseRoom">
                                                         <input type="hidden" name="SelectedRoomId" value="@room.Id"/>
                                                         <input type="hidden" name="SelectedRoomCount" value="1"/>
+                                                        <input type="hidden" asp-for="PromoCode"/>
+                                                        <input type="hidden" asp-for="SDiscount"/>
                                                         <input type="hidden" asp-for="CheckInDate" forma
                                                                value="@Model.CheckInDate.ToString("yyyy-MM-dd")"/>
                                                         <input type="hidden" asp-for="CheckOutDate"
@@ -187,6 +191,8 @@
                                                     </div>
                                                 </div>
                                                 <input readonly hidden type="number" asp-for="SelectedRoomId" value="@room.Id" />
+                                                <input type="hidden" asp-for="PromoCode"/>
+                                                <input type="hidden" asp-for="SDiscount"/>
                                                 <div class="col-auto" hidden>
                                                     <button type="submit" class="choose-btn">Lựa chọn</button>
                                                 </div>
@@ -199,8 +205,9 @@
                                                 <div class="row">
                                                     <div class="col-md-3">
                                                         <p><strong>Phòng @r.Name</strong></p>
-                                                        <input readonly hidden type="number" asp-for="SelectedRoomId"
-                                                            value="@r.RoomId" />
+                                                        <input readonly hidden type="number" asp-for="SelectedRoomId" value="@r.RoomId" />
+                                                        <input type="hidden" asp-for="PromoCode"/>
+                                                        <input type="hidden" asp-for="SDiscount"/>
                                                         <input type="hidden" asp-for="CheckInDate"
                                                             value="@Model.CheckInDate.ToString("yyyy-MM-dd")" />
                                                         <input type="hidden" asp-for="CheckOutDate"
@@ -311,10 +318,12 @@
                         <p>Đã giảm: @((Model.TotalPrice*totalDiscount/100).ToString("N0")) VND</p>
 
                         <form method="post" asp-page-handler="PreOrder">
+                            <input type="hidden" asp-for="PromoCode"/>
+                            <input type="hidden" asp-for="SDiscount"/>
                             <input type="hidden" asp-for="CheckInDate"
-                                   value="@Model.CheckInDate.ToString("yyyy-MM-dd")" />
+                                   value="@Model.CheckInDate.ToString("yyyy-MM-dd")"/>
                             <input type="hidden" asp-for="CheckOutDate"
-                                   value="@Model.CheckOutDate.ToString("yyyy-MM-dd")" />
+                                   value="@Model.CheckOutDate.ToString("yyyy-MM-dd")"/>
                             <input type="hidden" name="selectedRoomJson" class="form-control"
                                    placeholder="Mã khuyến mại" value="@Model.SelectedRoomsJson">
                             <button type="submit" class="choose-btn">Đặt Ngay</button>

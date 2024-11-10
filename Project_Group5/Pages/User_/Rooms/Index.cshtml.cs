@@ -60,11 +60,15 @@ public class IndexModel : PageModel
     public async Task OnGetAsync()
     {
         RoomTypes = await GetAvailableRoom();
+        this.PromoCode = PromoCode;
+        this.SDiscount = SDiscount;
         this.SpecialDiscount = await GetAllDiscount();
     }
 
     public async Task<List<Discount>> GetAllDiscount()
     {
+        this.PromoCode = PromoCode;
+        this.SDiscount = SDiscount;
         DateTime today = DateTime.Now.Date;
 
         return await _context.Discounts
@@ -100,7 +104,7 @@ public class IndexModel : PageModel
     }
 
 
-    public async Task<IActionResult> OnPostChooseRoomAsync(int SelectedRoomId, int SelectedRoomCount, DateTime CheckInDate, DateTime CheckOutDate)
+    public async Task<IActionResult> OnPostChooseRoomAsync(int SelectedRoomId, int SelectedRoomCount, DateTime CheckInDate, DateTime CheckOutDate, string PromoCode, string SDiscount) 
     {
         this.SpecialDiscount = await GetAllDiscount();
 
@@ -135,12 +139,14 @@ public class IndexModel : PageModel
         }
         this.CheckInDate = CheckInDate;
         this.CheckOutDate = CheckOutDate;
+        this.PromoCode = PromoCode;
+        this.SDiscount = SDiscount;
         SelectedRooms = selectedRooms;
         await CalculatePrice();
         return Page();
     }
 
-    public async Task<IActionResult> OnPostChangeAdultAndChildrenCount(int SelectedRoomId, int AdultCount, int ChildrenCount, DateTime CheckInDate, DateTime CheckOutDate)
+    public async Task<IActionResult> OnPostChangeAdultAndChildrenCount(int SelectedRoomId, int AdultCount, int ChildrenCount, DateTime CheckInDate, DateTime CheckOutDate, string PromoCode, string SDiscount)
     {
         this.SpecialDiscount = await GetAllDiscount();
 
@@ -155,6 +161,8 @@ public class IndexModel : PageModel
         }
         this.CheckInDate = CheckInDate;
         this.CheckOutDate = CheckOutDate;
+        this.PromoCode = PromoCode;
+        this.SDiscount = SDiscount;
         SelectedRooms = selectedRoomList;
         await CalculatePrice();
         return Page();
@@ -187,47 +195,37 @@ public class IndexModel : PageModel
             }
         }
 
-        /*        // Apply discount if applicable
-                if (!string.IsNullOrEmpty(PromoCode))
-                {
-                    var discount = await GetDiscountByPromoCode(PromoCode);
-                    if (discount != null)
-                    {
-                        if (decimal.TryParse(discount.Amount, out decimal discountAmount))
-                        {
-                            // Assuming the Amount is a percentage
-                            TotalPrice *= (1 - (discountAmount / 100));
-                        }
-                    }
-                }*/
-        decimal totalDiscountAmount = 0;
-        // Apply discount if applicable
+        decimal totalDiscountPercentage = 0;
+
+        // Apply PromoCode discount if applicable
         if (!string.IsNullOrEmpty(PromoCode))
         {
             var discount = await GetDiscountByPromoCode(PromoCode);
-            if (discount != null)
+            if (discount != null && decimal.TryParse(discount.Amount, out decimal discountAmount))
             {
-                if (decimal.TryParse(discount.Amount, out decimal discountAmount))
-                {
-                    // Assuming the Amount is a percentage
-                    totalDiscountAmount += discountAmount;
-                }
+                totalDiscountPercentage += discountAmount;
+                this.Discount = discountAmount; // Store the PromoCode discount
             }
         }
 
+        // Apply Special discount if applicable
         if (!string.IsNullOrEmpty(SDiscount))
         {
             var discount = await GetDiscountByPromoCode(SDiscount);
-            if (discount != null)
+            if (discount != null && decimal.TryParse(discount.Amount, out decimal discountAmount))
             {
-                if (decimal.TryParse(discount.Amount, out decimal discountAmount))
-                {
-                    // Assuming the Amount is a percentage
-                    totalDiscountAmount += discountAmount;
-                }
+                totalDiscountPercentage += discountAmount;
+                this.SDiscountAmount = discountAmount; // Store the Special discount
             }
         }
+
+        // Apply the total discount
+        if (totalDiscountPercentage > 0)
+        {
+            TotalPrice *= (1 - (totalDiscountPercentage / 100));
+        }
     }
+
     public async Task<IActionResult> OnPostCalculateTotalPrice(DateTime CheckInDate, DateTime CheckOutDate, string PromoCode, string SDiscount, string selectedRoomJson)
     {
         this.SpecialDiscount = await GetAllDiscount();
@@ -321,7 +319,7 @@ public class IndexModel : PageModel
     }
 
 
-    public async Task<IActionResult> OnPostPreOrder(DateTime CheckInDate, DateTime CheckOutDate, string selectedRoomJson)
+    public async Task<IActionResult> OnPostPreOrder(DateTime CheckInDate, DateTime CheckOutDate, string PromoCode, string SDiscount, string selectedRoomJson)
     {
         if (!String.IsNullOrEmpty(selectedRoomJson))
         {
@@ -354,10 +352,12 @@ public class IndexModel : PageModel
         }
         this.CheckInDate = CheckInDate;
         this.CheckOutDate = CheckOutDate;
+        this.PromoCode = PromoCode;
+        this.SDiscount = SDiscount;
         SelectedRooms = selectedRoomList;
         // Store data in TempData for the redirect
         var serializedRoomData = JsonSerializer.Serialize(roomDatas);
-        return RedirectToPage("PreOrder", new { CheckInDate, CheckOutDate, roomData = serializedRoomData });
+        return RedirectToPage("PreOrder", new { CheckInDate, CheckOutDate, PromoCode, SDiscount, roomData = serializedRoomData });
     }
 
     private async Task<Discount?> GetDiscountByPromoCode(string promoCode)
