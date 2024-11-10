@@ -3,7 +3,6 @@
     public class RoomData
     {
         public int RoomTypeId { get; set; }
-        public string RoomType { get; set; }
         public int Bed { get; set; }
         public double Price { get; set; }
         public string Name { get; set; }

@@ -341,7 +341,6 @@ public class IndexModel : PageModel
                 var roomData = new RoomData
                 {
                     RoomTypeId = roomType.Id,
-                    RoomType = roomType.Name,
                     Bed = roomType.Bed,
                     Price = roomType.Price,
                     Name = roomType.Name,

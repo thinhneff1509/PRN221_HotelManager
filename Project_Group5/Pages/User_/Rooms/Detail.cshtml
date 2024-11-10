@@ -116,7 +116,8 @@
 
 <!-- Đặt Phòng Button -->
 <div class="flex justify-center my-10">
-    <form method="post" action="/Rooms/Detail/@Model.RoomType?.Id">
+    <form method="post" asp-page-handler="BookRoom">
+        <input type="hidden" name="roomId" value="@Model.RoomId" />
         <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white text-lg font-semibold py-3 px-10 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
             Đặt phòng
         </button>
