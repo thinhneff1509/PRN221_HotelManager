@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using Project_Group5.Models;
 using System.Collections.Generic;
@@ -32,7 +33,10 @@ namespace Project_Group5.Pages.Admin.PaymentManagement
         [BindProperty(SupportsGet = true)]
         public string SearchQuery { get; set; }
 
-        public async Task OnGetAsync(int pageIndex = 1)
+        [BindProperty(SupportsGet = true)]
+        public string DateFilter { get; set; }
+
+        public async Task OnGetAsync(int pageIndex = 1, string sortOrder = "Newest")
         {
             CurrentPage = pageIndex;
 
@@ -44,19 +48,17 @@ namespace Project_Group5.Pages.Admin.PaymentManagement
                     .ThenInclude(b => b.Customer)
                 .AsQueryable();
 
-            // Lọc theo tên khách hàng nếu có giá trị tìm kiếm
-            if (!string.IsNullOrEmpty(SearchQuery))
-            {
-                query = query.Where(p => p.Booking.Customer.Name.Contains(SearchQuery));
-            }
+            // Sắp xếp theo PaymentDate dựa trên sortOrder
+            query = sortOrder == "Newest"
+                ? query.OrderByDescending(p => p.PaymentDate)
+                : query.OrderBy(p => p.PaymentDate);
 
             // Lấy tổng số bản ghi (sau khi áp dụng filter nếu có)
             TotalItems = await query.CountAsync();
             TotalPages = (int)Math.Ceiling(TotalItems / (double)PageSize);
 
-            // Lấy danh sách thanh toán với filter và phân trang
+            // Lấy danh sách thanh toán với phân trang
             Payments = await query
-                .OrderBy(p => p.Id)
                 .Skip((CurrentPage - 1) * PageSize)
                 .Take(PageSize)
                 .ToListAsync();
