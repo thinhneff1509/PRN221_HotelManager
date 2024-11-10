@@ -68,7 +68,9 @@
                                         <a href="/Admin/UserManagement" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Manage Users</a>
                                         <a href="/Admin/PaymentManagement" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Manage Payment</a>
                                         <a href="/Admin/RoomManagement" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Manage Room</a>
-                                        <a href="/Login?handler=Logout" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Logout</a>
+                                        <form method="post" asp-page="/Login/Logout">
+                                            <button type="submit" class="w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100">Logout</button>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
@@ -78,7 +80,9 @@
                             <div class="flex items-center space-x-2">
                                 <span class="text-gray-800 font-semibold">Hello, @User.Identity.Name</span>
                                 <a href="/Customer/Profile" class="text-gray-800 hover:text-blue-600">Profile</a>
-                                <a href="/Logout" class="text-gray-800 hover:text-blue-600">Logout</a>
+                                <form method="post" asp-page="/Login/Logout">
+                                    <button type="submit" class="w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100">Logout</button>
+                                </form>
                             </div>
                         }
                         else if (role == 3)  // Nếu role là Receptionist
@@ -90,7 +94,9 @@
                                     <div class="hidden group-hover:block absolute right-0 w-48 bg-white border border-gray-200 rounded-md shadow-lg">
                                         <a href="/Receptionist/ManageBookings" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Manage Bookings</a>
                                         <a href="/Receptionist/ViewMessages" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">View Messages</a>
-                                        <a href="/Logout" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Logout</a>
+                                        <form method="post" asp-page="/Login/Logout">
+                                            <button type="submit" class="w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100">Logout</button>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
