@@ -8,36 +8,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3854dc94-ba40-4661-bc4c-01bd491d4348" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Project_Group5/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project_Group5/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/Project_Group5/DesignTimeBuild/.dtbcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/Project_Group5/DesignTimeBuild/.dtbcache.v2" afterDir="false" />
-<<<<<<< HEAD
-      <change beforePath="$PROJECT_DIR$/.vs/Project_Group5/v17/.futdcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/Project_Group5/v17/.futdcache.v2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/Project_Group5/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/Project_Group5/v17/.suo" afterDir="false" />
-=======
-      <change beforePath="$PROJECT_DIR$/.vs/Project_Group5/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/Project_Group5/v17/.suo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/Project_Group5/v17/DocumentLayout.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/Project_Group5/v17/DocumentLayout.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Discount.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Discount.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Fall24_SE1745_PRN221_Group5Context.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Fall24_SE1745_PRN221_Group5Context.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/Admin/PaymentManagerment/PaymentManagement.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Admin/PaymentManagerment/PaymentManagement.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/User_/Rooms/PreOrder.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/User_/Rooms/PreOrder.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/User_/Rooms/PreOrder.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/User_/Rooms/PreOrder.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net6.0/Project_Group5.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net6.0/Project_Group5.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net6.0/Project_Group5.exe" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net6.0/Project_Group5.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net6.0/Project_Group5.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net6.0/Project_Group5.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net6.0/Project_Group5.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net6.0/Project_Group5.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net6.0/Project_Group5.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net6.0/Project_Group5.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net6.0/Project_Group5.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net6.0/Project_Group5.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net6.0/Project_Group5.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net6.0/Project_Group5.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net6.0/Project_Group5.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net6.0/Project_Group5.sourcelink.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net6.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net6.0/apphost.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net6.0/ref/Project_Group5.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net6.0/ref/Project_Group5.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net6.0/refint/Project_Group5.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net6.0/refint/Project_Group5.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net6.0/staticwebassets.build.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net6.0/staticwebassets.build.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/obj/rider.project.restore.info" afterDir="false" />
->>>>>>> 120add65b073ccbdf4b0f9c7a36ce61ecd007a0f
-    </list>
+    <list default="true" id="3854dc94-ba40-4661-bc4c-01bd491d4348" name="Changes" comment="layout" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,10 +20,12 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="phicode" />
+        <entry key="$PROJECT_DIR$/.." value="thinh_loginbygg" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RESET_MODE" value="HARD" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -67,25 +40,103 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/575c31ecc35a636b6f962cb71d53992552941a18982aae1c8e6c16305cc3761b/ExceptionDispatchInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/.vs/Project_Group5/v17/DocumentLayout.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/.vs/Project_Group5/v17/DocumentLayout.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/.vs/Project_Group5/v17/DocumentLayout.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/.vs/Project_Group5/v17/DocumentLayout.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/.vs/Project_Group5/v17/DocumentLayout.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/Models/Fall24_SE1745_PRN221_Group5Context.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/Models/Fall24_SE1745_PRN221_Group5Context.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Models/Fall24_SE1745_PRN221_Group5Context.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/Models/Room.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/Admin/DashBoard/Dashboard.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/Admin/DashBoard/Dashboard.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Pages/Admin/DashBoard/Dashboard.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Pages/Admin/DashBoard/Dashboard.cshtml.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/Admin/DashBoard/Dashboard.cshtml.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/Admin/DashBoard/Dashboard.cshtml.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Pages/Admin/PaymentManagerment/PaymentManagement.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Pages/Admin/PaymentManagerment/PaymentManagement.cshtml.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/Admin/RoomManagement/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Pages/Homepage/Home.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/User_/ServiceOrder/ServiceOrder.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/User_/ServiceOrder/ServiceOrder.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/User_/ServiceOrder/ServiceOrder.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/User_/ServiceOrder/ServiceOrder.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/User_/ServiceOrder/ServiceOrder.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/User_/ServiceOrder/ServiceOrder.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/User_/ServiceOrder/ServiceOrder.cshtml.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/User_/ServiceOrder/ServiceOrder.cshtml.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/User_/ServiceOrder/ServiceOrder.cshtml.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/User_/ServiceOrder/ServiceOrder.cshtml.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/bin/Debug/net6.0/Project_Group5.staticwebassets.runtime.json" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/Login/Login.cshtml.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/Login/Login.cshtml.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/Shared/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/Shared/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/Shared/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Pages/Shared/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/User_/Rooms/Detail.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/User_/Rooms/Detail.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/User_/Rooms/Detail.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Pages/User_/Rooms/Detail.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/User_/Rooms/Detail.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Pages/User_/Rooms/Detail.cshtml.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/User_/Rooms/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/User_/Rooms/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/User_/Rooms/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/User_/Rooms/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/User_/Rooms/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Pages/User_/Rooms/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/User_/Rooms/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/User_/Rooms/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/User_/Rooms/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/User_/Rooms/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/User_/Rooms/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/User_/Rooms/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/User_/Rooms/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/User_/Rooms/Index.cshtml.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/User_/Rooms/Index.cshtml.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/User_/Rooms/Index.cshtml.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/Pages/User_/Rooms/Index.cshtml.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Pages/User_/Rooms/PreOrder.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Pages/User_/Rooms/PreOrder.cshtml.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/appsettings.Development.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/appsettings.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/appsettings.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/appsettings.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/appsettings.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/bin/Debug/net6.0/Project_Group5.deps.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/bin/Debug/net6.0/Project_Group5.deps.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/bin/Debug/net6.0/Project_Group5.deps.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/bin/Debug/net6.0/Project_Group5.deps.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/bin/Debug/net6.0/Project_Group5.deps.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/bin/Debug/net6.0/appsettings.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/bin/Debug/net6.0/appsettings.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/bin/Debug/net6.0/appsettings.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/bin/Debug/net6.0/appsettings.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/bin/Debug/net6.0/appsettings.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/obj/Debug/net6.0/Project_Group5.AssemblyInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/obj/Debug/net6.0/Project_Group5.AssemblyInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/obj/Debug/net6.0/Project_Group5.AssemblyInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/obj/Debug/net6.0/Project_Group5.AssemblyInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/obj/Debug/net6.0/Project_Group5.AssemblyInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/obj/Debug/net6.0/Project_Group5.AssemblyInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/obj/Debug/net6.0/Project_Group5.AssemblyInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/obj/Debug/net6.0/Project_Group5.AssemblyInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/obj/Debug/net6.0/Project_Group5.AssemblyInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/obj/Debug/net6.0/Project_Group5.AssemblyInfo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/obj/Debug/net6.0/Project_Group5.AssemblyInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/obj/Debug/net6.0/Project_Group5.AssemblyInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/obj/Debug/net6.0/Project_Group5.AssemblyInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/obj/Debug/net6.0/Project_Group5.sourcelink.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/obj/Debug/net6.0/Project_Group5.sourcelink.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/obj/Debug/net6.0/Project_Group5.sourcelink.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/obj/Debug/net6.0/Project_Group5.sourcelink.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/obj/Debug/net6.0/Project_Group5.sourcelink.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/obj/Debug/net6.0/Project_Group5.sourcelink.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/obj/Debug/net6.0/Project_Group5.sourcelink.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/obj/Project_Group5.csproj.nuget.dgspec.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/obj/project.assets.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
@@ -100,26 +151,11 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-<<<<<<< HEAD
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;.NET Launch Settings Profile.Project_Group5.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;TienThinh__AdminRoom&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.C#&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-=======
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     ".NET Launch Settings Profile.Project_Group5.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "thinh__Authen",
+    "git-widget-placeholder": "Quang__changepassword",
     "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -128,7 +164,6 @@
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "preferences.keymap",
     "vue.rearranger.settings.migration": "true"
->>>>>>> 120add65b073ccbdf4b0f9c7a36ce61ecd007a0f
   }
 }]]></component>
   <component name="RunManager" selected=".NET Launch Settings Profile.Project_Group5">
@@ -184,8 +219,8 @@
       <workItem from="1730942233482" duration="252000" />
       <workItem from="1730942555709" duration="2678000" />
       <workItem from="1730950738692" duration="104000" />
-      <workItem from="1730961479369" duration="312000" />
-      <workItem from="1730987171417" duration="4068000" />
+      <workItem from="1730967877410" duration="4563000" />
+      <workItem from="1730991688435" duration="1280000" />
     </task>
     <task id="LOCAL-00001" summary="merge feedback">
       <option name="closed" value="true" />
@@ -459,7 +494,47 @@
       <option name="project" value="LOCAL" />
       <updated>1730960303064</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="fix room">
+      <option name="closed" value="true" />
+      <created>1730991766106</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1730991766106</updated>
+    </task>
+    <task id="LOCAL-00036" summary="commit">
+      <option name="closed" value="true" />
+      <created>1731170054269</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1731170054269</updated>
+    </task>
+    <task id="LOCAL-00037" summary="delete gg">
+      <option name="closed" value="true" />
+      <created>1731170248878</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1731170248878</updated>
+    </task>
+    <task id="LOCAL-00038" summary="merge 4 nhanh">
+      <option name="closed" value="true" />
+      <created>1731171086692</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1731171086692</updated>
+    </task>
+    <task id="LOCAL-00039" summary="layout">
+      <option name="closed" value="true" />
+      <created>1731171131106</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1731171131106</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -500,10 +575,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="hi" />
-    <MESSAGE value="payment" />
-    <MESSAGE value="hihi" />
-    <MESSAGE value="test" />
     <MESSAGE value="dich vu dat do an" />
     <MESSAGE value="Login admin" />
     <MESSAGE value="merge code admin" />
@@ -520,11 +591,15 @@
     <MESSAGE value="nhanh moi" />
     <MESSAGE value="day nhe TienThinhadminro0m" />
     <MESSAGE value="dashboard" />
-    <MESSAGE value="commit" />
     <MESSAGE value="done service cả 2" />
     <MESSAGE value="done" />
     <MESSAGE value="merge hoang paymentadmin vs quang feedback admin" />
     <MESSAGE value="done feedback admin, payment admin" />
-    <option name="LAST_COMMIT_MESSAGE" value="done feedback admin, payment admin" />
+    <MESSAGE value="fix room" />
+    <MESSAGE value="commit" />
+    <MESSAGE value="delete gg" />
+    <MESSAGE value="merge 4 nhanh" />
+    <MESSAGE value="layout" />
+    <option name="LAST_COMMIT_MESSAGE" value="layout" />
   </component>
 </project>

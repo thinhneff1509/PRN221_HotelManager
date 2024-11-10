@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\",
+  "WorkspaceRootPath": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\",
   "Documents": [
     {
       "AbsoluteMoniker": "D:0:0:{9A2393C9-4A9C-4C05-93B4-67304C2480E3}|Project_Group5.csproj|d:\\prn221\\prn221_project_dtf\\prn221_hotelmanager\\project_group5\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -37,7 +37,7 @@
   ],
   "DocumentGroupContainers": [
     {
-      "Orientation": 0,
+      "Orientation": 1,
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
@@ -154,10 +154,6 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
@@ -250,6 +246,10 @@
             },
             {
               "$type": "Bookmark",
+              "Name": "ST:2:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
               "Name": "ST:12:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
             },
             {
@@ -265,8 +265,17 @@
               "Name": "ST:52:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:4:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Home.cshtml",
+              "DocumentMoniker": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\Pages\\Homepage\\Home.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Homepage\\Home.cshtml",
+              "ToolTip": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\Pages\\Homepage\\Home.cshtml",
+              "RelativeToolTip": "Pages\\Homepage\\Home.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-09T17:48:09.303Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
@@ -362,32 +371,31 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Index.cshtml.cs",
-              "DocumentMoniker": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\Pages\\User_\\Rooms\\Index.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\Pages\\User_\\Rooms\\Index.cshtml.cs",
               "RelativeDocumentMoniker": "Pages\\User_\\Rooms\\Index.cshtml.cs",
-              "ToolTip": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\Pages\\User_\\Rooms\\Index.cshtml.cs",
+              "ToolTip": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\Pages\\User_\\Rooms\\Index.cshtml.cs",
               "RelativeToolTip": "Pages\\User_\\Rooms\\Index.cshtml.cs",
               "ViewState": "AQIAAD8AAAAAAAAAAAAAwFAAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T16:35:01.625Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-09T16:48:02.969Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\Pages\\User_\\Rooms\\Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\Pages\\User_\\Rooms\\Index.cshtml",
               "RelativeDocumentMoniker": "Pages\\User_\\Rooms\\Index.cshtml",
-              "ToolTip": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\Pages\\User_\\Rooms\\Index.cshtml",
+              "ToolTip": "C:\\Users\\MY PC\\Documents\\GitHub\\PRN221_HotelManager\\Project_Group5\\Pages\\User_\\Rooms\\Index.cshtml",
               "RelativeToolTip": "Pages\\User_\\Rooms\\Index.cshtml",
               "ViewState": "AQIAAAQAAAAAAAAAAAAAANkAAABOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-07T16:34:57.636Z",
+              "WhenOpened": "2024-11-09T16:14:00.454Z",
               "EditorCaption": ""
             }
           ]
         },
         {
-          "DockedWidth": 120,
+          "DockedHeight": 76,
           "SelectedChildIndex": -1,
           "Children": [
             {
@@ -437,7 +445,7 @@
           ]
         },
         {
-          "DockedWidth": 258,
+          "DockedHeight": 269,
           "SelectedChildIndex": -1,
           "Children": [
             {
@@ -483,6 +491,16 @@
             {
               "$type": "Bookmark",
               "Name": "ST:13:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 269,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{a80febb4-e7e0-4147-b476-21aaf2453969}"
             }
           ]
         }

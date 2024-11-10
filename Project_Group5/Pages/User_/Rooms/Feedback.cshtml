@@ -96,12 +96,12 @@
             <form method="post">
                 <div class="row mb-3">
                     <div class="col-md-6">
-                        <label asp-for="Feedback.CustomerId" class="form-label">Mã khách hàng</label>
-                        <input asp-for="Feedback.CustomerId" class="form-control" required />
-                        <span asp-validation-for="Feedback.CustomerId" class="text-danger"></span>
+                        <label class="form-label">Khách hàng</label>
+                        <input type="text" class="form-control" value="@Model.CustomerName" disabled />
+                        @* <input type="hidden" asp-for="Feedback.CustomerId" value="@Model.CustomerName" /> *@
                     </div>
                     <div class="col-md-6">
-                        <label asp-for="Feedback.RoomId" class="form-label">Mã phòng</label>
+                        <label asp-for="Feedback.RoomId" class="form-label">Phòng</label>
                         <input asp-for="Feedback.RoomId" class="form-control" required />
                         <span asp-validation-for="Feedback.RoomId" class="text-danger"></span>
                     </div>
