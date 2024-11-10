@@ -79,7 +79,7 @@ namespace Project_Group5.Pages.Rooms
                 var RoomTypes = await context.RoomTypes.Include(r => r.Rooms).ThenInclude(r => r.ImageRooms).ToListAsync();
                 foreach (var r in selectedRooms)
                 {
-                    r.AvailableRoom = context.Rooms.Where(rl => rl.Status == "Còn phòng" && r.RoomTypeId == rl.RoomtypeId).Count();
+                    r.AvailableRoom = context.Rooms.Where(rl => rl.Status != "Hết phòng" && r.RoomTypeId == rl.RoomtypeId).Count();
                 }
             }
             SelectedRooms = selectedRooms;
@@ -141,7 +141,7 @@ namespace Project_Group5.Pages.Rooms
             {
                 // Fetch the specified RoomType with its rooms and images
                 var roomType = await context.RoomTypes
-                    .Include(r => r.Rooms.Where(r => r.Status == "Còn phòng"))
+                    .Include(r => r.Rooms.Where(r => r.Status != "Hết phòng"))
                     .ThenInclude(r => r.ImageRooms)
                     .FirstOrDefaultAsync(r => r.Id == roomTypeId);
 

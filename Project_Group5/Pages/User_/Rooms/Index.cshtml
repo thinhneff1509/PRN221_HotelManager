@@ -19,22 +19,42 @@
                 <div class="col-auto">
                     <label for="checkin-date" class="col-form-label">Ngày đến</label>
                     <input type="date" id="checkin-date" asp-for="CheckInDate" onchange="this.form.submit"
-                        class="form-control" value="@Model.CheckInDate.ToString("yyyy-MM-dd")">
+                           class="form-control" value="@Model.CheckInDate.ToString("yyyy-MM-dd")">
                 </div>
 
                 <div class="col-auto">
                     <label for="checkout-date" class="col-form-label">Ngày đi</label>
                     <input type="date" id="checkout-date" asp-for="CheckOutDate" onchange="this.form.submit"
-                        class="form-control" value="@Model.CheckOutDate.ToString("yyyy-MM-dd")">
+                           class="form-control" value="@Model.CheckOutDate.ToString("yyyy-MM-dd")">
                 </div>
 
                 <div class="col-auto">
                     <label for="promo-code" class="col-form-label">Mã khuyến mại</label>
                     <input type="text" id="promo-code" asp-for="PromoCode" class="form-control"
-                        placeholder="Mã khuyến mại" value="@Model.PromoCode">
+                           placeholder="Mã khuyến mại" value="@Model.PromoCode">
+                </div>
+
+                <div class="col-auto">
+                    <label for="promo-code" class="col-form-label">Mã khuyến mại</label>
+                    <select id="selectedRoomCount" asp-for="SDiscount" class="form-control"
+                            onchange="this.form.submit()">
+                        @if (Model.SpecialDiscount != null)
+                        {
+                            <option selected >
+                                Select discount
+                            </option>
+                            @foreach (var d in Model.SpecialDiscount)
+                            {
+                                <option selected="@(d.Name == Model.SDiscount ? "selected" : null)" value="@d.Name">
+                                    @d.Name
+                                </option>
+                            }
+                        }
+
+                    </select>
                 </div>
                 <input type="hidden" name="selectedRoomJson" class="form-control" placeholder="Mã khuyến mại"
-                    value="@Model.SelectedRoomsJson">
+                       value="@Model.SelectedRoomsJson">
 
                 <div class="col-auto">
                     <button type="submit" class="choose-btn">Kiểm tra phòng</button>
@@ -96,7 +116,7 @@
                                                     value="@Model.CheckInDate.ToString("yyyy-MM-dd")" />
                                                 <input type="hidden" asp-for="CheckOutDate"
                                                     value="@Model.CheckOutDate.ToString("yyyy-MM-dd")" />
-                                                @if (room.Rooms.Count(r => r.Status.Equals("Còn phòng")) <= 0)
+                                                @if (room.Rooms.Count(r => !r.Status.Equals("Hết phòng")) <= 0)
                                                 {
                                                     <button type="submit" class="choose-btn col-md-5" disabled>Hết phòng</button>
                                                 }
@@ -138,8 +158,8 @@
                                                     <label for="room-count" class="col-form-label">Số phòng:</label>
                                                     <select id="selectedRoomCount" name="SelectedRoomCount" class="form-control"
                                                         onchange="this.form.submit()">
-                                                        @for (int i = 0; i <= room.Rooms.Count(r => r.Status.Equals("Còn phòng"));
-                                                       i++)
+                                                        @for (int i = 0; i <= room.Rooms.Count(r => !r.Status.Equals("Hết phòng"));
+i++)
                                                         {
                                                             @if (selectedRooms.Where(r => r.RoomTypeId == room.Id).Count() == i)
                                                             {
@@ -235,8 +255,10 @@
                             {
                                 <div class="content-block">
                                     <p><strong>Phòng: </strong>@selectedRoom.Name</p>
-                                    <p><strong>Số người: </strong>@(selectedRoom.AdultCount + selectedRoom.ChildrenCount)
-                                        (@selectedRoom.AdultCount người lớn, @selectedRoom.ChildrenCount trẻ em)</p>
+                                    <p>
+                                        <strong>Số người: </strong>@(selectedRoom.AdultCount + selectedRoom.ChildrenCount)
+                                        (@selectedRoom.AdultCount người lớn, @selectedRoom.ChildrenCount trẻ em)
+                                    </p>
                                     @{
                                         decimal adjustedPrice = selectedRoom.Price;
                                         decimal extraChilrenCost = 0;
@@ -256,14 +278,30 @@
                             }
                         }
 
-                        <p><strong>Tổng cộng: @Model.TotalPrice.ToString("N0") VND</strong></p>
+                        @*                        @if( Model.Discount != null && Model.Discount > 0)
+        {
+            <p>Đã giảm: @((Model.TotalPrice*Model.Discount/100).ToString("N0")) VND</p>
+        }*@
+                        @{decimal totalDiscount = 0;
+                            if (Model.Discount != null && Model.Discount > 0)
+                            {
+                                totalDiscount += Model.Discount;
+                            }
+                            if (Model.SDiscountAmount != null && Model.SDiscountAmount > 0)
+                            {
+                                totalDiscount += Model.SDiscountAmount;
+                            }
+                        }
+                        <p><strong>Tổng cộng: @((Model.TotalPrice* (1 - totalDiscount/100)).ToString("N0")) VND</strong></p>
+                        <p>Đã giảm: @((Model.TotalPrice*totalDiscount/100).ToString("N0")) VND</p>
+
                         <form method="post" asp-page-handler="PreOrder">
                             <input type="hidden" asp-for="CheckInDate"
-                                value="@Model.CheckInDate.ToString("yyyy-MM-dd")" />
+                                   value="@Model.CheckInDate.ToString("yyyy-MM-dd")" />
                             <input type="hidden" asp-for="CheckOutDate"
-                                value="@Model.CheckOutDate.ToString("yyyy-MM-dd")" />
+                                   value="@Model.CheckOutDate.ToString("yyyy-MM-dd")" />
                             <input type="hidden" name="selectedRoomJson" class="form-control"
-                                placeholder="Mã khuyến mại" value="@Model.SelectedRoomsJson">
+                                   placeholder="Mã khuyến mại" value="@Model.SelectedRoomsJson">
                             <button type="submit" class="choose-btn">Đặt Ngay</button>
                         </form>
                     </div>

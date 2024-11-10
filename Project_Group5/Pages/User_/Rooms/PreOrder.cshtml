@@ -111,7 +111,6 @@
         <div class="col-md-4">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">Thông tin khách</h5>
                     <form id="preorderForm" method="post" asp-page-handler="PreOrder">
                         <input type="hidden" asp-for="CheckinDate" id="hidden-checkin-date" value="@Model.CheckinDate" />
                         <input type="hidden" asp-for="CheckoutDate" id="hidden-checkout-date" value="@Model.CheckoutDate" />
@@ -120,29 +119,35 @@
 
                         @if (!isLoggedIn)
                         {
-                            <form id="preorderForm" method="post">
-                                <div class="mb-3">
-                                    <label for="name" class="form-label">Họ và tên</label>
-                                    <input type="text" class="form-control" asp-for="Name" placeholder="Họ và tên" />
-                                    <span asp-validation-for="Name" class="text-danger"></span>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="phone" class="form-label">Số điện thoại</label>
-                                    <input type="text" class="form-control" asp-for="Phone" placeholder="Phone" />
-                                    <span asp-validation-for="Phone" class="text-danger"></span>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="email" class="form-label">Email</label>
-                                    <input type="email" class="form-control" asp-for="Email" placeholder="Địa chỉ Email" />
-                                    <span asp-validation-for="Email" class="text-danger"></span>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="dob" class="form-label">Ngày sinh</label>
-                                    <input type="date" class="form-control" asp-for="Dob" placeholder="Ngày sinh" />
-                                    <span asp-validation-for="Dob" class="text-danger"></span>
-                                </div>
-                                <button class="btn btn-primary w-100" type="submit">Đặt phòng</button>
-                            </form>
+                            <h5 class="card-title">Thông tin khách</h5>
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Họ và tên</label>
+                                <input type="text" class="form-control" asp-for="Name" placeholder="Họ và tên" />
+                                <span asp-validation-for="Name" class="text-danger"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">Số điện thoại</label>
+                                <input type="text" class="form-control" asp-for="Phone" placeholder="Phone" />
+                                <span asp-validation-for="Phone" class="text-danger"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" asp-for="Email" placeholder="Địa chỉ Email" />
+                                <span asp-validation-for="Email" class="text-danger"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label for="dob" class="form-label">Ngày sinh</label>
+                                <input type="date" class="form-control" asp-for="Dob" placeholder="Ngày sinh" />
+                                <span asp-validation-for="Dob" class="text-danger"></span>
+                            </div>
+                        }
+                        else
+                        {
+                            <span>
+                                <strong>
+                                    <button class="btn btn-primary w-100" type="submit">Đặt phòng</button>
+                                </strong>
+                            </span>
                         }
 
                     </form>

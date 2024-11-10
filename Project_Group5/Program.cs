@@ -1,8 +1,8 @@
-using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Authentication.Google;
-using Microsoft.AspNetCore.Authentication.Cookies;
-using Project_Group5.Models;
 using DotNetEnv; // Thêm thư viện DotNetEnv
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.Google;
+using Microsoft.EntityFrameworkCore;
+using Project_Group5.Models;
 
 namespace Project_Group5
 {
@@ -33,14 +33,14 @@ namespace Project_Group5
                 options.LoginPath = "/Login"; // Đường dẫn đến trang đăng nhập
                 options.LogoutPath = "/Logout"; // Đường dẫn để đăng xuất
                 options.AccessDeniedPath = "/AccessDenied"; // Đường dẫn khi không có quyền truy cập
-            })
-            .AddGoogle(GoogleDefaults.AuthenticationScheme, options =>
-            {
-                // Lấy ClientId và ClientSecret từ biến môi trường
-                options.ClientId = Environment.GetEnvironmentVariable("GOOGLE_CLIENT_ID");
-                options.ClientSecret = Environment.GetEnvironmentVariable("GOOGLE_CLIENT_SECRET");
+                /*            })
+                            .AddGoogle(GoogleDefaults.AuthenticationScheme, options =>
+                            {
+                                // Lấy ClientId và ClientSecret từ biến môi trường
+                                options.ClientId = Environment.GetEnvironmentVariable("GOOGLE_CLIENT_ID");
+                                options.ClientSecret = Environment.GetEnvironmentVariable("GOOGLE_CLIENT_SECRET");
 
-                options.CallbackPath = "/signin-google";
+                                options.CallbackPath = "/signin-google";*/
             });
 
             // Cấu hình Authorization
