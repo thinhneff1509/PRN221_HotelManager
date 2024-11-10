@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,8 +16,8 @@
     <link rel="stylesheet" href="~/assets/css/style.css" />
     <link rel="stylesheet" href="~/assets/css/ngoc.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-          integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-          crossorigin="anonymous" referrerpolicy="no-referrer" />
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <!--script-->
 
@@ -28,19 +29,21 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- JS thư viện -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> <!-- Nên dùng jQuery v3.5.1 đầy đủ thay vì slim -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <!-- Nên dùng jQuery v3.5.1 đầy đủ thay vì slim -->
     <script src="https://cdn.jsdelivr.net/npm/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
 
 </head>
+
 <body>
     <!--Header-->
     <header class="bg-[#FFF] fixed nav_header w-full shadow-lg z-20 py-1">
         <div class="max-content flex items-stretch justify-between gap-5 md:px-0 py-2 max-md:flex-wrap px-5">
             <a class="py-auto" href="/">
                 <img loading="lazy" src="~/assets/images/Logo.png"
-                     class="pt-[5px] md:pt-0 aspect-[1.82] object-contain object-center w-[80px] md:w-[100px] overflow-hidden shrink-0 max-w-full" />
+                    class="pt-[5px] md:pt-0 aspect-[1.82] object-contain object-center w-[80px] md:w-[100px] overflow-hidden shrink-0 max-w-full" />
             </a>
 
             <!-- Header Navigation Links -->
@@ -66,23 +69,30 @@
                             User.IsInRole("Customer") ? 2 :
                             User.IsInRole("Receptionist") ? 3 : 0;
 
-                            if (role == 1)  // Nếu role là Admin
+                            if (role == 1) // Nếu role là Admin
                             {
                                 <div class="flex items-center space-x-2">
                                     <span class="text-gray-800 font-semibold">Hello, Admin @User.Identity.Name</span>
                                     <div class="relative group">
-                                        <button class="text-gray-800 hover:text-blue-600">Admin Menu <i class="fa-solid fa-sort-down"></i></button>
-                                        <div class="hidden group-hover:block absolute right-0 w-48 bg-white border border-gray-200 rounded-md shadow-lg">
-                                            <a href="/Admin/Dashboard" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Dashboard</a>
-                                            <a href="/Admin/UserManagement" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Manage Users</a>
-                                            <a href="/Admin/PaymentManagement" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Manage Payment</a>
-                                            <a href="/Admin/RoomManagement" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Manage Room</a>
-                                            <a href="/Login?handler=Logout" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Logout</a>
+                                        <button class="text-gray-800 hover:text-blue-600">Admin Menu <i
+                                                class="fa-solid fa-sort-down"></i></button>
+                                        <div
+                                            class="hidden group-hover:block absolute right-0 w-48 bg-white border border-gray-200 rounded-md shadow-lg">
+                                            <a href="/Admin/Dashboard"
+                                                class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Dashboard</a>
+                                            <a href="/Admin/UserManagement"
+                                                class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Manage Users</a>
+                                            <a href="/Admin/PaymentManagement"
+                                                class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Manage Payment</a>
+                                            <a href="/Admin/RoomManagement"
+                                                class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Manage Room</a>
+                                            <a href="/Login?handler=Logout"
+                                                class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Logout</a>
                                         </div>
                                     </div>
                                 </div>
                             }
-                            else if (role == 2)  // Nếu role là Customer
+                            else if (role == 2) // Nếu role là Customer
                             {
                                 <div class="flex items-center space-x-2">
                                     <span class="text-gray-800 font-semibold">Hello, @User.Identity.Name</span>
@@ -90,25 +100,32 @@
                                     <a href="/Login?handler=Logout" class="text-gray-800 hover:text-blue-600">Logout</a>
                                     <!-- Icon Đặt Phòng -->
                                     <div class="relative">
-                                        <a href="/gioithieu" class="relative flex items-center justify-center w-10 h-10 text-white bg-blue-600 rounded-full hover:bg-blue-700 focus:outline-none">
+                                        <a href="/gioithieu"
+                                            class="relative flex items-center justify-center w-10 h-10 text-white bg-blue-600 rounded-full hover:bg-blue-700 focus:outline-none">
                                             <i class="fas fa-door-open text-lg"></i>
                                             <!-- Badge số lượng đặt phòng, nếu cần -->
-                                            <span class="absolute top-0 right-0 flex items-center justify-center w-4 h-4 text-xs font-semibold text-white bg-red-500 rounded-full">100</span>
+                                            <span
+                                                class="absolute top-0 right-0 flex items-center justify-center w-4 h-4 text-xs font-semibold text-white bg-red-500 rounded-full">100</span>
                                         </a>
                                     </div>
                                 </div>
 
                             }
-                            else if (role == 3)  // Nếu role là Receptionist
+                            else if (role == 3) // Nếu role là Receptionist
                             {
                                 <div class="flex items-center space-x-2">
                                     <span class="text-gray-800 font-semibold">Hello, Receptionist @User.Identity.Name</span>
                                     <div class="relative group">
-                                        <button class="text-gray-800 hover:text-blue-600">Receptionist Menu <i class="fa-solid fa-sort-down"></i></button>
-                                        <div class="hidden group-hover:block absolute right-0 w-48 bg-white border border-gray-200 rounded-md shadow-lg">
-                                            <a href="/Receptionist/ManageBookings" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Manage Bookings</a>
-                                            <a href="/Receptionist/ViewMessages" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">View Messages</a>
-                                            <a href="/Login?handler=Logout" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Logout</a>
+                                        <button class="text-gray-800 hover:text-blue-600">Receptionist Menu <i
+                                                class="fa-solid fa-sort-down"></i></button>
+                                        <div
+                                            class="hidden group-hover:block absolute right-0 w-48 bg-white border border-gray-200 rounded-md shadow-lg">
+                                            <a href="/Receptionist/ManageBookings"
+                                                class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Manage Bookings</a>
+                                            <a href="/Receptionist/ViewMessages"
+                                                class="block px-4 py-2 text-gray-700 hover:bg-gray-100">View Messages</a>
+                                            <a href="/Login?handler=Logout"
+                                                class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Logout</a>
                                         </div>
                                     </div>
                                 </div>
@@ -124,6 +141,11 @@
                         }
                     }
                 </div>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/TienThinh_AdminRoom
             </div>
 
         </div>
@@ -133,16 +155,18 @@
     <!--Header mobile-->
     <div class="block md:hidden">
         <!--Menu-->
-        <div id="open_menu" onclick="openModal()"
-             class="min-sm:block md:block lg:hidden  cursor-pointer pt-3">
+        <div id="open_menu" onclick="openModal()" class="min-sm:block md:block lg:hidden  cursor-pointer pt-3">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                 <g clip-path="url(#clip0_372_1645)">
-                    <path d="M23 10.9998H1C0.447715 10.9998 0 11.4475 0 11.9998C0 12.552 0.447715 12.9998 1 12.9998H23C23.5523 12.9998 24 12.552 24 11.9998C24 11.4475 23.5523 10.9998 23 10.9998Z"
-                          fill="white" />
-                    <path d="M23 4.00024H1C0.447715 4.00024 0 4.44796 0 5.00024C0 5.55253 0.447715 6.00024 1 6.00024H23C23.5523 6.00024 24 5.55253 24 5.00024C24 4.44796 23.5523 4.00024 23 4.00024Z"
-                          fill="white" />
-                    <path d="M23 18H1C0.447715 18 0 18.4477 0 19C0 19.5523 0.447715 20 1 20H23C23.5523 20 24 19.5523 24 19C24 18.4477 23.5523 18 23 18Z"
-                          fill="white" />
+                    <path
+                        d="M23 10.9998H1C0.447715 10.9998 0 11.4475 0 11.9998C0 12.552 0.447715 12.9998 1 12.9998H23C23.5523 12.9998 24 12.552 24 11.9998C24 11.4475 23.5523 10.9998 23 10.9998Z"
+                        fill="white" />
+                    <path
+                        d="M23 4.00024H1C0.447715 4.00024 0 4.44796 0 5.00024C0 5.55253 0.447715 6.00024 1 6.00024H23C23.5523 6.00024 24 5.55253 24 5.00024C24 4.44796 23.5523 4.00024 23 4.00024Z"
+                        fill="white" />
+                    <path
+                        d="M23 18H1C0.447715 18 0 18.4477 0 19C0 19.5523 0.447715 20 1 20H23C23.5523 20 24 19.5523 24 19C24 18.4477 23.5523 18 23 18Z"
+                        fill="white" />
                 </g>
                 <defs>
                     <clipPath id="clip0_372_1645">
@@ -154,13 +178,14 @@
         <!--Modal-->
         <div class="modal hidden" id="modalContainer">
             <div id="close_menu" class="pt-2 hidden" onclick="closeModalMobile()">
-                <svg width="32" height="32" viewBox="0 0 16 16" fill="#222"
-                     xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7.99999 7.05732L11.3 3.75732L12.2427 4.69999L8.94266 7.99999L12.2427 11.3L11.3 12.2427L7.99999 8.94266L4.69999 12.2427L3.75732 11.3L7.05732 7.99999L3.75732 4.69999L4.69999 3.75732L7.99999 7.05732Z"
-                          fill="#222" />
+                <svg width="32" height="32" viewBox="0 0 16 16" fill="#222" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M7.99999 7.05732L11.3 3.75732L12.2427 4.69999L8.94266 7.99999L12.2427 11.3L11.3 12.2427L7.99999 8.94266L4.69999 12.2427L3.75732 11.3L7.05732 7.99999L3.75732 4.69999L4.69999 3.75732L7.99999 7.05732Z"
+                        fill="#222" />
                 </svg>
             </div>
-            <div class="h-screen mt-[4px] p-8 absolute z-50 bg-white top-14 left-0 right-0 md:relative md:top-0 md:bg-transparent items-stretch flex flex-col md:flex-row gap-5">
+            <div
+                class="h-screen mt-[4px] p-8 absolute z-50 bg-white top-14 left-0 right-0 md:relative md:top-0 md:bg-transparent items-stretch flex flex-col md:flex-row gap-5">
                 <div class="text-gray-700  text-[18px] font-medium leading-6  whitespace-nowrap">
                     <a onclick="closeModalMobile()" href="/">
                         Trang chủ
@@ -220,36 +245,38 @@
     <!--Footer-->
     <section class="flex overflow-hidden relative flex-col justify-center min-h-[464px]">
         <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/cc7121df96ef0bff6a448306fe4a4db41e5bf3a3d6ae742b0699b563ccc5e38f?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
-             alt="" class="object-cover absolute inset-0 size-full" />
-        <div class="flex relative flex-col items-center px-5 pt-10 md:pt-20 pb-5 w-full bg-black bg-opacity-80 max-md:max-w-full">
+            alt="" class="object-cover absolute inset-0 size-full" />
+        <div
+            class="flex relative flex-col items-center px-5 pt-10 md:pt-20 pb-5 w-full bg-black bg-opacity-80 max-md:max-w-full">
             <div class="mt-4 w-full max-content  max-md:max-w-full">
                 <div class="flex gap-12 max-md:flex-col max-md:gap-0">
                     <div class="flex flex-col w-[50%] max-md:ml-0 max-md:w-full">
                         <div class="flex flex-col grow items-start mt-1 max-md:mt-6 max-md:max-w-full">
                             <a href="">
                                 <img src="~/assets/images/Logo.png" alt="DTF Việt Nam logo"
-                                     class="max-w-full aspect-[2.86] w-[90px] md:w-[120px]" />
+                                    class="max-w-full aspect-[2.86] w-[90px] md:w-[120px]" />
                             </a>
-                            <h2 class="self-stretch mt-4 md:mt-7 text-xl md:text-2xl font-semibold text-white max-md:max-w-full">
+                            <h2
+                                class="self-stretch mt-4 md:mt-7 text-xl md:text-2xl font-semibold text-white max-md:max-w-full">
                                 Tập đoàn Thương mại Dịch vụ Hennessy Việt Nam
                             </h2>
                             <div class="flex gap-3.5 mt-4 md:mt-8 text-xl md:text-3xl font-extrabold text-orange-400">
                                 <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/cac4da3e65728bae6f5d7c922c84f3753d3759aede5a11c9630b849b304c07ab?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
-                                     alt="" class="shrink-0 w-5 md:w-6 aspect-square" />
+                                    alt="" class="shrink-0 w-5 md:w-6 aspect-square" />
                                 <a href="tel:1900988935" class="flex-auto">0837003242</a>
                             </div>
                             <div class="flex gap-3.5 mt-4 md:mt-6">
                                 <a href="">
                                     <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/3759d68e994d8c21d15cb0299b7915ee5a0a53f669e39522174c5055d4d82680?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
-                                         alt="Facebook icon" class="shrink-0 w-6 aspect-square" />
+                                        alt="Facebook icon" class="shrink-0 w-6 aspect-square" />
                                 </a>
                                 <a href="">
                                     <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4d48d01527415fda32b15ac5d2edba25f8c4b28379abc702ddc0ebac389014c1?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
-                                         alt="YouTube icon" class="shrink-0 aspect-[0.96] w-[23px]" />
+                                        alt="YouTube icon" class="shrink-0 aspect-[0.96] w-[23px]" />
                                 </a>
                                 <a href="">
                                     <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/b4ad1e2bab0737f1c7b2ddcbd7efc30f1b313f952882b0d979b19bbfadc4caea?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
-                                         alt="Instagram icon" class="shrink-0 aspect-[0.92] w-[22px]" />
+                                        alt="Instagram icon" class="shrink-0 aspect-[0.92] w-[22px]" />
                                 </a>
                             </div>
                         </div>
@@ -280,7 +307,8 @@
 
                 </div>`
             </div>
-            <hr class="self-stretch mt-20 w-full border border-solid bg-stone-300 bg-opacity-50 border-stone-300 border-opacity-50 min-h-[1px] max-md:mt-10 max-md:max-w-full" />
+            <hr
+                class="self-stretch mt-20 w-full border border-solid bg-stone-300 bg-opacity-50 border-stone-300 border-opacity-50 min-h-[1px] max-md:mt-10 max-md:max-w-full" />
             <div class="mt-4 md:mt-5 text-base text-center text-white">
                 © Bản quyền © 2023 thuộc về Hennessy | Giữ toàn quyền
             </div>
@@ -294,4 +322,5 @@
 
     @await RenderSectionAsync("Scripts", required: false)
 </body>
+
 </html>

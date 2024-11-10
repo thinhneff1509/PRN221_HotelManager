@@ -1,6 +1,7 @@
-using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Authentication.Google;
+using DotNetEnv; // Thêm thư viện DotNetEnv
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.Google;
+using Microsoft.EntityFrameworkCore;
 using Project_Group5.Models;
 
 namespace Project_Group5
@@ -9,6 +10,9 @@ namespace Project_Group5
     {
         public static void Main(string[] args)
         {
+            // Nạp biến môi trường từ tệp .env
+            Env.Load();
+
             var builder = WebApplication.CreateBuilder(args);
 
             // Đăng ký DbContext với chuỗi kết nối
@@ -29,9 +33,15 @@ namespace Project_Group5
                 options.LoginPath = "/Login"; // Đường dẫn đến trang đăng nhập
                 options.LogoutPath = "/Logout"; // Đường dẫn để đăng xuất
                 options.AccessDeniedPath = "/AccessDenied"; // Đường dẫn khi không có quyền truy cập
-            })
-           ;
+                /*            })
+                            .AddGoogle(GoogleDefaults.AuthenticationScheme, options =>
+                            {
+                                // Lấy ClientId và ClientSecret từ biến môi trường
+                                options.ClientId = Environment.GetEnvironmentVariable("GOOGLE_CLIENT_ID");
+                                options.ClientSecret = Environment.GetEnvironmentVariable("GOOGLE_CLIENT_SECRET");
 
+                                options.CallbackPath = "/signin-google";*/
+            });
 
             // Cấu hình Authorization
             builder.Services.AddAuthorization();
@@ -52,7 +62,6 @@ namespace Project_Group5
             // Thêm Authentication và Authorization vào pipeline
             app.UseAuthentication();
             app.UseAuthorization();
-
 
             app.MapRazorPages();
 

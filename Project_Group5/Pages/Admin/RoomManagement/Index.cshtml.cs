@@ -122,8 +122,6 @@ namespace Project_Group5.Pages.Admin.RoomManagement
         {
             var roomToDelete = await _context.Rooms
                                              .Include(r => r.Bookings)
-                                                 .ThenInclude(b => b.Discounts)
-                                             .Include(r => r.Bookings)
                                                  .ThenInclude(b => b.Payments)
                                              .Include(r => r.Bookings)
                                                  .ThenInclude(b => b.ServiceRegistrations)
@@ -167,10 +165,6 @@ namespace Project_Group5.Pages.Admin.RoomManagement
                     if (booking.Payments != null)
                     {
                         _context.Payments.RemoveRange(booking.Payments);
-                    }
-                    if (booking.Discounts != null)
-                    {
-                        _context.Discounts.RemoveRange(booking.Discounts);
                     }
                 }
                 _context.Bookings.RemoveRange(roomToDelete.Bookings);
