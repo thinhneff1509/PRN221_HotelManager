@@ -29,12 +29,24 @@ namespace Project_Group5
 
 
             // Cấu hình Authentication sử dụng Cookie
-            builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-                .AddCookie(options =>
+          //  builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+            builder.Services.AddAuthentication(options =>
+            {
+                options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+                options.DefaultAuthenticateScheme = GoogleDefaults.AuthenticationScheme;
+            })
+                .AddCookie()
+                //(options =>
+                //{
+                //    options.LoginPath = "/Login"; // Đường dẫn đến trang đăng nhập
+                //    options.LogoutPath = "/Logout"; // Đường dẫn để đăng xuất
+                //    options.AccessDeniedPath = "/AccessDenied"; // Đường dẫn khi không có quyền truy cập
+                //})
+                .AddGoogle(GoogleDefaults.AuthenticationScheme,options =>
                 {
-                    options.LoginPath = "/Login"; // Đường dẫn đến trang đăng nhập
-                    options.LogoutPath = "/Logout"; // Đường dẫn để đăng xuất
-                    options.AccessDeniedPath = "/AccessDenied"; // Đường dẫn khi không có quyền truy cập
+                    options.ClientId = builder.Configuration.GetSection("GoogleKeys:ClientId").Value;
+                    options.ClientSecret = builder.Configuration.GetSection("GoogleKeys:ClientSecret").Value;
+                    options.CallbackPath = "/signin-google";
                 });
 
 

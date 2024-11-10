@@ -2,10 +2,12 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.Google;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Project_Group5.Models;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
 
 namespace Project_Group5.Pages.Login
 {
@@ -38,7 +40,7 @@ namespace Project_Group5.Pages.Login
             return Page(); // Nếu chưa đăng nhập hoặc là Customer, hiển thị trang đăng nhập
         }
 
-
+       
         public async Task<IActionResult> OnPostAsync()
         {
             var customer = await _context.Customers
@@ -81,5 +83,65 @@ namespace Project_Group5.Pages.Login
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
             return RedirectToPage("/Homepage/Home");
         }
+
+
+        public async Task Login()
+        {
+            await HttpContext.ChallengeAsync(GoogleDefaults.AuthenticationScheme,
+                new AuthenticationProperties
+                {
+                    RedirectUri = Url.Action("GoogleResponse")
+                });
+        }
+
+
+        public async Task<IActionResult> GoogleResponse()
+        {
+            var result = await HttpContext.AuthenticateAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            var claims = result.Principal.Identities.FirstOrDefault().Claims.Select(claim => new
+            {
+                claim.Issuer,
+                claim.OriginalIssuer,
+                claim.Type,
+                claim.Value
+            });
+            //  return Json(claims);
+            return RedirectToAction("Login", "Home", new { area = "" });
+        }
+
+
+        public IActionResult OnGetLogin()
+        {
+            var authenticationProperties = new AuthenticationProperties
+            {
+                RedirectUri = Url.Page("/Homepage/Home", "GoogleResponse") // Điều hướng sau khi xác thực Google thành công
+            };
+
+            return Challenge(authenticationProperties, GoogleDefaults.AuthenticationScheme);
+        }
+
+
+
+        public async Task<IActionResult> OnGetGoogleResponse()
+        {
+            var authenticateResult = await HttpContext.AuthenticateAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+
+            if (!authenticateResult.Succeeded)
+                return RedirectToPage("/Login");
+
+            var claims = authenticateResult.Principal.Identities.FirstOrDefault().Claims.ToList();
+
+            var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+            var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
+
+            await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, claimsPrincipal);
+
+            return RedirectToPage("/Homepage/Home"); // Điều hướng sau khi đăng nhập thành công
+        }
+
+
+
+
+
     }
 }
