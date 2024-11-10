@@ -1,6 +1,6 @@
-using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Authentication.Google;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.Google;
+using Microsoft.EntityFrameworkCore;
 using Project_Group5.Models;
 
 namespace Project_Group5
@@ -9,6 +9,7 @@ namespace Project_Group5
     {
         public static void Main(string[] args)
         {
+
             var builder = WebApplication.CreateBuilder(args);
 
             // Đăng ký DbContext với chuỗi kết nối
@@ -75,8 +76,14 @@ namespace Project_Group5
             app.UseAuthentication();
             app.UseAuthorization();
 
-
             app.MapRazorPages();
+
+            // Điều hướng root (/) tới /home
+            app.MapGet("/", (context) =>
+            {
+                context.Response.Redirect("/home");
+                return Task.CompletedTask;
+            });
 
             app.Run();
         }

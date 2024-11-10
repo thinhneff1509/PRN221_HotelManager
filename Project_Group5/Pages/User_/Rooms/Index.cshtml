@@ -1,35 +1,62 @@
 @page "/Room/Booking"
-@model Project_Group5.Pages.Rooms.IndexModel
+@model Project_Group5.Pages.Rooms.IndexModel;
+@using Project_Group5.Models;
+@using System.Text.Json;
 @{
-    var rooms = Model.Rooms;
-}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    var rooms = Model.RoomTypes;
+    var selectedRooms = string.IsNullOrEmpty(Model.SelectedRoomsJson) ? new List<SelectedRoom>() :
+    JsonSerializer.Deserialize<List<SelectedRoom>>(Model.SelectedRoomsJson);
     <title>Hotel Room</title>
     <link href="~/css/listroom.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-</head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+}
+
 <body>
     <main>
         <div class="search-bar">
-            <form method="post" asp-page-handler="CalculatePrice" class="row g-3 align-items-center">
+            <form method="post" asp-page-handler="CalculateTotalPrice" class="row g-3 align-items-center">
                 <div class="col-auto">
                     <label for="checkin-date" class="col-form-label">Ngày đến</label>
-                    <input type="date" id="checkin-date" name="CheckInDate" class="form-control" value="@Model.CheckInDate.ToString("yyyy-MM-dd")">
+                    <input type="date" id="checkin-date" asp-for="CheckInDate" onchange="this.form.submit"
+                           min="@DateTime.Now.ToString("dd-MM-yyyy")" 
+                           class="form-control" value="@Model.CheckInDate.ToString("yyyy-MM-dd")">
                 </div>
 
                 <div class="col-auto">
                     <label for="checkout-date" class="col-form-label">Ngày đi</label>
-                    <input type="date" id="checkout-date" name="CheckOutDate" class="form-control" value="@Model.CheckOutDate.ToString("yyyy-MM-dd")">
+                    <input type="date" id="checkout-date" asp-for="CheckOutDate" onchange="this.form.submit"
+                           min="@DateTime.Now.AddDays(1).ToString("yyyy-MM-dd")"
+                           class="form-control" value="@Model.CheckOutDate.ToString("yyyy-MM-dd")">
                 </div>
 
                 <div class="col-auto">
                     <label for="promo-code" class="col-form-label">Mã khuyến mại</label>
-                    <input type="text" id="promo-code" name="PromoCode" class="form-control" placeholder="Mã khuyến mại" value="@Model.PromoCode">
+                    <input type="text" id="promo-code" asp-for="PromoCode" class="form-control"
+                           placeholder="Mã khuyến mại" value="@Model.PromoCode">
                 </div>
+
+                <div class="col-auto">
+                    <label for="promo-code" class="col-form-label">Mã khuyến mại</label>
+                    <select id="selectedRoomCount" asp-for="SDiscount" class="form-control"
+                            onchange="this.form.submit()">
+                        @if (Model.SpecialDiscount != null)
+                        {
+                            <option selected >
+                                Select discount
+                            </option>
+                            @foreach (var d in Model.SpecialDiscount)
+                            {
+                                <option selected="@(d.Name == Model.SDiscount ? "selected" : null)" value="@d.Name">
+                                    @d.Name
+                                </option>
+                            }
+                        }
+
+                    </select>
+                </div>
+                <input type="hidden" name="selectedRoomJson" class="form-control" placeholder="Mã khuyến mại"
+                       value="@Model.SelectedRoomsJson">
 
                 <div class="col-auto">
                     <button type="submit" class="choose-btn">Kiểm tra phòng</button>
@@ -41,54 +68,200 @@
             <div class="col-md-8">
                 <!-- Danh sách phòng -->
                 <div class="container my-5">
-                    @foreach (var room in rooms)
+                    @if (rooms != null)
                     {
-                        <div class="room-card">
-                            <div class="room-info">
-                                <div id="roomCarousel_@room.Id" class="carousel slide col-md-6" data-bs-ride="carousel">
-                                    <div class="carousel-inner">
-                                        @foreach (var r in room.Rooms)
-                                        {
-                                            @foreach (var image in r.ImageRooms)
+                        @foreach (var room in rooms)
+                        {
+                            <div class="room-card">
+                                <div class="room-info">
+                                    <div class="carousel slide col-md-6" data-bs-ride="carousel">
+                                        <div class="carousel-inner">
+                                            @foreach (var r in room.Rooms)
                                             {
-                                                <div class="carousel-item @(image == r.ImageRooms.First() ? "active" : "")">
-                                                    <img src="/images/@image.Path" class="d-block w-100 room-image" alt="Room Image">
-                                                </div>
+                                                @foreach (var image in r.ImageRooms)
+                                                {
+                                                    <div class="carousel-item @(image == r.ImageRooms.First() ? "active" : "")">
+                                                        <img src="/images/@image.Path" class="d-block w-100 room-image"
+                                                            alt="Room Image">
+                                                    </div>
+                                                }
                                             }
-                                        }
+                                        </div>
+                                        <button class="carousel-control-prev" type="button"
+                                            data-bs-target="#roomCarousel_@room.Id" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button"
+                                            data-bs-target="#roomCarousel_@room.Id" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Next</span>
+                                        </button>
                                     </div>
-                                    <button class="carousel-control-prev" type="button" data-bs-target="#roomCarousel_@room.Id" data-bs-slide="prev">
-                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                        <span class="visually-hidden">Previous</span>
-                                    </button>
-                                    <button class="carousel-control-next" type="button" data-bs-target="#roomCarousel_@room.Id" data-bs-slide="next">
-                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                        <span class="visually-hidden">Next</span>
-                                    </button>
-                                </div>
 
-                                <div class="room-details col-md-6">
-                                    <h2>@room.Name</h2>
-                                    <p>Số giường: @room.Bed</p>
-                                    <ul class="amenities">
-                                        <li><i class="fa fa-wifi"></i> Wifi</li>
-                                        <li><i class="fa fa-tv"></i> TV</li>
-                                        <li><i class="fa fa-bath"></i> Bồn tắm</li>
-                                    </ul>
-                                    <p class="price">Giá chỉ từ: <strong>@String.Format("{0:N0}", room.Price) VND</strong> / đêm</p>
+                                    <div class="room-details col-md-6">
+                                        <h2>@room.Name</h2>
+                                        <p>Số giường: @room.Bed</p>
+                                        <ul class="amenities">
+                                            <li><i class="fa fa-wifi"></i> Wifi</li>
+                                            <li><i class="fa fa-tv"></i> TV</li>
+                                            <li><i class="fa fa-bath"></i> Bồn tắm</li>
+                                        </ul>
+                                        <p class="price">Giá chỉ từ: <strong>@String.Format("{0:N0}", room.Price) VND</strong> /
+                                            đêm</p>
 
-                                    <div class="row col-md-12 d-flex justify-content-between">
-                                        <form method="post" asp-page-handler="ChooseRoom">
-                                            <input type="hidden" name="SelectedRoomId" value="@room.Id" />
-                                            <button type="submit" class="choose-btn col-md-5">Lựa chọn</button>
-                                        </form>
-                                        <div class="choose-btn col-md-5" onclick="window.location='/User_/Rooms/Detail/@room.Id'">
-                                            Xem chi tiết phòng <i class="bi bi-chevron-down"></i>
+                                        <div class="row col-md-12 d-flex justify-content-between">
+                                            <div class="col-md-6">
+                                                <span>
+                                                    <form method="post" asp-page-handler="ChooseRoom">
+                                                        <input type="hidden" name="SelectedRoomId" value="@room.Id"/>
+                                                        <input type="hidden" name="SelectedRoomCount" value="1"/>
+                                                        <input type="hidden" asp-for="PromoCode"/>
+                                                        <input type="hidden" asp-for="SDiscount"/>
+                                                        <input type="hidden" asp-for="CheckInDate" forma
+                                                               value="@Model.CheckInDate.ToString("yyyy-MM-dd")"/>
+                                                        <input type="hidden" asp-for="CheckOutDate"
+                                                               value="@Model.CheckOutDate.ToString("yyyy-MM-dd")"/>
+                                                        @if (room.Rooms.Count(r => !r.Status.Equals("Hết phòng")) <= 0)
+                                                        {
+                                                            <button type="submit" class="choose-btn col-md-12 py-3" disabled><strong></strong> phòng</button>
+                                                        }
+                                                        else
+                                                        {
+                                                            <button type="submit" class="choose-btn col-md-12 py-3">Lựa chọn</button>
+                                                        }
+                                                    </form>
+                                                </span>
+                                            </div>
+                                            <div class="choose-btn col-md-6 py-3 text-center"
+                                                 onclick="window.location='/User_/Rooms/Detail/@room.Id'">
+                                                Xem chi tiết phòng
+                                                <i class="bi bi-chevron-down"></i>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
+                                @if (selectedRooms.Any(r => r.RoomTypeId == room.Id))
+                                {
+                                    <div class="row">
+                                        <div class="row mt-5">
+                                            <div class="col-md-2">
+                                                <p class="col-form-label"><strong>@room.Name</strong></p>
+                                            </div>
+
+                                            <div class="col-md-3">
+                                                <p class="col-form-label">
+                                                    @*
+                                                    <del>@String.Format("{0:N0}", room.Price) VND</del>
+                                                    *@
+                                                    <strong class="col-form-label">@String.Format("{0:N0}", room.Price) VND</strong> / đêm
+                                                </p>
+                                            </div>
+
+                                            <div class="col-md-2">
+                                                <label class="col-form-label">@room.Bed người lớn:</label>
+                                            </div>
+
+                                            <form method="post" asp-page-handler="ChooseRoom" class="col-md-5">
+                                                <input type="hidden" asp-for="CheckInDate"
+                                                    value="@Model.CheckInDate.ToString("yyyy-MM-dd")" />
+                                                <input type="hidden" asp-for="CheckOutDate"
+                                                    value="@Model.CheckOutDate.ToString("yyyy-MM-dd")" />
+                                                <div class="col-auto row">
+                                                    <div class="col-md-5">
+                                                        <label for="room-count" class="col-form-label">Số phòng:</label>
+                                                    </div>
+                                                    <div class="col-md-7">
+                                                        <select id="selectedRoomCount" name="SelectedRoomCount" class="form-control"
+                                                                onchange="this.form.submit()">
+                                                            @for (int i = 0;
+                                                            i <= room.Rooms.Count(r => !r.Status.Equals("Hết phòng"));
+                                                            i++)
+                                                            {
+                                                            @if (selectedRooms.Where(r => r.RoomTypeId == room.Id).Count() == i)
+                                                            {
+                                                            <option selected value="@i">@i phòng</option>
+                                                            }
+                                                            else
+                                                            {
+                                                            <option value="@i">@i phòng</option>
+                                                            }
+                                                            }
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <input readonly hidden type="number" asp-for="SelectedRoomId" value="@room.Id" />
+                                                <input type="hidden" asp-for="PromoCode"/>
+                                                <input type="hidden" asp-for="SDiscount"/>
+                                                <div class="col-auto" hidden>
+                                                    <button type="submit" class="choose-btn">Lựa chọn</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        @foreach (var r in selectedRooms.Where(r => r.RoomTypeId == room.Id))
+                                        {
+                                            <hr>
+                                            <form method="post" asp-page-handler="ChangeAdultAndChildrenCount">
+                                                <div class="row">
+                                                    <div class="col-md-3">
+                                                        <p><strong>Phòng @r.Name</strong></p>
+                                                        <input readonly hidden type="number" asp-for="SelectedRoomId" value="@r.RoomId" />
+                                                        <input type="hidden" asp-for="PromoCode"/>
+                                                        <input type="hidden" asp-for="SDiscount"/>
+                                                        <input type="hidden" asp-for="CheckInDate"
+                                                            value="@Model.CheckInDate.ToString("yyyy-MM-dd")" />
+                                                        <input type="hidden" asp-for="CheckOutDate"
+                                                            value="@Model.CheckOutDate.ToString("yyyy-MM-dd")" />
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <label>Người lớn:</label>
+                                                        <select asp-for="AdultCount" onchange="this.form.submit()" class="form-control">
+                                                            @for (int i = 1; i <= room.Bed; i++)
+                                                            {
+                                                                if (i == r.AdultCount)
+                                                                {
+                                                                    <option value="@i" selected>@i</option>
+
+                                                                }
+                                                                else
+                                                                {
+                                                                    <option value="@i">@i</option>
+
+                                                                }
+                                                            }
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <label>Trẻ em:</label>
+                                                        <select asp-for="ChildrenCount" onchange="this.form.submit()"
+                                                            class="form-control">
+                                                            @for (int i = 0; i <= room.Bed; i++)
+                                                            {
+                                                                if (i == r.ChildrenCount)
+                                                                {
+                                                                    <option value="@i" selected>@i</option>
+
+                                                                }
+                                                                else
+                                                                {
+                                                                    <option value="@i">@i</option>
+
+                                                                }
+                                                            }
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-auto" hidden>
+                                                        <button type="submit" class="choose-btn">Lựa chọn</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        }
+
+                                    </div>
+                                }
+
                             </div>
-                        </div>
+                        }
                     }
                 </div>
             </div>
@@ -98,21 +271,70 @@
                 <div class="selected-rooms">
                     <h3>Thông Tin Phòng</h3>
                     <div class="selected-room">
-                        @foreach (var selectedRoom in Model.SelectedRooms)
+                        @if (selectedRooms != null && selectedRooms.Any())
                         {
-                            <div class="content-block">
-                                <p><strong>Phòng: </strong>@selectedRoom.RoomName</p>
-                                <p><strong>Giá: </strong>@selectedRoom.Price.ToString("N0") VND / đêm</p>
-                            </div>
+                            @foreach (var selectedRoom in Model.SelectedRooms)
+                            {
+                                <div class="content-block">
+                                    <p><strong>Phòng: </strong>@selectedRoom.Name</p>
+                                    <p>
+                                        <strong>Số người: </strong>@(selectedRoom.AdultCount + selectedRoom.ChildrenCount)
+                                        (@selectedRoom.AdultCount người lớn, @selectedRoom.ChildrenCount trẻ em)
+                                    </p>
+                                    @{
+                                        decimal adjustedPrice = selectedRoom.Price;
+                                        decimal extraChilrenCost = 0;
+                                        if (selectedRoom.AdultCount + selectedRoom.ChildrenCount > selectedRoom.Bed)
+                                        {
+                                            int extraGuests = selectedRoom.AdultCount + selectedRoom.ChildrenCount - selectedRoom.Bed;
+                                            extraChilrenCost = selectedRoom.Price * extraGuests * 0.3m;
+                                            adjustedPrice += extraChilrenCost;
+                                        }
+                                    }
+                                    <p><strong>Giá: </strong>@adjustedPrice.ToString("N0") VND / đêm</p>
+                                    @if (adjustedPrice > selectedRoom.Price)
+                                    {
+                                        <p><small>(Phụ thu trẻ em: @extraChilrenCost.ToString("N0") VND / đêm)</small></p>
+                                    }
+                                </div>
+                            }
                         }
-                        <p><strong>Tổng cộng: @Model.TotalPrice.ToString("N0") VND</strong></p>
-                        <button class="choose-btn">Đặt Ngay</button>
+
+                        @*                        @if( Model.Discount != null && Model.Discount > 0)
+        {
+            <p>Đã giảm: @((Model.TotalPrice*Model.Discount/100).ToString("N0")) VND</p>
+        }*@
+                        @{decimal totalDiscount = 0;
+                            if (Model.Discount != null && Model.Discount > 0)
+                            {
+                                totalDiscount += Model.Discount;
+                            }
+                            if (Model.SDiscountAmount != null && Model.SDiscountAmount > 0)
+                            {
+                                totalDiscount += Model.SDiscountAmount;
+                            }
+                        }
+                        <p><strong>Tổng cộng: @((Model.TotalPrice* (1 - totalDiscount/100)).ToString("N0")) VND</strong></p>
+                        <p>Đã giảm: @((Model.TotalPrice*totalDiscount/100).ToString("N0")) VND</p>
+
+                        <form method="post" asp-page-handler="PreOrder">
+                            <input type="hidden" asp-for="PromoCode"/>
+                            <input type="hidden" asp-for="SDiscount"/>
+                            <input type="hidden" asp-for="CheckInDate"
+                                   value="@Model.CheckInDate.ToString("yyyy-MM-dd")"/>
+                            <input type="hidden" asp-for="CheckOutDate"
+                                   value="@Model.CheckOutDate.ToString("yyyy-MM-dd")"/>
+                            <input type="hidden" name="selectedRoomJson" class="form-control"
+                                   placeholder="Mã khuyến mại" value="@Model.SelectedRoomsJson">
+                            <button type="submit" class="choose-btn">Đặt Ngay</button>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
     </main>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 </body>
-</html>

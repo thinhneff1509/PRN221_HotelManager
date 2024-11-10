@@ -71,7 +71,6 @@ namespace Project_Group5.Pages.Admin.RoomManagement
             var roomTypeToDelete = await _context.RoomTypes
                                                  .Include(rt => rt.Rooms)
                                                     .ThenInclude(r => r.Bookings)
-                                                        .ThenInclude(b => b.Discounts)
                                                  .Include(rt => rt.Rooms)
                                                     .ThenInclude(r => r.Bookings)
                                                         .ThenInclude(b => b.Payments)
@@ -124,10 +123,6 @@ namespace Project_Group5.Pages.Admin.RoomManagement
                         if (booking.Payments != null)
                         {
                             _context.Payments.RemoveRange(booking.Payments);
-                        }
-                        if (booking.Discounts != null)
-                        {
-                            _context.Discounts.RemoveRange(booking.Discounts);
                         }
                     }
                     _context.Bookings.RemoveRange(room.Bookings);

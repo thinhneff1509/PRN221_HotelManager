@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
+﻿using Microsoft.EntityFrameworkCore;
 
 namespace Project_Group5.Models
 {
@@ -54,6 +51,8 @@ namespace Project_Group5.Models
 
                 entity.Property(e => e.CustomerId).HasColumnName("customer_id");
 
+                entity.Property(e => e.DiscountId).HasColumnName("discount_id");
+
                 entity.Property(e => e.PaymentStatus)
                     .HasMaxLength(255)
                     .HasColumnName("payment_status");
@@ -72,6 +71,11 @@ namespace Project_Group5.Models
                     .WithMany(p => p.Bookings)
                     .HasForeignKey(d => d.CustomerId)
                     .HasConstraintName("FK__Booking__custome__3D5E1FD2");
+
+                entity.HasOne(d => d.Discount)
+                    .WithMany(p => p.Bookings)
+                    .HasForeignKey(d => d.DiscountId)
+                    .HasConstraintName("FK_Booking_Discount");
 
                 entity.HasOne(d => d.Room)
                     .WithMany(p => p.Bookings)
@@ -136,22 +140,25 @@ namespace Project_Group5.Models
 
                 entity.Property(e => e.Id).HasColumnName("id");
 
-                entity.Property(e => e.Amount).HasMaxLength(255);
-
-                entity.Property(e => e.BookingId).HasColumnName("booking_id");
+                entity.Property(e => e.Amount)
+                    .HasMaxLength(255)
+                    .HasColumnName("amount");
 
                 entity.Property(e => e.Content)
                     .HasMaxLength(255)
                     .HasColumnName("content");
 
+                entity.Property(e => e.EffectiveDate)
+                    .HasColumnType("date")
+                    .HasColumnName("effective_date");
+
+                entity.Property(e => e.ExpirationDate)
+                    .HasColumnType("date")
+                    .HasColumnName("expiration_date");
+
                 entity.Property(e => e.Name)
                     .HasMaxLength(255)
                     .HasColumnName("name");
-
-                entity.HasOne(d => d.Booking)
-                    .WithMany(p => p.Discounts)
-                    .HasForeignKey(d => d.BookingId)
-                    .HasConstraintName("FK_Discount_Booking");
             });
 
             modelBuilder.Entity<Feedback>(entity =>

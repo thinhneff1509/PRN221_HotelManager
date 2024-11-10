@@ -1,0 +1,222 @@
+﻿@page "/Admin/DiscountManagement"
+@model Project_Group5.Pages.Admin.DiscountManagement.DiscountManagementModel
+@{
+}
+@if (TempData["SuccessMessage"] != null)
+{
+<div class="alert alert-success" role="alert">
+    @TempData["SuccessMessage"]
+</div>
+}
+@if (TempData["Error"] != null)
+{
+<div class="alert alert-danger" role="alert">
+    @TempData["Error"]
+</div>
+}
+
+<h2 class="text-3xl font-semibold text-center my-8" data-metatip="true">Quản Lý Voucher</h2>
+
+<div class="container mt-4">
+    <!-- Tìm kiếm phòng -->
+    <form method="get" class="form-inline mb-4">
+        <input type="text" name="searchString" class="form-control mr-2" placeholder="Tìm kiếm voucher" value="@Request.Query["searchString"]" />
+        <button type="submit" class="btn btn-primary">Tìm kiếm</button>
+    </form>
+
+    <!-- Danh sách phòng -->
+    <table class="table table-bordered">
+        <thead class="thead-light">
+        <tr>
+            <th>Mã Voucher</th>
+            <th>Mô tả</th>
+            <th>Giá trị (%)</th>
+            <th>Ngày hiệu lực</th> <!-- Thêm cột hình ảnh -->
+            <th>Ngày hết hạn</th>
+            <th>Hành Động</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var d in Model.Discounts)
+        {
+        <tr>
+            <td>@d.Name</td>
+            <td>@d.Content</td>
+            <td>@d.Amount</td>
+            <td>@(d.EffectiveDate?.ToString("dd/MM/yyyy") ?? "")</td>
+            <td>@(d.ExpirationDate?.ToString("dd/MM/yyyy") ?? "")</td>
+            <td>
+                <button class="btn btn-warning" data-toggle="modal" data-target="#editModal"
+                        data-discount-id="@d.Id"
+                        data-discount-name="@d.Name"
+                        data-discount-content="@d.Content"
+                        data-discount-amount="@d.Amount"
+                        data-discount-eff="@d.EffectiveDate"
+                        data-discount-exp="@d.ExpirationDate">
+                    Sửa
+                </button>
+                <button class="btn btn-danger" data-toggle="modal" data-target="#deleteModal" data-discount-id="@d.Id">
+                    Xóa
+                </button>
+            </td>
+        </tr>
+        }
+        </tbody>
+    </table>
+
+
+    <!-- Button Thêm phòng -->
+    <button class="btn btn-success" data-toggle="modal" data-target="#addModal">Thêm Voucher</button>
+</div>
+
+<!-- Modal Thêm Phòng -->
+<div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <form method="post" asp-page-handler="Add">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addModalLabel">Thêm Voucher</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>Mã Voucher</label>
+                        <input type="text" asp-for="Discount.Name" class="form-control" required />
+                        <span asp-validation-for="Discount.Name" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label>Mô Tả</label>
+                        <input type="text" asp-for="Discount.Content" class="form-control" required>
+                        <span asp-validation-for="Discount.Content" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label>Giảm Giá (%)</label>
+                        <input type="number" asp-for="Discount.Amount" class="form-control" required />
+                        <span asp-validation-for="Discount.Amount" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label>Ngày Hiệu Lực</label>
+                        <input type="date" asp-for="Discount.EffectiveDate" class="form-control" multiple />
+                        <span asp-validation-for="Discount.EffectiveDate" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label>Ngày Hết Hạn</label>
+                        <input type="date" asp-for="Discount.ExpirationDate" class="form-control" multiple />
+                        <span asp-validation-for="Discount.ExpirationDate" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                    <button type="submit" class="btn btn-primary">Lưu</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Cập nhật Phòng -->
+<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <form method="post" asp-page-handler="Update" enctype="multipart/form-data">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editModalLabel">Cập Nhật Phòng</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <input asp-for="Discount.Id" type="hidden"/>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>Mã Voucher</label>
+                        <input type="text" asp-for="Discount.Name" class="form-control" required />
+                        <span asp-validation-for="Discount.Name" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label>Mô Tả</label>
+                        <input type="text" asp-for="Discount.Content" class="form-control" required>
+                        <span asp-validation-for="Discount.Content" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label>Giảm Giá (%)</label>
+                        <input type="number" asp-for="Discount.Amount" class="form-control" required />
+                        <span asp-validation-for="Discount.Amount" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label>Ngày Hiệu Lực</label>
+                        <input type="date" asp-for="Discount.EffectiveDate" class="form-control" multiple />
+                        <span asp-validation-for="Discount.EffectiveDate" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label>Ngày Hết Hạn</label>
+                        <input type="date" asp-for="Discount.ExpirationDate" class="form-control" multiple />
+                        <span asp-validation-for="Discount.ExpirationDate" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                    <button type="submit" class="btn btn-primary">Lưu Thay Đổi</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Xóa Phòng -->
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <form method="post" asp-page-handler="Delete">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deleteModalLabel">Xóa Voucher</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Bạn có chắc chắn muốn xóa voucher này?</p>
+                    <input type="hidden" name="id" />
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
+                    <button type="submit" class="btn btn-danger">Xóa</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+    $('#editModal').on('show.bs.modal', function (event) {
+        var button = $(event.relatedTarget);
+        var discountId = button.data('discount-id');
+        var discountName = button.data('discount-name');
+        var discountContent = button.data('discount-content');
+        var discountAmount = button.data('discount-amount');
+        var discountEff = button.data('discount-eff');
+        var discountExp = button.data('discount-exp');
+
+        var modal = $(this);
+        modal.find('input[name="Discount.Id"]').val(discountId);
+        modal.find('input[name="Discount.Name"]').val(discountName);
+        modal.find('input[name="Discount.Content"]').val(discountContent);
+        modal.find('input[name="Discount.Amount"]').val(discountAmount);
+        modal.find('input[name="Discount.EffectiveDate"]').val(discountEff);
+        modal.find('input[name="Discount.EffectiveDate"]').val(discountExp);
+
+    });
+
+    $('#deleteModal').on('show.bs.modal', function (event) {
+        var button = $(event.relatedTarget);
+        var discountId = button.data('discount-id');
+        console.log("Discount ID:", discountId); // In ra để kiểm tra
+        var modal = $(this);
+        modal.find('input[name="id"]').val(discountId);
+    });
+</script>
+}
