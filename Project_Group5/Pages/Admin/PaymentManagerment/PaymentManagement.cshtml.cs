@@ -67,11 +67,7 @@ namespace Project_Group5.Pages.Admin.PaymentManagement
         // Phương thức Post Edit (không cần thay đổi)
         public async Task<IActionResult> OnPostEditAsync()
         {
-            if (!ModelState.IsValid)
-            {
-                await OnGetAsync();
-                return Page();
-            }
+          
 
             var paymentToUpdate = await _context.Payments.FindAsync(Payment.Id);
             if (paymentToUpdate == null)
@@ -79,7 +75,7 @@ namespace Project_Group5.Pages.Admin.PaymentManagement
                 return NotFound();
             }
 
-            paymentToUpdate.PaymentDate = DateTime.Now;
+            paymentToUpdate.PaymentDate = DateTime.Now;  // Có thể cần kiểm tra lại
             paymentToUpdate.Amount = Payment.Amount;
             paymentToUpdate.PaymentMethod = Payment.PaymentMethod;
             paymentToUpdate.Status = Payment.Status;
@@ -87,7 +83,6 @@ namespace Project_Group5.Pages.Admin.PaymentManagement
             await _context.SaveChangesAsync();
 
             TempData["SuccessMessage"] = "Cập nhật thanh toán thành công!";
-
             return RedirectToPage();
         }
 

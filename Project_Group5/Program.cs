@@ -18,19 +18,25 @@ namespace Project_Group5
             // Đăng ký Razor Pages và các dịch vụ cần thiết
             builder.Services.AddRazorPages();
 
-            builder.Services.AddAuthentication(options =>
-            {
-                options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-                options.DefaultChallengeScheme = GoogleDefaults.AuthenticationScheme;
-            })
-            .AddCookie(options =>
-            {
-                options.Cookie.SameSite = SameSiteMode.None; // Cấu hình này có thể cần thiết để đảm bảo cookie hoạt động với các yêu cầu OAuth
-                options.LoginPath = "/Login"; // Đường dẫn đến trang đăng nhập
-                options.LogoutPath = "/Logout"; // Đường dẫn để đăng xuất
-                options.AccessDeniedPath = "/AccessDenied"; // Đường dẫn khi không có quyền truy cập
-            })
-           ;
+            // Thêm dịch vụ Session
+            builder.Services.AddDistributedMemoryCache(); // Cần thiết cho Session
+           builder.Services.AddSession(options =>
+           {
+               options.IdleTimeout = TimeSpan.FromMinutes(30); // Thời gian hết hạn của session
+               options.Cookie.HttpOnly = true;
+               options.Cookie.IsEssential = true; // Bắt buộc cookie của Session để hoạt động
+           });
+
+
+            // Cấu hình Authentication sử dụng Cookie
+            builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                .AddCookie(options =>
+                {
+                    options.LoginPath = "/Login"; // Đường dẫn đến trang đăng nhập
+                    options.LogoutPath = "/Logout"; // Đường dẫn để đăng xuất
+                    options.AccessDeniedPath = "/AccessDenied"; // Đường dẫn khi không có quyền truy cập
+                });
+
 
 
             // Cấu hình Authorization
@@ -48,6 +54,8 @@ namespace Project_Group5
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseRouting();
+
+            app.UseSession();
 
             // Thêm Authentication và Authorization vào pipeline
             app.UseAuthentication();
