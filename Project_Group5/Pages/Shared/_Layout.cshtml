@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@using System.Security.Claims
+﻿
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
@@ -54,6 +56,13 @@
                     @{
                         if (User.Identity.IsAuthenticated)
                         {
+                            var roles = User.FindFirst(ClaimTypes.Role)?.Value;
+                            <div class="flex items-center space-x-2">
+                                <span class="text-gray-800 font-semibold">Hello, @User.Identity.Name</span>
+                                <a href="/Login?handler=Logout" class="text-gray-800 hover:text-blue-600">Logout</a>
+                            </div>
+
+
                             var role = User.IsInRole("Admin") ? 1 :
                             User.IsInRole("Customer") ? 2 :
                             User.IsInRole("Receptionist") ? 3 : 0;
@@ -82,7 +91,7 @@
                                     <a href="/Login?handler=Logout" class="text-gray-800 hover:text-blue-600">Logout</a>
                                     <!-- Icon Đặt Phòng -->
                                     <div class="relative">
-                                        <a href="/ViewCart" class="relative flex items-center justify-center w-10 h-10 text-white bg-blue-600 rounded-full hover:bg-blue-700 focus:outline-none">
+                                        <a href="/gioithieu" class="relative flex items-center justify-center w-10 h-10 text-white bg-blue-600 rounded-full hover:bg-blue-700 focus:outline-none">
                                             <i class="fas fa-door-open text-lg"></i>
                                             <!-- Badge số lượng đặt phòng, nếu cần -->
                                             <span class="absolute top-0 right-0 flex items-center justify-center w-4 h-4 text-xs font-semibold text-white bg-red-500 rounded-full">100</span>
@@ -116,7 +125,7 @@
                         }
                     }
                 </div>
-             
+
 
             </div>
 

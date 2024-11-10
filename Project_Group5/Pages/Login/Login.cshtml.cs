@@ -41,7 +41,7 @@ namespace Project_Group5.Pages.Login
         }
 
        
-        public async Task<IActionResult> OnPostAsync()
+        public async Task<IActionResult> OnPostAsync(string returnUrl = null)
         {
             var customer = await _context.Customers
                                           .Include(c => c.Role)
@@ -67,14 +67,25 @@ namespace Project_Group5.Pages.Login
             // Set authentication cookie
             await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity));
 
+
+            // Điều hướng dựa trên `ReturnUrl` hoặc vai trò
+            if (!string.IsNullOrEmpty(returnUrl) && Url.IsLocalUrl(returnUrl))
+            {
+                return Redirect(returnUrl);
+            }
+
             // Redirect based on role
             if (customer.Role.Id == 1)
             {
-                return RedirectToPage("/Admin/DashBoard/Dashboard"); // Admin page
+                return RedirectToPage("/Admin/DashBoard/Dashboard");
+            }
+            else if (customer.Role.Id == 3)
+            {
+                return RedirectToPage("/Receptionist/Home");
             }
             else
             {
-                return RedirectToPage("/Homepage/Home"); // Regular user homepage
+                return RedirectToPage("/Homepage/Home");
             }
         }
 
@@ -84,7 +95,6 @@ namespace Project_Group5.Pages.Login
             return RedirectToPage("/Homepage/Home");
         }
 
-
         public async Task Login()
         {
             await HttpContext.ChallengeAsync(GoogleDefaults.AuthenticationScheme,
@@ -93,7 +103,6 @@ namespace Project_Group5.Pages.Login
                     RedirectUri = Url.Action("GoogleResponse")
                 });
         }
-
 
         public async Task<IActionResult> GoogleResponse()
         {
@@ -105,10 +114,8 @@ namespace Project_Group5.Pages.Login
                 claim.Type,
                 claim.Value
             });
-            //  return Json(claims);
-            return RedirectToAction("Login", "Home", new { area = "" });
+            return RedirectToAction("Home", "Index");
         }
-
 
         public IActionResult OnGetLogin()
         {
@@ -119,7 +126,6 @@ namespace Project_Group5.Pages.Login
 
             return Challenge(authenticationProperties, GoogleDefaults.AuthenticationScheme);
         }
-
 
 
         public async Task<IActionResult> OnGetGoogleResponse()
@@ -142,8 +148,6 @@ namespace Project_Group5.Pages.Login
 
             if (customer == null)
             {
-                // Nếu người dùng chưa có trong database, có thể thêm vào database hoặc chuyển hướng đăng ký
-                // Ví dụ thêm người dùng mới với role Customer (role = 2)
                 customer = new Customer
                 {
                     Username = name ?? email.Split('@')[0],
@@ -160,7 +164,8 @@ namespace Project_Group5.Pages.Login
         new Claim(ClaimTypes.Name, customer.Username),
         new Claim(ClaimTypes.NameIdentifier, customer.Id.ToString()),
         new Claim(ClaimTypes.Email, customer.Email),
-        new Claim(ClaimTypes.Role, "Customer") // Đặt role là "Customer"
+        new Claim(ClaimTypes.Role, customer.Role.Id == 1 ? "Admin" :
+                              customer.Role.Id == 3 ? "Receptionist" : "Customer")
     };
 
             var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
