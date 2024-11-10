@@ -8,7 +8,6 @@ using System.Linq;
 namespace Project_Group5.Pages.Admin.DashBoard
 {
     [Authorize(Roles = "Admin")]
-
     public class DashboardModel : PageModel
     {
         private readonly Fall24_SE1745_PRN221_Group5Context _context;
@@ -18,42 +17,44 @@ namespace Project_Group5.Pages.Admin.DashBoard
             _context = context;
         }
 
-        public List<int> MonthlyRevenue { get; set; } = new List<int>();
+        public List<decimal> MonthlyRevenue { get; set; } = new List<decimal>();
         public List<int> MonthlyBookings { get; set; } = new List<int>();
+        public int? SelectedMonth { get; set; } // Tháng được chọn từ front-end
 
-        public void OnGet()
+        public void OnGet(int? month = null)
         {
-            // Lấy dữ liệu doanh thu hàng tháng và số đơn đặt phòng hàng tháng
-            MonthlyRevenue = GetMonthlyRevenue();
-            MonthlyBookings = GetMonthlyBookings();
+            SelectedMonth = month;
+            MonthlyRevenue = GetMonthlyRevenue(month);
+            MonthlyBookings = GetMonthlyBookings(month);
         }
 
-        private List<int> GetMonthlyRevenue()
+        private List<decimal> GetMonthlyRevenue(int? month)
         {
-            var monthlyRevenue = new int[12];
-            var payments = _context.Payments.Where(p => p.PaymentDate.Year == DateTime.Now.Year);
+            var monthlyRevenue = new decimal[12];
+            var payments = _context.Payments
+                .Where(p => p.PaymentDate.Year == DateTime.Now.Year && (!month.HasValue || p.PaymentDate.Month == month))
+                .ToList();
 
             foreach (var payment in payments)
             {
-                int month = payment.PaymentDate.Month - 1;
-                if (int.TryParse(payment.Amount, out int amount))
-                {
-                    monthlyRevenue[month] += amount;
-                }
+                int monthIndex = payment.PaymentDate.Month - 1;
+                monthlyRevenue[monthIndex] += decimal.Parse(payment.Amount);
             }
 
             return monthlyRevenue.ToList();
         }
 
-        private List<int> GetMonthlyBookings()
+        private List<int> GetMonthlyBookings(int? month)
         {
             var monthlyBookings = new int[12];
-            var payments = _context.Payments.Where(p => p.PaymentDate.Year == DateTime.Now.Year);
+            var payments = _context.Payments
+                .Where(p => p.PaymentDate.Year == DateTime.Now.Year && (!month.HasValue || p.PaymentDate.Month == month))
+                .ToList();
 
             foreach (var payment in payments)
             {
-                int month = payment.PaymentDate.Month - 1;
-                monthlyBookings[month]++;
+                int monthIndex = payment.PaymentDate.Month - 1;
+                monthlyBookings[monthIndex]++;
             }
 
             return monthlyBookings.ToList();
