@@ -33,14 +33,6 @@ namespace Project_Group5
                 options.LoginPath = "/Login"; // Đường dẫn đến trang đăng nhập
                 options.LogoutPath = "/Logout"; // Đường dẫn để đăng xuất
                 options.AccessDeniedPath = "/AccessDenied"; // Đường dẫn khi không có quyền truy cập
-                /*            })
-                            .AddGoogle(GoogleDefaults.AuthenticationScheme, options =>
-                            {
-                                // Lấy ClientId và ClientSecret từ biến môi trường
-                                options.ClientId = Environment.GetEnvironmentVariable("GOOGLE_CLIENT_ID");
-                                options.ClientSecret = Environment.GetEnvironmentVariable("GOOGLE_CLIENT_SECRET");
-
-                                options.CallbackPath = "/signin-google";*/
             });
 
             // Cấu hình Authorization
@@ -64,6 +56,13 @@ namespace Project_Group5
             app.UseAuthorization();
 
             app.MapRazorPages();
+
+            // Điều hướng root (/) tới /home
+            app.MapGet("/", (context) =>
+            {
+                context.Response.Redirect("/home");
+                return Task.CompletedTask;
+            });
 
             app.Run();
         }

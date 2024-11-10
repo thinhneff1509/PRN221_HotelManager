@@ -237,3 +237,5 @@ C:\Users\MY PC\Documents\GitHub\PRN221_HotelManager\Project_Group5\bin\Debug\net
 C:\Users\MY PC\Documents\GitHub\PRN221_HotelManager\Project_Group5\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
 D:\PRN221\project\PRN221_HotelManager\Project_Group5\bin\Debug\net6.0\DotNetEnv.dll
 D:\PRN221\project\PRN221_HotelManager\Project_Group5\bin\Debug\net6.0\Sprache.dll
+C:\Users\MY PC\Documents\GitHub\PRN221_HotelManager\Project_Group5\bin\Debug\net6.0\DotNetEnv.dll
+C:\Users\MY PC\Documents\GitHub\PRN221_HotelManager\Project_Group5\bin\Debug\net6.0\Sprache.dll
