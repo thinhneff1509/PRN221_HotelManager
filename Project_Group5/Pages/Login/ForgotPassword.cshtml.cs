@@ -58,8 +58,9 @@ namespace Project_Group5.Pages.Login
                 {
                     SendEmail(customer.Email, "Password Reset Request",
                         $"Please reset your password by clicking <a href='{resetLink}'>here</a>.");
+
+                    // Nếu gửi email thành công, lưu thông báo vào TempData
                     TempData["Message"] = "A reset link has been sent to your email.";
-                    //return RedirectToPage("/Login/ResetPassword");
                     return Page();
                 }
                 catch (Exception ex)
@@ -76,6 +77,7 @@ namespace Project_Group5.Pages.Login
                 return Page();
             }
         }
+
 
         private string GenerateToken(string email)
         {
