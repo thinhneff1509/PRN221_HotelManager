@@ -6865,24 +6865,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Le Cong Truong Thinh\\.nuget\\packages\\": {},
-    "D:\\visuastudiosetting\\NuGetPackages": {}
+    "C:\\Users\\ACER\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\Project_Group5.csproj",
+      "projectUniqueName": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\Project_Group5.csproj",
       "projectName": "Project_Group5",
-      "projectPath": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\Project_Group5.csproj",
-      "packagesPath": "C:\\Users\\Le Cong Truong Thinh\\.nuget\\packages\\",
-      "outputPath": "D:\\PRN221\\project\\PRN221_HotelManager\\Project_Group5\\obj\\",
+      "projectPath": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\Project_Group5.csproj",
+      "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
+      "outputPath": "D:\\PRN221\\PRN221_Project_DTF\\PRN221_HotelManager\\Project_Group5\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "D:\\visuastudiosetting\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Le Cong Truong Thinh\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6890,7 +6885,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -6974,7 +6968,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
