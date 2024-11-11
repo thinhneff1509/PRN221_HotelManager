@@ -21,6 +21,8 @@
                     <th class="px-6 py-3 text-left text-sm font-medium text-gray-500 border border-gray-300">Phương Thức Thanh Toán</th>
                     <th class="px-6 py-3 text-left text-sm font-medium text-gray-500 border border-gray-300">Trạng Thái Thanh Toán</th>
                     <th class="px-6 py-3 text-left text-sm font-medium text-gray-500 border border-gray-300">Dịch Vụ Đã Đặt</th>
+                    <th class="px-6 py-3 text-left text-sm font-medium text-gray-500 border border-gray-300">Hành Động</th>
+
                 </tr>
             </thead>
             <tbody class="divide-y divide-gray-200">
@@ -60,6 +62,11 @@
                             {
                                 <div>@serviceRegistration.Service?.ServiceName - @serviceRegistration.Quantity x @serviceRegistration.Service?.Price</div>
                             }
+                        </td>
+                        <td class="px-6 py-4 text-sm text-gray-900 border border-gray-300">
+                            <a href="/User_/Rooms/Feedback" class="btn btn-secondary">
+                                Send feedback
+                            </a>
                         </td>
                     </tr>
                 }

@@ -16,6 +16,25 @@
             <p><strong>Nhận phòng:</strong> @Model.CheckinDate</p>
             <p><strong>Trả phòng:</strong> @Model.CheckoutDate</p>
             <p><a href="#">(Bạn có muốn thay đổi ngày lưu trú?)</a></p>
+            <div class="card mb-4">
+                <div class="card-body">
+                    <form method="get" id="updateDatesForm">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="checkinDate" class="form-label"><strong>Nhận phòng:</strong></label>
+                                <input type="date" class="form-control" id="checkinDate" name="CheckinDate" value="@Model.CheckinDate.ToString("yyyy-MM-dd")" onchange="updateDates()">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="checkoutDate" class="form-label"><strong>Trả phòng:</strong></label>
+                                <input type="date" class="form-control" id="checkoutDate" name="CheckoutDate" value="@Model.CheckoutDate.ToString("yyyy-MM-dd")" onchange="updateDates()">
+                            </div>
+                        </div>
+                        <input type="hidden" asp-for="PromoCode" value="@Model.PromoCode"/>
+                        <input type="hidden" asp-for="SDiscount" value="@Model.SDiscount"/>
+                        <input type="hidden" name="roomData" value="@Model.SelectedRoomsJson" />
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -216,4 +235,20 @@
         return 0;
     }
 
+}
+@section Scripts {
+    <script>
+        function updateDates() {
+            var checkinDate = document.getElementById('checkinDate').value;
+            var checkoutDate = document.getElementById('checkoutDate').value;
+
+            if (checkinDate && checkoutDate) {
+                if (new Date(checkinDate) >= new Date(checkoutDate)) {
+                    alert('Check-out date must be after check-in date');
+                    return;
+                }
+                document.getElementById('updateDatesForm').submit();
+            }
+        }
+    </script>
 }
