@@ -1,11 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Project_Group5.Models;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Authorization;
+using Project_Group5.Models;
 
 namespace Project_Group5.Pages.ServiceOrder
 {
@@ -84,7 +80,7 @@ namespace Project_Group5.Pages.ServiceOrder
 
             await _context.SaveChangesAsync();
 
-            return RedirectToPage(new { bookingId = BookingId });
+            return RedirectToPage("/ViewCart");
         }
     }
 }
