@@ -2,6 +2,9 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using Project_Group5.Models;
+using System.Numerics;
+using System.Security.Claims;
+using System.Xml.Linq;
 
 namespace Project_Group5.Pages.ServiceOrder
 {
@@ -17,6 +20,8 @@ namespace Project_Group5.Pages.ServiceOrder
 
         [BindProperty]
         public int BookingId { get; set; }
+        [BindProperty]
+        public List<Booking> bookings { get; set; }
         public List<Room> Rooms { get; set; } = new List<Room>();
         public List<Service> Services { get; set; } = new List<Service>();
         public List<ServiceRegistration> ServiceRegistrations { get; set; } = new List<ServiceRegistration>();
@@ -32,11 +37,14 @@ namespace Project_Group5.Pages.ServiceOrder
         {
             BookingId = bookingId;
 
+            bookings = await GetListBooking();
+
+
             // Lấy danh sách phòng và dịch vụ từ cơ sở dữ liệu
             Rooms = await _context.Rooms.Include(r => r.Roomtype).ToListAsync();
             Services = await _context.Services.Where(s => s.Status == "Available").ToListAsync();
 
-            // Lấy các dịch vụ đã đăng ký cho booking này và tính tổng tiền
+/*            // Lấy các dịch vụ đã đăng ký cho booking này và tính tổng tiền
             ServiceRegistrations = await _context.ServiceRegistrations
                 .Include(sr => sr.Service)
                 .Include(sr => sr.Booking)
@@ -44,7 +52,7 @@ namespace Project_Group5.Pages.ServiceOrder
                 .Where(sr => sr.BookingId == BookingId)
                 .ToListAsync();
 
-            TotalAmount = ServiceRegistrations.Sum(sr => sr.TotalPrice ?? 0);
+            TotalAmount = ServiceRegistrations.Sum(sr => sr.TotalPrice ?? 0);*/
         }
 
         public async Task<IActionResult> OnPostAddServiceAsync()
@@ -80,7 +88,20 @@ namespace Project_Group5.Pages.ServiceOrder
 
             await _context.SaveChangesAsync();
 
-            return RedirectToPage("/ViewCart");
+            return RedirectToPage("/User_/ViewCart/ViewCart");
+        }
+
+        public async Task<List<Booking>> GetListBooking()
+        {
+                var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+                Customer customer = new Customer();
+                if (userId != null)
+                {
+                    // Fetch user information from the database using their ID
+                    customer = await _context.Customers.FindAsync(int.Parse(userId));
+                }
+               
+                return await _context.Bookings.Include(b => b.Room).ThenInclude(b => b.Roomtype).Where(c => c.CustomerId == customer.Id && c.CheckInDate <= DateTime.Now && c.CheckOutDate >= DateTime.Now).ToListAsync();
         }
     }
 }

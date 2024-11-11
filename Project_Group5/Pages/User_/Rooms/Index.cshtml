@@ -124,7 +124,7 @@
                                                                value="@Model.CheckOutDate.ToString("yyyy-MM-dd")"/>
                                                         @if (room.Rooms.Count(r => !r.Status.Equals("Hết phòng")) <= 0)
                                                         {
-                                                            <button type="submit" class="choose-btn col-md-12 py-3" disabled><strong></strong> phòng</button>
+                                                            <button type="submit" class="choose-btn col-md-12 py-3" disabled><strong></strong>Hết phòng</button>
                                                         }
                                                         else
                                                         {

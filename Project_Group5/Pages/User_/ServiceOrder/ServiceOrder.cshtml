@@ -24,10 +24,10 @@
             <div class="row g-3 mb-3">
                 <div class="col-md-6">
                     <label for="roomId" class="form-label">Phòng:</label>
-                    <select id="roomId" name="RoomId" class="form-select">
-                        @foreach (var room in Model.Rooms)
+                    <select id="roomId" asp-for="@Model.BookingId" class="form-select">
+                        @foreach (var b in Model.bookings)
                         {
-                            <option value="@room.Id">@room.RoomNumber - @room.Roomtype.Name</option>
+                            <option value="@b.Id">@b.Room.RoomNumber - @b.Room.Roomtype.Name</option>
                         }
                     </select>
                 </div>
@@ -50,41 +50,8 @@
                 </div>
             </div>
 
-            <input type="hidden" name="BookingId" value="@Model.BookingId" />
-
             <button type="submit" class="btn btn-outline-success w-full">Thêm Dịch Vụ</button>
         </form>
-    </div>
-
-    <!-- Hóa đơn dịch vụ -->
-    <div class="p-4 bg-white shadow-md rounded">
-        <h2 class="text-lg font-semibold mb-3">Hóa đơn dịch vụ</h2>
-        <table class="table table-bordered">
-            <thead>
-                <tr>
-                    <th>STT</th>
-                    <th>Tên phòng</th>
-                    <th>Tên dịch vụ</th>
-                    <th>Đơn giá</th>
-                    <th>Số lượng</th>
-                    <th>Thành tiền</th>
-                </tr>
-            </thead>
-            <tbody>
-                @for (int i = 0; i < Model.ServiceRegistrations.Count; i++)
-                {
-                    var reg = Model.ServiceRegistrations[i];
-                    <tr>
-                        <td>@(i + 1)</td>
-                        <td>@reg.Booking.Room.RoomNumber</td> <!-- Truy cập Room thông qua Booking -->
-                        <td>@reg.Service.ServiceName</td>
-                        <td>@reg.Service.Price ₫</td>
-                        <td>@reg.Quantity</td>
-                        <td>@(reg.TotalPrice) ₫</td>
-                    </tr>
-                }
-            </tbody>
-        </table>
     </div>
 </div>
 
