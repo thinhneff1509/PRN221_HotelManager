@@ -376,7 +376,14 @@ namespace Project_Group5.Pages.Rooms
 
                     await context.SaveChangesAsync();
 
-                    return RedirectToPage("/Homepage/Home");
+                    // Serialize các giá trị cần truyền
+                    TempData["SelectedRooms"] = JsonSerializer.Serialize(SelectedRooms);
+                    TempData["TotalAmount"] = TotalAmount;
+                    TempData["StayDuration"] = StayDuration;
+                    TempData["CheckinDate"] = CheckinDate;
+                    TempData["CheckoutDate"] = CheckoutDate;
+
+                    return RedirectToPage("/User_/Checkout");
                 }
             }
 

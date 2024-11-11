@@ -48,18 +48,32 @@ namespace Project_Group5.Pages.Checkout
         public int StayDuration { get; set; }
         public decimal TotalAmount { get; set; }
 
-        public async Task<IActionResult> OnGetAsync(string selectedRooms, string totalAmount, int stayDuration)
+        public async Task<IActionResult> OnGetAsync()
         {
-            // Deserialize RoomData JSON from the query parameter
-            if (!string.IsNullOrEmpty(selectedRooms))
+            // 1. Kiểm tra và đọc dữ liệu từ TempData
+            if (TempData.ContainsKey("SelectedRooms"))
             {
-                SelectedRooms = JsonConvert.DeserializeObject<List<RoomData>>(selectedRooms);
+                SelectedRooms = JsonConvert.DeserializeObject<List<RoomData>>(TempData["SelectedRooms"]?.ToString() ?? "[]");
             }
 
-            // Parse StayDuration and assign
-            StayDuration = stayDuration;
+            if (TempData.ContainsKey("TotalAmount"))
+            {
+                TotalAmount = Convert.ToDecimal(TempData["TotalAmount"]);
+            }
 
-            // Kiểm tra nếu người dùng đã đăng nhập
+            if (TempData.ContainsKey("StayDuration"))
+            {
+                StayDuration = Convert.ToInt32(TempData["StayDuration"]);
+            }
+
+
+            // 2. Kiểm tra nếu không có dữ liệu SelectedRooms thì quay lại trang PreOrder
+            if (SelectedRooms == null || SelectedRooms.Count == 0)
+            {
+                return RedirectToPage("/BookingRoom");
+            }
+
+            // 3. Lấy thông tin người dùng nếu đã đăng nhập
             if (User.Identity.IsAuthenticated)
             {
                 string username = User.Identity.Name;
@@ -71,31 +85,12 @@ namespace Project_Group5.Pages.Checkout
                     PhoneNumber = customer.Phone;
                     Email = customer.Email;
                     Address = customer.Address;
-
-                    // Tìm booking của khách hàng để lấy `TotalAmount` từ Payment
-                    var booking = await _context.Bookings.FirstOrDefaultAsync(b => b.CustomerId == customer.Id);
-                    if (booking != null)
-                    {
-                        var payment = await _context.Payments.FirstOrDefaultAsync(p => p.BookingId == booking.Id);
-                        if (payment != null)
-                        {
-                            // Chuyển đổi payment.Amount từ string sang decimal
-                            if (decimal.TryParse(payment.Amount, out decimal amount))
-                            {
-                                TotalAmount = amount;
-                            }
-                            else
-                            {
-                                // Xử lý nếu không chuyển đổi được, ví dụ: gán giá trị mặc định hoặc log lỗi
-                                TotalAmount = 0;
-                            }
-                        }
-                    }
                 }
             }
 
             return Page();
         }
+
 
 
         public string CreateVnPayUrl(decimal amount)
@@ -139,11 +134,9 @@ namespace Project_Group5.Pages.Checkout
 
         public async Task<IActionResult> OnPostCheckout(string paymentMethod)
         {
-            // Kiểm tra xem TotalAmount có giá trị chưa, nếu không, hãy gán giá trị từ Model hoặc từ cơ sở dữ liệu
-            // Đảm bảo rằng `TotalAmount` có giá trị
+            // Đảm bảo rằng TotalAmount có giá trị
             if (TotalAmount <= 0 && SelectedRooms != null)
             {
-                // Tính tổng số tiền dựa trên các phòng đã chọn và thời gian ở
                 TotalAmount = SelectedRooms.Sum(room => (decimal)room.Price * StayDuration);
             }
 
@@ -162,8 +155,8 @@ namespace Project_Group5.Pages.Checkout
                 CheckInDate = DateTime.Now,
                 CheckOutDate = DateTime.Now.AddDays(StayDuration),
                 TotalAmount = TotalAmount.ToString(),
-                PaymentStatus = "Completed",  // Đánh dấu thanh toán hoàn tất
-                Status = "Processed"
+                PaymentStatus = "Pending",
+                Status = "Processing"
             };
             _context.Bookings.Add(booking);
             await _context.SaveChangesAsync();
@@ -175,24 +168,25 @@ namespace Project_Group5.Pages.Checkout
                 PaymentDate = DateTime.Now,
                 Amount = TotalAmount.ToString(),
                 PaymentMethod = paymentMethod, // Lưu phương thức thanh toán
-                Status = "Completed",  // Trạng thái thanh toán hoàn tất
+                Status = "Pending",
                 CheckIn = DateTime.Now,
                 CheckOut = DateTime.Now.AddDays(StayDuration)
             };
             _context.Payments.Add(payment);
             await _context.SaveChangesAsync();
 
-
-            // Tạo URL thanh toán và chuyển hướng đến VNPAY
-            string paymentUrl = CreateVnPayUrl(TotalAmount);
-            return Redirect(paymentUrl);
-
-            // Thông báo thanh toán thành công và chuyển hướng về trang chủ
-            TempData["PaymentMessage"] = "Thanh toán thành công!";
-
-            return RedirectToPage("/User_/ViewCart");
-
+            if (paymentMethod == "Paypal")
+            {
+                TempData["PaymentMessage"] = "Thanh toán thành công qua Paypal!";
+                return RedirectToPage("/User_/ViewCart");
+            }
+            else
+            {
+                string paymentUrl = CreateVnPayUrl(TotalAmount);
+                return Redirect(paymentUrl);
+            }
         }
+
 
         public async Task<IActionResult> OnPostAsync()
         {

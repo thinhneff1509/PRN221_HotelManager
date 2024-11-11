@@ -8,20 +8,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="33fbd02b-09be-44c5-93d6-695b6fc30d55" name="Changes" comment="">
+    <list default="true" id="33fbd02b-09be-44c5-93d6-695b6fc30d55" name="Changes" comment="check">
+      <change beforePath="$PROJECT_DIR$/.vs/ProjectEvaluation/project_group5.strings.v8.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/ProjectEvaluation/project_group5.strings.v8.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/Project_Group5/DesignTimeBuild/.dtbcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/Project_Group5/DesignTimeBuild/.dtbcache.v2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/Project_Group5/v17/.futdcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/Project_Group5/v17/.futdcache.v2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.vs/Project_Group5/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/Project_Group5/v17/.suo" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.vs/Project_Group5/v17/DocumentLayout.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/Project_Group5/v17/DocumentLayout.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Shared/_Layout.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/User_/Checkout/Checkout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/User_/Checkout/Checkout.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/User_/Checkout/Checkout.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/User_/Checkout/Checkout.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/User_/Rooms/PreOrder.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/User_/Rooms/PreOrder.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/User_/Rooms/PreOrder.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/User_/Rooms/PreOrder.cshtml.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net6.0/Project_Group5.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net6.0/Project_Group5.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net6.0/Project_Group5.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net6.0/Project_Group5.AssemblyInfoInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net6.0/Project_Group5.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net6.0/Project_Group5.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net6.0/Project_Group5.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net6.0/Project_Group5.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net6.0/Project_Group5.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net6.0/Project_Group5.sourcelink.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net6.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net6.0/apphost.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Project_Group5.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Project_Group5.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Project_Group5.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Project_Group5.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net6.0/project.razor.vs.bin" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net6.0/project.razor.vs.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/obj/rider.project.model.nuget.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -32,19 +36,87 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="false" />
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "git-widget-placeholder": "thinh__loginbygg"
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "thinhneff1509"
   }
 }]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/thinhneff1509/PRN221_HotelManager.git",
+    "accountId": "a05e06a1-4ade-483a-b2ee-413485e47f9a"
+  }
+}]]></component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/.vs/Project_Group5/v17/DocumentLayout.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/.vs/Project_Group5/v17/DocumentLayout.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/obj/Debug/net6.0/Project_Group5.AssemblyInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/obj/Debug/net6.0/Project_Group5.AssemblyInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/obj/Debug/net6.0/Project_Group5.sourcelink.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/PRN221/project/PRN221_HotelManager/Project_Group5/obj/Debug/net6.0/Project_Group5.sourcelink.json" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="false" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 2
+}]]></component>
+  <component name="ProjectId" id="2ogWo8gX4lQznAFBzY1pVoZEEdz" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "thinh__loginbygg",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="33fbd02b-09be-44c5-93d6-695b6fc30d55" name="Changes" comment="" />
+      <created>1731291873481</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1731291873481</updated>
+      <workItem from="1731291875808" duration="2240000" />
+    </task>
+    <task id="LOCAL-00001" summary="check">
+      <option name="closed" value="true" />
+      <created>1731291904684</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1731291904686</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="false" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="check" />
+    <option name="LAST_COMMIT_MESSAGE" value="check" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
