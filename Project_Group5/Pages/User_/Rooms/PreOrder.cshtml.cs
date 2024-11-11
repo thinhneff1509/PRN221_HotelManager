@@ -128,7 +128,7 @@ namespace Project_Group5.Pages.Rooms
             return Page();
         }
 
-        public Task<IActionResult> OnPostChangeBookingInfo(int roomId, int roomTypeId, int AdultCount,
+        public async Task<IActionResult> OnPostChangeBookingInfo(int roomId, int roomTypeId, int AdultCount,
             int ChildrenCount, DateTime checkinDate, DateTime checkoutDate, Decimal Discount, string PromoCode, int SDiscount)
         {
             CheckinDate = checkinDate;
@@ -137,7 +137,7 @@ namespace Project_Group5.Pages.Rooms
             var selectedRooms = SelectedRooms;
             if (SelectedRooms == null)
             {
-                return Task.FromResult<IActionResult>(BadRequest("Invalid room data."));
+                return Page();
             }
 
             using (var context = new Fall24_SE1745_PRN221_Group5Context())
@@ -148,14 +148,14 @@ namespace Project_Group5.Pages.Rooms
 
                 if (roomGroup == null)
                 {
-                    return Task.FromResult<IActionResult>(BadRequest("Room group data not found."));
+                    return Page();
                 }
 
                 var room = roomGroup.RoomList.FirstOrDefault(r => r.RoomId == roomId);
 
-                if (roomGroup == null)
+                if (room == null)
                 {
-                    return Task.FromResult<IActionResult>(BadRequest("Room not found."));
+                    return Page();
                 }
 
                 room.AdultCount = AdultCount;
@@ -163,7 +163,7 @@ namespace Project_Group5.Pages.Rooms
             }
             this.Discount = Discount;
             SelectedRooms = selectedRooms;
-            return Task.FromResult<IActionResult>(Page());
+            return Page();
         }
 
         public async Task<IActionResult> OnPostChangeRoomNum(int roomTypeId, int roomCount, DateTime checkinDate,
@@ -362,7 +362,7 @@ namespace Project_Group5.Pages.Rooms
                                     CustomerId = customer.Id,
                                     CheckInDate = CheckInDate,
                                     CheckOutDate = CheckOutDate,
-                                    Status = "Chờ thanh toán",
+                                    Status = "Đang chờ",
                                     TotalAmount = finalAmount.ToString(), // Store the total after applying discount
                                     RoomId = room.Id,
                                     DiscountId = (discountId == 0) ? null : discountId

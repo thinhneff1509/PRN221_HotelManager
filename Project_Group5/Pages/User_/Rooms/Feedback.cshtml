@@ -66,7 +66,7 @@
                         {
                             <tr>
                                 <td>@feedback.Customer?.Name</td> <!-- Display the customer's name -->
-                                <td>@feedback.RoomId</td>
+                                <td>@feedback.Room?.RoomNumber</td>
                                 <td>@feedback.Content</td>
                                 <td>
                                     @for (int i = 0; i < feedback.Rating; i++)
@@ -92,14 +92,15 @@
         <div class="card-body">
             <form method="post">
                 <div class="row mb-3">
-                    <div class="col-md-6">
+                    <div class="col-md-12">
                         <label class="form-label">Khách hàng</label>
                         <input type="text" class="form-control" value="@Model.CustomerName" disabled />
-                        @* <input type="hidden" asp-for="Feedback.CustomerId" value="@Model.CustomerName" /> *@
                     </div>
-                    <div class="col-md-6">
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-12">
                         <label asp-for="Feedback.RoomId" class="form-label">Phòng</label>
-                        <input asp-for="Feedback.RoomId" class="form-control" required />
+                        <select asp-for="Feedback.RoomId" class="form-select" asp-items="Model.RoomList" required></select>
                         <span asp-validation-for="Feedback.RoomId" class="text-danger"></span>
                     </div>
                 </div>
