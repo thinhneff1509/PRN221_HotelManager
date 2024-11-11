@@ -104,7 +104,7 @@ public class IndexModel : PageModel
     }
 
 
-    public async Task<IActionResult> OnPostChooseRoomAsync(int SelectedRoomId, int SelectedRoomCount, DateTime CheckInDate, DateTime CheckOutDate, string PromoCode, string SDiscount) 
+    public async Task<IActionResult> OnPostChooseRoomAsync(int SelectedRoomId, int SelectedRoomCount, DateTime CheckInDate, DateTime CheckOutDate, string PromoCode, string SDiscount)
     {
         this.SpecialDiscount = await GetAllDiscount();
 
@@ -217,12 +217,6 @@ public class IndexModel : PageModel
                 totalDiscountPercentage += discountAmount;
                 this.SDiscountAmount = discountAmount; // Store the Special discount
             }
-        }
-
-        // Apply the total discount
-        if (totalDiscountPercentage > 0)
-        {
-            TotalPrice *= (1 - (totalDiscountPercentage / 100));
         }
     }
 
@@ -340,7 +334,7 @@ public class IndexModel : PageModel
             {
                 var roomData = new RoomData
                 {
-                    RoomTypeId = roomType.Id,
+                    Id = roomType.Id,
                     Bed = roomType.Bed,
                     Price = roomType.Price,
                     Name = roomType.Name,
