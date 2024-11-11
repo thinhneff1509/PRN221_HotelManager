@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Project_Group5.Models;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 
 namespace Project_Group5.Pages.User_.ViewCart
@@ -24,6 +25,11 @@ namespace Project_Group5.Pages.User_.ViewCart
 
         public async Task OnGetAsync(int customerId = 1)
         {
+            var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            if (String.IsNullOrEmpty(userId))
+            {
+                customerId = int.Parse(userId);
+            }
             Console.WriteLine("Debug: CustomerId = " + customerId);
 
             // Truy vấn các Booking của khách hàng bao gồm cả thông tin Room, RoomType, Payment, và Service

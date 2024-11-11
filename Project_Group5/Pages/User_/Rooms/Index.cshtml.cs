@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using Project_Group5.Models;
 using System.ComponentModel.DataAnnotations;
+using System.Security.Claims;
 using System.Text.Json;
 
 namespace Project_Group5.Pages.Rooms;
@@ -315,42 +316,51 @@ public class IndexModel : PageModel
 
     public async Task<IActionResult> OnPostPreOrder(DateTime CheckInDate, DateTime CheckOutDate, string PromoCode, string SDiscount, string selectedRoomJson)
     {
-        if (!String.IsNullOrEmpty(selectedRoomJson))
-        {
-            SelectedRoomsJson = selectedRoomJson;
-        }
-        List<RoomData> roomDatas = new List<RoomData>();
-        RoomTypes = await _context.RoomTypes.Include(r => r.Rooms).ThenInclude(r => r.ImageRooms).ToListAsync();
-        var selectedRoomList = SelectedRooms;
 
-        // Group selected rooms by RoomTypeId
-        var groupedRooms = selectedRoomList.GroupBy(r => r.RoomTypeId);
-
-        // Create a RoomData object for each unique RoomTypeId
-        foreach (var group in groupedRooms)
+        if (User.Identity.IsAuthenticated)
         {
-            var roomType = RoomTypes.FirstOrDefault(rt => rt.Id == group.Key);
-            if (roomType != null)
+            if (!String.IsNullOrEmpty(selectedRoomJson))
             {
-                var roomData = new RoomData
-                {
-                    Id = roomType.Id,
-                    Bed = roomType.Bed,
-                    Price = roomType.Price,
-                    Name = roomType.Name,
-                    RoomList = group.ToList()
-                };
-                roomDatas.Add(roomData);
+                SelectedRoomsJson = selectedRoomJson;
             }
+            List<RoomData> roomDatas = new List<RoomData>();
+            RoomTypes = await _context.RoomTypes.Include(r => r.Rooms).ThenInclude(r => r.ImageRooms).ToListAsync();
+            var selectedRoomList = SelectedRooms;
+
+            // Group selected rooms by RoomTypeId
+            var groupedRooms = selectedRoomList.GroupBy(r => r.RoomTypeId);
+
+            // Create a RoomData object for each unique RoomTypeId
+            foreach (var group in groupedRooms)
+            {
+                var roomType = RoomTypes.FirstOrDefault(rt => rt.Id == group.Key);
+                if (roomType != null)
+                {
+                    var roomData = new RoomData
+                    {
+                        Id = roomType.Id,
+                        Bed = roomType.Bed,
+                        Price = roomType.Price,
+                        Name = roomType.Name,
+                        RoomList = group.ToList()
+                    };
+                    roomDatas.Add(roomData);
+                }
+            }
+            this.CheckInDate = CheckInDate;
+            this.CheckOutDate = CheckOutDate;
+            this.PromoCode = PromoCode;
+            this.SDiscount = SDiscount;
+            SelectedRooms = selectedRoomList;
+            // Store data in TempData for the redirect
+            var serializedRoomData = JsonSerializer.Serialize(roomDatas);
+            return RedirectToPage("PreOrder", new { CheckInDate, CheckOutDate, PromoCode, SDiscount, roomData = serializedRoomData });
         }
-        this.CheckInDate = CheckInDate;
-        this.CheckOutDate = CheckOutDate;
-        this.PromoCode = PromoCode;
-        this.SDiscount = SDiscount;
-        SelectedRooms = selectedRoomList;
-        // Store data in TempData for the redirect
-        var serializedRoomData = JsonSerializer.Serialize(roomDatas);
-        return RedirectToPage("PreOrder", new { CheckInDate, CheckOutDate, PromoCode, SDiscount, roomData = serializedRoomData });
+        else
+        {
+            return RedirectToPage("/Login/Login");
+        }
+
     }
 
     private async Task<Discount?> GetDiscountByPromoCode(string promoCode)
