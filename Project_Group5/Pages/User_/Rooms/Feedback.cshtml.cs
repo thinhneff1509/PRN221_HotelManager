@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Project_Group5.Models;
 using System.ComponentModel.DataAnnotations;
@@ -29,7 +30,7 @@ namespace Project_Group5.Pages.Rooms
         }
 
         public string CustomerName { get; set; }
-
+        public List<SelectListItem> RoomList { get; set; }
         public async Task<IActionResult> OnGetAsync()
         {
             var customer = await _context.Customers
@@ -39,9 +40,22 @@ namespace Project_Group5.Pages.Rooms
 
             FeedbackList = await _context.Feedbacks
                 .Include(f => f.Customer)
+                .Include(f => f.Room)
                 .OrderByDescending(f => f.FeedbackDate)
                 .Take(10)
                 .ToListAsync() ?? new List<Feedback>();
+
+            RoomList = await _context.Bookings
+        .Where(b => b.CustomerId == customer.Id && b.Status == "confirmed")
+        .Select(b => new SelectListItem
+        {
+            Value = b.RoomId.ToString(),
+            Text = b.Room.RoomNumber
+        })
+        .ToListAsync();
+
+            await LoadFeedbackStatsAsync();
+            return Page();
 
             var allFeedbacks = await _context.Feedbacks.ToListAsync();
             Stats = new FeedbackStats
@@ -62,7 +76,7 @@ namespace Project_Group5.Pages.Rooms
         }
 
 
-        
+
 
         public async Task<IActionResult> OnPostAsync()
         {
@@ -74,12 +88,26 @@ namespace Project_Group5.Pages.Rooms
 
             var customer = await _context.Customers
                 .FirstOrDefaultAsync(c => c.Username == User.Identity.Name);
-            if (customer != null)
+
+            if (customer == null)
             {
-                Feedback.CustomerId = customer.Id;
-                CustomerName = customer.Name;
+                return Unauthorized();
             }
 
+            // Check if the customer has a confirmed booking for the selected room
+            var confirmedBooking = await _context.Bookings
+                .FirstOrDefaultAsync(b => b.CustomerId == customer.Id
+                                           && b.RoomId == Feedback.RoomId
+                                           && b.Status == "confirmed");
+
+            if (confirmedBooking == null)
+            {
+                ModelState.AddModelError(string.Empty, "Bạn không có quyền đánh giá cho phòng này.");
+                await OnGetAsync(); // Reload the page data if access is denied
+                return Page();
+            }
+
+            Feedback.CustomerId = customer.Id;
             Feedback.FeedbackDate = DateTime.Now;
             _context.Feedbacks.Add(Feedback);
             await _context.SaveChangesAsync();
@@ -88,6 +116,7 @@ namespace Project_Group5.Pages.Rooms
 
             return Page();
         }
+
 
         private async Task LoadFeedbackStatsAsync()
         {
@@ -109,6 +138,7 @@ namespace Project_Group5.Pages.Rooms
             // Load the latest feedbacks with Customer details
             FeedbackList = await _context.Feedbacks
                 .Include(f => f.Customer)
+                .Include(f => f.Room)
                 .OrderByDescending(f => f.FeedbackDate)
                 .Take(10)
                 .ToListAsync();
