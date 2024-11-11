@@ -36,7 +36,7 @@
                                     <p>Chi tiết: @r.RoomList.Count phòng, @Model.StayDuration ngày</p>
                                 </div>
                                 <form method="post" asp-page-handler="ChangeRoomNum" class="col-md-2">
-                                    <input type="hidden" name="roomTypeId" value="@r.RoomTypeId" />
+                                    <input type="hidden" name="roomTypeId" value="@r.Id" />
                                     <input type="hidden" name="CheckinDate" value="@Model.CheckinDate" />
                                     <input type="hidden" name="CheckoutDate" value="@Model.CheckoutDate" />
                                     <input type="hidden" asp-for="Discount" value="@Model.Discount" />
@@ -59,7 +59,7 @@
                                     {
                                         <form method="post" asp-page-handler="ChangeBookingInfo" class="d-flex align-items-center">
                                             <input type="hidden" name="roomId" value="@ri.RoomId" />
-                                            <input type="hidden" name="roomTypeId" value="@r.RoomTypeId" />
+                                            <input type="hidden" name="roomTypeId" value="@r.Id" />
                                             <input type="hidden" name="CheckinDate" value="@Model.CheckinDate" />
                                             <input type="hidden" name="CheckoutDate" value="@Model.CheckoutDate" />
                                             <input type="hidden" asp-for="StayDuration" value="@Model.StayDuration" />

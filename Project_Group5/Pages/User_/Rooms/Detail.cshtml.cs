@@ -1,8 +1,8 @@
-﻿using System.Text.Json;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using Project_Group5.Models;
+using System.Text.Json;
 
 namespace Project_Group5.Pages.Rooms
 {
@@ -52,9 +52,10 @@ namespace Project_Group5.Pages.Rooms
                 return RedirectToPage("/NotFound");
             }
 
+            List<RoomData>? roomDatas = new List<RoomData>();
             RoomData data = new RoomData
             {
-                RoomTypeId = room.RoomtypeId,
+                Id = room.RoomtypeId,
                 Bed = room.Roomtype.Bed,
                 Price = room.Roomtype.Price,
                 Name = room.Roomtype.Name,
@@ -72,8 +73,8 @@ namespace Project_Group5.Pages.Rooms
                     }
                 }
             };
-
-            var serializedRoomData = JsonSerializer.Serialize(data);
+            roomDatas.Add(data);
+            var serializedRoomData = JsonSerializer.Serialize(roomDatas);
             DateTime tomorow = DateTime.Now.AddDays(1);
 
             // Redirect to the PreOrder page with query parameters
@@ -84,6 +85,7 @@ namespace Project_Group5.Pages.Rooms
                 promoCode = "PromoCode",
                 sDiscount = "SDiscount",
                 roomData = serializedRoomData
-            });        }
+            });
+        }
     }
 }

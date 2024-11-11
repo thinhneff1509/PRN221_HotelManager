@@ -92,10 +92,10 @@ namespace Project_Group5.Pages.Rooms
                 foreach (var r in selectedRooms)
                 {
                     r.AvailableRoom = context.Rooms
-                        .Where(rl => rl.Status != "Hết phòng" && r.RoomTypeId == rl.RoomtypeId).Count();
+                        .Where(rl => rl.Status != "Hết phòng" && r.Id == rl.RoomtypeId).Count();
                 }
             }
-            
+
             decimal totalDiscountPercentage = 0;
 
             // Apply PromoCode discount if applicable
@@ -144,7 +144,7 @@ namespace Project_Group5.Pages.Rooms
             {
 
                 // Locate the corresponding RoomData in SelectedRooms
-                var roomGroup = selectedRooms.FirstOrDefault(r => r.RoomTypeId == roomTypeId);
+                var roomGroup = selectedRooms.FirstOrDefault(r => r.Id == roomTypeId);
 
                 if (roomGroup == null)
                 {
@@ -194,7 +194,7 @@ namespace Project_Group5.Pages.Rooms
                 }
 
                 // Locate the corresponding RoomData in SelectedRooms
-                var roomGroup = selectedRooms.FirstOrDefault(r => r.RoomTypeId == roomTypeId);
+                var roomGroup = selectedRooms.FirstOrDefault(r => r.Id == roomTypeId);
 
                 if (roomGroup == null)
                 {
@@ -349,7 +349,7 @@ namespace Project_Group5.Pages.Rooms
                                     }
                                 }
                                 this.Discount = totalDiscountPercentage;
-                                
+
                                 // Apply the total discount
                                 if (totalDiscountPercentage > 0)
                                 {
@@ -364,8 +364,8 @@ namespace Project_Group5.Pages.Rooms
                                     CheckOutDate = CheckOutDate,
                                     Status = "Chờ thanh toán",
                                     TotalAmount = finalAmount.ToString(), // Store the total after applying discount
-                                    RoomId = room.Id, 
-                                    DiscountId = (discountId == 0 )? null : discountId
+                                    RoomId = room.Id,
+                                    DiscountId = (discountId == 0) ? null : discountId
                                 };
                                 context.Add(booking);
                             }
@@ -399,5 +399,5 @@ namespace Project_Group5.Pages.Rooms
             }
         }
     }
-    
+
 }
