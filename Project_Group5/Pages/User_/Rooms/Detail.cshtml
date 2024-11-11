@@ -1,52 +1,59 @@
-﻿@page "{id:int}"
-@model Project_Group5.Pages.Rooms.DetailModel
+﻿    @page "{id:int}"
+    @model Project_Group5.Pages.Rooms.DetailModel
 
-@{
-    ViewBag.Title = Model.RoomType?.Name ?? "Room Details";
-    Layout = "_Layout";
-}
+    @{
+        ViewBag.Title = Model.RoomType?.Name ?? "Room Details";
+        Layout = "_Layout";
+    }
 
-<link href="~/css/detail.css" rel="stylesheet">
-
+    <link href="~/css/detail.css" rel="stylesheet">
+    <link href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <h1 class="text-3xl font-semibold text-center mt-10 text-gray-800">@Model.RoomType?.Name</h1>
 
 <div class="flex flex-col md:flex-row items-start justify-center my-10 px-5 space-x-0 md:space-x-6">
-    <!-- Cột trái: Image Gallery -->
-    <div class="flex flex-col items-center md:w-2/4 w-full mb-6 md:mb-0">
-        <!-- Tăng độ rộng của cột ảnh -->
-        <div class="relative w-full h-[500px] max-w-2xl">
-            <!-- Tăng chiều cao và giới hạn kích thước tối đa của ảnh -->
+    <!-- Image Gallery Section -->
+   <!-- Image Gallery Section -->
+<div class="flex flex-col items-center w-full md:w-1/2 mb-6 md:mb-0">
+    <div class="swiper-container w-full h-[500px] max-w-full rounded-lg overflow-hidden shadow-lg">
+        <div class="swiper-wrapper">
             @if (Model.ImageRoom != null && Model.ImageRoom.Any())
             {
                 @for (int i = 0; i < Model.ImageRoom.Count; i++)
                 {
-                    <img src="/images/@Model.ImageRoom[i].Path" alt="Room Image" class="gallery-image @(i == 0 ? "active" : "") w-full h-auto max-h-[500px] rounded-lg shadow-md" />
+                    <div class="swiper-slide flex justify-center items-center">
+                        <img src="/images/@Model.ImageRoom[i].Path" alt="Room Image" class="w-full h-auto object-cover max-h-[500px]" />
+                    </div>
                 }
             }
             else
             {
                 <p class="text-center text-gray-500">No images available for this room.</p>
             }
-            <!-- Nút điều hướng ảnh -->
-            <button class="absolute left-0 top-1/2 transform -translate-y-1/2 text-white bg-gray-700 p-2 rounded-full" onclick="changeImage(-1)">&#10094;</button>
-            <button class="absolute right-0 top-1/2 transform -translate-y-1/2 text-white bg-gray-700 p-2 rounded-full" onclick="changeImage(1)">&#10095;</button>
         </div>
-    </div>
 
-    <!-- Cột phải: Thông tin phòng -->
-    <div class="md:w-2/4 w-full text-left space-y-4">
-        <!-- Thu nhỏ độ rộng của cột mô tả -->
-        <p class="text-lg text-gray-700">@Model.RoomType?.Description</p>
+        <!-- Swiper Pagination and Navigation -->
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+</div>
+
+</div>
+<!-- Room Information Column -->
+<div class="flex justify-center w-full mt-10 px-5">
+    <div class="w-full md:w-2/3 lg:w-1/2 p-6 text-left bg-white rounded-lg shadow-lg space-y-4">
+        <p class="text-lg text-gray-700 text-center">@Model.RoomType?.Description</p>
         <div class="mt-4">
-            <table class="text-gray-800">
+            <table class="text-gray-800 w-full">
                 <tbody>
-                    <tr>
-                        <td class="py-2 text-lg font-semibold">Giá chỉ từ:</td>
-                        <td class="py-2 text-lg font-bold">@String.Format("{0:N0}", @Model.RoomType?.Price) VND / đêm</td>
+                    <tr class="border-b border-gray-200">
+                        <td class="py-2 text-lg font-semibold text-gray-600">Giá chỉ từ:</td>
+                        <td class="py-2 text-lg font-bold text-blue-600 text-right">@String.Format("{0:N0}", @Model.RoomType?.Price) VND / đêm</td>
                     </tr>
-                    <tr>
-                        <td class="py-2">Số giường:</td>
-                        <td class="py-2">@Model.RoomType?.Bed</td>
+                    <tr class="border-b border-gray-200">
+                        <td class="py-2 text-lg font-semibold text-gray-600">Số giường:</td>
+                        <td class="py-2 text-lg text-gray-800 text-right">@Model.RoomType?.Bed</td>
                     </tr>
                 </tbody>
             </table>
@@ -54,91 +61,106 @@
     </div>
 </div>
 
+    <!-- Amenities Section -->
+    <div class="px-5">
+        <h3 class="text-2xl font-semibold text-center text-gray-800 mb-6">Tất cả những tiện ích tại @Model.RoomType.Name</h3>
+        <div class="grid md:grid-cols-3 gap-10">
+            <div class="bg-gray-100 p-5 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4 flex items-center">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mr-2"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                    Ẩm thực
+                </h3>
+                <ul class="text-gray-600 list-disc list-inside space-y-1">
+                    <li>Bữa tối với thực đơn gọi món</li>
+                    <li>Nhà hàng có máy lạnh</li>
+                    <li>Quầy bar</li>
+                    <li>Bữa sáng món tự chọn</li>
+                    <!-- Thêm các mục khác nếu cần -->
+                </ul>
+            </div>
 
-<!-- Amenities Section -->
-<div class="px-5">
-    <h3 class="text-2xl font-semibold text-center text-gray-800 mb-6">Tất cả những tiện ích tại @Model.RoomType.Name</h3>
-    <div class="grid md:grid-cols-3 gap-10">
-        <div class="bg-gray-100 p-5 rounded-lg shadow-md">
-            <h3 class="text-xl font-semibold text-gray-800 mb-4 flex items-center">
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mr-2"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
-                Ẩm thực
-            </h3>
-            <ul class="text-gray-600 list-disc list-inside space-y-1">
-                <li>Bữa tối với thực đơn gọi món</li>
-                <li>Nhà hàng có máy lạnh</li>
-                <li>Quầy bar</li>
-                <li>Bữa sáng món tự chọn</li>
-                <!-- Thêm các mục khác nếu cần -->
-            </ul>
-        </div>
+            <div class="bg-gray-100 p-5 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4 flex items-center">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mr-2"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                    Dịch vụ khách sạn
+                </h3>
+                <ul class="text-gray-600 list-disc list-inside space-y-1">
+                    <li>Dịch vụ concierge/hỗ trợ khách</li>
+                    <li>Dịch vụ giặt ủi</li>
+                    <li>Lễ tân 24h</li>
+                    <li>Bảo vệ 24 giờ</li>
+                </ul>
+            </div>
 
-        <div class="bg-gray-100 p-5 rounded-lg shadow-md">
-            <h3 class="text-xl font-semibold text-gray-800 mb-4 flex items-center">
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mr-2"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
-                Dịch vụ khách sạn
-            </h3>
-            <ul class="text-gray-600 list-disc list-inside space-y-1">
-                <li>Dịch vụ concierge/hỗ trợ khách</li>
-                <li>Dịch vụ giặt ủi</li>
-                <li>Lễ tân 24h</li>
-                <li>Bảo vệ 24 giờ</li>
-            </ul>
-        </div>
-
-        <div class="bg-gray-100 p-5 rounded-lg shadow-md">
-            <h3 class="text-xl font-semibold text-gray-800 mb-4 flex items-center">
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mr-2"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
-                Tiện nghi công cộng
-            </h3>
-            <ul class="text-gray-600 list-disc list-inside space-y-1">
-                <li>Bãi đậu xe</li>
-                <li>Thang máy</li>
-                <li>Dịch vụ phòng 24 giờ</li>
-                <li>WiFi tại khu vực chung</li>
-            </ul>
+            <div class="bg-gray-100 p-5 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4 flex items-center">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mr-2"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+                    Tiện nghi công cộng
+                </h3>
+                <ul class="text-gray-600 list-disc list-inside space-y-1">
+                    <li>Bãi đậu xe</li>
+                    <li>Thang máy</li>
+                    <li>Dịch vụ phòng 24 giờ</li>
+                    <li>WiFi tại khu vực chung</li>
+                </ul>
+            </div>
         </div>
     </div>
-</div>
 
-<!-- Chính Sách Lưu Trú Section -->
-<div class="px-5 mt-10">
-    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Chính Sách Lưu Trú</h3>
-    <ul class="space-y-2 text-gray-700">
-        <li><strong>🕒 Thời gian nhận phòng/trả phòng:</strong> Từ 14:00 - Trước 12:00</li>
-        <li><strong>ℹ️ Lưu Ý về Tiện Ích:</strong> Hồ bơi tạm thời đóng cửa từ 15-12-2020 đến 31-3-2021.</li>
-        <li><strong>📋 Hướng Dẫn Nhận Phòng Chung:</strong> Bể bơi đóng cửa để bảo trì từ ngày 15-12-2020.</li>
-        <li><strong>🍳 Bữa sáng:</strong> Bữa sáng tại cơ sở lưu trú được phục vụ từ 06:00 đến 09:00.</li>
-        <li><strong>🚭 Hút Thuốc:</strong> Cơ sở lưu trú cấm hút thuốc.</li>
-        <li><strong>🐾 Thú cưng:</strong> Không được mang theo thú cưng.</li>
-    </ul>
-</div>
+    <!-- Chính Sách Lưu Trú Section -->
+    <div class="px-5 mt-10">
+        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Chính Sách Lưu Trú</h3>
+        <ul class="space-y-2 text-gray-700">
+            <li><strong>🕒 Thời gian nhận phòng/trả phòng:</strong> Từ 14:00 - Trước 12:00</li>
+            <li><strong>ℹ️ Lưu Ý về Tiện Ích:</strong> Hồ bơi tạm thời đóng cửa từ 15-12-2020 đến 31-3-2021.</li>
+            <li><strong>📋 Hướng Dẫn Nhận Phòng Chung:</strong> Bể bơi đóng cửa để bảo trì từ ngày 15-12-2020.</li>
+            <li><strong>🍳 Bữa sáng:</strong> Bữa sáng tại cơ sở lưu trú được phục vụ từ 06:00 đến 09:00.</li>
+            <li><strong>🚭 Hút Thuốc:</strong> Cơ sở lưu trú cấm hút thuốc.</li>
+            <li><strong>🐾 Thú cưng:</strong> Không được mang theo thú cưng.</li>
+        </ul>
+    </div>
 
-<!-- Đặt Phòng Button -->
-<div class="flex justify-center my-10">
-    <form method="post" asp-page-handler="BookRoom">
-        <input type="hidden" name="roomId" value="@Model.RoomId" />
-        <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white text-lg font-semibold py-3 px-10 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
-            Đặt phòng
-        </button>
-    </form>
-</div>
+    <!-- Đặt Phòng Button -->
+    <div class="flex justify-center my-10">
+        <form method="post" asp-page-handler="BookRoom">
+            <input type="hidden" name="roomId" value="@Model.RoomId" />
+            <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white text-lg font-semibold py-3 px-10 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
+                Đặt phòng
+            </button>
+        </form>
+    </div>
 
-<script>
-    let currentImageIndex = 0;
-    const images = document.getElementsByClassName("gallery-image");
+    <script>
+        let currentImageIndex = 0;
+        const images = document.getElementsByClassName("gallery-image");
 
-    function showImage(index) {
-        for (let i = 0; i < images.length; i++) {
-            images[i].classList.add("hidden");
+        function showImage(index) {
+            for (let i = 0; i < images.length; i++) {
+                images[i].classList.add("hidden");
+            }
+            images[index].classList.remove("hidden");
         }
-        images[index].classList.remove("hidden");
-    }
 
-    function changeImage(step) {
-        currentImageIndex = (currentImageIndex + step + images.length) % images.length;
+        function changeImage(step) {
+            currentImageIndex = (currentImageIndex + step + images.length) % images.length;
+            showImage(currentImageIndex);
+        }
+
         showImage(currentImageIndex);
-    }
-
-    showImage(currentImageIndex);
+    </script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        autoplay: {
+            delay: 1000,
+        }
+    });
 </script>
