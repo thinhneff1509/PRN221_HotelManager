@@ -31,14 +31,18 @@
                         }
                     </select>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-3">
                     <label for="serviceType" class="form-label">Loại dịch vụ:</label>
-                    <select id="serviceType" name="ServiceId" class="form-select">
+                    <select id="serviceType" name="ServiceId" onchange="updateServiceImage()" class="form-select">
                         @foreach (var service in Model.Services)
                         {
-                            <option value="@service.Id">@service.ServiceName - @service.Price ₫</option>
+                            <option value="@service.Id" data-image="@service.ImageService">@service.ServiceName - @service.Price ₫</option>
                         }
                     </select>
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label">Hình ảnh:</label>
+                    <img id="serviceImage" src="" alt="Service Image" class="img-fluid" style="height: auto; max-width: 350px;">
                 </div>
                 <div class="col-md-6">
                     <label for="quantity" class="form-label">Số lượng:</label>
@@ -85,3 +89,14 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+function updateServiceImage() {
+    var select = document.getElementById('serviceType');
+    var img = document.getElementById('serviceImage');
+    var selectedOption = select.options[select.selectedIndex];
+    img.src = selectedOption.getAttribute('data-image');
+}
+
+// Initialize the image when the page loads
+document.addEventListener('DOMContentLoaded', updateServiceImage);
+</script>
