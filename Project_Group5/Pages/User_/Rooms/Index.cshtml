@@ -42,7 +42,7 @@
                             onchange="this.form.submit()">
                         @if (Model.SpecialDiscount != null)
                         {
-                            <option selected >
+                            <option value="" selected >
                                 Select discount
                             </option>
                             @foreach (var d in Model.SpecialDiscount)
@@ -134,7 +134,7 @@
                                                 </span>
                                             </div>
                                             <div class="choose-btn col-md-6 py-3 text-center"
-                                                 onclick="window.location='/User_/Rooms/Detail/@room.Id'">
+                                                 onclick="window.location='/User_/Rooms/List/@room.Id'">
                                                 Xem chi tiết phòng
                                                 <i class="bi bi-chevron-down"></i>
                                             </div>

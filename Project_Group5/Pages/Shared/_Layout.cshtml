@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using System.Security.Claims
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -65,6 +66,13 @@
                     @{
                         if (User.Identity.IsAuthenticated)
                         {
+                            var roles = User.FindFirst(ClaimTypes.Role)?.Value;
+                            <div class="flex items-center space-x-2">
+                                <span class="text-gray-800 font-semibold">Hello, @User.Identity.Name</span>
+                                <a href="/Login?handler=Logout" class="text-gray-800 hover:text-blue-600">Logout</a>
+                            </div>
+
+
                             var role = User.IsInRole("Admin") ? 1 :
                             User.IsInRole("Customer") ? 2 :
                             User.IsInRole("Receptionist") ? 3 : 0;

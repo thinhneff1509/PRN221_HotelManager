@@ -1,0 +1,63 @@
+﻿@page "/User_/Rooms/List/{id?}"
+
+@model Project_Group5.Pages.User_.Rooms.ListModel
+@{
+    Layout = "_Layout";
+}
+<div class="container">
+    <!-- Danh sách phòng -->
+    <div class="mb-5 p-4 bg-white shadow-md rounded">
+        <h2 class="text-lg font-semibold mb-3">Danh sách phòng</h2>
+
+        <form method="get" class="mb-4">
+            <div class="form-group">
+                <label for="roomTypeSelect">Chọn loại phòng:</label>
+
+                <select id="roomTypeSelect" onchange="changeRoomType(this.value)" class="form-control">
+                    <option value="0">Tất cả loại phòng</option>
+                    @foreach (var r in Model.RoomTypeSelectList)
+                    {
+                        <option value="@r.Value" selected="@(r.Value.Equals(Model.Id.ToString()))">@r.Text</option>
+                    }
+                </select>
+            </div>
+            <button type="submit" hidden class="btn btn-primary mt-2">Lọc</button>
+        </form>
+
+        <div class="grid grid-cols-5 gap-3">
+            @if (Model.RoomTypes != null)
+            {
+                foreach (var roomtype in Model.RoomTypes)
+                {
+                    foreach (var room in roomtype.Rooms)
+                    {
+                        <button class="btn btn-outline-info"
+                                onclick="window.location='/User_/Rooms/Detail/@room.Id'">
+                            @room.RoomNumber - @room.Roomtype.Name
+                        </button>
+                    }
+                }
+            }
+            @if (Model.AvailableRooms != null)
+            {
+                foreach (var roomtype in Model.AvailableRooms)
+                {
+                    foreach (var room in roomtype.Rooms)
+                    {
+                        <button class="btn btn-outline-info" disabled>
+                            @room.RoomNumber - @room.Roomtype.Name
+                        </button>
+                    }
+                }
+            }
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        function changeRoomType(id) {
+            window.location.href = '/User_/Rooms/List/' + id;
+        }
+    </script>
+}

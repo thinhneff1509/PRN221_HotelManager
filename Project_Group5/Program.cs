@@ -1,4 +1,3 @@
-using DotNetEnv; // Thêm thư viện DotNetEnv
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.Google;
 using Microsoft.EntityFrameworkCore;
@@ -10,8 +9,6 @@ namespace Project_Group5
     {
         public static void Main(string[] args)
         {
-            // Nạp biến môi trường từ tệp .env
-            Env.Load();
 
             var builder = WebApplication.CreateBuilder(args);
 
@@ -22,18 +19,40 @@ namespace Project_Group5
             // Đăng ký Razor Pages và các dịch vụ cần thiết
             builder.Services.AddRazorPages();
 
+            // Thêm dịch vụ Session
+            builder.Services.AddDistributedMemoryCache(); // Cần thiết cho Session
+           builder.Services.AddSession(options =>
+           {
+               options.IdleTimeout = TimeSpan.FromMinutes(30); // Thời gian hết hạn của session
+               options.Cookie.HttpOnly = true;
+               options.Cookie.IsEssential = true; // Bắt buộc cookie của Session để hoạt động
+           });
+
+
+            // Cấu hình Authentication sử dụng Cookie
+          //  builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
             builder.Services.AddAuthentication(options =>
             {
                 options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+                options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
                 options.DefaultChallengeScheme = GoogleDefaults.AuthenticationScheme;
+
             })
-            .AddCookie(options =>
-            {
-                options.Cookie.SameSite = SameSiteMode.None; // Cấu hình này có thể cần thiết để đảm bảo cookie hoạt động với các yêu cầu OAuth
-                options.LoginPath = "/Login"; // Đường dẫn đến trang đăng nhập
-                options.LogoutPath = "/Logout"; // Đường dẫn để đăng xuất
-                options.AccessDeniedPath = "/AccessDenied"; // Đường dẫn khi không có quyền truy cập
-            });
+                .AddCookie(
+                options =>
+                {
+                    options.LoginPath = "/Login"; // Đường dẫn đến trang đăng nhập
+                   options.LogoutPath = "/Logout"; // Đường dẫn để đăng xuất
+                    options.AccessDeniedPath = "/AccessDenied"; // Đường dẫn khi không có quyền truy cập
+                })
+                .AddGoogle(GoogleDefaults.AuthenticationScheme,options =>
+                {
+                    options.ClientId = builder.Configuration.GetSection("GoogleKeys:ClientId").Value;
+                    options.ClientSecret = builder.Configuration.GetSection("GoogleKeys:ClientSecret").Value;
+                    options.CallbackPath = "/signin-google";
+                });
+
+
 
             // Cấu hình Authorization
             builder.Services.AddAuthorization();
@@ -50,6 +69,8 @@ namespace Project_Group5
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseRouting();
+
+            app.UseSession();
 
             // Thêm Authentication và Authorization vào pipeline
             app.UseAuthentication();

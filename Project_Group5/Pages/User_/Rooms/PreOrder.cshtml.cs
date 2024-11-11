@@ -92,10 +92,10 @@ namespace Project_Group5.Pages.Rooms
                 foreach (var r in selectedRooms)
                 {
                     r.AvailableRoom = context.Rooms
-                        .Where(rl => rl.Status != "Hết phòng" && r.RoomTypeId == rl.RoomtypeId).Count();
+                        .Where(rl => rl.Status != "Hết phòng" && r.Id == rl.RoomtypeId).Count();
                 }
             }
-            
+
             decimal totalDiscountPercentage = 0;
 
             // Apply PromoCode discount if applicable
@@ -128,7 +128,7 @@ namespace Project_Group5.Pages.Rooms
             return Page();
         }
 
-        public Task<IActionResult> OnPostChangeBookingInfo(int roomId, int roomTypeId, int AdultCount,
+        public async Task<IActionResult> OnPostChangeBookingInfo(int roomId, int roomTypeId, int AdultCount,
             int ChildrenCount, DateTime checkinDate, DateTime checkoutDate, Decimal Discount, string PromoCode, int SDiscount)
         {
             CheckinDate = checkinDate;
@@ -137,25 +137,25 @@ namespace Project_Group5.Pages.Rooms
             var selectedRooms = SelectedRooms;
             if (SelectedRooms == null)
             {
-                return Task.FromResult<IActionResult>(BadRequest("Invalid room data."));
+                return Page();
             }
 
             using (var context = new Fall24_SE1745_PRN221_Group5Context())
             {
 
                 // Locate the corresponding RoomData in SelectedRooms
-                var roomGroup = selectedRooms.FirstOrDefault(r => r.RoomTypeId == roomTypeId);
+                var roomGroup = selectedRooms.FirstOrDefault(r => r.Id == roomTypeId);
 
                 if (roomGroup == null)
                 {
-                    return Task.FromResult<IActionResult>(BadRequest("Room group data not found."));
+                    return Page();
                 }
 
                 var room = roomGroup.RoomList.FirstOrDefault(r => r.RoomId == roomId);
 
-                if (roomGroup == null)
+                if (room == null)
                 {
-                    return Task.FromResult<IActionResult>(BadRequest("Room not found."));
+                    return Page();
                 }
 
                 room.AdultCount = AdultCount;
@@ -163,7 +163,7 @@ namespace Project_Group5.Pages.Rooms
             }
             this.Discount = Discount;
             SelectedRooms = selectedRooms;
-            return Task.FromResult<IActionResult>(Page());
+            return Page();
         }
 
         public async Task<IActionResult> OnPostChangeRoomNum(int roomTypeId, int roomCount, DateTime checkinDate,
@@ -194,7 +194,7 @@ namespace Project_Group5.Pages.Rooms
                 }
 
                 // Locate the corresponding RoomData in SelectedRooms
-                var roomGroup = selectedRooms.FirstOrDefault(r => r.RoomTypeId == roomTypeId);
+                var roomGroup = selectedRooms.FirstOrDefault(r => r.Id == roomTypeId);
 
                 if (roomGroup == null)
                 {
@@ -349,7 +349,7 @@ namespace Project_Group5.Pages.Rooms
                                     }
                                 }
                                 this.Discount = totalDiscountPercentage;
-                                
+
                                 // Apply the total discount
                                 if (totalDiscountPercentage > 0)
                                 {
@@ -362,10 +362,10 @@ namespace Project_Group5.Pages.Rooms
                                     CustomerId = customer.Id,
                                     CheckInDate = CheckInDate,
                                     CheckOutDate = CheckOutDate,
-                                    Status = "Chờ thanh toán",
+                                    Status = "Đang chờ",
                                     TotalAmount = finalAmount.ToString(), // Store the total after applying discount
-                                    RoomId = room.Id, 
-                                    DiscountId = (discountId == 0 )? null : discountId
+                                    RoomId = room.Id,
+                                    DiscountId = (discountId == 0) ? null : discountId
                                 };
                                 context.Add(booking);
                             }
@@ -399,5 +399,5 @@ namespace Project_Group5.Pages.Rooms
             }
         }
     }
-    
+
 }
