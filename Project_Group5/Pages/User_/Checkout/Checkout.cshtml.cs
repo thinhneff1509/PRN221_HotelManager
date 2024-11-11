@@ -23,11 +23,9 @@ namespace Project_Group5.Pages.Checkout
         // Inject IConfiguration và DbContext vào lớp thông qua constructor
         public CheckoutModel(IConfiguration configuration, Fall24_SE1745_PRN221_Group5Context context)
         {
-            // Lưu trữ IConfiguration vào biến _configuration để sử dụng sau này
-            _configuration = configuration ?? throw new ArgumentNullException(nameof(configuration));
+            _configuration = configuration ;
 
-            // Lưu trữ DbContext vào biến _context để làm việc với cơ sở dữ liệu
-            _context = context ?? throw new ArgumentNullException(nameof(context));
+            _context = context ;
         }
 
         [BindProperty]
@@ -50,6 +48,9 @@ namespace Project_Group5.Pages.Checkout
 
         public async Task<IActionResult> OnGetAsync()
         {
+
+            Console.WriteLine("SelectedRooms in Checkout: " + TempData["SelectedRooms"]);
+
             // 1. Kiểm tra và đọc dữ liệu từ TempData
             if (TempData.ContainsKey("SelectedRooms"))
             {
@@ -106,7 +107,7 @@ namespace Project_Group5.Pages.Checkout
         { "vnp_Version", "2.1.0" },
         { "vnp_Command", "pay" },
         { "vnp_TmnCode", tmnCode },
-        { "vnp_Amount", ((int)(amount * 100)).ToString() }, // VNPAY yêu cầu amount là đơn vị VNĐ x100
+        { "vnp_Amount", ((int)(amount * 100)).ToString() }, 
         { "vnp_CurrCode", "VND" },
         { "vnp_TxnRef", DateTime.Now.Ticks.ToString() }, // ID giao dịch duy nhất
         { "vnp_OrderInfo", "Thanh toán đơn hàng" },
@@ -134,7 +135,9 @@ namespace Project_Group5.Pages.Checkout
 
         public async Task<IActionResult> OnPostCheckout(string paymentMethod)
         {
-            // Đảm bảo rằng TotalAmount có giá trị
+
+            Console.WriteLine("OnPostCheckout method called with payment method: " + paymentMethod);
+            // Đảm bảo rằng TotalAmount có giá trị từ trang PreOrder
             if (TotalAmount <= 0 && SelectedRooms != null)
             {
                 TotalAmount = SelectedRooms.Sum(room => (decimal)room.Price * StayDuration);
@@ -147,7 +150,7 @@ namespace Project_Group5.Pages.Checkout
                 return RedirectToPage("/Error");
             }
 
-            // Tạo Booking mới
+            // Tạo Booking mới và lưu vào cơ sở dữ liệu
             var booking = new Booking
             {
                 CustomerId = customer.Id,
@@ -155,20 +158,19 @@ namespace Project_Group5.Pages.Checkout
                 CheckInDate = DateTime.Now,
                 CheckOutDate = DateTime.Now.AddDays(StayDuration),
                 TotalAmount = TotalAmount.ToString(),
-                PaymentStatus = "Pending",
-                Status = "Processing"
+                PaymentStatus = "Chờ thanh toán",
+                Status = "Chờ thanh toán"
             };
             _context.Bookings.Add(booking);
             await _context.SaveChangesAsync();
 
-            // Tạo Payment mới với phương thức thanh toán được chọn
             var payment = new Payment
             {
-                BookingId = booking.Id,
+                BookingId = booking.Id, // Liên kết BookingId từ booking đã tạo
                 PaymentDate = DateTime.Now,
                 Amount = TotalAmount.ToString(),
-                PaymentMethod = paymentMethod, // Lưu phương thức thanh toán
-                Status = "Pending",
+                PaymentMethod = paymentMethod,
+                Status = "Chờ thanh toán",
                 CheckIn = DateTime.Now,
                 CheckOut = DateTime.Now.AddDays(StayDuration)
             };
@@ -178,7 +180,7 @@ namespace Project_Group5.Pages.Checkout
             if (paymentMethod == "Paypal")
             {
                 TempData["PaymentMessage"] = "Thanh toán thành công qua Paypal!";
-                return RedirectToPage("/User_/ViewCart");
+                return RedirectToPage("/User_/ViewCart/ViewCart");
             }
             else
             {
@@ -187,8 +189,7 @@ namespace Project_Group5.Pages.Checkout
             }
         }
 
-
-        public async Task<IActionResult> OnPostAsync()
+       /* public async Task<IActionResult> OnPostAsyncVNPAY()
         {
             if (!ModelState.IsValid)
             {
@@ -222,6 +223,8 @@ namespace Project_Group5.Pages.Checkout
             await _context.SaveChangesAsync();
 
             return RedirectToPage("Homepage/Home");
-        }
+        }*/
     }
+
 }
+
